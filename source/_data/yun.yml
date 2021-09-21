@@ -168,3 +168,12 @@ feed:
   autodiscovery: true
   template:
 
+mourn:
+  enable: true
+  days:
+    - "4-4"
+    - "9-18"
+
+local_search:
+  enable: true
+  src: /js/search/local-search.js
