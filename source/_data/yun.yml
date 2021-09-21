@@ -1,0 +1,151 @@
+aplayer:
+  global: true
+  meting: false
+  # https://github.com/metowolf/MetingJS/tree/v1.2#option
+  widget:
+    enable: true
+    autoplay: false
+    # theme: "#2980b9"
+    loop: all
+    order: list
+    preload: auto
+    volume: 0.7
+    mutex: true
+    lrcType: 0
+    listFolded: false
+    listMaxHeight: 340px
+    audio:
+      - name: PICO PARK
+        artist: TECOPARK
+        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
+        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/PICOPARK.png
+    meting:
+      enable: false
+      id: 308168565
+      server: netease
+      type: playlist
+
+live_time:
+  nable: true
+  prefix: 本博客已萌萌哒地运行
+  suffix: (●'◡'●)
+  start_time: "2021-09-20T22:15:00"
+
+say:
+  enable: false
+  # api: https://say.elpsy.cn/sentences.json
+  # /data/sentences.json
+  api: https://cdn.jsdelivr.net/gh/ElpsyCN/say@gh-pages/sentences.json
+  # src is the script
+  src: /js/say.js
+  # https://developer.hitokoto.cn/sentence/
+  hitokoto:
+    enable: true
+    api: https://v1.hitokoto.cn
+    # api: https://v1.hitokoto.cn?c=a&c=b&c=c&c=d&c=k
+
+reward:
+  enable: true
+  icon: icon-hand-coin-line
+  comment: 都看了这么多文章了，不考虑打点钱吗（
+  # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
+  methods:
+    - name: 支付宝
+      path: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/alipay-qrcode.png
+      color: "#00A3EE"
+      icon: icon-alipay-line
+    - name: QQ 支付
+      path: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/qq-qrcode.png
+      color: "#12B7F5"
+      icon: icon-qq-line
+  
+bg_image:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-bright-blur-30px.png # recomend image related to your mode
+  dark: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-dark-blur-10px.png
+
+cursor:
+  enable: true
+  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
+  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
+  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+
+banner:
+  enable: true
+  title: 大蛋糕的博客
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: "white"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+
+pjax:
+  enable: true
+  src: /js/pjax.js
+
+avatar:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
+  # If true, the avatar would be dispalyed in circle.
+  rounded: true
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  mickey_mouse: false
+  status:
+    enable: true
+    emoji: 😜
+    message: 又是搞怪的一天（
+
+pages:
+  - name: 友情链接 | CakeMC
+    url: https://www.cakemc.top/
+    icon: icon-genderless-line
+    color: dodgerblue
+
+social:
+  - name: RSS
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: /atom.xml # config.feed.path
+    icon: icon-rss-line
+    color: orange
+  - name: QQ
+    # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
+    link: http://wpa.qq.com/msgrd?v=3&uin=2577117205&site=qq&menu=yes
+    icon: icon-qq-line
+    color: "#12B7F5"
+  - name: GitHub
+    link: https://github.com/Big-Cake-jpg
+    icon: icon-github-line
+    color: "#6e5494"
+  - name: 网易云音乐
+    link: https://music.163.com/#/user/home?id=3812611237
+    icon: icon-netease-cloud-music-line
+    color: "#C20C0C"
+  - name: 知乎
+    link: https://www.zhihu.com/people/bigcake-19
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: Twitter
+    link: https://twitter.com/BigCake080105
+    icon: icon-twitter-line
+    color: "#1da1f2"
+  - name: 哔哩哔哩
+    link: https://space.bilibili.com/523235567
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
+  # - name: POPI
+  #   link: https://www.popiapp.cn/elpsycn
+  #   icon: icon-questionnaire-line
+  #   color: "#525252"
+  - name: E-Mail
+    link: mailto:bigcake@cakemc.top
+    icon: icon-mail-line
+    color: "#8E71C1"
+
+favicon: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/favicon.png
+
+baidu_push: true
