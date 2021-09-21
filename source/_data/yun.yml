@@ -76,7 +76,7 @@ cursor:
 
 banner:
   enable: true
-  title: 大蛋糕的博客
+  title: 大蛋糕的烘焙坊
   src: /js/ui/banner.js
   border: true
   cloud:
