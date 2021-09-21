@@ -31,8 +31,12 @@ live_time:
   suffix: (●'◡'●)
   start_time: "2021-09-20T22:15:00"
 
+  powered:
+    # Hexo link (Powered by Hexo).
+    enable: true
+
 say:
-  enable: false
+  enable: true
   # api: https://say.elpsy.cn/sentences.json
   # /data/sentences.json
   api: https://cdn.jsdelivr.net/gh/ElpsyCN/say@gh-pages/sentences.json
@@ -149,3 +153,18 @@ social:
 favicon: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/favicon.png
 
 baidu_push: true
+
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+
