@@ -18,7 +18,7 @@ aplayer:
       - name: PICO PARK
         artist: TECOPARK
         url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
-        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/PICOPARK.png
+        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/PICOPARK.jpg
     meting:
       enable: false
       id: 308168565
@@ -177,3 +177,22 @@ mourn:
 local_search:
   enable: true
   src: /js/search/local-search.js
+
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-archive-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
+  custom:
+    title: 下一站 - Hexo
+    path: https://hexo.io
+    icon: icon-arrow-right-line
