@@ -196,3 +196,8 @@ menu:
     title: 下一站 - Hexo
     path: https://hexo.io
     icon: icon-arrow-right-line
+
+google_analytics:
+  enable: true
+  # GA4
+  id: G-WXBXYV2R6B
