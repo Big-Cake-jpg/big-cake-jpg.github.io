@@ -201,3 +201,6 @@ google_analytics:
   enable: true
   # GA4
   id: G-WXBXYV2R6B
+
+footer:
+  since: 2019
