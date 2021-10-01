@@ -106,3 +106,8 @@ deploy:
   repo: https://github.com/Big-Cake-jpg/blog.git
   branch: main
   message: Update Hexo Static Content
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
