@@ -15,6 +15,8 @@ categories:
 
 ## 2021-09-30 | 微软登录
 
+### 10-01 | 初步完成
+
 微软登录基本完成，目前启动器使用了两个启动核心，分别是 [KMCCC](https://github.com/MineStudio/KMCCC) 和 [SquareMinecraftLauncherCore](https://github.com/baibao132/SquareMinecraftLauncherCore)
 
 前者用于离线登录与 Mojang 正版登录，后者用于微软正版登录
@@ -31,3 +33,10 @@ categories:
 
 >如果你想帮我修复这个问题，或者为启动器添砖加瓦，你可以前往 [GitHub 仓库](https://github.com/Big-Cake-jpg/Cake-Launcher)
 
+### 10-01 | 继续优化
+
+经过不懈的询问他人及对比代码，微软登录不会使启动器崩溃了
+
+但是无法获得 access_token 的问题出现了
+
+等待更新......
