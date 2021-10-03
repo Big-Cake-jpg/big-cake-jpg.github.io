@@ -34,7 +34,7 @@ aplayer:
       type: playlist
 
 live_time:
-  nable: true
+  enable: true
   prefix: 本博客已萌萌哒地运行
   suffix: (●'◡'●)
   start_time: "2021-09-20T22:15:00"
