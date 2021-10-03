@@ -33,15 +33,7 @@ aplayer:
       server: netease
       type: playlist
 
-live_time:
-  enable: true
-  prefix: 本博客已萌萌哒地运行
-  suffix: (●'◡'●)
-  start_time: "2021-09-20T22:15:00"
 
-  powered:
-    # Hexo link (Powered by Hexo).
-    enable: true
 
 say:
   enable: true
@@ -223,3 +215,11 @@ footer:
     color: "#0078E7"
     # url: https://sponsors.yunyoujun.cn
     # title: 云游君的赞助者们
+  live_time:
+    enable: true
+    prefix: 本博客已萌萌哒地运行
+    suffix: (●'◡'●)
+    start_time: "2021-09-20T22:15:00"
+  powered:
+    # Hexo link (Powered by Hexo).
+    enable: true
