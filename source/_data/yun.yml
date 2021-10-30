@@ -225,5 +225,5 @@ footer:
     enable: true
 
 google_adsense:
-  enable: false
+  enable: true
   client: ca-pub-3406300839504314
