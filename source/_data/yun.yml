@@ -12,7 +12,7 @@ aplayer:
     volume: 0.7
     mutex: true
     lrcType: 0
-    listFolded: false
+    listFolded: true
     listMaxHeight: 340px
     audio:
       - name: PICO PARK
