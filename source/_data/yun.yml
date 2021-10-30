@@ -232,7 +232,7 @@ comment:
   enable: true
   icon: icon-chat-3-line
   tips:
-    - 要不要和我说些什么？
+    - 可以说几句话嘛^_^如果看不到评论，请刷新几次
   candidates:
     - utterances
 utterances:
