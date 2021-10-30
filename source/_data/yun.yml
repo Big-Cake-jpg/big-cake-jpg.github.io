@@ -227,3 +227,15 @@ footer:
 google_adsense:
   enable: true
   client: ca-pub-3406300839504314
+
+comment:
+  enable: true
+  icon: icon-chat-3-line
+  tips:
+    - 要不要和我说些什么？
+utterances:
+  enable: true
+  repo: Big-Cake-jpg/blog
+  issue-term: pathname
+  # label: comment
+  theme: github-light
