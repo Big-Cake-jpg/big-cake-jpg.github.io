@@ -223,3 +223,7 @@ footer:
   powered:
     # Hexo link (Powered by Hexo).
     enable: true
+
+google_adsense:
+  enable: false
+  client: ca-pub-3406300839504314
