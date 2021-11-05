@@ -238,6 +238,6 @@ comment:
 utterances:
   enable: true
   repo: Big-Cake-jpg/blog
-  issue-term: pathname
+  issue-term: title
   # label: comment
   theme: github-light
