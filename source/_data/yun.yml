@@ -104,10 +104,6 @@ avatar:
     message: 又是搞怪的一天（
 
 pages:
-  - name: 友情链接 | CakeMC
-    url: https://www.cakemc.top/
-    icon: icon-genderless-line
-    color: dodgerblue
 
 social:
   - name: RSS
