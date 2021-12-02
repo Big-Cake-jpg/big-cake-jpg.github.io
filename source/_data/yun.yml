@@ -33,8 +33,6 @@ aplayer:
       server: netease
       type: playlist
 
-
-
 say:
   enable: true
   # api: https://say.elpsy.cn/sentences.json
