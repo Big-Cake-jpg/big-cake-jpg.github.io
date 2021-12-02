@@ -235,5 +235,10 @@ utterances:
   enable: true
   repo: Big-Cake-jpg/blog
   issue-term: title
-  # label: comment
+  label: comment
   theme: github-light
+
+leancloud_visitors:
+  enable: true
+  app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
+  app_key: iK4BuSm3M35dNsuMerVlq3JO
