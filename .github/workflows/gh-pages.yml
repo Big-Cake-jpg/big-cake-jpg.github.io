@@ -21,7 +21,7 @@ jobs:
       
       - name: Install theme
         run: |
-          rm themes/yun
+          rm -r themes/yun
           git clone https://github.com/YunYouJun/hexo-theme-yun.git themes/yun
         
       - run: yarn build
