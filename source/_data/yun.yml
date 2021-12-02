@@ -240,3 +240,8 @@ leancloud_visitors:
   enable: true
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
   app_key: iK4BuSm3M35dNsuMerVlq3JO
+
+wordcount:
+  enable: true
+  count: true
+  time: true
