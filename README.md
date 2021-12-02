@@ -14,3 +14,13 @@ Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
 推送至 GitHub，使用 Actions 生成静态页面并推送 main 分支
 
 同时触发其它地方的构建（Railway，Netlify……）
+
+### Blog Updates
+
+`💡 New post`
+
+`🐛 Typo`
+
+`👆 Update dependencies / themes`
+
+`❤️ Fix CI build`
