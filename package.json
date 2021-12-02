@@ -1,6 +1,7 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "big-cake-jpg.github.io",
+  "desc": "BigCake's blog"
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "hexo generate",
