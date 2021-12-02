@@ -1,6 +1,6 @@
 {
   "name": "big-cake-jpg.github.io",
-  "desc": "BigCake's blog"
+  "desc": "BigCake's blog",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -28,7 +28,6 @@
     "hexo-renderer-marked": "^4.0.0",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
-    "hexo-theme-landscape": "^0.0.3",
-    "highlight.js": "^11.3.1"
+    "hexo-theme-landscape": "^0.0.3"
   }
 }
