@@ -1,30 +1,26 @@
-# This is a basic workflow to help you get started with Actions
-
 name: GitHub Pages
 on:
   push:
-    branches: 
+    branches:
       - source
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
-          
+
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: "14.x"
 
-      - name: Install dependencies
-        run: |
-            git pull https://github.com/YunYouJun/hexo-theme-yun.git
-            yarn install
-      
-      - run: hexo g
-            
+      - name: Install Dependencies
+        run: yarn
+        
+      - run: yarn build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
