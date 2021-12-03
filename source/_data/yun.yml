@@ -231,7 +231,7 @@ comment:
     - utterances
 utterances:
   enable: true
-  repo: Big-Cake-jpg/blog
+  repo: Big-Cake-jpg/big-cake-jpg.github.io
   issue-term: title
   label: comment
   theme: github-light
