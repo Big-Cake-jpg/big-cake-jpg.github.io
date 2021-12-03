@@ -5,7 +5,7 @@
 Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
 
 - 主站：[bigcake.cakemc.top](https://bigcake.cakemc.top) | [big-cake-jpg.github.io](https://big-cake-jpg.github.io)
-- 备用：暂无
+- 备用：[bigcake-blog.netlify.app](https://bigcake-blog.netlify.app)
 
 ## Usage
 
