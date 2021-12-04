@@ -217,6 +217,13 @@ footer:
   powered:
     # Hexo link (Powered by Hexo).
     enable: true
+  support:
+    enable: true
+    title: 又拍云
+    link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+    logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
+    prefix: 本网站由
+    suffix: 提供 CDN 加速与云存储服务
 
 google_adsense:
   enable: true
@@ -245,12 +252,4 @@ wordcount:
   enable: true
   count: true
   time: true
-
-footer:
-  support:
-    enable: true
-    title: 又拍云
-    link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
-    prefix: 本网站由
-    suffix: 提供 CDN 加速与云存储服务
+  
