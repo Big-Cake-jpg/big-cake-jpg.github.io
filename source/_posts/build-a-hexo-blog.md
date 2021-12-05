@@ -207,7 +207,7 @@ Hexo 默认提供的主题是 [hexo-theme-landscape](https://github.com/hexojs/h
 
 当然，你也可以到 [Themes｜Hexo](https://hexo.io/themes/) 寻找其它主题使用，比如 hexo-theme-next
 
-#### 下载主题
+### 下载主题
 
 进入终端，确保路径在你之前初始化的博客文件夹下（下面简称 Hexo 目录），然后执行如下命令
 
@@ -221,7 +221,7 @@ git clone https://github.com/YunYouJun/hexo-theme-yun.git themes/yun
 > 
 > `themes/yun`：将主题复制到 `themes` 文件夹下的 `yun` 子文件夹（没有就会自动创建）
 
-#### 编辑 Hexo 配置
+### 编辑 Hexo 配置
 
 > 右键 Hexo 文件夹，选择 “使用 VS Code 打开”。此后操作都默认你处在该工作目录中
 
@@ -245,7 +245,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus
 
 完成上述步骤以后，再次使用 `hexo server` 启动测试服务器，即可看到一个全新的页面
 
-#### 自定义主题配置
+### 自定义主题配置
 
 第一次启动使用的是主题的默认配置，不一定符合你的心意
 
@@ -371,7 +371,7 @@ hexo net post xxx
 
 > [Markdown 标记语言语法等](https://younghz.github.io/markdown/)
 
-##### 为文章添加标签/分类
+#### 为文章添加标签/分类
 
 你可能需要先了解 Hexo 的 Front-matter
 
@@ -391,7 +391,7 @@ categories:
 你的文章内容
 ```
 
-##### 页面
+#### 页面
 
 自定义页面在 Hexo 中是可以使用的，譬如直接在 `source` 下新建 HTML 进行编写
 
