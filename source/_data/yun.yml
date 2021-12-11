@@ -171,6 +171,7 @@ mourn:
   days:
     - "4-4"
     - "9-18"
+    - "12-13"
 
 local_search:
   enable: true
