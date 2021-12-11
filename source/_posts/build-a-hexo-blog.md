@@ -296,7 +296,7 @@ git chexkout -b hexo
 安装 `hexo-deployer-git` 插件
 
 ```
-npm install hexo-deployer-git`
+npm install hexo-deployer-git
 ```
 
 在 Hexo 配置文件 `_config.yml` （**不是主题的**）中配置
