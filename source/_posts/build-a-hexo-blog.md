@@ -288,7 +288,7 @@ git init #只需执行一次即可
 部署之前，最好建立一个备份 Hexo 工作目录的分支
 
 ```
-git chexkout -b hexo
+git checkout -b hexo
 ```
 
 完成后，所有的工作就都将在 hexo 分支进行
