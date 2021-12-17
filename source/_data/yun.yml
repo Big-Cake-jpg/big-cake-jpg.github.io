@@ -243,7 +243,7 @@ comment:
     - utterances
     - waline
 utterances:
-  enable: false
+  enable: true
   repo: Big-Cake-jpg/big-cake-jpg.github.io
   issue-term: title
   label: comment
