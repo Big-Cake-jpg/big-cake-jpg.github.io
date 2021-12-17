@@ -369,7 +369,7 @@ VS Code 中有比较方便的操作，它会在右侧栏中的“源代码管理
 hexo net post xxx
 ```
 
-> [Markdown 标记语言语法等](https://younghz.github.io/markdown/)
+> [Markdown 标记语言语法等](https://younghz.github.io/Markdown/)
 
 ### 为文章添加标签/分类
 
