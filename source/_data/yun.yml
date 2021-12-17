@@ -240,10 +240,9 @@ comment:
   tips:
     - 可以说几句话嘛^_^如果看不到评论，请刷新几次
   candidates:
-    - utterances
     - waline
 utterances:
-  enable: true
+  enable: false
   repo: Big-Cake-jpg/big-cake-jpg.github.io
   issue-term: title
   label: comment
@@ -257,7 +256,7 @@ waline:
     - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
     - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/
   locale:
-    placeholder: 求求你了，写点评论吧（
+    placeholder: 求求你了，写点评论吧（请先登录）
     
 leancloud_visitors:
   enable: true
