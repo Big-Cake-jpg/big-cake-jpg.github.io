@@ -268,3 +268,14 @@ wordcount:
   count: true
   time: true
   
+colors:
+  primary: "#F2BC57"
+  bg: "#F2F2F2"
+  
+fireworks:
+  enable: true
+  colors:
+    - "115, 75, 52"
+    - "242, 188, 87"
+    - "242, 205, 94"
+    - "242, 242, 242"
