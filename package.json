@@ -13,7 +13,7 @@
     "version": "5.4.0"
   },
   "dependencies": {
-    "hexo": "^5.0.0",
+    "hexo": "^6.0.0",
     "hexo-wordcount": "^6.0.1",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
