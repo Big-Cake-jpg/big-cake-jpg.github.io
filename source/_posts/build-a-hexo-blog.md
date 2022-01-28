@@ -71,7 +71,7 @@ categories:
 国内使用 npm 会很慢，你可以考虑切换为 `taobao` 镜像源
 
 ```
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com
 ```
 
 你可以在安装完 Node.js 后安装 [yarn](https://www.yarnpkg.com/zh-Hans) 。Facebook 出品，比 npm 更快速的包管理器
@@ -94,7 +94,7 @@ npm install -g yarn
 
 （~~微软大法好~~）
 
-先安装 [VS Code](code.visualstudio.com)，这样可以在安装 Git 时设置 VS Code 为默认编辑器
+先安装 [VS Code](https://code.visualstudio.com)，这样可以在安装 Git 时设置 VS Code 为默认编辑器
 
 Windows 10 / 11 用户可在微软商店（新版）下载
 
@@ -221,6 +221,8 @@ git clone https://github.com/YunYouJun/hexo-theme-yun.git themes/yun
 > 
 > `themes/yun`：将主题复制到 `themes` 文件夹下的 `yun` 子文件夹（没有就会自动创建）
 
+> 注意：hexo-theme-yun 从 v1.8 开始使用 npm 包分发，你需要按照文档的步骤进行配置迁移
+
 ### 编辑 Hexo 配置
 
 > 右键 Hexo 文件夹，选择 “使用 VS Code 打开”。此后操作都默认你处在该工作目录中
@@ -257,7 +259,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus
 
 一般来说，主题的使用文档将会给出这种情况的解决方案
 
-如 `hexo-theme-yun` 会让用户在博客根目录新建 `source/_data/yun.yml`
+如 `hexo-theme-yun` 会让用户在博客根目录新建 `_config.yun.yml`
 
 更多配置选项请参考主题文档
 
@@ -415,7 +417,7 @@ hexo new page xxx
 
 将域名用 CNAME 解析到 `你的名字.github.io`（当然 A 记录直接填 GitHub Pages 的 IP 也可以）
 
-> [GitHub 官方文档，有中文](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
+> [GitHub 官方文档，有中文](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site)
 
 在 `source` 文件夹下新建 `CNAME` 文件（没有后缀）并填入你的域名
 
