@@ -1,0 +1,281 @@
+aplayer:
+  global: true
+  meting: false
+  # https://github.com/metowolf/MetingJS/tree/v1.2#option
+  widget:
+    enable: true
+    autoplay: false
+    # theme: "#2980b9"
+    loop: all
+    order: list
+    preload: auto
+    volume: 0.7
+    mutex: true
+    lrcType: 0
+    listFolded: true
+    listMaxHeight: 340px
+    audio:
+      - name: PICO PARK
+        artist: TECOPARK
+        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
+        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/PICOPARK.jpg
+      - name: ふわふわ♪
+        artist: 牧野由依
+        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/ふわふわ♪.mp3
+        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/ふわふわ♪.jpg
+      - name: 君だったら
+        artist: HAPPY BIRTHDAY
+        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/君だったら.mp3
+        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/君だったら.jpg
+      - name: 可愛くなりたい
+        artist: 鎖那
+        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/可愛くなりたい.mp3
+        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/可愛くなりたい.jpg
+    meting:
+      enable: false
+      id: 308168565
+      server: netease
+      type: playlist
+
+say:
+  enable: true
+  # api: https://say.elpsy.cn/sentences.json
+  # /data/sentences.json
+  api: https://cdn.jsdelivr.net/gh/ElpsyCN/say@gh-pages/sentences.json
+  # src is the script
+  src: /js/say.js
+  # https://developer.hitokoto.cn/sentence/
+  hitokoto:
+    enable: true
+    api: https://v1.hitokoto.cn
+    # api: https://v1.hitokoto.cn?c=a&c=b&c=c&c=d&c=k
+
+reward:
+  enable: true
+  icon: icon-hand-coin-line
+  comment: 都看了这么多文章了，不考虑打点钱吗（
+  # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
+  methods:
+    - name: 支付宝
+      path: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/alipay-qrcode.png
+      color: "#00A3EE"
+      icon: icon-alipay-line
+    - name: QQ 支付
+      path: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/qq-qrcode.png
+      color: "#12B7F5"
+      icon: icon-qq-line
+  
+bg_image:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-bright-blur-30px.png # recomend image related to your mode
+  dark: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-dark-blur-10px.png
+
+cursor:
+  enable: true
+  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
+  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
+  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+
+banner:
+  enable: true
+  title: 大蛋糕的烘焙坊
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: "white"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+
+pjax:
+  enable: true
+  src: /js/pjax.js
+
+avatar:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
+  # If true, the avatar would be dispalyed in circle.
+  rounded: true
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  mickey_mouse: false
+  status:
+    enable: true
+    emoji: 😜
+    message: 又是搞怪的一天（
+
+pages:
+
+social:
+  - name: RSS
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: /atom.xml # config.feed.path
+    icon: icon-rss-line
+    color: orange
+  - name: QQ
+    # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
+    link: http://wpa.qq.com/msgrd?v=3&uin=2577117205&site=qq&menu=yes
+    icon: icon-qq-line
+    color: "#12B7F5"
+  - name: GitHub
+    link: https://github.com/Big-Cake-jpg
+    icon: icon-github-line
+    color: "#6e5494"
+  - name: 网易云音乐
+    link: https://music.163.com/#/user/home?id=3812611237
+    icon: icon-netease-cloud-music-line
+    color: "#C20C0C"
+  - name: 知乎
+    link: https://www.zhihu.com/people/bigcake-19
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: Twitter
+    link: https://twitter.com/BigCake080105
+    icon: icon-twitter-line
+    color: "#1da1f2"
+  - name: 哔哩哔哩
+    link: https://space.bilibili.com/523235567
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
+  # - name: POPI
+  #   link: https://www.popiapp.cn/elpsycn
+  #   icon: icon-questionnaire-line
+  #   color: "#525252"
+  - name: E-Mail
+    link: mailto:bigcake@cakemc.top
+    icon: icon-mail-line
+    color: "#8E71C1"
+
+favicon: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
+
+baidu_push: true
+
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+
+mourn:
+  enable: true
+  days:
+    - "4-4"
+    - "9-18"
+    - "12-13"
+
+local_search:
+  enable: true
+  src: /js/search/local-search.js
+
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-archive-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
+  custom:
+    title: 下一站
+    path: https://skin.cakemc.top
+    icon: icon-arrow-right-line
+
+google_analytics:
+  enable: true
+  # GA4
+  id: G-WXBXYV2R6B
+
+footer:
+  since: 2021
+
+  # Icon between year and copyright info.
+  icon:
+    # `heart` is recommended with animation in red (#ff0000).
+    name: icon-cloud-line
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#0078E7"
+    # url: https://sponsors.yunyoujun.cn
+    # title: 云游君的赞助者们
+  live_time:
+    enable: true
+    prefix: 本博客已萌萌哒地运行
+    suffix: (●'◡'●)
+    start_time: "2021-09-20T22:15:00"
+  powered:
+    # Hexo link (Powered by Hexo).
+    enable: true
+  support:
+    enable: true
+    title: 又拍云
+    link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+    logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
+    prefix: 本网站由
+    suffix: 提供 CDN 加速与云存储服务
+
+google_adsense:
+  enable: true
+  client: ca-pub-3406300839504314
+
+comment:
+  enable: true
+  icon: icon-chat-3-line
+  tips:
+    - 可以说几句话嘛^_^如果看不到评论，请刷新几次
+  candidates:
+    - waline
+utterances:
+  enable: false
+  repo: Big-Cake-jpg/big-cake-jpg.github.io
+  issue-term: title
+  label: comment
+  theme: github-light
+waline:
+  enable: true
+  serverURL: https://waline.bigcake.cakemc.top
+  comment: true
+  emoji:
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/
+  locale:
+    placeholder: 求求你了，写点评论吧（请先登录）
+    
+leancloud_visitors:
+  enable: true
+  app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
+  app_key: iK4BuSm3M35dNsuMerVlq3JO
+
+wordcount:
+  enable: true
+  count: true
+  time: true
+  
+colors:
+  primary: "#F2BC57"
+  bg: "#F2F2F2"
+  
+fireworks:
+  enable: true
+  colors:
+    - "115, 75, 52"
+    - "242, 188, 87"
+    - "242, 205, 94"
+    - "242, 242, 242"
