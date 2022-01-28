@@ -18,11 +18,6 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
-      
-      - name: Install theme
-        run: |
-          rm -r themes/yun
-          git clone https://github.com/YunYouJun/hexo-theme-yun.git themes/yun
         
       - run: yarn build
 
