@@ -22,7 +22,7 @@ jobs:
       - name: algolia
         env:
           HEXO_ALGOLIA_INDEXING_KEY: ${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
-        run: npm run algolia
+        run: yarn algolia
         
       - run: yarn build
 
