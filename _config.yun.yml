@@ -174,7 +174,7 @@ mourn:
     - "12-13"
 
 local_search:
-  enable: true
+  enable: false
   src: /js/search/local-search.js
 
 menu:
@@ -279,3 +279,6 @@ fireworks:
     - "242, 188, 87"
     - "242, 205, 94"
     - "242, 242, 242"
+
+algolia_search:
+  enable: true

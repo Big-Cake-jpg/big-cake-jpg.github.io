@@ -111,3 +111,8 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+algolia:
+  applicationID: '8WHCI2MGOD'
+  apiKey: '1c51edcec3f0f6e9b2c0e1d3d7d76502'
+  indexName: 'BigCake Blog'

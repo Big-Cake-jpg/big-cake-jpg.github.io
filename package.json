@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "algolia": "hexo clean && hexo algolia",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
