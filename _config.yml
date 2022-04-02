@@ -117,3 +117,4 @@ algolia:
   apiKey: "1c51edcec3f0f6e9b2c0e1d3d7d76502"
   indexName: "BigCake Blog"
   chunkSize: 5000
+  
