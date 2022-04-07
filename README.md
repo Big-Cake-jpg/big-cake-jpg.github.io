@@ -21,7 +21,7 @@ Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
 
 `🐛 Typo`
 
-`👆 Upgrade dependencies / themes`
+`⬆️ Upgrade dependencies / themes`
 
 `❤️ Fix CI build`
 
