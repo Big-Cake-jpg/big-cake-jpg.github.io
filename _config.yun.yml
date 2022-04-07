@@ -106,6 +106,10 @@ avatar:
     message: 又是搞怪的一天（
 
 pages:
+  - name: 我的小伙伴们
+    url: /links/
+    icon: icon-genderless-line
+    color: dodgerblue
 
 social:
   - name: RSS
