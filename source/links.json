@@ -10,6 +10,7 @@
         "url": "https://xiaojin233.cn",
         "avatar": "https://xiaojin233.cn/img/avator.png",
         "name": "Xiao_Jin",
+        "color": "#2e2e2e",
         "blog": "Xiao_Jin's Home",
         "desc": "Code Changes Life"
     },
@@ -17,6 +18,7 @@
         "url": "https://blog.restent.win/",
         "avatar": "https://cdn.jsdelivr.net/gh/Restent/Restent/avatar.jpg",
         "name": "Restent Ou",
+        "color": "#03a9f4",
         "blog": "Restent's Blog",
         "desc": "遇见你是我一生最幸运的事"
     },
@@ -24,6 +26,7 @@
         "url": "https://lfhsheng.top",
         "avatar": "https://blog.lfhsheng.top/images/lfhsheng.jpg",
         "name": "泠风寒声",
+        "color": "#ffa500",
         "blog": "泠风寒声的小窝",
         "desc": "沉浸在Touch Fish的海洋中无法自拔"
     }
