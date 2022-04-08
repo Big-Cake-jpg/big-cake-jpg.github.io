@@ -17,9 +17,7 @@ categories:
 
 ### 10-01 | 初步完成
 
-微软登录基本完成，目前启动器使用了两个启动核心，分别是 [KMCCC](https://github.com/MineStudio/KMCCC) 和 [SquareMinecraftLauncherCore](https://github.com/baibao132/SquareMinecraftLauncherCore)
-
-前者用于离线登录与 Mojang 正版登录，后者用于微软正版登录
+微软登录基本完成，目前启动器使用的启动核心是  [SquareMinecraftLauncherCore](https://github.com/baibao132/SquareMinecraftLauncherCore)，用于离线登录与 Mojang 正版登录和微软正版登录
 
 >感谢 B 站 UP 主 [小叶君](https://space.bilibili.com/495713706) 的教程与微软登录dll
 
