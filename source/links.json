@@ -24,7 +24,7 @@
     },
     {
         "url": "https://lfhsheng.com",
-        "avatar": "https://blog.lfhsheng.top/images/lfhsheng.jpg",
+        "avatar": "https://api.lfhsheng.com/avatar",
         "name": "泠风寒声",
         "color": "#ffa500",
         "blog": "泠风寒声的小窝",
