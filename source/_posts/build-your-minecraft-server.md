@@ -64,6 +64,8 @@ Minecraft 服务器都有一个极其核心的部分：服务端。
 
 现在打开 `eula.txt`，我们需要在这个文件中同意 Mojang 的 EULA 才能进行下一步配置。
 
+> 建议您大致了解 Mojang EULA 协议
+
 将 `false` 改为 `true`，保存文件。
 
 ![屏幕截图 2022-04-10 084631.png](https://pic.dogimg.com/2022/04/10/625229032851c.png)
