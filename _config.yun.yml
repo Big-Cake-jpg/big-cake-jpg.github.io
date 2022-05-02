@@ -67,14 +67,14 @@ reward:
   
 bg_image:
   enable: true
-  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-bright-blur-30px.png # recomend image related to your mode
-  dark: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-dark-blur-10px.png
+  url: https://pic.dogimg.com/2022/05/02/626f47db3cfe2.png # recomend image related to your mode
+  dark: https://pic.dogimg.com/2022/05/02/626f4c1f55cb2.png
 
 cursor:
   enable: true
-  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
-  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
-  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+  default: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog@main/cursors/Netherite%20Sword.cur
+  pointer: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog@main/cursors/Netherite%20Pickaxe.cur
+  text: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog@main/cursors/Beamstick.cur
 
 banner:
   enable: true
@@ -94,7 +94,7 @@ pjax:
 
 avatar:
   enable: true
-  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
+  url: https://pic.dogimg.com/2022/05/02/626f4c3dde1af.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -156,7 +156,7 @@ social:
     icon: icon-telegram-line
     color: "#0088CC"
 
-favicon: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
+favicon: https://pic.dogimg.com/2022/05/02/626f4c3dde1af.jpg
 
 baidu_push: true
 

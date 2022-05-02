@@ -122,4 +122,4 @@ categories:
 
 Java / JVM 的问题，可以尝试重新安装一次 Java 或者多给你的 Minecraft 分配点内存。毕竟：
 
-![Java eats memories](https://i.mcmod.cn/class/cover/20201129/1606614612_21294_sYEJ.jpg)
+![Java eats memories](https://pic.dogimg.com/2022/05/02/626f50ce7ac63.jpg)
