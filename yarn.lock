@@ -1591,10 +1591,10 @@ hexo-theme-landscape@^0.0.3:
   resolved "https://registry.npmmirror.com/hexo-theme-landscape/-/hexo-theme-landscape-0.0.3.tgz#87d1f4d613da9be5245dad0d4b80479eab70d386"
   integrity sha512-b0Di+TUVs4ESrNX4ULEh9uQmADpO6kr10rIJ2OGZM8suNQNFKdxn+vJUjnLfKkCPJAfVmS7/S83KCNYe4tpoNw==
 
-hexo-theme-yun@^1.8.11:
-  version "1.8.11"
-  resolved "https://registry.npmmirror.com/hexo-theme-yun/-/hexo-theme-yun-1.8.11.tgz#50680050b8637792f289d4c88e0f677c0332037d"
-  integrity sha512-3JAP8ip81N3wP8vu29WC6cFZxg775gSVWuhmAvLLCJC4xBvibsTCGhAJvDsL9NgRgculoeHTeEO+vFukVuBwxw==
+hexo-theme-yun@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/hexo-theme-yun/-/hexo-theme-yun-1.9.1.tgz#6c887906321391ef7ef7e31054fad5b747c42790"
+  integrity sha512-F12isLIAc1sMINzmaUt6vdmiTjm2qc/aj6ANAFZlkV/jbQ2UdpRN6GsDby8LF3xiWKUDnmZZSG3ZeZZ9r1bm4A==
 
 hexo-util@^0.6.3:
   version "0.6.3"
