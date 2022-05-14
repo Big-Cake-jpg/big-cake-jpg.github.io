@@ -1608,10 +1608,10 @@ hexo-util@^0.6.3:
     html-entities "^1.2.0"
     striptags "^2.1.1"
 
-hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.5.0, hexo-util@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.npmmirror.com/hexo-util/-/hexo-util-2.6.0.tgz#3265aa1b1983e48345a2af59c6785ac061886075"
-  integrity sha512-sLG45foxXMnMgCo3FpP4Sicj5nLD6ezO46+DKP01BWj1CfNq2pYoUdJacfeVbKc+oFtitRcNIGsPNNt3pVbzdg==
+hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.5.0, hexo-util@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/hexo-util/-/hexo-util-2.6.1.tgz#19b79a1ec751a735ffe34766b65d8e2039c00519"
+  integrity sha512-xj1jUrId2qTe8L/tRizWWRl+j7X1Zzh5rCVtffboOU0p/EfbPomxIxDvntTHT3fcqgvLHsncqJF9V5j7+buOqA==
   dependencies:
     bluebird "^3.5.2"
     camel-case "^4.0.0"
@@ -1660,10 +1660,10 @@ hexo@^3.0.0:
     titlecase "^1.1.2"
     warehouse "^2.2.0"
 
-hexo@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.npmmirror.com/hexo/-/hexo-6.1.0.tgz#627d44997172235f22de13e05786281753fa2fe6"
-  integrity sha512-TeV2cN61CD2C1GKczJRR3tdZhR3JUQi8wtS4eIgkDOeDYWTmovPoSCcc8jvh42D3fehOPp6E81fTeyjh39QWtA==
+hexo@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/hexo/-/hexo-6.2.0.tgz#5a62a4c731bf89431d2004326b07af0ec0490242"
+  integrity sha512-HOpt3vUOz/T0rWTDb/CtWuBJwYARPwbpvGwsaz0RPu/l5I6AmKE+UA0lJZf14iPS3JIt/HiOcTZ3Qz22A+PE8w==
   dependencies:
     abbrev "^1.1.1"
     archy "^1.0.0"
@@ -1673,7 +1673,7 @@ hexo@^6.1.0:
     hexo-fs "^3.1.0"
     hexo-i18n "^1.0.0"
     hexo-log "^3.0.0"
-    hexo-util "^2.6.0"
+    hexo-util "^2.6.1"
     js-yaml "^4.1.0"
     js-yaml-js-types "^1.0.0"
     micromatch "^4.0.4"
@@ -1688,7 +1688,7 @@ hexo@^6.1.0:
     text-table "^0.2.0"
     tildify "^2.0.0"
     titlecase "^1.1.3"
-    warehouse "^4.0.0"
+    warehouse "^4.0.1"
 
 highlight.js@^11.0.1:
   version "11.5.0"
@@ -1917,10 +1917,10 @@ is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   dependencies:
     isobject "^3.0.1"
 
-is-plain-object@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.npmmirror.com/is-plain-object/-/is-plain-object-3.0.1.tgz#662d92d24c0aa4302407b0d45d21f2251c85f85b"
-  integrity sha512-Xnpx182SBMrr/aBik8y+GuR4U1L9FqMSojwDQwPMmxyC6bvEqly9UBCxhauBF5vNh2gwWJNX6oDV7O+OM4z34g==
+is-plain-object@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.0.0.tgz#4427f50ab3429e9025ea7d52e9043a9ef4159344"
+  integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
 
 is-potential-custom-element-name@^1.0.1:
   version "1.0.1"
@@ -3484,16 +3484,17 @@ warehouse@^2.2.0:
     is-plain-object "^2.0.1"
     lodash "^4.2.1"
 
-warehouse@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmmirror.com/warehouse/-/warehouse-4.0.0.tgz#45832bc43e1fd323bd9d3c86b2761430ba0d1e7b"
-  integrity sha512-9i6/JiHzjnyene5Pvvl2D2Pd18no129YGy0C0P7x18iTz/SeO9nOBioR64XoCy5xKwBKQtl3MU361qpr0V9uXw==
+warehouse@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/warehouse/-/warehouse-4.0.1.tgz#4d552b2635a2412ee0970c97e3bf12986b041e61"
+  integrity sha512-rFJYdHlk2C+pKAoV4Nlptb+b7nmBN5QOg8VkQVNMbK7jf/lDctaUF9nNehZqVoarDWS74nMpTWVDhWecWwoqQw==
   dependencies:
     JSONStream "^1.0.7"
     bluebird "^3.2.2"
     cuid "^2.1.4"
     graceful-fs "^4.1.3"
-    is-plain-object "^3.0.0"
+    hexo-log "^3.0.0"
+    is-plain-object "^5.0.0"
     rfdc "^1.1.4"
 
 webidl-conversions@^7.0.0:
