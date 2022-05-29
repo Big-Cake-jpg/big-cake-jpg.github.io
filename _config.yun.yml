@@ -67,8 +67,8 @@ reward:
   
 bg_image:
   enable: true
-  url: https://pic.dogimg.com/2022/05/02/626f47db3cfe2.png # recomend image related to your mode
-  dark: https://pic.dogimg.com/2022/05/02/626f4c1f55cb2.png
+  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-bright-blur-30px.png # recomend image related to your mode
+  dark: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-dark-blur-10px.png
 
 cursor:
   enable: true
@@ -94,7 +94,7 @@ pjax:
 
 avatar:
   enable: true
-  url: https://pic.dogimg.com/2022/05/02/626f4c3dde1af.jpg
+  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -156,7 +156,7 @@ social:
     icon: icon-telegram-line
     color: "#0088CC"
 
-favicon: https://pic.dogimg.com/2022/05/02/626f4c3dde1af.jpg
+favicon: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
 
 baidu_push: true
 
