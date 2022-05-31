@@ -290,3 +290,15 @@ fireworks:
 
 algolia_search:
   enable: true
+
+vendors:
+  host: https://fastly.jsdelivr.net/npm/
+  waline:
+    js: https://npm.elemecdn.com/@waline/client@v2/dist/waline.js
+    css: https://npm.elemecdn.com/@waline/client@v2/dist/waline.css
+  aplayer:
+    js: https://npm.elemecdn.com/aplayer/dist/APlayer.min.js
+    css: https://npm.elemecdn.com/aplayer/dist/APlayer.min.css
+    meting: https://npm.elemecdn.com/meting/dist/Meting.min.js
+  pjax:
+    js: https://npm.elemecdn.com/pjax/pjax.min.js
