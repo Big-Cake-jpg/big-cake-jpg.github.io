@@ -302,3 +302,5 @@ vendors:
     meting: https://npm.elemecdn.com/meting/dist/Meting.min.js
   pjax:
     js: https://npm.elemecdn.com/pjax/pjax.min.js
+
+medium_zoom: true
