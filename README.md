@@ -9,6 +9,13 @@ Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
 
 ## Usage
 
+```
+git clone https://github.com/Big-Cake-jpg/big-cake-jpg.github.io.git
+yarn # npm install
+hexo new post
+hexo generate # hexo g
+```
+
 ### 日常发布
 
 推送至 GitHub，使用 Actions 生成静态页面并推送 main 分支
@@ -26,3 +33,9 @@ Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
 `❤️ Fix CI build`
 
 `📃 Update config`
+
+## 注释
+
+在学校内进行的提交： `( in-school commit )`
+
+日常进行的提交不进行注释
