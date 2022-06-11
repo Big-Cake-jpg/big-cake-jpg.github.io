@@ -215,12 +215,8 @@ Hexo 默认提供的主题是 [hexo-theme-landscape](https://github.com/hexojs/h
 >「你知道吗」可以在 VS Code 里直接打开终端
 
 ```
-git clone https://github.com/YunYouJun/hexo-theme-yun.git themes/yun
+yarn add hexo-theme-yun # npm install -g hexo-theme-yun
 ```
-
-> `git clone`：使用此前安装的 `Git` 克隆，后边的链接是主题的 Git 仓库地址
-> 
-> `themes/yun`：将主题复制到 `themes` 文件夹下的 `yun` 子文件夹（没有就会自动创建）
 
 > 注意：hexo-theme-yun 从 v1.8 开始使用 npm 包分发，你需要按照文档的步骤进行配置迁移
 
@@ -356,7 +352,7 @@ VS Code 中有比较方便的操作，它会在右侧栏中的“源代码管理
 
 你可以参考 Hexo 官方文档，也可以直接照抄我的 [gh-pages.yml](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/.github/workflows/gh-pages.yml)
 
-> 记得把 `branch` 的值改成自己存放 Hexo 工作区的分支名，`Install theme` 中的链接替换成自己的主题
+> 记得把 `branch` 的值改成自己存放 Hexo 工作区的分支名，删掉 `algolia` 字段
 
 当然，你还可以使用 Netlify、Vercel 等第三方服务
 
