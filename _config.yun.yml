@@ -260,9 +260,9 @@ waline:
   serverURL: https://waline.bigcake.cakemc.top
   comment: true
   emoji:
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/
+    - https://npm.elemecdn.com/@waline/emojis@latest/bilibili/
+    - https://npm.elemecdn.com/@waline/emojis@latest/weibo/
+    - https://npm.elemecdn.com/@waline/emojis@latest/qq/
   locale:
     placeholder: 求求你了，写点评论吧（请先登录）
     
