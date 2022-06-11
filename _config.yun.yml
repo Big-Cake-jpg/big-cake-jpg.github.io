@@ -18,19 +18,19 @@ aplayer:
       - name: PICO PARK
         artist: TECOPARK
         url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
-        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/PICOPARK.jpg
+        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
       - name: ふわふわ♪
         artist: 牧野由依
         url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/ふわふわ♪.mp3
-        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/ふわふわ♪.jpg
+        cover: https://s2.loli.net/2022/06/12/bpgOT9Hr3sWcGv5.jpg
       - name: 君だったら
         artist: HAPPY BIRTHDAY
         url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/君だったら.mp3
-        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/君だったら.jpg
+        cover: https://s2.loli.net/2022/06/12/eQX8Y9rHbmjxstu.jpg
       - name: 可愛くなりたい
         artist: 鎖那
         url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/可愛くなりたい.mp3
-        cover: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/可愛くなりたい.jpg
+        cover: https://s2.loli.net/2022/06/12/yak6vnq9GQAViRB.jpg
     meting:
       enable: false
       id: 308168565
@@ -57,18 +57,18 @@ reward:
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
-      path: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/alipay-qrcode.png
+      path: https://s2.loli.net/2022/06/12/uGYRtVW4378kKp1.png
       color: "#00A3EE"
       icon: icon-alipay-line
     - name: QQ 支付
-      path: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/qq-qrcode.png
+      path: https://s2.loli.net/2022/06/12/a6A5utXIlcVWCMv.png
       color: "#12B7F5"
       icon: icon-qq-line
   
 bg_image:
   enable: true
-  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-bright-blur-30px.png # recomend image related to your mode
-  dark: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/bg-dark-blur-10px.png
+  url: https://s2.loli.net/2022/06/12/LDEoubKysTdR7Bw.jpg # recomend image related to your mode
+  dark: https://s2.loli.net/2022/06/12/i2Vd6T1QUtb9cfS.png
 
 cursor:
   enable: true
@@ -94,7 +94,7 @@ pjax:
 
 avatar:
   enable: true
-  url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
+  url: https://s2.loli.net/2022/06/12/RpGChkMjcwIOAaJ.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -156,7 +156,7 @@ social:
     icon: icon-telegram-line
     color: "#0088CC"
 
-favicon: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/tx.jpg
+favicon: https://s2.loli.net/2022/06/12/RpGChkMjcwIOAaJ.jpg
 
 baidu_push: true
 
