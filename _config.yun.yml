@@ -52,18 +52,18 @@ say:
 
 reward:
   enable: true
-  icon: icon-hand-coin-line
+  icon: ri:hand-coin-line
   comment: 都看了这么多文章了，不考虑打点钱吗（
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
       path: https://s2.loli.net/2022/06/12/uGYRtVW4378kKp1.png
       color: "#00A3EE"
-      icon: icon-alipay-line
+      icon: ri:alipay-line
     - name: QQ 支付
       path: https://s2.loli.net/2022/06/12/a6A5utXIlcVWCMv.png
       color: "#12B7F5"
-      icon: icon-qq-line
+      icon: ri:qq-line
   
 bg_image:
   enable: true
@@ -86,7 +86,7 @@ banner:
     color: "white"
   go_down:
     enable: true
-    icon: icon-arrow-down-s-line
+    icon: ri:arrow-down-s-line
 
 pjax:
   enable: true
@@ -108,7 +108,7 @@ avatar:
 pages:
   - name: 我的小伙伴们
     url: /links/
-    icon: icon-genderless-line
+    icon: ri:genderless-line
     color: dodgerblue
 
 social:
@@ -116,44 +116,44 @@ social:
     # set rss in your root config
     # https://github.com/hexojs/hexo-generator-feed
     link: /atom.xml # config.feed.path
-    icon: icon-rss-line
+    icon: ri:rss-line
     color: orange
   - name: QQ
     # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
     link: http://wpa.qq.com/msgrd?v=3&uin=2577117205&site=qq&menu=yes
-    icon: icon-qq-line
+    icon: ri:qq-line
     color: "#12B7F5"
   - name: GitHub
     link: https://github.com/Big-Cake-jpg
-    icon: icon-github-line
+    icon: ri:github-line
     color: "#6e5494"
   - name: 网易云音乐
     link: https://music.163.com/#/user/home?id=3812611237
-    icon: icon-netease-cloud-music-line
+    icon: ri:netease-cloud-music-line
     color: "#C20C0C"
   - name: 知乎
     link: https://www.zhihu.com/people/bigcake-19
-    icon: icon-zhihu-line
+    icon: ri:zhihu-line
     color: "#0084FF"
   - name: Twitter
     link: https://twitter.com/BigCake080105
-    icon: icon-twitter-line
+    icon: ri:twitter-line
     color: "#1da1f2"
   - name: 哔哩哔哩
     link: https://space.bilibili.com/523235567
-    icon: icon-bilibili-line
+    icon: ri:bilibili-line
     color: "#FF8EB3"
   # - name: POPI
   #   link: https://www.popiapp.cn/elpsycn
-  #   icon: icon-questionnaire-line
+  #   icon: ri:questionnaire-line
   #   color: "#525252"
   - name: E-Mail
     link: mailto:bigcake@cakemc.top
-    icon: icon-mail-line
+    icon: ri:mail-line
     color: "#8E71C1"
   - name: Telegram
     link: https://t.me/BigCakeBlog
-    icon: icon-telegram-line
+    icon: ri:telegram-line
     color: "#0088CC"
 
 favicon: https://s2.loli.net/2022/06/12/RpGChkMjcwIOAaJ.jpg
@@ -188,21 +188,21 @@ local_search:
 menu:
   home:
     path: /
-    icon: icon-home-4-line
+    icon: ri:home-4-line
   list:
     - type: archives
       path: /archives/
-      icon: icon-archive-line
+      icon: ri:archive-line
     - type: categories
       path: /categories/
-      icon: icon-folder-2-line
+      icon: ri:folder-2-line
     - type: tags
       path: /tags/
-      icon: icon-price-tag-3-line
+      icon: ri:price-tag-3-line
   custom:
     title: 下一站
     path: https://skin.cakemc.top
-    icon: icon-arrow-right-line
+    icon: ri:arrow-right-line
 
 google_analytics:
   enable: true
@@ -215,7 +215,7 @@ footer:
   # Icon between year and copyright info.
   icon:
     # `heart` is recommended with animation in red (#ff0000).
-    name: icon-cloud-line
+    name: ri:cloud-line
     # If you want to animate the icon, set it to true.
     animated: true
     # Change the color of icon, using Hex Code.
@@ -244,7 +244,7 @@ google_adsense:
 
 comment:
   enable: true
-  icon: icon-chat-3-line
+  icon: ri:chat-3-line
   tips:
     - 可以说几句话嘛^_^如果看不到评论，请刷新几次
   candidates:
