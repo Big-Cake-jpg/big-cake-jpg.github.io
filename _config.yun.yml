@@ -292,7 +292,7 @@ algolia_search:
   enable: true
 
 vendors:
-  host: https://npm.elemecdn.com
+  host: https://npm.elemecdn.com/
   waline:
     js: https://npm.elemecdn.com/@waline/client@v2/dist/waline.js
     css: https://npm.elemecdn.com/@waline/client@v2/dist/waline.css
