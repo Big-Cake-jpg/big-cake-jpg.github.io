@@ -52,7 +52,7 @@ say:
 
 reward:
   enable: true
-  icon: ri:hand-coin-line
+  icon: fluent:document-heart-20-regular
   comment: 都看了这么多文章了，不考虑打点钱吗（
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
@@ -86,7 +86,7 @@ banner:
     color: "white"
   go_down:
     enable: true
-    icon: ri:arrow-down-s-line
+    icon: fluent:chevron-down-16-regular
 
 pjax:
   enable: true
@@ -108,7 +108,7 @@ avatar:
 pages:
   - name: 我的小伙伴们
     url: /links/
-    icon: ri:genderless-line
+    icon: fluent:people-12-regular
     color: dodgerblue
 
 social:
@@ -116,7 +116,7 @@ social:
     # set rss in your root config
     # https://github.com/hexojs/hexo-generator-feed
     link: /atom.xml # config.feed.path
-    icon: ri:rss-line
+    icon: fluent:rss-20-regular
     color: orange
   - name: QQ
     # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
@@ -149,7 +149,7 @@ social:
   #   color: "#525252"
   - name: E-Mail
     link: mailto:bigcake@cakemc.top
-    icon: ri:mail-line
+    icon: fluent:mail-16-regular
     color: "#8E71C1"
   - name: Telegram
     link: https://t.me/BigCakeBlog
@@ -188,21 +188,21 @@ local_search:
 menu:
   home:
     path: /
-    icon: ri:home-4-line
+    icon: fluent:home-16-regular
   list:
     - type: archives
       path: /archives/
-      icon: ri:archive-line
+      icon: fluent:archive-16-regular
     - type: categories
       path: /categories/
-      icon: ri:folder-2-line
+      icon: fluent:folder-16-regular
     - type: tags
       path: /tags/
-      icon: ri:price-tag-3-line
+      icon: fluent:tag-16-regular
   custom:
     title: 下一站
     path: https://skin.cakemc.top
-    icon: ri:arrow-right-line
+    icon: fluent:arrow-right-16-regular
 
 google_analytics:
   enable: true
@@ -215,11 +215,11 @@ footer:
   # Icon between year and copyright info.
   icon:
     # `heart` is recommended with animation in red (#ff0000).
-    name: ri:cloud-line
+    name: fluent:heart-16-filled
     # If you want to animate the icon, set it to true.
     animated: true
     # Change the color of icon, using Hex Code.
-    color: "#0078E7"
+    color: "#ff0000"
     # url: https://sponsors.yunyoujun.cn
     # title: 云游君的赞助者们
   live_time:
@@ -244,7 +244,7 @@ google_adsense:
 
 comment:
   enable: true
-  icon: ri:chat-3-line
+  icon: fluent:chat-16-regular
   tips:
     - 可以说几句话嘛^_^如果看不到评论，请刷新几次
   candidates:
@@ -268,11 +268,13 @@ waline:
     
 leancloud_visitors:
   enable: true
+  icon: fluent:eye-16-regular
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
   app_key: iK4BuSm3M35dNsuMerVlq3JO
 
 wordcount:
   enable: true
+  icon: fluent:text-word-count-24-regular
   count: true
   time: true
   
