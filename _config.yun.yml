@@ -296,8 +296,8 @@ algolia_search:
 vendors:
   host: https://npm.elemecdn.com/
   waline:
-    js: https://npm.elemecdn.com/@waline/client@v2/dist/waline.js
-    css: https://npm.elemecdn.com/@waline/client@v2/dist/waline.css
+    js: https://npm.elemecdn.com/@waline/client/dist/waline.js
+    css: https://npm.elemecdn.com/@waline/client/dist/waline.css
   aplayer:
     js: https://npm.elemecdn.com/aplayer/dist/APlayer.min.js
     css: https://npm.elemecdn.com/aplayer/dist/APlayer.min.css
