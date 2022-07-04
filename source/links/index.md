@@ -7,4 +7,6 @@ description: 以及穗香咖啡馆的各位！
 comments: true
 links: /links.json
 random: true
+tip: 别催啦，友链在准备啦！如果失败了，请刷新页面（
+placeholder: 欸，这，这人为什么没有话呢？
 ---
