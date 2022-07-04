@@ -15,21 +15,29 @@ aplayer:
     listFolded: true
     listMaxHeight: 340px
     audio:
-      - name: PICO PARK
-        artist: TECOPARK
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
-        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
+#      - name: PICO PARK
+#        artist: TECOPARK
+#        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
+#        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
+      - name: otherside
+        artist: Lena Raine
+        url: https://m801.music.126.net/20220704191940/3a3c95d98829f3420b7a33c93eafbe66/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/11252250815/b26d/0e89/e579/dbe083afd2246f2e85ed78fe10c38ca3.mp3
+        cover: https://p2.music.126.net/ly16g4KsYaOCe6cj09SQMw==/109951166959790351.jpg
+      - name: Eternal Anamnesis 永恒的回忆
+        artist: 陈致逸 / HOYO-MiX
+        url: https://m10.music.126.net/20220704192358/4387174da4dd4b78229e5685f6027ddb/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/14053843750/9c16/26ef/2ede/a37248b725d47588ff535be8b22e5129.mp3
+        cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
       - name: ふわふわ♪
         artist: 牧野由依
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/ふわふわ♪.mp3
+        url: https://m701.music.126.net/20220704191728/0069a5997419248ba9fcd47486d59877/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/8943671315/7fe6/1ec8/265a/725b2c449871bb59bb8cc3e35da784e7.mp3
         cover: https://s2.loli.net/2022/06/12/bpgOT9Hr3sWcGv5.jpg
       - name: 君だったら
         artist: HAPPY BIRTHDAY
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/君だったら.mp3
+        url: https://m801.music.126.net/20220704191307/97c6d1538f7b3be0c56a9cbe72ec1530/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/8958263700/547a/0377/f415/153b57867e6a1641becb3f3b34ef77f0.mp3
         cover: https://s2.loli.net/2022/06/12/eQX8Y9rHbmjxstu.jpg
       - name: 可愛くなりたい
         artist: 鎖那
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/可愛くなりたい.mp3
+        url: https://m10.music.126.net/20220704191530/bbfc9067fd56e12a22f1fbdb4a68a287/ymusic/f93e/9b74/e970/89f045d330d2a369b6de85603ecba779.mp3
         cover: https://s2.loli.net/2022/06/12/yak6vnq9GQAViRB.jpg
     meting:
       enable: false
