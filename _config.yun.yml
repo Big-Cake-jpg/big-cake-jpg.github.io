@@ -15,21 +15,41 @@ aplayer:
     listFolded: true
     listMaxHeight: 340px
     audio:
-      - name: PICO PARK
-        artist: TECOPARK
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
-        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
+#      - name: PICO PARK
+#        artist: TECOPARK
+#        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
+#        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
+      - name: Eternal Anamnesis 永恒的回忆
+        artist: 陈致逸 / HOYO-MiX
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Eternal-Anamnesis.mp3
+        cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
+      - name: Remembrance 一段回忆
+        artist: 陈致逸 / HOYO-MiX
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Remembrance.flac
+        cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
+      - name: Moonlight in Mondstadt 蒙德的月光
+        artist: 陈致逸 / HOYO-MiX
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Moonlight-in-Mondstadt.flac
+        cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
+      - name: Mondstadt Starlit 星光下的蒙德
+        artist: 陈致逸 / HOYO-MiX
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Mondstadt-Starlit.flac
+        cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
+      - name: otherside
+        artist: Lena Raine
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/otherside.mp3
+        cover: https://p2.music.126.net/ly16g4KsYaOCe6cj09SQMw==/109951166959790351.jpg
       - name: ふわふわ♪
         artist: 牧野由依
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/ふわふわ♪.mp3
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/ふわふわ♪.mp3
         cover: https://s2.loli.net/2022/06/12/bpgOT9Hr3sWcGv5.jpg
       - name: 君だったら
         artist: HAPPY BIRTHDAY
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/君だったら.mp3
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/君だったら.mp3
         cover: https://s2.loli.net/2022/06/12/eQX8Y9rHbmjxstu.jpg
       - name: 可愛くなりたい
         artist: 鎖那
-        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music_For_My_Blog/可愛くなりたい.mp3
+        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/可愛くなりたい.mp3
         cover: https://s2.loli.net/2022/06/12/yak6vnq9GQAViRB.jpg
     meting:
       enable: false
