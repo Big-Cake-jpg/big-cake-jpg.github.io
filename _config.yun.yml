@@ -11,7 +11,7 @@ aplayer:
     preload: auto
     volume: 0.7
     mutex: true
-    lrcType: 0
+    lrcType: 3
     listFolded: true
     listMaxHeight: 340px
     audio:
@@ -43,14 +43,17 @@ aplayer:
         artist: 牧野由依
         url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/ふわふわ♪.mp3
         cover: https://s2.loli.net/2022/06/12/bpgOT9Hr3sWcGv5.jpg
+        lrc: https://resources.cakeskin.tk/file/bigcake-blog-resources/lrcs/ふわふわ♪.lrc
       - name: 君だったら
         artist: HAPPY BIRTHDAY
         url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/君だったら.mp3
         cover: https://s2.loli.net/2022/06/12/eQX8Y9rHbmjxstu.jpg
+        lrcs: https://resources.cakeskin.tk/file/bigcake-blog-resources/lrcs/君だったら.lrc
       - name: 可愛くなりたい
         artist: 鎖那
         url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/可愛くなりたい.mp3
         cover: https://s2.loli.net/2022/06/12/yak6vnq9GQAViRB.jpg
+        lrcs: https://resources.cakeskin.tk/file/bigcake-blog-resources/lrcs/可愛くなりたい.lrc
     meting:
       enable: false
       id: 308168565
