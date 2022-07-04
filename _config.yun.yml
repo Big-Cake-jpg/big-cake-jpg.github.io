@@ -106,7 +106,7 @@ avatar:
     message: 我不想去学校（（（
 
 pages:
-  - name: 我的小伙伴们
+  - name: 友链
     url: /links/
     icon: fluent:people-12-regular
     color: dodgerblue
@@ -304,3 +304,12 @@ vendors:
     meting: https://npm.elemecdn.com/meting/dist/Meting.min.js
 
 medium_zoom: true
+
+busuanzi:
+  enable: true
+  site_uv: true
+  site_uv_icon: fluent:person-16-filled
+  site_pv: true
+  site_pv_icon: fluent:eye-16-filled
+  page_pv: false
+  page_pv_icon: fluent:document-person-16-regular
