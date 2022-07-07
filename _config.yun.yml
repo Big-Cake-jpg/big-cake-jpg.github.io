@@ -77,18 +77,18 @@ reward:
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
-      path: https://s2.loli.net/2022/06/12/uGYRtVW4378kKp1.png
+      path: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/alipay-qrcode.png
       color: "#00A3EE"
       icon: ri:alipay-line
     - name: QQ 支付
-      path: https://s2.loli.net/2022/06/12/a6A5utXIlcVWCMv.png
+      path: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/qq-qrcode.png
       color: "#12B7F5"
       icon: ri:qq-line
   
 bg_image:
   enable: true
-  url: https://s2.loli.net/2022/06/12/LDEoubKysTdR7Bw.jpg # recomend image related to your mode
-  dark: https://s2.loli.net/2022/06/12/i2Vd6T1QUtb9cfS.png
+  url: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/bg-bright-blur-30px.png # recomend image related to your mode
+  dark: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/bg-dark-blur-30px.png
 
 cursor:
   enable: true
@@ -114,7 +114,7 @@ pjax:
 
 avatar:
   enable: true
-  url: https://s2.loli.net/2022/06/12/RpGChkMjcwIOAaJ.jpg
+  url: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -180,7 +180,7 @@ social:
     icon: fluent:mail-16-regular
     color: "#8E71C1"
 
-favicon: https://s2.loli.net/2022/06/12/RpGChkMjcwIOAaJ.jpg
+favicon: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg
 
 baidu_push: true
 
@@ -258,7 +258,7 @@ footer:
     enable: true
     title: 又拍云
     link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
+    logo: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/upyun-logo.png
     prefix: 本网站由
     suffix: 提供 CDN 加速与云存储服务
   custom_text: <a href="https://travellings.link" target="_blank"><img height="25" alt="travellings" src="https://travellings.link/assets/logo.svg"></a>
