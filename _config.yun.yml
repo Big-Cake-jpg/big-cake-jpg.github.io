@@ -261,6 +261,7 @@ footer:
     logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
     prefix: 本网站由
     suffix: 提供 CDN 加速与云存储服务
+  custom_text: <a href="https://travellings.link" target="_blank"><img height="25" alt="travellings" src="https://travellings.link/assets/logo.svg"></a>
 
 google_adsense:
   enable: true
