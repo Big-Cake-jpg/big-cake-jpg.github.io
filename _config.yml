@@ -4,9 +4,15 @@
 
 # Site
 title: 大蛋糕的烘焙坊
-subtitle: ''
-description: '一个屑初二学生的小窝'
+subtitle: '也许我们会分别，但是我们将永远不会忘记彼此'
+description: '一个屑初三学生的小窝'
 keywords:
+  - Big_Cake
+  - Blog
+  - 大蛋糕
+  - 博客
+  - 大蛋糕的烘焙坊
+  - bigcake.cakemc.top
 author: Big_Cake
 language: zh-CN
 timezone: 'Asia/Shanghai'
