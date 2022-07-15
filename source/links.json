@@ -53,5 +53,20 @@
         "name": "Redish101",
         "color": "#c0e44e",
         "blog": "Redish101's Blog"
+    },
+    {
+        "url": "https://www.ykuee.link",
+        "avatar": "https://www.ykuee.link/favicon.ico",
+        "name": "Ykuee",
+        "color": "#39C5BB",
+        "blog": "Ykueeの窝"
+    },
+    {
+        "url": "https://seayj.cn",
+        "avatar": "https://seayj.cn/medias/logo.png",
+        "name": "SeaYJ",
+        "color": "#3790b5",
+        "blog": "SeaYJ",
+        "desc": "追随大佬的脚步越走越远"
     }
 ]
