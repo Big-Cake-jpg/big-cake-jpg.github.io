@@ -46,5 +46,12 @@
         "color": "#40b4fc",
         "blog": "捌比玖",
         "desc": "我比将心向明月，奈何明月照沟渠"
+    },
+    {
+        "url": "https://blog.redish101.top",
+        "avatar": "https://blog.redish101.top/favicon.ico",
+        "name": "Redish101",
+        "color": "#c0e44e",
+        "blog": "Redish101's Blog"
     }
 ]
