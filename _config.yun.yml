@@ -319,7 +319,7 @@ algolia_search:
   enable: true
 
 vendors:
-  host: https://npm.elemecdn.com/
+  host: https://unpkg.com/
   waline:
     js: https://unpkg.com/@waline/client/dist/waline.js
     css: https://unpkg.com/@waline/client/dist/waline.css
