@@ -285,9 +285,9 @@ waline:
   serverURL: https://waline.bigcake.cakemc.top
   comment: true
   emoji:
-    - https://npm.elemecdn.com/@waline/emojis@latest/bilibili/
-    - https://npm.elemecdn.com/@waline/emojis@latest/weibo/
-    - https://npm.elemecdn.com/@waline/emojis@latest/qq/
+    - https://unpkg.com/@waline/emojis@latest/bilibili/
+    - https://unpkg.com/@waline/emojis@latest/weibo/
+    - https://unpkg.com/@waline/emojis@latest/qq/
   locale:
     placeholder: 求求你了，写点评论吧（请先登录）
     
@@ -319,7 +319,7 @@ algolia_search:
   enable: true
 
 vendors:
-  host: https://unpkg.com/
+  host: https://npm.elemecdn.com/
   waline:
     js: https://unpkg.com/@waline/client/dist/waline.js
     css: https://unpkg.com/@waline/client/dist/waline.css
