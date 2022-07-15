@@ -319,14 +319,7 @@ algolia_search:
   enable: true
 
 vendors:
-  host: https://npm.elemecdn.com/
-  waline:
-    js: https://unpkg.com/@waline/client/dist/waline.js
-    css: https://unpkg.com/@waline/client/dist/waline.css
-  aplayer:
-    js: https://npm.elemecdn.com/aplayer/dist/APlayer.min.js
-    css: https://npm.elemecdn.com/aplayer/dist/APlayer.min.css
-    meting: https://npm.elemecdn.com/meting/dist/Meting.min.js
+  host: https://unpkg.onmicrosoft.cn/
   busuanzi: https://busuanzi.icodeq.com/busuanzi.pure.mini.js
 
 medium_zoom: true
