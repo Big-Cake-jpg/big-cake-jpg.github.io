@@ -293,13 +293,11 @@ waline:
     
 leancloud_visitors:
   enable: true
-  icon: fluent:eye-24-regular
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
   app_key: iK4BuSm3M35dNsuMerVlq3JO
 
 wordcount:
   enable: true
-  icon: fluent:text-word-count-24-regular
   count: true
   time: true
   
@@ -332,3 +330,16 @@ busuanzi:
   site_pv_icon: fluent:eye-24-filled
   page_pv: false
   page_pv_icon: fluent:document-person-16-regular
+
+icons:
+  # 返回顶部
+  back_to_top: fluent:arrow-up-24-filled
+  # 分类
+  category: fluent:folder-24-regular
+  # 标签
+  tag: fluent:tag-24-regular
+  # 拜访
+  view: fluent:document-person-16-regular
+  wordcount: fluent:text-word-count-24-regular
+  readtime: fluent:timer-24-regular
+  
