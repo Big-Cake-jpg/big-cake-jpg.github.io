@@ -333,7 +333,7 @@ busuanzi:
 
 icons:
   # 返回顶部
-  back_to_top: fluent:arrow-up-24-filled
+  back_to_top: fluent:arrow-up-24-regular
   # 分类
   category: fluent:folder-24-regular
   # 标签
