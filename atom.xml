@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>大蛋糕的烘焙坊</title>
+  
+  <subtitle>也许我们会分别，但是我们将永远不会忘记彼此</subtitle>
+  <link href="https://bigcake.cakemc.top/atom.xml" rel="self"/>
+  
+  <link href="https://bigcake.cakemc.top/"/>
+  <updated>2022-07-15T05:32:45.000Z</updated>
+  <id>https://bigcake.cakemc.top/</id>
+  
+  <author>
+    <name>Big_Cake</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>优化站点速度之见解</title>
+    <link href="https://bigcake.cakemc.top/posts/site-speed-optimization/"/>
+    <id>https://bigcake.cakemc.top/posts/site-speed-optimization/</id>
+    <published>2022-07-15T05:32:45.000Z</published>
+    <updated>2022-07-15T05:32:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>有没有一种可能，大家当中的一部分人都在为自己的网站速度而苦恼呢？</p><p>特别是去年 12 月 jsDelivr 的备案被吊销以后，很多网站的速度明显下降。</p><p>这篇文章，我会把我的经验分享给大家，希望能对各位的情况有点作用。</p><span id="more"></span><h2 id="使用-CDN"><a href="#使用-CDN" class="headerlink" title="使用 CDN"></a>使用 CDN</h2><p>如同标题所言，CDN 可以帮助分发你的网站资源，加快网站访问速度。</p><p>当然，想使用国内的 CDN，意味着你需要为你的网站进行备案。</p><p>不过你也可以选择仅使用 CDN 加速资源文件。有很多类似的服务，如 unpkg、jsDelivr、Staticfiles、饿了么等等。</p><p>但这些 CDN 都多多少少有点问题，比如国内速度缓慢、被和谐、版本不齐全或不是最新版本、屏蔽匿名访问等等……</p><p>大家可以按照自己的喜好选择合适的 CDN 为己所用，如果有其它的服务商也可以在评论区留言造福其他站长。</p><p>统一 CDN 也有利于加快网站加载速度，这个嘛就仁者见仁智者见智了。</p><h2 id="更换网站托管提供商"><a href="#更换网站托管提供商" class="headerlink" title="更换网站托管提供商"></a>更换网站托管提供商</h2><p>很多人把自己的 Hexo 站点部署到了 GitHub Pages，然后整天抱怨速度慢，为何不换一个服务商呢？</p><p>很多大厂都免费提供了一些无服务器架构，比如 Vercel、Netlify、Railway。</p><p>特别是 Vercel，据说它还为了中国大陆地区的服务专门买了优化线路；</p><p>而且 Vercel 用的是 Amazon Global Accelerator（ AGA，好像还是定制的），线路质量和速度自然不用说。</p><p>不过即使这样，Vercel 仍然有被和谐的可能性，所以三思而后行。</p><blockquote><p>不建议使用 Netlify，因为它真的很慢。</p></blockquote><h2 id="减小资源文件体积"><a href="#减小资源文件体积" class="headerlink" title="减小资源文件体积"></a>减小资源文件体积</h2><p>图片、JavaScript、网页等的大小都会影响网站加载速度，</p><p>这就是为什么 JavaScript、HTML、CSS 文件都要尽量去除空格。</p><p>图片的话，可以进行压缩。如果你不在意使用旧版 Safari &#x2F; iOS 的用户，也可以使用 WebP 格式图片。</p><p>而使用 WebP 格式可以在不影响图片质量的情况下进一步压缩体积。</p><p>大概就这样了，如果各位还有别的办法，也可以在评论区提出来。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;有没有一种可能，大家当中的一部分人都在为自己的网站速度而苦恼呢？&lt;/p&gt;
+&lt;p&gt;特别是去年 12 月 jsDelivr 的备案被吊销以后，很多网站的速度明显下降。&lt;/p&gt;
+&lt;p&gt;这篇文章，我会把我的经验分享给大家，希望能对各位的情况有点作用。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="优化" scheme="https://bigcake.cakemc.top/categories/%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="GitHub" scheme="https://bigcake.cakemc.top/tags/GitHub/"/>
+    
+    <category term="CDN" scheme="https://bigcake.cakemc.top/tags/CDN/"/>
+    
+    <category term="速度" scheme="https://bigcake.cakemc.top/tags/%E9%80%9F%E5%BA%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建 Hypixel 加速 IP</title>
+    <link href="https://bigcake.cakemc.top/posts/build-hypixel-boost-ip/"/>
+    <id>https://bigcake.cakemc.top/posts/build-hypixel-boost-ip/</id>
+    <published>2022-07-13T08:48:21.000Z</published>
+    <updated>2022-07-13T08:48:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>其实在这之前我一直用的是网上公开的加速 IP，比如 NoCheatPlus 团队的公益加速 IP。</p><p>然而昨天这个加速 IP 出了点问题，Minecraft 连不上去了。</p><p>我就想，要不然自己搭建一个算了，稳定还省心呢。</p><p>于是这篇文章应运而生。</p><span id="more"></span><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="选购合适的服务器"><a href="#选购合适的服务器" class="headerlink" title="选购合适的服务器"></a>选购合适的服务器</h3><p>想要搭建加速 IP，我们首先需要选购一个合适的服务器。</p><p>当然，这年头云服务器提供商也不少了，阿里云、腾讯云、UCloud、华为云等等。</p><p>你可以根据自己的喜好，到对应的服务商处购买服务器。</p><p>需要注意的是，服务器需要位于国外并且有良好的 CN2 线路。</p><p>华南地区可以选择位于香港的服务器，其它地区可以选择日本、美国的服务器。</p><p>服务器系统请选 CentOS 系，宽带建议 5 Mbps。</p><p>买下服务器后，你会得到一个 IP 地址和一个密码。</p><p>接下来我们要确认电脑内是否有 SSH 工具。</p><p>如果你是 Windows 10&#x2F;11 用户，那么电脑内已经自带了 SSH 工具。如果没有，请去“打开或关闭 Windows 功能”内手动启用。</p><p>其它系统可以选择安装 Xshell、FinalShell、PuTTY 之类的 SSH 工具。</p><h3 id="连接服务器"><a href="#连接服务器" class="headerlink" title="连接服务器"></a>连接服务器</h3><p>接下来，用你拿到手的 IP 和密码进行连接吧。</p><p>这里假设我的服务器 IP 是 192.173.261.222，那么我需要在终端内输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> root@192.173.261.222<span class="token comment"># 第一次连接的话会显示一个未知主机的警告，输入 yes 确认</span>root@192.173.261.222's password: _ <span class="token comment"># 输入你的密码</span><span class="token comment"># 如果你发现屏幕没反应，不要慌，其实密码已经输进去了</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>然后我们就能连接上我们的服务器了。</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/build-hypixel-boost-ip/SSH.png" alt="SSH 界面" loading="lazy"></p><h3 id="设置流量转发"><a href="#设置流量转发" class="headerlink" title="设置流量转发"></a>设置流量转发</h3><p>接下来我们需要一个流量转发脚本。这个就看大家喜好了，只要是自己常用的就行，这里使用 Brook 作为示例。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /<span class="token function">mkdir</span> brook<span class="token builtin class-name">cd</span> brook<span class="token function">wget</span> https://resources.cakeskin.tk/file/bigcake-blog-resources/brook.sh<span class="token function">bash</span> brook.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>然后输入 1 安装 Brook，等待安装完成后再次输入 <code>bash brook.sh</code>，按顺序分别输入 7 和 1。</p><p>然后你就会看到这样的页面</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/build-hypixel-boost-ip/Brook.png" alt="Brook" loading="lazy"></p><p>按照其指引进行设置。本地监听端口填写 25565；被监听 IP 填写 <code>mc.hypixel.net</code> 解析出的任意 IP；被监听端口填写 25565.</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/build-hypixel-boost-ip/Ping.png" alt="Ping" loading="lazy"><em>红圈圈住的即是 IP</em></p><p>全部填写完毕后，输入 Y 确认启用转发。</p><h3 id="填写-Hosts"><a href="#填写-Hosts" class="headerlink" title="填写 Hosts"></a>填写 Hosts</h3><p>但这还没完。如果你尝试直接使用 IP 地址进入 Hypixel，会收到一个“非官方的 IP 地址”，叫你使用 Hypixel 提供的连接地址进行游玩。</p><p>可笑的是，这个检测很容易破解，它只是在检测你连接用的域名是不是属于 Hypixel 而已。</p><p>所以，我们以管理员模式打开记事本或任意一个文本编辑器，然后打开文件资源管理器，在上方的地址栏内输入：</p><pre class="line-numbers language-none"><code class="language-none">C:\Windows\System32\drivers\etc\# 出问题的话，可以试试把 Windows 换成 WINDOWS<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>找到名为 <code>hosts</code> 的没有后缀名的文件，用刚才打开的文本编辑器进行编辑，加入下面这行：</p><pre class="line-numbers language-none"><code class="language-none">xxx.xxx.xxx.xxx mc.hypixel.net# 如果你想保持 mc.hypixel.net 原有的解析，只需要把 mc 换成任意字符串就行# xxx.xxx.xxx.xxx 替换为你自己的服务器 IP 地址<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>保存文件。</p><p>现在打开 Minecraft，输入你刚才在 Hosts 里填的域名，然后尝试连接一下？</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;其实在这之前我一直用的是网上公开的加速 IP，比如 NoCheatPlus 团队的公益加速 IP。&lt;/p&gt;
+&lt;p&gt;然而昨天这个加速 IP 出了点问题，Minecraft 连不上去了。&lt;/p&gt;
+&lt;p&gt;我就想，要不然自己搭建一个算了，稳定还省心呢。&lt;/p&gt;
+&lt;p&gt;于是这篇文章应运而生。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Minecraft" scheme="https://bigcake.cakemc.top/categories/Minecraft/"/>
+    
+    
+    <category term="Hypixel" scheme="https://bigcake.cakemc.top/tags/Hypixel/"/>
+    
+    <category term="服务器" scheme="https://bigcake.cakemc.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>部署 VuePress v1 文档到 Vercel</title>
+    <link href="https://bigcake.cakemc.top/posts/deploy-vuepress-v1-docs-to-vercel/"/>
+    <id>https://bigcake.cakemc.top/posts/deploy-vuepress-v1-docs-to-vercel/</id>
+    <published>2022-07-10T00:43:54.000Z</published>
+    <updated>2022-07-10T00:43:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>可能大家用 VuePress 做文档的已经厌烦了每天对着终端敲 <code>yarn docs:build</code> 了吧。</p><p>想用 CI 却苦于配置无从下手。</p><p>这里我来和大家分享一下，如何将 VuePress 文档部署到 Vercel 上。</p><span id="more"></span><div class="danger"><blockquote><p>本文仅适用于 VuePress v1 文档。关于 v2 文档，还请各位看官自行摸索。</p></blockquote></div><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="注册-Vercel"><a href="#注册-Vercel" class="headerlink" title="注册 Vercel"></a>注册 Vercel</h3><p>不多说了，这是<a href="https://vercel.com/signup">注册链接</a>，推荐使用 GitHub 账号进行 OAuth 登录。</p><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>进入 Dashboard 以后，点击右上角的“New Project”新建一个项目；</p><p>选择你存放文档的仓库，点击“Import”，这里用 PCL 生存服的文档进行展示；</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/deploy-vuepress-v1-docs-to-vercel/Import-Repo.png" alt="导入仓库" loading="lazy"></p><div class="info"><blockquote><p>如果你要从一个组织账号部署，你需要先创建一个团队账号。</p></blockquote></div><p><code>FRAMEWORK PRESET</code> 请务必选择 Vue.js。</p><p>我们接下来来到 <code>BUILD AND OUTPUT SETTINGS</code> 页面，打开第二个开关，在旁边的文本框内填 <code>.vuepress/dist</code>（如果你的文档在子目录里存放比如 <code>docs</code> 文件夹，那么需要在前面加上这个文件夹的名字）。</p><p>其余的可以留着不填，如下图（请不要直接照抄）</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/deploy-vuepress-v1-docs-to-vercel/Config.png" alt="配置" loading="lazy"></p><p>点击“Deploy”按钮，然后等待部署。</p><p>如果页面上冒出了烟花，表示你的文档已经成功部署了。</p><h3 id="配置项目"><a href="#配置项目" class="headerlink" title="配置项目"></a>配置项目</h3><p>打开项目，点击 Settings，导航到 Git，将“Production Branch”设置为你存放文档工作区的分支。</p><p>需要注意的是，文档工作区的目录结构一般长这个样：</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/deploy-vuepress-v1-docs-to-vercel/Branch.png" alt="文档目录结构" loading="lazy"></p><p>设置好，点击“Save”，然后对仓库进行一次提交，更改就会自动部署到生产环境。</p><p>至此，我们所需要做的就全部完成了！</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;可能大家用 VuePress 做文档的已经厌烦了每天对着终端敲 &lt;code&gt;yarn docs:build&lt;/code&gt; 了吧。&lt;/p&gt;
+&lt;p&gt;想用 CI 却苦于配置无从下手。&lt;/p&gt;
+&lt;p&gt;这里我来和大家分享一下，如何将 VuePress 文档部署到 Vercel 上。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="一点小技巧" scheme="https://bigcake.cakemc.top/categories/%E4%B8%80%E7%82%B9%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="GitHub" scheme="https://bigcake.cakemc.top/tags/GitHub/"/>
+    
+    <category term="Vercel" scheme="https://bigcake.cakemc.top/tags/Vercel/"/>
+    
+    <category term="VuePress" scheme="https://bigcake.cakemc.top/tags/VuePress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="https://bigcake.cakemc.top/posts/hello-world/"/>
+    <id>https://bigcake.cakemc.top/posts/hello-world/</id>
+    <published>2022-07-08T04:57:47.000Z</published>
+    <updated>2022-07-08T04:57:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.</p><span id="more"></span><hr><p>不知不觉，博客运行快要满一年了，而我也即将成为初三的学生。</p><p>面对着即将到来的中考，我都不知道自己身上又会发生什么事情……</p><p>开学以后，因为学业繁重，我的博客肯定要停更一段时间，可能也就一个星期维护一次。</p><p>不过放心，我是不可能关掉博客的，放假只要有时间我就会更新的。</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/hello-world/Live-Time.png" alt="Live-Time" loading="lazy"><em>截止时间：2022&#x2F;07&#x2F;07 13:45</em></p><p>hexo-theme-yun 是我这一年来一直在用的主题，在此为云游君打尻（？</p><p>说实话有点遗憾，因为初二的时候一直没有给博客写很多文章，导致上线一年来就只有 12 篇文章，连开往都加入不了……</p><p>看到别人都慢慢从 Hexo 转到了 Typecho 或者 WordPress，我也曾想过换成 WordPress，但无奈没有经济实力且 WordPress 的加载速度慢成💩而放弃。</p><p>希望有人能支持我一下（</p><p>就这么多，以后看着再改改罢。</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/bg-dark.png" alt="image" loading="lazy"></p><blockquote><p>也许我们会分别，但是我们将永远不会忘记彼此</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Hexo&quot;&gt;&lt;a href=&quot;#Hexo&quot; class=&quot;headerlink&quot; title=&quot;Hexo&quot;&gt;&lt;/a&gt;Hexo&lt;/h2&gt;&lt;p&gt;Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="时光" scheme="https://bigcake.cakemc.top/categories/%E6%97%B6%E5%85%89/"/>
+    
+    
+    <category term="回忆录" scheme="https://bigcake.cakemc.top/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>白嫖党福利——Backblaze B2 免费 10GB 对象存储</title>
+    <link href="https://bigcake.cakemc.top/posts/backblaze-b2/"/>
+    <id>https://bigcake.cakemc.top/posts/backblaze-b2/</id>
+    <published>2022-07-07T13:53:31.000Z</published>
+    <updated>2022-07-07T13:53:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>其实 Backblaze 这个东西我今年初才听说，当时我疯狂的在网上搜可以白嫖的对象存储。</p><p>然后我就看到了 Backblaze B2，免费 10GB 对象存储 + 一个月免费 1GB 下载流量。</p><blockquote><p>感觉挺香的，你们觉得呢（</p></blockquote><span id="more"></span><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Backblaze，一个比较老牌的云存储服务商，成立于 2007 年。它致力于为用户提供价格低廉的存储服务。</p><p>可能你会看到它的一些报告，里面详尽的介绍了磁盘可靠性，合计磁盘可靠率，磁盘可靠的制造商等等一系列和机械硬盘有关的消息。</p><p>但我们今天的话题不是磁盘可靠性 blabla 的，我们要拿到它的 10GB 免费存储。</p><blockquote><p>本篇文章开始将全部采用 Backblaze B2 + Cloudflare 作为图床，也请在评论区留言图片加载速度</p></blockquote><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h3><p><a href="https://www.backblaze.com/b2/sign-up.html?referrer=nopref">注册链接</a></p><p>然后输入你的邮箱和密码，点击下面的“Region”选择存储服务所在地区，可以选择 US West 或者 EU Central；</p><blockquote><p>我注册时选的是 US West 即美国西部。你可以自己去测试两个地区哪个速度更快。</p></blockquote><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/Register.png" alt="注册" loading="lazy"></p><p>登录账号，我们就来到了后台。</p><h3 id="创建存储桶"><a href="#创建存储桶" class="headerlink" title="创建存储桶"></a>创建存储桶</h3><p>点击“Create a new bucket”创建一个存储桶，名字随意，我这里用博客的桶进行演示；</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/Create-Bucket.png" alt="创建存储桶" loading="lazy"></p><p>创建好以后，我们点击“Bucket Settings”，然后就可以对存储桶进行设置；</p><p>接下来，在 <code>Bucket Info</code> 里填入 <code>&#123;&quot;cache-control&quot;:&quot;max-age=31536000&quot;&#125;</code> 设置缓存时长，为之后设置 Cloudflare 做准备；</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/Bucket-Info.png" alt="Bucket Info" loading="lazy"></p><p>然后保存设置，点击“Upload&#x2F;Download”按钮，就可以进入文件管理页面；</p><p>将你的文件上传上去，点击旁边的信息按钮，就可以看到这个文件的详细信息了。</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/Details.png" alt="详细信息" loading="lazy"></p><h3 id="接入-Cloudflare"><a href="#接入-Cloudflare" class="headerlink" title="接入 Cloudflare"></a>接入 Cloudflare</h3><p>Cloudflare 和 Backblaze 有合作关系，使用 Cloudflare 接入 Backblaze B2 可以免除流量费用。</p><p>我们记下 Friendly URL 的根域名，比如我这里就是 <code>f004.backblazeb2.com</code>。</p><p>让我们打开 Cloudflare 后台，登录账号，选择域名。</p><p>记录类型选 CNAME，名称填一个自己喜欢的名字，然后将根域名填进目标，打开小黄云。</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/Add-Record.png" alt="添加解析记录" loading="lazy"></p><p>保存以后，打开“页面规则”，添加一个规则，如下图：</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/Page-Rules.png" alt="页面规则" loading="lazy"></p><p>保存以后，所有的事情就完成了！</p><p>接下来，把 Friendly URL 中的根域名换成你自己接入 Cloudflare 的域名就可以了，试试看！</p><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p>下面的图片与视频是通过 Cloudflare + Backblaze B2 加载的，视频分辨率为 720P。</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/bg-bright.png" alt="示例图片" loading="lazy"></p><video controls>    <source src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/levitated-trailer.mp4" type="video/mp4"></video><div class="info"><blockquote><p>在此墙裂要求 mr普拉斯打钱（雾</p></blockquote></div><p>我们可以看到有了 Cloudflare 的加持，Backblaze 外链速度还是挺快的。</p><p>使用 Microsoft Edge DevTools 查看元素，我们发现二者都已命中缓存：</p><p><img src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/backblaze-b2/Cache-Hit.png" alt="缓存" loading="lazy"></p><p>至此，我们的设置就完成了！开始体验吧！</p><div class="info"><blockquote><p>如果你有 ImgURL Pro，那么可以将 Backblaze B2 作为图床快捷上传。</p></blockquote></div>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;其实 Backblaze 这个东西我今年初才听说，当时我疯狂的在网上搜可以白嫖的对象存储。&lt;/p&gt;
+&lt;p&gt;然后我就看到了 Backblaze B2，免费 10GB 对象存储 + 一个月免费 1GB 下载流量。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感觉挺香的，你们觉得呢（&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="大蛋糕的安利" scheme="https://bigcake.cakemc.top/categories/%E5%A4%A7%E8%9B%8B%E7%B3%95%E7%9A%84%E5%AE%89%E5%88%A9/"/>
+    
+    
+    <category term="Backblaze" scheme="https://bigcake.cakemc.top/tags/Backblaze/"/>
+    
+    <category term="白嫖" scheme="https://bigcake.cakemc.top/tags/%E7%99%BD%E5%AB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打开 Windows 传递优化，利人利己！</title>
+    <link href="https://bigcake.cakemc.top/posts/windows-delievry-optimize/"/>
+    <id>https://bigcake.cakemc.top/posts/windows-delievry-optimize/</id>
+    <published>2022-07-05T11:50:21.000Z</published>
+    <updated>2022-07-05T11:50:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows 的更新下载速度那是真的慢（虽然比官网下镜像快多了）。</p><p>Windows 10 发布的时候，传递优化伴随着它一同出现在人们眼前。</p><p>这应该是 <del>M$</del> 为了进一步改善更新下载速度而做出来的东西吧。</p><span id="more"></span><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="打开传递优化"><a href="#打开传递优化" class="headerlink" title="打开传递优化"></a>打开传递优化</h3><p>老样子，让我们打开我们亲爱的“设置”，打开“Windows 更新”；</p><p><img src="https://s2.loli.net/2022/07/05/kW68EGLjCT29tio.png" alt="设置" loading="lazy"></p><p>点击“高级选项”，然后点击“传递优化”；</p><p><img src="https://s2.loli.net/2022/07/05/jF1i3GXJcgstSrb.png" alt="高级选项" loading="lazy"></p><blockquote><p>如果你用的是 Windows 10，那么你应该打开“设置”-&gt;“更新和安全”-&gt;“传递优化”。</p></blockquote><p>然后我们可以看到传递优化的设置界面，如下图：</p><p><img src="https://s2.loli.net/2022/07/05/BqeE1HvJS4PmnG5.png" alt="传递优化" loading="lazy"></p><p>我们把“允许从其他电脑下载”打开，然后把下面的下载来源改成“Internet 和我的本地网络上的设备”即可。</p><p><img src="https://s2.loli.net/2022/07/05/gJ2EYePWnbdxMTc.png" alt="传递优化设置" loading="lazy"></p><div class="success"><blockquote><p>什么？你以为还有第二步？没有，你想多了！没错，传递优化的配置就是这么简单</p></blockquote></div><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>传递优化这个东西，我猜测它的原理比较类似 P2P 之类的东西。</p><p>别人电脑上下载过的更新会直接被传递优化下载下来，同时这份更新也会保留在电脑上，不过没那么占空间罢了。</p><p>但是因为没多少人用，传递优化的效果不太明显。因此，我们需要很多人开启传递优化才能看到效果。</p><p>传递优化也会占用一部分上传带宽用于为其他电脑下载更新，不过这个带宽你可以根据自己情况在设置中限制。</p><p>设置中有一个传递优化的活动监视器，可以用来查看传递优化下载的更新来自哪里以及百分比、大小；上传的更新到哪里去了、百分比、大小。</p><p><img src="https://s2.loli.net/2022/07/05/X5GITMi8qQrsPL2.png" alt="活动监视器" loading="lazy"></p><p>就这么多。</p><blockquote><p>成功水了一篇文章🤣（bushi</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Windows 的更新下载速度那是真的慢（虽然比官网下镜像快多了）。&lt;/p&gt;
+&lt;p&gt;Windows 10 发布的时候，传递优化伴随着它一同出现在人们眼前。&lt;/p&gt;
+&lt;p&gt;这应该是 &lt;del&gt;M$&lt;/del&gt; 为了进一步改善更新下载速度而做出来的东西吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="优化" scheme="https://bigcake.cakemc.top/categories/%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="Windows" scheme="https://bigcake.cakemc.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优化 Windows Search 搜索，加快搜索速度！</title>
+    <link href="https://bigcake.cakemc.top/posts/windows-search-optimization/"/>
+    <id>https://bigcake.cakemc.top/posts/windows-search-optimization/</id>
+    <published>2022-07-04T08:18:16.000Z</published>
+    <updated>2022-07-04T08:18:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows Search 这个东西，一言难尽……</p><p>你说它没用吧，它还挺有用的；你说它有用吧，它搜索速度还贼慢，还搜不到想要的东西。</p><p>这篇文章，我会告诉各位我的 Windows 搜索为什么那么好用，以及该怎么进行配置。</p><span id="more"></span><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>等等，什么是索引？</p><blockquote><p><a href="https://support.microsoft.com/zh-cn/windows/windows-10-%E4%B8%AD%E7%9A%84%E6%90%9C%E7%B4%A2%E7%B4%A2%E5%BC%95-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94-da061c83-af6b-095c-0f7a-4dfecda4d15a">Windows 10 中的搜索索引：常见问题解答</a></p></blockquote><p>我们在这里做个比喻。电脑像一本书，而索引就像书里面的书签。</p><p>我想在这本书里找到一句话，如果那句话正好有一个书签，我就能很快地找到这句话。</p><p>反之，如果没有书签，我就可能需要几个小时来找这句话。</p><p>搜索索引也是一个道理。它通过为每个文件建立独一无二的标记并将其存储，从而加快搜索速度，改善搜索体验。</p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="设置索引模式"><a href="#设置索引模式" class="headerlink" title="设置索引模式"></a>设置索引模式</h3><p>首先，让我们打开 Windows 的设置，导航到“隐私和安全性”-&gt;“搜索 Windows”。</p><p>然后我们就能够看到索引状态、索引模式、排除项等等。</p><p><img src="https://s2.loli.net/2022/07/04/JrR91X28ep54uh7.png" alt="索引设置" loading="lazy"></p><blockquote><p>如果你用的是 Windows 10，则直接在“设置”的第一级页面中进入“搜索”分类即可。</p></blockquote><p>索引模式大多数人默认都是“经典”即只为桌面、音乐、图片、文档文件夹编制索引。</p><p>让我们把它改成“增强”吧</p><h3 id="排除不想索引的文件夹"><a href="#排除不想索引的文件夹" class="headerlink" title="排除不想索引的文件夹"></a>排除不想索引的文件夹</h3><p>Windows Search 提供了排除项功能，可以根据自己的需要对部分文件夹进行排除。</p><p>比如，有时候你会发现搜索结果里出现了 DLL 文件或者 QQ 等东西缓存到电脑上的图片之类的东西。</p><p>这时候，我们就需要设置排除的文件夹了。</p><p>排除项一次只能设置一个文件夹，所以你可能需要一段时间来进行排除。</p><h3 id="重建索引"><a href="#重建索引" class="headerlink" title="重建索引"></a>重建索引</h3><p>万事大吉以后，我们可以重建索引。这样将会删除之前 Windows 在你电脑上编制的索引，然后重新编制。</p><p>将页面滚动到最底部，选择“高级索引选项”在打开的窗口中选择“高级”；</p><p><img src="https://s2.loli.net/2022/07/04/gGJPfcODSWA4xRh.png" alt="高级索引选项" loading="lazy"></p><p>在另一个弹出的窗口中选择“删除和重建索引”；</p><p><img src="https://s2.loli.net/2022/07/04/EiyYClHAznk2Jv5.png" alt="删除和重建索引" loading="lazy"></p><p>选择后，Windows 会弹出一个提示框询问你是否继续操作，我们点击“确定”；</p><p><img src="https://s2.loli.net/2022/07/04/CxKjtqHZFYPVwo5.png" alt="重建索引" loading="lazy"></p><p>等待几秒，Windows 会自动开始编制索引。</p><p>稍微等上几分钟，然后你应该就可以通过任务栏的搜索按钮 &#x2F; 搜索框体验到完美的 Windows Search 了。</p><p><img src="https://s2.loli.net/2022/07/04/a187XjKnrJTDOkm.png" alt="Windows Search" loading="lazy"></p><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>需要注意的是，设置为“增强”模式后，Windows 将会对所有文件（除了排除文件夹）进行索引，索引量通常上万。</p><p>这可能导致 Windows 更新失败，提示 0x800707e7 错误。</p><p>因此，每次更新前为了保险起见，先重建索引，当 Windows 开始编制索引时立刻重启电脑。这样的话更新就不会出现什么大问题。</p><p>如果你有意见，欢迎在评论区里指正！</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Windows Search 这个东西，一言难尽……&lt;/p&gt;
+&lt;p&gt;你说它没用吧，它还挺有用的；你说它有用吧，它搜索速度还贼慢，还搜不到想要的东西。&lt;/p&gt;
+&lt;p&gt;这篇文章，我会告诉各位我的 Windows 搜索为什么那么好用，以及该怎么进行配置。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="优化" scheme="https://bigcake.cakemc.top/categories/%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="Windows" scheme="https://bigcake.cakemc.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建一个属于你自己的 Minecraft 服务器</title>
+    <link href="https://bigcake.cakemc.top/posts/build-your-minecraft-server/"/>
+    <id>https://bigcake.cakemc.top/posts/build-your-minecraft-server/</id>
+    <published>2022-04-09T13:58:44.000Z</published>
+    <updated>2022-04-09T13:58:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>好的，又是一篇新的文章！其实网上的教程够多了，基本都能达到目标。</p><p>但是我要写一个简单的教程来取代它们（其实如果自己忘了也可以看看）</p><p>废话少说，让我们开始吧！</p><blockquote><p>前排提示：本教程仅适用于 Minecraft Java 版，基岩版请等以后出。</p><p>而且你首先得有初一的英语水平、一个正常的大脑、玩过一段时间的 Minecraft，以及一台能正常工作的电脑。</p></blockquote><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="检查系统环境"><a href="#检查系统环境" class="headerlink" title="检查系统环境"></a>检查系统环境</h3><p>开一个 Minecraft Java 版服务器，首当其冲的要求就是 Java 运行时。这个只要你玩过 Minecraft 就肯定会有。</p><p>其次，你的操作系统也需要与时俱进，最起码得是 Windows 8.1 或者较新的 Linux。</p><p>这些都是你在搭建服务端时需要注意的，当你看到以上所有的条件都满足以后，就可以开心地进入下一步了！</p><h3 id="下载服务端核心"><a href="#下载服务端核心" class="headerlink" title="下载服务端核心"></a>下载服务端核心</h3><p>Minecraft 服务器都有一个极其核心的部分：服务端。</p><p>服务端承载 Minecraft 服务器与多人游戏的实现，是必不可少的。</p><p>现在让我们来下载服务端吧！这里使用 z0z0r4 提供的 ZMirror 服务端镜像下载服务。</p><blockquote><p>地址：<a href="https://mcmirror.zclubserver.top/">https://mcmirror.zclubserver.top</a> </p><p>赞助：<a href="https://pay.z0z0r4.top/">https://pay.z0z0r4.top</a></p></blockquote><p>打开上面的地址，我们可以看到一个这样的界面：</p><p><img src="https://pic.dogimg.com/2022/04/09/62519a5b239ef.png" alt="屏幕截图 2022-04-09 223731.png" loading="lazy"></p><p>其中：vanilla 是原版服务端，也就是 Mojang 写的，不能通过插件或 Mods 添加功能与玩法。这里选择它来做教程</p><p>点进去，在列表里找到你需要的版本即可。如：1.18.1。</p><p>点击一下你要的版本，在右上角找到下载按钮即可下载。</p><p><img src="https://pic.dogimg.com/2022/04/10/6252272c18e31.png" alt="屏幕截图 2022-04-10 083827.png" loading="lazy"></p><blockquote><p>请下载后缀名为 <code>.jar</code> 的文件，不要下后缀为 <code>.jar.sha1</code> 的文件。</p></blockquote><p>下载好以后，丢到你喜欢的位置。我这里是在桌面上新建一个文件夹，直接把下载好的核心丢进去即可。</p><p><img src="https://pic.dogimg.com/2022/04/10/625227fd9e61a.png" alt="屏幕截图 2022-04-10 084116.png" loading="lazy"></p><h3 id="进行初步配置"><a href="#进行初步配置" class="headerlink" title="进行初步配置"></a>进行初步配置</h3><p>我们双击一下服务端核心，稍等片刻，就会发现目录下多了很多文件。</p><p><img src="https://pic.dogimg.com/2022/04/10/6252286ca844b.png" alt="屏幕截图 2022-04-10 084402.png" loading="lazy"></p><p>现在打开 <code>eula.txt</code>，我们需要在这个文件中同意 Mojang 的 EULA 才能进行下一步配置。</p><blockquote><p>建议您大致了解 Mojang EULA 协议</p></blockquote><p>将 <code>false</code> 改为 <code>true</code>，保存文件。</p><p><img src="https://pic.dogimg.com/2022/04/10/625229032851c.png" alt="屏幕截图 2022-04-10 084631.png" loading="lazy"></p><p>然后再次双击服务端文件，过一段时间你应该会看到这个窗口：</p><p><img src="https://pic.dogimg.com/2022/04/10/62522aa453614.png" alt="屏幕截图 2022-04-10 085328.png" loading="lazy"></p><p>让我们关闭服务端。点击关闭按钮或者在控制台内输入 <code>stop</code> 都可以。</p><p>现在在目录里新建一个文本文档，在里面输入下面的参数：</p><pre class="line-numbers language-none"><code class="language-none">java -Xmx1G -Xms1G -jar minecraft_server.1.18.1.jar -noguipause# 如果你要使用自定义的 Java 版本&quot;你要用的 Java 的 java.exe 绝对路径&quot; -Xmx1G -Xms1G -jar minecraft_server.1.18.1.jar -nogui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p><code>java</code> 是你要用的 Java 路径。如果电脑内安装了不同版本的 Java 则需要手动指定路径</p><p><code>-Xmx</code> 和 <code>-Xms</code> 字段是控制服务器所用内存的，根据你自己的需求来设置即可。Mojang 推荐最大值和最小值相同（即分配静态内存）</p></blockquote><p>现在，你的文件夹内应该有这样的目录结构：</p><pre class="line-numbers language-none"><code class="language-none">文件夹|_ libraries|_ logs|_ versions|_ world|_ banned-ips.json|_ banned-players.json|_ eula.txt|_ minecraft_server.1.18.1.jar|_ ops.json|_ server.properties|_ start.bat|_ usercache.json|_ whitelist.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>打开 <code>server.properties</code> 文件，这个文件是服务端的配置文件，你可以在其中自定义玩家数量上限、正版验证、游戏模式、难度等等。具体请看 Minecraft Wiki。</p><p><img src="https://pic.dogimg.com/2022/04/10/6252360d1b990.png" alt="屏幕截图 2022-04-10 094206.png" loading="lazy"></p><blockquote><p><a href="https://minecraft.fandom.com/zh/wiki/Server.properties">Minecraft Wiki 有关服务端配置文件的介绍</a></p></blockquote><p>当你完成了该文件的编辑时，这个服务器就算是真正完成了。接下来你可以使用内网穿透工具让它可以被外部连接到，或者花点钱去租一个服务器也可以。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>到这里，这个教程就结束了。</p><p>你现在已经基本掌握了搭建服务器的步骤，接下来，去租一个机子托管你的服务器吧！不要总是做<del>白嫖怪</del>呢……？</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;好的，又是一篇新的文章！其实网上的教程够多了，基本都能达到目标。&lt;/p&gt;
+&lt;p&gt;但是我要写一个简单的教程来取代它们（其实如果自己忘了也可以看看）&lt;/p&gt;
+&lt;p&gt;废话少说，让我们开始吧！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前排提示：本教程仅适用于 Minecraft J</summary>
+      
+    
+    
+    
+    <category term="Minecraft" scheme="https://bigcake.cakemc.top/categories/Minecraft/"/>
+    
+    
+    <category term="服务器" scheme="https://bigcake.cakemc.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何诊断 Minecraft Java 版客户端中的错误</title>
+    <link href="https://bigcake.cakemc.top/posts/minecraft-problems-solve/"/>
+    <id>https://bigcake.cakemc.top/posts/minecraft-problems-solve/</id>
+    <published>2022-04-07T23:45:18.000Z</published>
+    <updated>2022-04-07T23:45:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>妈耶，终于修好 Hexo 报 YAMLException 的问题了，上次更新已经是 5 个月前了呢！</p><p>这段时间没更新，主要就是 Hexo 的锅。</p><blockquote><p>顺带一提，又回归到网课时期了（我这边有疫情）</p></blockquote><p>由于 <del>Mojang</del> Bugjump 的传统艺能，Minecraft Java 版通常会因为各种玄幻的原因崩溃，这篇文章将会带着你判断你的 Minecraft 出了什么问题，以及可能的修复方法。</p><span id="more"></span><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="选择正确的-Java-版本"><a href="#选择正确的-Java-版本" class="headerlink" title="选择正确的 Java 版本"></a>选择正确的 Java 版本</h3><p>请先选择正确的 Java 版本。</p><p>1.17.x 需要 Java 16，1.18 + 需要 Java 17。1.16.5 及以下需要 Java 8</p><p>如果选择了错误的 Java，那么不管怎么搞，游戏都始终会崩溃。</p><blockquote><p>通常情况下，启动器会自动根据选择的版本帮你选择 Java 运行时（如 <a href="https;//www.bakaxl.com">BakaXL</a> 和 PCL2）</p></blockquote><p>当你的游戏无法启动时，取决于你使用的启动器（如 <a href="https://www.bakaxl.com/">BakaXL</a> ），启动器会为你分析崩溃原因并为你提供一个打包好的错误报告与日志。如果你比较懒，可以直接将这个压缩包发到 QQ 群等处询问他人。<del>（但这就和这篇文章的主旨脱离了啊喂）</del></p><blockquote><p>推荐阅读：<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way">提问的智慧</a></p></blockquote><p>理想情况下，上面的方法可帮你解决大部分问题。但是俗话说：“理想很丰满，现实很骨感”，有些问题连启动器都没办法告诉你为啥。这就需要我们自己动手了。</p><h3 id="认识-Minecraft-的目录结构"><a href="#认识-Minecraft-的目录结构" class="headerlink" title="认识 Minecraft 的目录结构"></a>认识 Minecraft 的目录结构</h3><p>首先，请打开你存放游戏的文件夹。我在这里默认你的游戏已经运行和崩溃了至少一次。</p><p>如果你没有开启版本隔离，那么这个文件夹应该至少具备以下目录结构：</p><pre class="line-numbers language-none"><code class="language-none">文件夹|_ .minecraft|     |_ assets|     |_ libraries|     |_ crash-reports|     |_ logs|     |_ versions|     |   |_ 你的游戏版本|     |       |_ 游戏版本.jar|     |       |_ 游戏版本.json|     |_ launcher_profiles.json       |_ 启动器（ PCL2.exe，BakaXL.exe 等）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如果你开启了版本隔离，那么这个文件夹的目录结构至少应该是这样的：</p><pre class="line-numbers language-none"><code class="language-none">文件夹|_ .minecraft|     |_ assets|     |_ libraries|     |_ versions|     |   |_ 你的游戏版本|     |       |_ crash-reports|     |       |_ logs|     |       |_ 游戏版本.jar|     |       |_ 游戏版本.json|     |_ launcher_profiles.json|_ 启动器（ PCL2.exe，BakaXL.exe 等）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>然后，按照上方的目录结构，找到 <code>crash-reports</code> 和 <code>logs</code> 文件夹。前者存放着游戏崩溃时自动生成的崩溃报告，后者存放游戏运行日志</p><p>然后，在资源管理器中按下 “修改日期” 按钮，你就会看到最新的日志 <code>latest.log</code> 。</p><p><img src="https://pic.dogimg.com/2022/04/08/624fbdc0b4a63.png" alt="latest-log" loading="lazy"></p><blockquote><p><code>crash-reports</code> 文件夹同理。</p></blockquote><p>我们暂且先不去理 <code>latest.log</code> 。现在让我们打开最新的 <code>crash-report</code> 文件，打开以后你就会看到大片的堆栈跟踪以及看不懂的错误类型。</p><blockquote><p>文件名内标有 <code>server</code> 字样的一般和游戏内置的服务端有关，你可以不用理会。一般崩溃后产生的 <code>crash-report</code> 文件都是带有 <code>client</code> 字样的</p><p><img src="https://pic.dogimg.com/2022/04/08/624fbf4329db5.png" alt="crash-report" loading="lazy"></p></blockquote><h3 id="寻找错误"><a href="#寻找错误" class="headerlink" title="寻找错误"></a>寻找错误</h3><p>这一份崩溃报告是安装了 Forge 和 VanillaFix 后的一次崩溃生成的。我们可以看到这里的错误类型是 <code>Initializing game</code> ，意思是加载游戏（废话）。堆栈跟踪最顶部的一行告诉了我们错误原因是 <code>ngtlib</code> 这个依赖 Mod 加载 <code>jp.ngt.ngtlib.NGTCore</code> 这个 Class 失败了。</p><p><img src="https://pic.dogimg.com/2022/04/08/624fc0dfd9e74.png" alt="屏幕截图 2022-04-08 125741.png" loading="lazy"></p><p>这段文字告诉我们导致错误的原因是 <code>ClassNotFoundException</code> 即 “找不到类”。下方的 Sha1 值验证不通过和后方跟着的人类可读报错告诉我们这个 Mod 和依赖它的 <code>RealTrainMod</code> 的版本不对应导致崩溃</p><p>往下翻，我们可以看到这样的布局：</p><p><img src="https://pic.dogimg.com/2022/04/08/624fc2d1a664a.png" alt="屏幕截图 2022-04-08 130559.png" loading="lazy"></p><p>上半部分记录了你的系统、游戏版本、Java 和 JVM 各自的版本、JVM 参数、内存等；下半部分则是你使用的 Forge、OptiFine（如果你装了）的版本以及下方 L、C、H、I、J、A、D、E 八个字符分别对应的意思以及你安装的 Mods。一般通过这张表即可得出出问题的 Mod 是哪个。</p><p>以此类推即可。</p><p>如果你的 Minecraft 文件夹内出现了文件名类似 <code>hs-err-pidxxxxxxxx.mdmp</code> 之类的文件的话，可能是你分配给 Minecraft 的内存过少或者你的 Java 有问题。</p><p>如果启动时出现了一个窗口，内部带有如下链接：<a href="https://aka.ms/mcdriver">https://aka.ms/mcdriver</a> ，则说明你的显卡驱动出现了一些问题（或者你压根没有显卡——通常发生在你尝试在租来的 Windows 服务器上）。</p><h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><p>出问题的 Mod，需要更换或删除。</p><p>内存不足，需要多分点内存，或者<del>滚回功率，坐和放宽</del>去玩老版本</p><p>显卡有问题，可以考虑更新显卡驱动或者重买一个电脑（？</p><p>Java &#x2F; JVM 的问题，可以尝试重新安装一次 Java 或者多给你的 Minecraft 分配点内存。毕竟：</p><p><img src="https://pic.dogimg.com/2022/05/02/626f50ce7ac63.jpg" alt="Java eats memories" loading="lazy"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;妈耶，终于修好 Hexo 报 YAMLException 的问题了，上次更新已经是 5 个月前了呢！&lt;/p&gt;
+&lt;p&gt;这段时间没更新，主要就是 Hexo 的锅。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;顺带一提，又回归到网课时期了（我这边有疫情）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由于 &lt;del&gt;Mojang&lt;/del&gt; Bugjump 的传统艺能，Minecraft Java 版通常会因为各种玄幻的原因崩溃，这篇文章将会带着你判断你的 Minecraft 出了什么问题，以及可能的修复方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Minecraft" scheme="https://bigcake.cakemc.top/categories/Minecraft/"/>
+    
+    
+    <category term="问题诊断" scheme="https://bigcake.cakemc.top/tags/%E9%97%AE%E9%A2%98%E8%AF%8A%E6%96%AD/"/>
+    
+    <category term="Mods" scheme="https://bigcake.cakemc.top/tags/Mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手把手教你如何搭建属于自己的 Hexo 博客</title>
+    <link href="https://bigcake.cakemc.top/posts/build-a-hexo-blog/"/>
+    <id>https://bigcake.cakemc.top/posts/build-a-hexo-blog/</id>
+    <published>2021-12-04T08:45:10.000Z</published>
+    <updated>2021-12-04T08:45:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>写给一个想要拥有自己的博客，却没有资金的小白和小学时的自己</p></blockquote><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然，独立博客的时代已经过去，越来越多的人们开始在大平台上发布自己的文章</p><p>虽然，这些平台的流量能够为这些博主们创造收益</p><p>但是，拥有一个自己的博客，意味着它不仅属于自己，而且需要自己一步步为它添砖加瓦</p><p>比如文章的语言、界面的布局、功能多少、搜索引擎收录，都需要自己一点点完善</p><p>最后，看到自己的网站一步步走到现在，内心也会有一种自豪与欣慰的感觉</p><p>希望看到这篇文章的所有人，不管是学生还是其它人，都能拥有一个完全属于自己的博客，并且用心去建设其中的内容</p><blockquote><p>类似于此处的引用一般会是一些注意事项，在阅读前记得多注意一些</p></blockquote><h3 id="会提到的一些东西"><a href="#会提到的一些东西" class="headerlink" title="会提到的一些东西"></a>会提到的一些东西</h3><ul><li>Hexo</li><li>静态博客</li><li>Serverless（无服务器）</li><li>GitHub Pages</li><li>Hexo 主题</li></ul><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><blockquote><p>啥是 Node.js ？</p><p>Node.js 是一个基于Chrome V8引擎的 JavaScript 运行环境，使用了一个事件驱动、非阻塞式 I&#x2F;O 模型，让 JavaScript 运行在服务端的开发平台，它让 JavaScript 成为与 PHP、Python、Perl、Ruby 等服务端语言平起平坐的脚本语言<br><em>—— 百度百科</em></p></blockquote><p>上边的这一个引用你可以忽略，看正文部分即可</p><p>首先，前往 <a href="https://nodejs.org/zh-cn/">Node.js 官网</a> 下载安装包</p><p>选择<strong>长期维护版</strong>下载。如果你选择最新尝鲜版也无伤大雅，只是你有可能会遇到一些 Bug</p><p>如果你是 Windows 系统，下载下来的安装包后缀应为 <code>.msi</code></p><blockquote><p>macOS 下载 <code>.pkg</code> 后缀</p><p>Linux 标签页右方小叉</p></blockquote><p>打开下载下来的安装程序，一路回车（开始的时候需要同意协议）</p><p>等待安装程序安装完成后，打开命令行或者终端，输入 <code>node</code></p><p>如果返回的内容与你安装的版本一致那么就代表安装成功了</p><p>后续操作都会在终端进行输入</p><blockquote><p>Node.js 安装成功以后默认会随附 <code>npm</code> 包管理器，会在之后用到</p><p>它的全称是 <code>Node Package Manager</code> ，你可以理解成手机上的应用商店</p></blockquote><p>国内使用 npm 会很慢，你可以考虑切换为 <code>taobao</code> 镜像源</p><pre class="line-numbers language-none"><code class="language-none">npm config set registry https:&#x2F;&#x2F;registry.npmmirror.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>你可以在安装完 Node.js 后安装 <a href="https://www.yarnpkg.com/zh-Hans">yarn</a> 。Facebook 出品，比 npm 更快速的包管理器</p><pre class="line-numbers language-none"><code class="language-none">npm install -g yarn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p><a href="https://www.yuque.com/yunyoujun/notes/npm-and-yarn#nrm">npm &amp; yarn 常用包与命令</a></p></blockquote><h3 id="Git-和-GitHub"><a href="#Git-和-GitHub" class="headerlink" title="Git 和 GitHub"></a>Git 和 GitHub</h3><h4 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h4><blockquote><p>Visual Studio Code ，简称 VS Code</p><p>目前最强大、最易用的编辑器，轻量、快速（<del>宇宙第一编辑器</del>）</p><p>但它不是 VS ， VS 指的是 Visual Studio ，是集成开发环境（ IDE ）（<del>小白易读：开发软件用的</del>）这玩意儿体积要比 VS Code 大一个量级</p></blockquote><p>（<del>微软大法好</del>）</p><p>先安装 <a href="https://code.visualstudio.com/">VS Code</a>，这样可以在安装 Git 时设置 VS Code 为默认编辑器</p><p>Windows 10 &#x2F; 11 用户可在微软商店（新版）下载</p><blockquote><p>Git 是一个开源的分布式版本控制系统，由 Linus Torvalds（同时也是 Linux 的作者）为了管理 Linux 开发而开发。</p><p>简而言之，是一个版本管理工具。譬如设计师设计好了第三版的海报，客户却说还是要第一版吧，这时便可以通过 Git 快速回退到最初的版本。</p><p>你只需要把每次更改的状态（Git 会自动进行检测，你只要掌握基础的几条命令就可以了）告诉 Git，而不需要每个版本都保存一份压缩包，既方便也能大大节约空间。</p></blockquote><p>下载 <a href="https://git-scm.com/">Git</a> 并安装，速度太慢的话可以试试国内的软件分发网站（注意要找大厂如腾讯，千万不要选高速下载之类的东西）</p><h4 id="注册-GitHub"><a href="#注册-GitHub" class="headerlink" title="注册 GitHub"></a>注册 GitHub</h4><p>这部分你可以等到在自己电脑上测试完成后，打算部署到线上的时候再翻回来看</p><blockquote><p>从字面看，GitHub 便与 Git 有着密不可分的关系。<code>Git</code> 在必应翻译中是<del>蠢货</del>的意思，而 <code>Hub</code> 则为枢纽</p><p>所以 GitHub 便是 <del>“蠢货枢纽” 的意思（大雾（划掉））</del></p><p>GitHub 是全球最大的开源项目与代码托管网站，也是众多开发者交流的平台，同时也是全球最大的<a href="https://github.com/komeiji-satori/Dress"><del>同性交友网站</del></a></p><p>而其代码托管本身的实现正是基于上边的 Git</p></blockquote><p>注册 <a href="https://github.com/">GitHub</a> 账号（虽然全英文无翻译，但是并不难理解，只需记住最常用的选项即可，而且<a href="https://docs.github.com/">官方文档</a>有中文翻译）</p><p>注册时的英文 ID 将会成为你可以使用的免费域名前缀（比如我的 GitHub ID 是 Big-Cake-jpg ，那么我可以使用的免费域名就是 big-cake-jpg.github.io ）</p><blockquote><p>为啥是这个没中文还天天打不开的东西？</p><p>对于平民来说，第一次搭建网站时也许手头并没有钱去买服务器和域名</p><p>而 GitHub 则提供了 <a href="https://pages.github.com/">GitHub Pages</a> 这一免费服务</p><p>用户们可以利用这一服务部署静态站点</p></blockquote><p>点右上角的 <code>+</code> &#x3D;&gt; <code>New repository</code> 或者左侧边栏里的绿色按钮新建一个仓库</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/build-a-hexo-blog/create-repo.png" alt="create-repo" loading="lazy"><em>创建仓库的页面。我这里因为有同名仓库所以无法创建</em></p><p>仓库名称务必像上图中 <code>用户名.github.io</code> 一样，用户名为英文，大小写可以不区分</p><blockquote><p>为啥子必须要用这个仓库名啊……</p><p>如果你没有自备的域名，这样做可以让 GitHub Pages 将其作为你的专属域名。当然，如果你有自己的域名，可以绑定上去</p></blockquote><p>点击 <code>Create repository</code></p><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p><a href="https://hexo.io/">Hexo</a></p><ul><li>GitHub：<a href="https://github.com/hexojs/hexo">https://github.com/hexojs/hexo</a></li><li><a href="https://hexo.io/zh-cn/docs/index.html">官方文档</a> 有较高的理解能力（<del>语文 90 分以上</del>）也可以看官方文档（<del>反正我看不懂</del>)</li></ul><blockquote><p>Hexo 是一个快速、简介、强大的博客框架，基于 Node.js，同样托管与 GitHub 上，拥有良好的生态。你可以用它快速生成静态页面，可以使用他人的主题与插件，也可自己定制</p><p>其它常用的博客框架还有 <a href="https://wordpress.org/">WordPress</a>、<a href="https://typecho.org/">Typecho</a>等，但它们往往需要购置自己的服务器，而无法静态化地部署到 GitHub Pages。当然，功能和灵活性也会大大提升。</p><p>静态化站点还有一个优势是访问速度往往更快。</p><p>静态网站生成器还有 <a href="https://vuepress.vuejs.org/">VuePress</a> 等，但这些多为写文档而量身定制，关于博客的主题与解决办法等会少得多</p></blockquote><p>先在你喜欢的地方创建一个文件夹，起一个喜欢的名字，然后右键这个文件夹选择 <code>Git Bash Here</code></p><p>在打开的终端里输入如下命令：</p><pre class="line-numbers language-none"><code class="language-none">npm install hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p><code>install</code>：安装</p><p><code>hexo-cli</code>：<code>hexo</code> 的终端工具，用于生成后面会用到的模版文件</p><p><code>-g</code>：全局安装，即在电脑任何地方都可使用</p></blockquote><p>然后输入：</p><pre class="line-numbers language-none"><code class="language-none">hexo init 你的 GitHub 用户名.github.io<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p><code>hexo</code> 是因为之前安装了 <code>hexo-cli</code> 这个包，所以我们能够使用 <code>hexo</code> 这一命令</p><p><code>init</code> 初始化博客模版，后面的参数是将会新建的文件夹的名字，建议与仓库名保持一致</p></blockquote><pre class="line-numbers language-none"><code class="language-none">cd 你的 GitHub 用户名.github.ionpm install# oryarn installhexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>server</code> 意思是告诉 Hexo 开启本地测试服务器。这样的话，你就可以通过浏览器访问 <code>localhost:4000</code> 看到效果了</p><p>按 <code>Ctrl + C</code>终止本地服务器运行</p><p>至此，站点的基本框架已经搭建完成了</p><h2 id="使用第三方-Hexo-主题"><a href="#使用第三方-Hexo-主题" class="headerlink" title="使用第三方 Hexo 主题"></a>使用第三方 Hexo 主题</h2><p>Hexo 默认提供的主题是 <a href="https://github.com/hexojs/hexo-theme-landscape">hexo-theme-landscape</a></p><p>样式简单，功能少，所以大多数人并不会用默认主题</p><p>本处使用<a href="https://yunyoujun.cn/">云游君</a>的主题 <a href="https://github.com/YunYouJun/hexo-theme-yun">hexo-theme-yun</a></p><blockquote><p>本站的主题即为 hexo-theme-yun</p></blockquote><p>当然，你也可以到 <a href="https://hexo.io/themes/">Themes｜Hexo</a> 寻找其它主题使用，比如 hexo-theme-next</p><h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><p>进入终端，确保路径在你之前初始化的博客文件夹下（下面简称 Hexo 目录），然后执行如下命令</p><blockquote><p>「你知道吗」可以在 VS Code 里直接打开终端</p></blockquote><pre class="line-numbers language-none"><code class="language-none">yarn add hexo-theme-yun # npm install -g hexo-theme-yun<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p>注意：hexo-theme-yun 从 v1.8 开始使用 npm 包分发，你需要按照文档的步骤进行配置迁移</p></blockquote><h3 id="编辑-Hexo-配置"><a href="#编辑-Hexo-配置" class="headerlink" title="编辑 Hexo 配置"></a>编辑 Hexo 配置</h3><blockquote><p>右键 Hexo 文件夹，选择 “使用 VS Code 打开”。此后操作都默认你处在该工作目录中</p></blockquote><p>在此前初始化操作建立的 Hexo 文件目录下，会存在一个 <code>_config.yml</code> 文件</p><p>它是 Hexo 的配置文件，你可以在 <a href="https://hexo.io/zh-cn/docs/configuration">配置｜Hexo</a> 处查看各配置选项的意义</p><p>在这个文件中找到 <code>theme</code> 字段，将后边的 <code>landscape</code> 修改为 <code>yun</code></p><blockquote><p>后边的 <code>yun</code>根据你选择的主题来设置，比如你使用 <code>hexo-theme-next</code>，那么将后面的字段设置为 <code>next</code></p><p>一般来说，主题都会在使用文档中声明使用了什么渲染器</p><p>如 <code>hexo-theme-yun</code> 使用 pug 和 stylus 渲染器，而 Hexo 自带的一般是 ejs 与 stylus，所以可能需要输入下方命令安装缺失的渲染器</p></blockquote><pre class="line-numbers language-none"><code class="language-none">npm install hexo-renderer-pug hexo-renderer-stylus# 如果出了问题，可以试试 yarn 安装<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>完成上述步骤以后，再次使用 <code>hexo server</code> 启动测试服务器，即可看到一个全新的页面</p><h3 id="自定义主题配置"><a href="#自定义主题配置" class="headerlink" title="自定义主题配置"></a>自定义主题配置</h3><p>第一次启动使用的是主题的默认配置，不一定符合你的心意</p><p>所以你可以根据自己的需求，对主题进行一些自定义</p><p>主题的默认配置文件放在了 <code>source/主题/_config.yml</code></p><p>但是直接修改这个文件将导致以后主题更新升级麻烦得很</p><p>一般来说，主题的使用文档将会给出这种情况的解决方案</p><p>如 <code>hexo-theme-yun</code> 会让用户在博客根目录新建 <code>_config.yun.yml</code></p><p>更多配置选项请参考主题文档</p><h2 id="生成站点的静态文件并部署"><a href="#生成站点的静态文件并部署" class="headerlink" title="生成站点的静态文件并部署"></a>生成站点的静态文件并部署</h2><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>直到现在为止，你之前的工作都是本地进行，你也许已经迫不及待想让博客上线了</p><p>这时，便轮到 GitHub Pages 登场了</p><pre class="line-numbers language-none"><code class="language-none"># 生成静态文件hexo generate# 缩写为 hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>当执行完成后，Hexo 目录下会出现一个 <code>public</code> 文件夹，里边存放的是刚才生成的静态文件</p><h3 id="与远程仓库进行关联"><a href="#与远程仓库进行关联" class="headerlink" title="与远程仓库进行关联"></a>与远程仓库进行关联</h3><p>然后执行如下命令初始化 Git 仓库</p><pre class="line-numbers language-none"><code class="language-none">git init #只需执行一次即可<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>部署之前，最好建立一个备份 Hexo 工作目录的分支</p><pre class="line-numbers language-none"><code class="language-none">git checkout -b hexo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>完成后，所有的工作就都将在 hexo 分支进行</p><p>安装 <code>hexo-deployer-git</code> 插件</p><pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>在 Hexo 配置文件 <code>_config.yml</code> （<strong>不是主题的</strong>）中配置</p><pre class="line-numbers language-none"><code class="language-none">deploy:  type: git  repo: 你此前新建的仓库的链接 # 比如：https:&#x2F;&#x2F;github.com&#x2F;Big-Cake-jpg&#x2F;big-cake-jpg.github.io  branch: master # 默认使用 master 分支  message: Update Hexo Static Content # 你可以自定义此次部署更新的说明<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>保存并部署</p><blockquote><p>第一次部署可能需要 GitHub 账号密码，密码输入时不会出现星号，但是密码已经输入进去了</p></blockquote><pre class="line-numbers language-none"><code class="language-none">hexp deploy#缩写为 hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>等待 Git 推送完成后，在 GitHub 上依次打开 <code>仓库</code> &#x3D;&gt; <code>Settings</code> &#x3D;&gt; <code>Pages</code></p><p>选择分支（一般都是 <code>master</code>），点击 <code>save</code></p><p>等待几秒钟，打开 <code>https://你的 GitHub 用户名.github.io</code> 就可以看到线上效果了</p><h2 id="备份-Hexo-工作区以及自动部署"><a href="#备份-Hexo-工作区以及自动部署" class="headerlink" title="备份 Hexo 工作区以及自动部署"></a>备份 Hexo 工作区以及自动部署</h2><h3 id="备份-Hexo-工作区"><a href="#备份-Hexo-工作区" class="headerlink" title="备份 Hexo 工作区"></a>备份 Hexo 工作区</h3><p>上边的做法只是将生成的静态文件部署到了云端而已</p><p>为了方便在不同设备上写作以及以防万一，你的 Hexo 工作目录也应该推送到 GitHub 仓库备份</p><pre class="line-numbers language-none"><code class="language-none"># 只需执行一次，这会与远程仓库建立一个连接git remote add origin https:&#x2F;&#x2F;github.com&#x2F;你的用户名&#x2F;你的用户名.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>VS Code 中有比较方便的操作，它会在右侧栏中的“源代码管理”中显示所有你修改过的文件</p><p>你可以在顶部的输入框中输入这次改了工作区的什么文件之类的，然后按跟前的对勾即可提交到本地 Git 仓库</p><p>然后再点击最下方的蓝色大条条中的一个带俩箭头的“同步更改”按钮将 Hexo 工作区推送到 GitHub</p><h3 id="自动部署"><a href="#自动部署" class="headerlink" title="自动部署"></a>自动部署</h3><p>时间长了，你会发现这样还是不方便，在别的设备上你得再拉取一遍仓库，如果碰巧你用的是手机 &#x2F; 平板那更是只能干瞪眼</p><p>所以现在我们需要一个持续集成服务</p><blockquote><p>本文中使用 GitHub Actions，自身便拥有仓库的 Token ，不需要额外的配置，可直接使用 <code>secrets.GITHUB_TOKEN</code></p></blockquote><p>你可以参考 Hexo 官方文档，也可以直接照抄我的 <a href="https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/.github/workflows/gh-pages.yml">gh-pages.yml</a></p><blockquote><p>记得把 <code>branch</code> 的值改成自己存放 Hexo 工作区的分支名，删掉 <code>algolia</code> 字段</p></blockquote><p>当然，你还可以使用 Netlify、Vercel 等第三方服务</p><p>完成后，你的个人博客便基本搭建完成。你可以再对主题进行自定义，或者开始写作</p><h2 id="开始写作"><a href="#开始写作" class="headerlink" title="开始写作"></a>开始写作</h2><h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><p>输入以下命令即可新建 <code>xxx.md</code> 文件</p><pre class="line-numbers language-none"><code class="language-none">hexo net post xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p><a href="https://younghz.github.io/Markdown/">Markdown 标记语言语法等</a></p></blockquote><h3 id="为文章添加标签-x2F-分类"><a href="#为文章添加标签-x2F-分类" class="headerlink" title="为文章添加标签&#x2F;分类"></a>为文章添加标签&#x2F;分类</h3><p>你可能需要先了解 Hexo 的 Front-matter</p><blockquote><p><a href="https://hexo.io/zh-cn/docs/front-matter.html">Front-matter</a></p></blockquote><pre class="line-numbers language-none"><code class="language-none">---title: 手把手教你如何搭建属于自己的 Hexo 博客date: 2021-12-04 16:45:10tags:  - GitHub    - Hexo   - 博客categories:  - 大蛋糕的安利---你的文章内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h3><p>自定义页面在 Hexo 中是可以使用的，譬如直接在 <code>source</code> 下新建 HTML 进行编写</p><p>也可以通过执行下边的命令新建页面（还是 Markdown，不过你可以直接在 Markdown 里写 HTML 的，同样会渲染）</p><pre class="line-numbers language-none"><code class="language-none">hexo new page xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="有打算发视频吗？"><a href="#有打算发视频吗？" class="headerlink" title="有打算发视频吗？"></a>有打算发视频吗？</h3><p>没有打算，电脑被家人收了，不让我动 QWQ</p><p>二是视频制作比较麻烦，文章相对来说更加简单</p><h3 id="我想绑定我自己的域名（"><a href="#我想绑定我自己的域名（" class="headerlink" title="我想绑定我自己的域名（"></a>我想绑定我自己的域名（</h3><p>首先你得有个域名</p><p>将域名用 CNAME 解析到 <code>你的名字.github.io</code>（当然 A 记录直接填 GitHub Pages 的 IP 也可以）</p><blockquote><p><a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">GitHub 官方文档，有中文</a></p></blockquote><p>在 <code>source</code> 文件夹下新建 <code>CNAME</code> 文件（没有后缀）并填入你的域名</p><p>然后部署一次即可</p><p>如果你后边把这东西删掉的话，随后不包含它的部署将会把远程仓库里的 CNAME 覆盖掉</p><h3 id="备案"><a href="#备案" class="headerlink" title="备案"></a>备案</h3><p>要用国内服务如 CDN，不备案是真的难于上青天</p><p>这里的备案指的是 ICP 备案（就是每个国内网站页脚挂的 “京 ICP 备 xxxxxxxxxx 号” 之类的</p><p>但国内备案都要求你有一台人家的国内服务器，且购买时长至少 3 个月以上</p><blockquote><p>需要注意的是：</p><ul><li><p>确定域名可以备案（<code>moe</code> 之类的域名无法备案）</p></li><li><p>关闭评论区</p></li><li><p>备注说明不得包含 <code>交流</code> 字样</p></li><li><p>首页不能含有其他网站直达链接</p></li><li><p>遵纪守法（那肯定）</p></li></ul></blockquote><p>你也可以直接下线网站，等备案成功以后再上线（以后偶尔会复查，相对宽松很多）</p><p>按照服务商的备案步骤一步步来即可</p><p>拿到 ICP 备案号以后页脚必须清晰展示备案号，且指向 <a href="https://beian.miit.gov.cn/">https://beian.miit.gov.cn</a></p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>个人博客可以用作许多用途，比如笔记本、回忆、创作、开发经验、生活等等</p><p>多年后，再打开它看自己写下的内容，回忆纷纷涌上心头，多么美好</p><p>希望大家的博客成功上线以后，能够承载着自己的许多回忆、承载自己的人生，走得更远</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;写给一个想要拥有自己的博客，却没有资金的小白和小学时的自己&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;虽然，独立博</summary>
+      
+    
+    
+    
+    <category term="大蛋糕的安利" scheme="https://bigcake.cakemc.top/categories/%E5%A4%A7%E8%9B%8B%E7%B3%95%E7%9A%84%E5%AE%89%E5%88%A9/"/>
+    
+    
+    <category term="GitHub" scheme="https://bigcake.cakemc.top/tags/GitHub/"/>
+    
+    <category term="Hexo" scheme="https://bigcake.cakemc.top/tags/Hexo/"/>
+    
+    <category term="博客" scheme="https://bigcake.cakemc.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我讲了节物理课这件事</title>
+    <link href="https://bigcake.cakemc.top/posts/a-little-teacher/"/>
+    <id>https://bigcake.cakemc.top/posts/a-little-teacher/</id>
+    <published>2021-12-02T17:07:23.000Z</published>
+    <updated>2021-12-02T17:07:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>《关于加个引号就能变成小说这件事》</p></blockquote><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>说实话，这件事情本来能避免的，只是因为我当时<del>脑子抽了</del>上物理课的时候写地理默写</p><p>结果就有了下面的这件事情……</p><span id="more"></span><h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><p>大概是两个月前，有一节物理课。老师在上边给我们讲复习课，我在下边写<strong>地理</strong>默写</p><p>老师看到了我在写别的就给我收掉了（</p><p>然后我就开始改物理《名校课堂》上边的错题，老师也不让现在改……</p><p>结果下了课，班主任就找过来问我上课是不是做了什么不该做的事（<del>还好上课的时候没在后门录视频</del>）</p><blockquote><p>“那你就讲一节课吧，给大家复习一下。如果讲不透，下次再出现类似的事情就立马叫家长”</p></blockquote><p>没办法，死马当活马医吧。我看了下课程表，下一节物理课在星期三第二节课（当时是星期一），还有一天多的准备时间</p><p>我着急忙慌地跑到办公室问我的英语老师要了份教案，拿走了以后就根据上面的内容构思</p><p>中午吃完饭回了宿舍，看到隔壁班和我一个宿舍那个男同学也在，我就让他帮我想想这些可以总结成什么</p><p>“1+2+2+3+3+4。”他是这么说的</p><blockquote><p>“1” 是回声测距、“2” 分别是两大实验……</p></blockquote><p>教案终于填完了，然后我又仔细翻了遍第二章声现象的内容，为讲课做准备</p><p>星期三，第一节课刚下没大概4分钟，物理老师站到了门口，结果有个女生就告诉她说我得讲课</p><blockquote><p><del>rnm 她要是不说我就不用去讲课了</del></p></blockquote><p>班主任就在最后一排坐着听课</p><p>硬着头皮上了讲台就开始讲。说实话我自己都觉得讲的不好</p><p>板书、画图、举例、抛出问题…..我能想到的所有讲课可以用的都用了</p><p>课堂效果还算不错，但是我自己太紧张了，大家都指出我讲课的时候声音是颤抖的</p><p>物理老师告诉我说讲的还不错，大家都听懂了</p><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>完蛋了，现在连语文老师、数学老师（班主任）都想让我讲课了，可是这些科目我成绩都特别差的啊喂……</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;《关于加个引号就能变成小说这件事》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;说实话，这件事情本来能避免的，只是因为我当时&lt;del&gt;脑子抽了&lt;/del&gt;上物理课的时候写地理默写&lt;/p&gt;
+&lt;p&gt;结果就有了下面的这件事情……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活的点点滴滴" scheme="https://bigcake.cakemc.top/categories/%E7%94%9F%E6%B4%BB%E7%9A%84%E7%82%B9%E7%82%B9%E6%BB%B4%E6%BB%B4/"/>
+    
+    
+    <category term="学习" scheme="https://bigcake.cakemc.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的 Minecraft 服务器 —— CakeMC</title>
+    <link href="https://bigcake.cakemc.top/posts/my-mcserver/"/>
+    <id>https://bigcake.cakemc.top/posts/my-mcserver/</id>
+    <published>2021-10-03T06:01:12.000Z</published>
+    <updated>2021-10-03T06:01:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>CakeMC 是我自己的一个 Minecraft 服务器，早在 Cake Launcher 的开发日志里就有提到</p><p>它于今年 8 月份开始运营，到现在已经获得了较多的玩家数量，最高日在线数量达到了 6-7 人</p><p>这对于一个没有多少宣传、新运营的服务器来说已经很不错了</p><p>目前它甚至还获得了他人的帮助（指免费挂的面板服）</p><p>下面开始正文……</p><span id="more"></span><h2 id="前身"><a href="#前身" class="headerlink" title="前身"></a>前身</h2><h3 id="黑历史"><a href="#黑历史" class="headerlink" title="黑历史"></a>黑历史</h3><p>CakeMC 的前身是我的黑历史：RTMWorld</p><p>本来它是我和几个朋友开的联机服，在一起玩</p><p>但是后来出了一件事，它就没有再开下去</p><p>直到今年 8 月份</p><h2 id="重组"><a href="#重组" class="headerlink" title="重组"></a>重组</h2><p>8 月，我的朋友 XieXiLin 一下租了两个月的 VPS 闲置着，我就想到了继续开一个服务器的念头</p><p>于是咬一咬牙，买了域名，又把 RTMWorld 进行了重组，改名 CakeMC 并计划提供 RealTrainMod 建设服务器（仍保留 RTMWorld 称呼）以及 1.17.1 生存服务器</p><p>一切准备就绪，我和 XieXiLin 便开始在各个 QQ 群里小小宣传一下，便有两三个人来了……</p><h2 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h2><h3 id="田所地铁"><a href="#田所地铁" class="headerlink" title="田所地铁"></a>田所地铁</h3><p>8 月上旬，田所市及其轨道交通开始建设，并取得一定规模</p><p>8 月中旬，田所市建设进度明显过于缓慢，而轨道交通建设进度明显加快</p><p>8 月下旬，田所地铁二、三号线开通，三号线 POV 上传到 B 站作宣传</p><h3 id="开学"><a href="#开学" class="headerlink" title="开学"></a>开学</h3><p>9 月，群内大部分玩家开学，服务器开始日常空载</p><p>9 月末，服务器主机到期，但地图早已提取出来保存</p><p>10 月初，z0z0r4 为 CakeMC 作了支持，免费为 RTMWorld 提供了一个面板服</p><h2 id="如何进入服务器"><a href="#如何进入服务器" class="headerlink" title="如何进入服务器"></a>如何进入服务器</h2><h3 id="进入服务器-QQ-群"><a href="#进入服务器-QQ-群" class="headerlink" title="进入服务器 QQ 群"></a>进入服务器 QQ 群</h3><p>加入<a href="https://jq.qq.com/?_wv=1027&k=BMEMBGvG">外部审核群</a>，填写群公告内问卷并提交管理员审核</p><p>工作日内不审核问卷，法定节假日或周末为审核时间</p><p>寒暑假全天审核</p><p>如果你有任何得意之作（如 RTM 追加包、建筑），请带着追加包模型截图或建筑截图私信管理员</p><p>如果符合条件，管理员会为你加急审核</p><blockquote><p>学习时间内不加急审核，请等待周末&#x2F;法定节假日</p></blockquote><p>如果你审核通过了，管理员会联系你，并告知你群号与验证答案</p><blockquote><p>你不可以泄露内群群号与验证答案<br>如果你把群号与验证答案泄露给了他人，你将被踢出内群，并且禁止再次进群</p></blockquote><h3 id="下载客户端整合包"><a href="#下载客户端整合包" class="headerlink" title="下载客户端整合包"></a>下载客户端整合包</h3><p>在内群群文件内找到客户端整合包并下载到你喜欢的地方</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/my-mcserver/client-download.png" alt="client-download" loading="lazy"></p><p>解压压缩包，你会得到一个文件夹，里面包含了客户端文件和启动器</p><h3 id="启动客户端"><a href="#启动客户端" class="headerlink" title="启动客户端"></a>启动客户端</h3><blockquote><p>推荐你使用 PCL2 来获得最佳体验，因为 HMCL 没有 PCL2 的一些功能</p></blockquote><p>打开启动器，然后登录你的帐号</p><blockquote><p>如果你有正版账号，我们更推荐你使用正版账号进入服务器<br>PCL2 启动器的右侧会动态展示服务器公告，这会成为我们发布整合包更新通知等的重要手段<br>服务器将来会更换 Blessing Skin Server + Yggdrasil API 实现鉴权，来加强对玩家的管理</p></blockquote><p>启动游戏前确认选择的版本为 “CakeMC - RTMWorld”，否则无法进入服务器</p><h3 id="加入服务器"><a href="#加入服务器" class="headerlink" title="加入服务器"></a>加入服务器</h3><p>启动游戏，等待游戏加载完毕进入标题画面</p><p>点击 “多人游戏” 按钮，在 “添加服务器” 页面填入服务器 IP</p><blockquote><p>RTMWorld 的 IP：rtmworld.cakemc.top</p></blockquote><p>保存，然后加入服务器，开始你的建设之旅吧！</p><h2 id="赞助"><a href="#赞助" class="headerlink" title="赞助"></a>赞助</h2><p>服务器是公益性质的，接受各位玩家的无偿捐赠</p><p>如果想要支持服务器，请通过下方的打赏按钮或者前往<a href="https://afdian.net/@Big_Cake2577117205">爱发电</a>支付</p><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p>如果你有疑问，可以发邮件到 <a href="mailto:&#x63;&#111;&#110;&#116;&#97;&#99;&#116;&#117;&#115;&#x40;&#99;&#x61;&#107;&#101;&#x6d;&#99;&#x2e;&#x74;&#111;&#112;">&#x63;&#111;&#110;&#116;&#97;&#99;&#116;&#117;&#115;&#x40;&#99;&#x61;&#107;&#101;&#x6d;&#99;&#x2e;&#x74;&#111;&#112;</a> 或者 <a href="mailto:&#98;&#x69;&#103;&#99;&#97;&#107;&#x65;&#x40;&#x63;&#97;&#107;&#x65;&#x6d;&#99;&#x2e;&#x74;&#x6f;&#112;">&#98;&#x69;&#103;&#99;&#97;&#107;&#x65;&#x40;&#x63;&#97;&#107;&#x65;&#x6d;&#99;&#x2e;&#x74;&#x6f;&#112;</a> 联系，管理员会尽快处理的</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;CakeMC 是我自己的一个 Minecraft 服务器，早在 Cake Launcher 的开发日志里就有提到&lt;/p&gt;
+&lt;p&gt;它于今年 8 月份开始运营，到现在已经获得了较多的玩家数量，最高日在线数量达到了 6-7 人&lt;/p&gt;
+&lt;p&gt;这对于一个没有多少宣传、新运营的服务器来说已经很不错了&lt;/p&gt;
+&lt;p&gt;目前它甚至还获得了他人的帮助（指免费挂的面板服）&lt;/p&gt;
+&lt;p&gt;下面开始正文……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="大蛋糕的安利" scheme="https://bigcake.cakemc.top/categories/%E5%A4%A7%E8%9B%8B%E7%B3%95%E7%9A%84%E5%AE%89%E5%88%A9/"/>
+    
+    
+    <category term="CakeMC" scheme="https://bigcake.cakemc.top/tags/CakeMC/"/>
+    
+    <category term="Minecraft" scheme="https://bigcake.cakemc.top/tags/Minecraft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于 GitHub 今年国庆节访问的问题</title>
+    <link href="https://bigcake.cakemc.top/posts/about-github-access/"/>
+    <id>https://bigcake.cakemc.top/posts/about-github-access/</id>
+    <published>2021-10-01T00:55:13.000Z</published>
+    <updated>2021-10-01T00:55:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天，我在 Surfing the Internet 的时候往博客的 Aplayer 挂件里塞了个音乐列表</p><p>结果发现 GitHub 突然无法访问了，显示 “连接超时”</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/connection-timeout.png" alt="GitHub-unaccessable" loading="lazy"></p><p>我就去查看 Dev-Sidecar 是否开着，得到的结果是</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/dev-sidecar-on.png" alt="Dev-Sidecar-on" loading="lazy"></p><p>看来是代理出问题了</p><p>我在 PCL2 的内测用户群和其他各个群询问了一下，得到的答案是：特殊时期</p><p>同时发现了其他人出现了微软正版无法登录导致无法启动 Minecraft 的问题，修改 DNS 都无用</p><p>而其他网站没有太大问题</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/other-people.png" alt="other-users" loading="lazy"></p><blockquote><p>GFW 司马</p></blockquote><p>没办法，代理用不了了，只能继续回归之前 git push 都得烧一柱香、GitHub 日常打不开的日子了</p><p>希望国庆节过去以后能恢复正常吧</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天，我在 Surfing the Internet 的时候往博客的 Aplayer 挂件里塞了个音乐列表&lt;/p&gt;
+&lt;p&gt;结果发现 GitHub 突然无法访问了，显示 “连接超时”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/B</summary>
+      
+    
+    
+    
+    <category term="GFW" scheme="https://bigcake.cakemc.top/categories/GFW/"/>
+    
+    
+    <category term="GitHub" scheme="https://bigcake.cakemc.top/tags/GitHub/"/>
+    
+    <category term="代理" scheme="https://bigcake.cakemc.top/tags/%E4%BB%A3%E7%90%86/"/>
+    
+    <category term="软件" scheme="https://bigcake.cakemc.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cake Launcher 开发日志</title>
+    <link href="https://bigcake.cakemc.top/posts/launcher-develop/"/>
+    <id>https://bigcake.cakemc.top/posts/launcher-develop/</id>
+    <published>2021-09-30T08:49:20.000Z</published>
+    <updated>2022-04-07T12:53:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://img.shields.io/github/issues-pr/Big-Cake-jpg/Cake-Launcher?label=Pull%20Requests&style=flat-square" alt="GitHub pull requests" loading="lazy"><img src="https://img.shields.io/github/issues/Big-Cake-jpg/Cake-Launcher?label=Issues&style=flat-square" alt="GitHub issues" loading="lazy"><img src="https://img.shields.io/github/license/Big-Cake-jpg/Cake-Launcher?label=License&style=flat-square" alt="GitHub" loading="lazy"><img src="https://img.shields.io/github/repo-size/Big-Cake-jpg/Cake-Launcher?label=Repository%20Size&style=flat-square" alt="GitHub repo size" loading="lazy"><img src="https://img.shields.io/github/contributors/Big-Cake-jpg/Cake-Launcher?label=Contributors&style=flat-square" alt="GitHub contributors" loading="lazy"><img src="https://img.shields.io/github/last-commit/Big-Cake-jpg/Cake-Launcher?label=Last%20commit&style=flat-square" alt="GitHub last commit" loading="lazy"><img src="https://img.shields.io/badge/Author-Big__Cake-blue?style=flat-square" alt="GitHub Author" loading="lazy"><img src="https://img.shields.io/github/stars/Big-Cake-jpg/Cake-Launcher?label=Stars&style=flat-square" alt="GitHub Repo stars" loading="lazy"><img src="https://img.shields.io/github/forks/Big-Cake-jpg/Cake-Launcher?label=Forks&style=flat-square" alt="GitHub forks" loading="lazy"></p><p><a href="https://github.com/Big-Cake-jpg/Cake-Launcher">Cake Launcher</a> 是我为自己的 Minecraft 服务器开发的一个启动器 <del>（蛋糕启动器（误））</del></p><span id="more"></span><h2 id="2021-09-30-微软登录"><a href="#2021-09-30-微软登录" class="headerlink" title="2021-09-30 | 微软登录"></a>2021-09-30 | 微软登录</h2><h3 id="10-01-初步完成"><a href="#10-01-初步完成" class="headerlink" title="10-01 | 初步完成"></a>10-01 | 初步完成</h3><p>微软登录基本完成，目前启动器使用的启动核心是  <a href="https://github.com/baibao132/SquareMinecraftLauncherCore">SquareMinecraftLauncherCore</a>，用于离线登录与 Mojang 正版登录和微软正版登录</p><blockquote><p>感谢 B 站 UP 主 <a href="https://space.bilibili.com/495713706">小叶君</a> 的教程与微软登录dll</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/cake-launcher.png" alt="Cake-Launcher" loading="lazy"></p><p>但现在需要解决一个新的问题：如果使用微软登录启动游戏，启动器将无法继续运行后续代码</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/problem.png" alt="problem" loading="lazy"></p><p>请等待后续更新……</p><blockquote><p>如果你想帮我修复这个问题，或者为启动器添砖加瓦，你可以前往 <a href="https://github.com/Big-Cake-jpg/Cake-Launcher">GitHub 仓库</a></p></blockquote><h3 id="10-01-继续优化"><a href="#10-01-继续优化" class="headerlink" title="10-01 | 继续优化"></a>10-01 | 继续优化</h3><p>经过不懈的询问他人及对比代码，微软登录不会使启动器崩溃了</p><p>但是无法获得 access_token 的问题出现了</p><p>等待更新……</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://img.shields.io/github/issues-pr/Big-Cake-jpg/Cake-Launcher?label=Pull%20Requests&amp;style=flat-square&quot; alt=&quot;GitHub pull requests&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/issues/Big-Cake-jpg/Cake-Launcher?label=Issues&amp;style=flat-square&quot; alt=&quot;GitHub issues&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/license/Big-Cake-jpg/Cake-Launcher?label=License&amp;style=flat-square&quot; alt=&quot;GitHub&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/repo-size/Big-Cake-jpg/Cake-Launcher?label=Repository%20Size&amp;style=flat-square&quot; alt=&quot;GitHub repo size&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/contributors/Big-Cake-jpg/Cake-Launcher?label=Contributors&amp;style=flat-square&quot; alt=&quot;GitHub contributors&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/last-commit/Big-Cake-jpg/Cake-Launcher?label=Last%20commit&amp;style=flat-square&quot; alt=&quot;GitHub last commit&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Author-Big__Cake-blue?style=flat-square&quot; alt=&quot;GitHub Author&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/stars/Big-Cake-jpg/Cake-Launcher?label=Stars&amp;style=flat-square&quot; alt=&quot;GitHub Repo stars&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/forks/Big-Cake-jpg/Cake-Launcher?label=Forks&amp;style=flat-square&quot; alt=&quot;GitHub forks&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Big-Cake-jpg/Cake-Launcher&quot;&gt;Cake Launcher&lt;/a&gt; 是我为自己的 Minecraft 服务器开发的一个启动器 &lt;del&gt;（蛋糕启动器（误））&lt;/del&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Cake Launcher" scheme="https://bigcake.cakemc.top/categories/Cake-Launcher/"/>
+    
+    
+    <category term="启动器" scheme="https://bigcake.cakemc.top/tags/%E5%90%AF%E5%8A%A8%E5%99%A8/"/>
+    
+    <category term="C#" scheme="https://bigcake.cakemc.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>神级内存清理软件———Mem Reduct</title>
+    <link href="https://bigcake.cakemc.top/posts/mem-reduct/"/>
+    <id>https://bigcake.cakemc.top/posts/mem-reduct/</id>
+    <published>2021-09-20T12:58:00.000Z</published>
+    <updated>2021-09-20T12:58:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>想必看到这篇文章的大家大部分都经常因为运行内存不够而头疼吧</p><p>在这篇文章中，我将会为大家介绍这款软件 ——— <a href="https://henrypp.org/product/memreduct">Mem Reduct</a></p><hr><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>任何优化软件都只能在一定程度上进行优化，有时甚至不会有什么效果</p><p>因此如果你有“钞能力”，那我还是建议你给电脑加一根内存条</p><span id="more"></span><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h3><p>点击<a href="https://henrypp.org/product/memreduct">这里</a>前往 Mem Reduct 的介绍页面</p><blockquote><p>这是一个国外网站，速度较慢且没有中文<br>所以请善用翻译功能与代理</p></blockquote><p>将页面拉到最下方，找到下载地址，如图</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/download.PNG" alt="memreduct-download" loading="lazy"></p><blockquote><p>Windows 系统请下载 exe 文件<br>macOS 请下载 sig 文件<br>bin.zip 为源代码</p></blockquote><p>点击对应的链接即可开始下载。由于下载链接为 GitHub Releases 所以速度可能较慢。如速度慢请自行使用 GitHub 文件加速等功能</p><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>安装过程没什么好说的，在同意协议后一路回车即可</p><p>需要注意的是如果你想将它安装到可移动存储设备时需要在安装时勾选 “ Store settings in application direction ”</p><p>安装完成后就可以启动 Mem Reduct 了</p><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>你可以针对自己的使用习惯设置内存清理的间隔时间与超过百分比清理内存的数值等功能</p><blockquote><p>程序有中文翻译，使用起来没有门槛</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/settings.PNG" alt="memreduct-settings" loading="lazy"></p><h3 id="关闭-UAC-弹出提醒"><a href="#关闭-UAC-弹出提醒" class="headerlink" title="关闭 UAC 弹出提醒"></a>关闭 UAC 弹出提醒</h3><p>第一次清理内存是需要你给予它管理员权限的</p><p>而当你给予了它权限以后，程序本身的设置就可以让你选择不弹出 UAC 提醒了</p><p>只需要在设置里勾选 “跳过用户账户控制弹出提醒” 即可</p><h3 id="关闭内存清理二次确认弹窗"><a href="#关闭内存清理二次确认弹窗" class="headerlink" title="关闭内存清理二次确认弹窗"></a>关闭内存清理二次确认弹窗</h3><p>虽说这个功能可以防止不经意间的误触，但我还是建议你关掉这个功能</p><p>只需要将 “在内存清理开始时确认” 取消勾选就可以了</p><h3 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h3><p>既然是优化软件，那么软件内部会有自启动选项供你选择</p><p>勾选 “开机启动” 即可让 Mem Reduct 在每次开机时自动启动</p><h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><p>Mem Reduct 是开源的，如果你有能力，可以去 <a href="https://github.com/henrypp/memreduct">GitHub</a> 为它做贡献</p><p><img src="https://img.shields.io/github/downloads/henrypp/memreduct/total?style=flat-square" alt="GitHub all releases" loading="lazy"> <img src="https://img.shields.io/github/v/release/henrypp/memreduct?style=flat-square" alt="GitHub release (latest SemVer)" loading="lazy"> <img src="https://img.shields.io/github/license/henrypp/memreduct?style=flat-square" alt="GitHub" loading="lazy"> <img src="https://img.shields.io/github/issues/henrypp/memreduct?style=flat-square" alt="GitHub issues" loading="lazy"> <img src="https://img.shields.io/github/contributors/henrypp/memreduct?style=flat-square" alt="GitHub contributors" loading="lazy"></p><p>从提交日期看，可以发现 Mem Reduct 是一直在更新的。也证明了这位作者维护这个软件已经有长达六年多的时间了</p><p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/github.PNG" alt="memreduct-github" loading="lazy"></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>一个好的软件，需要长时间的开发。一个好的软件，凝聚着开发者智慧的结晶</p><p>并不是所有软件都是完美的，没有最完美，只有更完美</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;想必看到这篇文章的大家大部分都经常因为运行内存不够而头疼吧&lt;/p&gt;
+&lt;p&gt;在这篇文章中，我将会为大家介绍这款软件 ——— &lt;a href=&quot;https://henrypp.org/product/memreduct&quot;&gt;Mem Reduct&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;任何优化软件都只能在一定程度上进行优化，有时甚至不会有什么效果&lt;/p&gt;
+&lt;p&gt;因此如果你有“钞能力”，那我还是建议你给电脑加一根内存条&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="大蛋糕的安利" scheme="https://bigcake.cakemc.top/categories/%E5%A4%A7%E8%9B%8B%E7%B3%95%E7%9A%84%E5%AE%89%E5%88%A9/"/>
+    
+    
+    <category term="软件" scheme="https://bigcake.cakemc.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="分享" scheme="https://bigcake.cakemc.top/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#F2BC57"><meta name="author" content="Big_Cake"><meta name="copyright" content="Big_Cake"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>搭建一个属于你自己的 Minecraft 服务器 | 大蛋糕的烘焙坊</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.onmicrosoft.cn/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://unpkg.onmicrosoft.cn/prism-theme-vars/base.css"><script src="https://unpkg.onmicrosoft.cn/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link class="aplayer-style-marker" rel="stylesheet" type="text/css" href="https://unpkg.onmicrosoft.cn/aplayer@latest/dist/APlayer.min.css"><script class="aplayer-script-marker" src="https://unpkg.onmicrosoft.cn/aplayer@latest/dist/APlayer.min.js" defer></script><script src="https://unpkg.onmicrosoft.cn/pjax@latest/pjax.min.js" defer></script><script src="/js/pjax.js" defer type="module"></script><script src="https://unpkg.onmicrosoft.cn/vue@2.6.14"></script><link rel="icon" type="image/png" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg"><link rel="mask-icon" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg" color="#F2BC57"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.onmicrosoft.cn/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"bigcake.cakemc.top","root":"/","title":"大蛋糕的烘焙坊","version":"1.10.5","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"algolia":{"appID":"8WHCI2MGOD","apiKey":"1c51edcec3f0f6e9b2c0e1d3d7d76502","indexName":"BigCake Blog","hits":{"per_page":8}},"fireworks":{"colors":["115, 75, 52","242, 188, 87","242, 205, 94","242, 242, 242"]},"waline":{"config":{"enable":true,"serverURL":"https://waline.bigcake.cakemc.top","comment":true,"emoji":["https://unpkg.onmicrosoft.cn/@waline/emojis@latest/bilibili/","https://unpkg.onmicrosoft.cn/@waline/emojis@latest/weibo/","https://unpkg.onmicrosoft.cn/@waline/emojis@latest/qq/"],"locale":{"placeholder":"求求你了，写点评论吧（请先登录）"},"el":"#waline","lang":"zh-CN"},"cdn":"https://unpkg.onmicrosoft.cn/@waline/client@v2/dist/waline.js","dark":"html.dark"},"vendors":{"host":"https://unpkg.onmicrosoft.cn/","darken":"https://unpkg.onmicrosoft.cn/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="大蛋糕的烘焙坊" type="application/atom+xml"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-WXBXYV2R6B"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WXBXYV2R6B');
+}</script><script>//- only for pjax
+function sendPageView() {
+  if (CONFIG.hostname !== location.hostname) return;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('event', 'page_view', {
+    page_path: encodeURIComponent(location.pathname),
+  })
+}
+document.addEventListener("pjax:success", sendPageView);</script><script data-ad-client="ca-pub-3406300839504314" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><script>CONFIG.leancloudVisitors = {"enable":true,"app_id":"ErznielzJTc0MWHWtbaznYKO-MdYXbMMI","app_key":"iK4BuSm3M35dNsuMerVlq3JO","server_url":null}</script><script defer src="/js/analytics/leancloud-visitors.js" type="module"></script><meta name="description" content="好的，又是一篇新的文章！其实网上的教程够多了，基本都能达到目标。 但是我要写一个简单的教程来取代它们（其实如果自己忘了也可以看看） 废话少说，让我们开始吧！  前排提示：本教程仅适用于 Minecraft Java 版，基岩版请等以后出。 而且你首先得有初一的英语水平、一个正常的大脑、玩过一段时间的 Minecraft，以及一台能正常工作的电脑。  步骤检查系统环境开一个 Minecraft Ja">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建一个属于你自己的 Minecraft 服务器">
+<meta property="og:url" content="https://bigcake.cakemc.top/posts/build-your-minecraft-server/index.html">
+<meta property="og:site_name" content="大蛋糕的烘焙坊">
+<meta property="og:description" content="好的，又是一篇新的文章！其实网上的教程够多了，基本都能达到目标。 但是我要写一个简单的教程来取代它们（其实如果自己忘了也可以看看） 废话少说，让我们开始吧！  前排提示：本教程仅适用于 Minecraft Java 版，基岩版请等以后出。 而且你首先得有初一的英语水平、一个正常的大脑、玩过一段时间的 Minecraft，以及一台能正常工作的电脑。  步骤检查系统环境开一个 Minecraft Ja">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.dogimg.com/2022/04/09/62519a5b239ef.png">
+<meta property="og:image" content="https://pic.dogimg.com/2022/04/10/6252272c18e31.png">
+<meta property="og:image" content="https://pic.dogimg.com/2022/04/10/625227fd9e61a.png">
+<meta property="og:image" content="https://pic.dogimg.com/2022/04/10/6252286ca844b.png">
+<meta property="og:image" content="https://pic.dogimg.com/2022/04/10/625229032851c.png">
+<meta property="og:image" content="https://pic.dogimg.com/2022/04/10/62522aa453614.png">
+<meta property="og:image" content="https://pic.dogimg.com/2022/04/10/6252360d1b990.png">
+<meta property="article:published_time" content="2022-04-09T13:58:44.000Z">
+<meta property="article:modified_time" content="2022-04-09T13:58:44.000Z">
+<meta property="article:author" content="Big_Cake">
+<meta property="article:tag" content="服务器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.dogimg.com/2022/04/09/62519a5b239ef.png"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><script defer src="https://unpkg.onmicrosoft.cn/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Big_Cake"><img width="96" loading="lazy" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg" alt="Big_Cake"><span class="site-author-status" title="Playing Minecraft.">🛠️</span></a><div class="site-author-name"><a href="/about/">Big_Cake</a></div><span class="site-name">大蛋糕的烘焙坊</span><sub class="site-subtitle">也许我们会分别，但是我们将永远不会忘记彼此</sub><div class="site-description">一个屑初三学生的小窝</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:home-24-regular"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:archive-24-regular"></span></span><span class="site-state-item-count">15</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:folder-24-regular"></span></span><span class="site-state-item-count">8</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:tag-24-regular"></span></span><span class="site-state-item-count">23</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://travellings.link" title="开往"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:vehicle-subway-24-regular"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="fluent:rss-20-regular"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2577117205&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/Big-Cake-jpg" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=3812611237" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/bigcake-19" title="知乎" target="_blank" style="color:#0084FF"><span class="icon iconify" data-icon="ri:zhihu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://twitter.com/BigCake080105" title="Twitter" target="_blank" style="color:#1da1f2"><span class="icon iconify" data-icon="ri:twitter-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/523235567" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://t.me/BigCakeBlog" title="Telegram" target="_blank" style="color:#0088CC"><span class="icon iconify" data-icon="ri:telegram-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://tieba.baidu.com/home/main?id=tb.1.f0f48c80.0RMWKRqi00nEW65GQhsxQA?t=1586957539&amp;fr=index" title="百度贴吧" target="_blank" style="color:#317ef3"><span class="icon iconify" data-icon="ri:baidu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:bigcake@cakemc.top" title="E-Mail" target="_blank" style="color:#8E71C1"><span class="icon iconify" data-icon="fluent:mail-16-regular"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="友链" style="color:dodgerblue"><span class="icon iconify" data-icon="fluent:people-12-regular"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83"><span class="toc-number">1.1.</span> <span class="toc-text">检查系统环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A0%B8%E5%BF%83"><span class="toc-number">1.2.</span> <span class="toc-text">下载服务端核心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E5%88%9D%E6%AD%A5%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">进行初步配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">2.</span> <span class="toc-text">结语</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#F2BC57;"><link itemprop="mainEntityOfPage" href="https://bigcake.cakemc.top/posts/build-your-minecraft-server/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Big_Cake"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="大蛋糕的烘焙坊"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">搭建一个属于你自己的 Minecraft 服务器</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-04-09 21:58:44" itemprop="dateCreated datePublished" datetime="2022-04-09T21:58:44+08:00">2022-04-09</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">1k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><span class="icon iconify" data-icon="ri:timer-line"></span></span> <span title="阅读时长">3m</span></span></span><span class="leancloud_visitors" id="/posts/build-your-minecraft-server/" data-flag-title="搭建一个属于你自己的 Minecraft 服务器"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="fluent:document-person-16-regular"></span> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="评论数"><span class="icon iconify" data-icon="fluent:chat-24-regular"></span> <span class="waline-comment-count" id="/posts/build-your-minecraft-server/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/Minecraft/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Minecraft</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="fluent:tag-24-regular"></span></span><span class="tag-name">服务器</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><p>好的，又是一篇新的文章！其实网上的教程够多了，基本都能达到目标。</p>
+<p>但是我要写一个简单的教程来取代它们（其实如果自己忘了也可以看看）</p>
+<p>废话少说，让我们开始吧！</p>
+<blockquote>
+<p>前排提示：本教程仅适用于 Minecraft Java 版，基岩版请等以后出。</p>
+<p>而且你首先得有初一的英语水平、一个正常的大脑、玩过一段时间的 Minecraft，以及一台能正常工作的电脑。</p>
+</blockquote>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="检查系统环境"><a href="#检查系统环境" class="headerlink" title="检查系统环境"></a>检查系统环境</h3><p>开一个 Minecraft Java 版服务器，首当其冲的要求就是 Java 运行时。这个只要你玩过 Minecraft 就肯定会有。</p>
+<p>其次，你的操作系统也需要与时俱进，最起码得是 Windows 8.1 或者较新的 Linux。</p>
+<p>这些都是你在搭建服务端时需要注意的，当你看到以上所有的条件都满足以后，就可以开心地进入下一步了！</p>
+<h3 id="下载服务端核心"><a href="#下载服务端核心" class="headerlink" title="下载服务端核心"></a>下载服务端核心</h3><p>Minecraft 服务器都有一个极其核心的部分：服务端。</p>
+<p>服务端承载 Minecraft 服务器与多人游戏的实现，是必不可少的。</p>
+<p>现在让我们来下载服务端吧！这里使用 z0z0r4 提供的 ZMirror 服务端镜像下载服务。</p>
+<blockquote>
+<p>地址：<a target="_blank" rel="noopener" href="https://mcmirror.zclubserver.top/">https://mcmirror.zclubserver.top</a> </p>
+<p>赞助：<a target="_blank" rel="noopener" href="https://pay.z0z0r4.top/">https://pay.z0z0r4.top</a></p>
+</blockquote>
+<p>打开上面的地址，我们可以看到一个这样的界面：</p>
+<p><img src="https://pic.dogimg.com/2022/04/09/62519a5b239ef.png" alt="屏幕截图 2022-04-09 223731.png" loading="lazy"></p>
+<p>其中：vanilla 是原版服务端，也就是 Mojang 写的，不能通过插件或 Mods 添加功能与玩法。这里选择它来做教程</p>
+<p>点进去，在列表里找到你需要的版本即可。如：1.18.1。</p>
+<p>点击一下你要的版本，在右上角找到下载按钮即可下载。</p>
+<p><img src="https://pic.dogimg.com/2022/04/10/6252272c18e31.png" alt="屏幕截图 2022-04-10 083827.png" loading="lazy"></p>
+<blockquote>
+<p>请下载后缀名为 <code>.jar</code> 的文件，不要下后缀为 <code>.jar.sha1</code> 的文件。</p>
+</blockquote>
+<p>下载好以后，丢到你喜欢的位置。我这里是在桌面上新建一个文件夹，直接把下载好的核心丢进去即可。</p>
+<p><img src="https://pic.dogimg.com/2022/04/10/625227fd9e61a.png" alt="屏幕截图 2022-04-10 084116.png" loading="lazy"></p>
+<h3 id="进行初步配置"><a href="#进行初步配置" class="headerlink" title="进行初步配置"></a>进行初步配置</h3><p>我们双击一下服务端核心，稍等片刻，就会发现目录下多了很多文件。</p>
+<p><img src="https://pic.dogimg.com/2022/04/10/6252286ca844b.png" alt="屏幕截图 2022-04-10 084402.png" loading="lazy"></p>
+<p>现在打开 <code>eula.txt</code>，我们需要在这个文件中同意 Mojang 的 EULA 才能进行下一步配置。</p>
+<blockquote>
+<p>建议您大致了解 Mojang EULA 协议</p>
+</blockquote>
+<p>将 <code>false</code> 改为 <code>true</code>，保存文件。</p>
+<p><img src="https://pic.dogimg.com/2022/04/10/625229032851c.png" alt="屏幕截图 2022-04-10 084631.png" loading="lazy"></p>
+<p>然后再次双击服务端文件，过一段时间你应该会看到这个窗口：</p>
+<p><img src="https://pic.dogimg.com/2022/04/10/62522aa453614.png" alt="屏幕截图 2022-04-10 085328.png" loading="lazy"></p>
+<p>让我们关闭服务端。点击关闭按钮或者在控制台内输入 <code>stop</code> 都可以。</p>
+<p>现在在目录里新建一个文本文档，在里面输入下面的参数：</p>
+<pre class="line-numbers language-none"><code class="language-none">java -Xmx1G -Xms1G -jar minecraft_server.1.18.1.jar -nogui
+pause
+
+# 如果你要使用自定义的 Java 版本
+
+&quot;你要用的 Java 的 java.exe 绝对路径&quot; -Xmx1G -Xms1G -jar minecraft_server.1.18.1.jar -nogui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><code>java</code> 是你要用的 Java 路径。如果电脑内安装了不同版本的 Java 则需要手动指定路径</p>
+<p><code>-Xmx</code> 和 <code>-Xms</code> 字段是控制服务器所用内存的，根据你自己的需求来设置即可。Mojang 推荐最大值和最小值相同（即分配静态内存）</p>
+</blockquote>
+<p>现在，你的文件夹内应该有这样的目录结构：</p>
+<pre class="line-numbers language-none"><code class="language-none">文件夹
+|_ libraries
+|_ logs
+|_ versions
+|_ world
+|_ banned-ips.json
+|_ banned-players.json
+|_ eula.txt
+|_ minecraft_server.1.18.1.jar
+|_ ops.json
+|_ server.properties
+|_ start.bat
+|_ usercache.json
+|_ whitelist.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>打开 <code>server.properties</code> 文件，这个文件是服务端的配置文件，你可以在其中自定义玩家数量上限、正版验证、游戏模式、难度等等。具体请看 Minecraft Wiki。</p>
+<p><img src="https://pic.dogimg.com/2022/04/10/6252360d1b990.png" alt="屏幕截图 2022-04-10 094206.png" loading="lazy"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://minecraft.fandom.com/zh/wiki/Server.properties">Minecraft Wiki 有关服务端配置文件的介绍</a></p>
+</blockquote>
+<p>当你完成了该文件的编辑时，这个服务器就算是真正完成了。接下来你可以使用内网穿透工具让它可以被外部连接到，或者花点钱去租一个服务器也可以。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>到这里，这个教程就结束了。</p>
+<p>你现在已经基本掌握了搭建服务器的步骤，接下来，去租一个机子托管你的服务器吧！不要总是做<del>白嫖怪</del>呢……？</p>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">都看了这么多文章了，不考虑打点钱吗（</div><div id="qr" style="display:none;"><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/alipay-qrcode.png"><img loading="lazy" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/alipay-qrcode.png" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><span class="icon iconify" data-icon="ri:alipay-line"></span></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/qq-qrcode.png"><img loading="lazy" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/qq-qrcode.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Big_Cake</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://bigcake.cakemc.top/posts/build-your-minecraft-server/" title="搭建一个属于你自己的 Minecraft 服务器">https://bigcake.cakemc.top/posts/build-your-minecraft-server/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/windows-search-optimization/" rel="prev" title="优化 Windows Search 搜索，加快搜索速度！"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">优化 Windows Search 搜索，加快搜索速度！</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/minecraft-problems-solve/" rel="next" title="如何诊断 Minecraft Java 版客户端中的错误"><span class="post-nav-text">如何诊断 Minecraft Java 版客户端中的错误</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>可以说几句话嘛^_^如果看不到评论，请刷新几次</span><br></div><div id="waline"></div><link rel="stylesheet" href="https://unpkg.onmicrosoft.cn/@waline/client@v2/dist/waline.css"><script>window.CONFIG.waline.config.path = "/posts/build-your-minecraft-server/"</script><div class="js-Pjax"><script src="/js/comments/waline.js" type="module" defer></script></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2021 – 2022 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="fluent:heart-16-filled"></span></span><span class="author"> Big_Cake</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.5</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2021-09-20T22:15:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_uv" title="总访客量"><span><span class="icon iconify" data-icon="fluent:person-24-filled"></span></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><span class="icon iconify" data-icon="fluent:eye-24-filled"></span></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script></div><div class="footer-custom-text"><a href="https://travellings.link" target="_blank"><img height="25" alt="travellings" src="https://travellings.link/assets/logo.svg"></a></div><div class="footer-support"><span>本网站由</span><a class="footer-support-logo" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" target="blank" title="又拍云"><img height="30" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/upyun-logo.png" alt="又拍云"></a><span>提供 CDN 加速与云存储服务</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="fluent:arrow-up-24-regular"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#F2BC57" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:search-line"></span></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script defer src="https://unpkg.onmicrosoft.cn/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script><script defer src="https://unpkg.onmicrosoft.cn/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script defer src="/js/search/algolia-search.js" type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div class="algolia-pagination" id="algolia-pagination"></div></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = ["4-4","9-18","12-13"]
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><div id="aplayer"></div><script>function initAplayer() {
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    fixed: true,
+    autoplay: false,
+    theme: "#F2BC57",
+    loop: "all",
+    order: "list",
+    preload: "auto",
+    audio: [{"name":"Eternal Anamnesis 永恒的回忆","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Eternal-Anamnesis.mp3","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"Remembrance 一段回忆","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Remembrance.flac","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"Moonlight in Mondstadt 蒙德的月光","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Moonlight-in-Mondstadt.flac","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"Mondstadt Starlit 星光下的蒙德","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Mondstadt-Starlit.flac","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"otherside","artist":"Lena Raine","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/otherside.mp3","cover":"https://p2.music.126.net/ly16g4KsYaOCe6cj09SQMw==/109951166959790351.jpg"},{"name":"ふわふわ♪","artist":"牧野由依","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/ふわふわ♪.mp3","cover":"https://s2.loli.net/2022/06/12/bpgOT9Hr3sWcGv5.jpg"},{"name":"君だったら","artist":"HAPPY BIRTHDAY","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/君だったら.mp3","cover":"https://s2.loli.net/2022/06/12/eQX8Y9rHbmjxstu.jpg"},{"name":"可愛くなりたい","artist":"鎖那","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/可愛くなりたい.mp3","cover":"https://s2.loli.net/2022/06/12/yak6vnq9GQAViRB.jpg"}],
+    volume: 0.7,
+    mutex: true,
+    lrcType: 0,
+    listFolded: true,
+    listMaxHeight: "340px",
+    storageName: "aplayer-setting"
+  });
+}
+document.addEventListener("DOMContentLoaded", initAplayer);
+document.addEventListener("pjax:success", initAplayer);</script><script src="https://unpkg.onmicrosoft.cn/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
+mediumZoom(images)</script><style>.medium-zoom-image {
+  z-index: 99;
+}</style></body></html>

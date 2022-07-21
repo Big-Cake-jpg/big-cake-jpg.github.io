@@ -1,0 +1,409 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#F2BC57"><meta name="author" content="Big_Cake"><meta name="copyright" content="Big_Cake"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>手把手教你如何搭建属于自己的 Hexo 博客 | 大蛋糕的烘焙坊</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.onmicrosoft.cn/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://unpkg.onmicrosoft.cn/prism-theme-vars/base.css"><script src="https://unpkg.onmicrosoft.cn/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link class="aplayer-style-marker" rel="stylesheet" type="text/css" href="https://unpkg.onmicrosoft.cn/aplayer@latest/dist/APlayer.min.css"><script class="aplayer-script-marker" src="https://unpkg.onmicrosoft.cn/aplayer@latest/dist/APlayer.min.js" defer></script><script src="https://unpkg.onmicrosoft.cn/pjax@latest/pjax.min.js" defer></script><script src="/js/pjax.js" defer type="module"></script><script src="https://unpkg.onmicrosoft.cn/vue@2.6.14"></script><link rel="icon" type="image/png" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg"><link rel="mask-icon" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg" color="#F2BC57"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.onmicrosoft.cn/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"bigcake.cakemc.top","root":"/","title":"大蛋糕的烘焙坊","version":"1.10.5","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"algolia":{"appID":"8WHCI2MGOD","apiKey":"1c51edcec3f0f6e9b2c0e1d3d7d76502","indexName":"BigCake Blog","hits":{"per_page":8}},"fireworks":{"colors":["115, 75, 52","242, 188, 87","242, 205, 94","242, 242, 242"]},"waline":{"config":{"enable":true,"serverURL":"https://waline.bigcake.cakemc.top","comment":true,"emoji":["https://unpkg.onmicrosoft.cn/@waline/emojis@latest/bilibili/","https://unpkg.onmicrosoft.cn/@waline/emojis@latest/weibo/","https://unpkg.onmicrosoft.cn/@waline/emojis@latest/qq/"],"locale":{"placeholder":"求求你了，写点评论吧（请先登录）"},"el":"#waline","lang":"zh-CN"},"cdn":"https://unpkg.onmicrosoft.cn/@waline/client@v2/dist/waline.js","dark":"html.dark"},"vendors":{"host":"https://unpkg.onmicrosoft.cn/","darken":"https://unpkg.onmicrosoft.cn/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="大蛋糕的烘焙坊" type="application/atom+xml"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-WXBXYV2R6B"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WXBXYV2R6B');
+}</script><script>//- only for pjax
+function sendPageView() {
+  if (CONFIG.hostname !== location.hostname) return;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('event', 'page_view', {
+    page_path: encodeURIComponent(location.pathname),
+  })
+}
+document.addEventListener("pjax:success", sendPageView);</script><script data-ad-client="ca-pub-3406300839504314" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><script>CONFIG.leancloudVisitors = {"enable":true,"app_id":"ErznielzJTc0MWHWtbaznYKO-MdYXbMMI","app_key":"iK4BuSm3M35dNsuMerVlq3JO","server_url":null}</script><script defer src="/js/analytics/leancloud-visitors.js" type="module"></script><meta name="description" content="写给一个想要拥有自己的博客，却没有资金的小白和小学时的自己  前言虽然，独立博客的时代已经过去，越来越多的人们开始在大平台上发布自己的文章 虽然，这些平台的流量能够为这些博主们创造收益 但是，拥有一个自己的博客，意味着它不仅属于自己，而且需要自己一步步为它添砖加瓦 比如文章的语言、界面的布局、功能多少、搜索引擎收录，都需要自己一点点完善 最后，看到自己的网站一步步走到现在，内心也会有一种自豪与欣">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手把手教你如何搭建属于自己的 Hexo 博客">
+<meta property="og:url" content="https://bigcake.cakemc.top/posts/build-a-hexo-blog/index.html">
+<meta property="og:site_name" content="大蛋糕的烘焙坊">
+<meta property="og:description" content="写给一个想要拥有自己的博客，却没有资金的小白和小学时的自己  前言虽然，独立博客的时代已经过去，越来越多的人们开始在大平台上发布自己的文章 虽然，这些平台的流量能够为这些博主们创造收益 但是，拥有一个自己的博客，意味着它不仅属于自己，而且需要自己一步步为它添砖加瓦 比如文章的语言、界面的布局、功能多少、搜索引擎收录，都需要自己一点点完善 最后，看到自己的网站一步步走到现在，内心也会有一种自豪与欣">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/build-a-hexo-blog/create-repo.png">
+<meta property="article:published_time" content="2021-12-04T08:45:10.000Z">
+<meta property="article:modified_time" content="2021-12-04T08:45:10.000Z">
+<meta property="article:author" content="Big_Cake">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/build-a-hexo-blog/create-repo.png"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><script defer src="https://unpkg.onmicrosoft.cn/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Big_Cake"><img width="96" loading="lazy" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg" alt="Big_Cake"><span class="site-author-status" title="Playing Minecraft.">🛠️</span></a><div class="site-author-name"><a href="/about/">Big_Cake</a></div><span class="site-name">大蛋糕的烘焙坊</span><sub class="site-subtitle">也许我们会分别，但是我们将永远不会忘记彼此</sub><div class="site-description">一个屑初三学生的小窝</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:home-24-regular"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:archive-24-regular"></span></span><span class="site-state-item-count">15</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:folder-24-regular"></span></span><span class="site-state-item-count">8</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:tag-24-regular"></span></span><span class="site-state-item-count">23</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://travellings.link" title="开往"><span class="site-state-item-icon"><span class="icon iconify" data-icon="fluent:vehicle-subway-24-regular"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="fluent:rss-20-regular"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2577117205&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/Big-Cake-jpg" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=3812611237" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/bigcake-19" title="知乎" target="_blank" style="color:#0084FF"><span class="icon iconify" data-icon="ri:zhihu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://twitter.com/BigCake080105" title="Twitter" target="_blank" style="color:#1da1f2"><span class="icon iconify" data-icon="ri:twitter-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/523235567" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://t.me/BigCakeBlog" title="Telegram" target="_blank" style="color:#0088CC"><span class="icon iconify" data-icon="ri:telegram-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://tieba.baidu.com/home/main?id=tb.1.f0f48c80.0RMWKRqi00nEW65GQhsxQA?t=1586957539&amp;fr=index" title="百度贴吧" target="_blank" style="color:#317ef3"><span class="icon iconify" data-icon="ri:baidu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:bigcake@cakemc.top" title="E-Mail" target="_blank" style="color:#8E71C1"><span class="icon iconify" data-icon="fluent:mail-16-regular"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="友链" style="color:dodgerblue"><span class="icon iconify" data-icon="fluent:people-12-regular"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%9A%E6%8F%90%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF"><span class="toc-number">1.1.</span> <span class="toc-text">会提到的一些东西</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Node-js"><span class="toc-number">2.1.</span> <span class="toc-text">安装 Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git-%E5%92%8C-GitHub"><span class="toc-number">2.2.</span> <span class="toc-text">Git 和 GitHub</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Git"><span class="toc-number">2.2.1.</span> <span class="toc-text">安装 Git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C-GitHub"><span class="toc-number">2.2.2.</span> <span class="toc-text">注册 GitHub</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Hexo"><span class="toc-number">2.3.</span> <span class="toc-text">安装 Hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9-Hexo-%E4%B8%BB%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">使用第三方 Hexo 主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98"><span class="toc-number">3.1.</span> <span class="toc-text">下载主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91-Hexo-%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">编辑 Hexo 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">3.3.</span> <span class="toc-text">自定义主题配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9%E7%9A%84%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E5%B9%B6%E9%83%A8%E7%BD%B2"><span class="toc-number">4.</span> <span class="toc-text">生成站点的静态文件并部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">生成静态文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E5%85%B3%E8%81%94"><span class="toc-number">4.2.</span> <span class="toc-text">与远程仓库进行关联</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD-Hexo-%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="toc-number">5.</span> <span class="toc-text">备份 Hexo 工作区以及自动部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD-Hexo-%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">5.1.</span> <span class="toc-text">备份 Hexo 工作区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="toc-number">5.2.</span> <span class="toc-text">自动部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C"><span class="toc-number">6.</span> <span class="toc-text">开始写作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0"><span class="toc-number">6.1.</span> <span class="toc-text">文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E6%A0%87%E7%AD%BE-x2F-%E5%88%86%E7%B1%BB"><span class="toc-number">6.2.</span> <span class="toc-text">为文章添加标签&#x2F;分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2"><span class="toc-number">6.3.</span> <span class="toc-text">页面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQ"><span class="toc-number">7.</span> <span class="toc-text">FAQ</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E6%89%93%E7%AE%97%E5%8F%91%E8%A7%86%E9%A2%91%E5%90%97%EF%BC%9F"><span class="toc-number">7.1.</span> <span class="toc-text">有打算发视频吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E6%83%B3%E7%BB%91%E5%AE%9A%E6%88%91%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D%EF%BC%88"><span class="toc-number">7.2.</span> <span class="toc-text">我想绑定我自己的域名（</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E6%A1%88"><span class="toc-number">7.3.</span> <span class="toc-text">备案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">8.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#F2BC57;"><link itemprop="mainEntityOfPage" href="https://bigcake.cakemc.top/posts/build-a-hexo-blog/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Big_Cake"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="大蛋糕的烘焙坊"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">手把手教你如何搭建属于自己的 Hexo 博客</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2021-12-04 16:45:10" itemprop="dateCreated datePublished" datetime="2021-12-04T16:45:10+08:00">2021-12-04</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">4k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><span class="icon iconify" data-icon="ri:timer-line"></span></span> <span title="阅读时长">14m</span></span></span><span class="leancloud_visitors" id="/posts/build-a-hexo-blog/" data-flag-title="手把手教你如何搭建属于自己的 Hexo 博客"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="fluent:document-person-16-regular"></span> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="评论数"><span class="icon iconify" data-icon="fluent:chat-24-regular"></span> <span class="waline-comment-count" id="/posts/build-a-hexo-blog/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E5%A4%A7%E8%9B%8B%E7%B3%95%E7%9A%84%E5%AE%89%E5%88%A9/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">大蛋糕的安利</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/GitHub/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="fluent:tag-24-regular"></span></span><span class="tag-name">GitHub</span></a><a class="tag-item" href="/tags/Hexo/" style="--text-color:#0E83CD"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="fluent:tag-24-regular"></span></span><span class="tag-name">Hexo</span></a><a class="tag-item" href="/tags/%E5%8D%9A%E5%AE%A2/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="fluent:tag-24-regular"></span></span><span class="tag-name">博客</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><blockquote>
+<p>写给一个想要拥有自己的博客，却没有资金的小白和小学时的自己</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然，独立博客的时代已经过去，越来越多的人们开始在大平台上发布自己的文章</p>
+<p>虽然，这些平台的流量能够为这些博主们创造收益</p>
+<p>但是，拥有一个自己的博客，意味着它不仅属于自己，而且需要自己一步步为它添砖加瓦</p>
+<p>比如文章的语言、界面的布局、功能多少、搜索引擎收录，都需要自己一点点完善</p>
+<p>最后，看到自己的网站一步步走到现在，内心也会有一种自豪与欣慰的感觉</p>
+<p>希望看到这篇文章的所有人，不管是学生还是其它人，都能拥有一个完全属于自己的博客，并且用心去建设其中的内容</p>
+<blockquote>
+<p>类似于此处的引用一般会是一些注意事项，在阅读前记得多注意一些</p>
+</blockquote>
+<h3 id="会提到的一些东西"><a href="#会提到的一些东西" class="headerlink" title="会提到的一些东西"></a>会提到的一些东西</h3><ul>
+<li>Hexo</li>
+<li>静态博客</li>
+<li>Serverless（无服务器）</li>
+<li>GitHub Pages</li>
+<li>Hexo 主题</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><blockquote>
+<p>啥是 Node.js ？</p>
+<p>Node.js 是一个基于Chrome V8引擎的 JavaScript 运行环境，使用了一个事件驱动、非阻塞式 I&#x2F;O 模型，让 JavaScript 运行在服务端的开发平台，它让 JavaScript 成为与 PHP、Python、Perl、Ruby 等服务端语言平起平坐的脚本语言<br><em>—— 百度百科</em></p>
+</blockquote>
+<p>上边的这一个引用你可以忽略，看正文部分即可</p>
+<p>首先，前往 <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js 官网</a> 下载安装包</p>
+<p>选择<strong>长期维护版</strong>下载。如果你选择最新尝鲜版也无伤大雅，只是你有可能会遇到一些 Bug</p>
+<p>如果你是 Windows 系统，下载下来的安装包后缀应为 <code>.msi</code></p>
+<blockquote>
+<p>macOS 下载 <code>.pkg</code> 后缀</p>
+<p>Linux 标签页右方小叉</p>
+</blockquote>
+<p>打开下载下来的安装程序，一路回车（开始的时候需要同意协议）</p>
+<p>等待安装程序安装完成后，打开命令行或者终端，输入 <code>node</code></p>
+<p>如果返回的内容与你安装的版本一致那么就代表安装成功了</p>
+<p>后续操作都会在终端进行输入</p>
+<blockquote>
+<p>Node.js 安装成功以后默认会随附 <code>npm</code> 包管理器，会在之后用到</p>
+<p>它的全称是 <code>Node Package Manager</code> ，你可以理解成手机上的应用商店</p>
+</blockquote>
+<p>国内使用 npm 会很慢，你可以考虑切换为 <code>taobao</code> 镜像源</p>
+<pre class="line-numbers language-none"><code class="language-none">npm config set registry https:&#x2F;&#x2F;registry.npmmirror.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>你可以在安装完 Node.js 后安装 <a target="_blank" rel="noopener" href="https://www.yarnpkg.com/zh-Hans">yarn</a> 。Facebook 出品，比 npm 更快速的包管理器</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install -g yarn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/yunyoujun/notes/npm-and-yarn#nrm">npm &amp; yarn 常用包与命令</a></p>
+</blockquote>
+<h3 id="Git-和-GitHub"><a href="#Git-和-GitHub" class="headerlink" title="Git 和 GitHub"></a>Git 和 GitHub</h3><h4 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h4><blockquote>
+<p>Visual Studio Code ，简称 VS Code</p>
+<p>目前最强大、最易用的编辑器，轻量、快速（<del>宇宙第一编辑器</del>）</p>
+<p>但它不是 VS ， VS 指的是 Visual Studio ，是集成开发环境（ IDE ）（<del>小白易读：开发软件用的</del>）这玩意儿体积要比 VS Code 大一个量级</p>
+</blockquote>
+<p>（<del>微软大法好</del>）</p>
+<p>先安装 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VS Code</a>，这样可以在安装 Git 时设置 VS Code 为默认编辑器</p>
+<p>Windows 10 &#x2F; 11 用户可在微软商店（新版）下载</p>
+<blockquote>
+<p>Git 是一个开源的分布式版本控制系统，由 Linus Torvalds（同时也是 Linux 的作者）为了管理 Linux 开发而开发。</p>
+<p>简而言之，是一个版本管理工具。譬如设计师设计好了第三版的海报，客户却说还是要第一版吧，这时便可以通过 Git 快速回退到最初的版本。</p>
+<p>你只需要把每次更改的状态（Git 会自动进行检测，你只要掌握基础的几条命令就可以了）告诉 Git，而不需要每个版本都保存一份压缩包，既方便也能大大节约空间。</p>
+</blockquote>
+<p>下载 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> 并安装，速度太慢的话可以试试国内的软件分发网站（注意要找大厂如腾讯，千万不要选高速下载之类的东西）</p>
+<h4 id="注册-GitHub"><a href="#注册-GitHub" class="headerlink" title="注册 GitHub"></a>注册 GitHub</h4><p>这部分你可以等到在自己电脑上测试完成后，打算部署到线上的时候再翻回来看</p>
+<blockquote>
+<p>从字面看，GitHub 便与 Git 有着密不可分的关系。<code>Git</code> 在必应翻译中是<del>蠢货</del>的意思，而 <code>Hub</code> 则为枢纽</p>
+<p>所以 GitHub 便是 <del>“蠢货枢纽” 的意思（大雾（划掉））</del></p>
+<p>GitHub 是全球最大的开源项目与代码托管网站，也是众多开发者交流的平台，同时也是全球最大的<a target="_blank" rel="noopener" href="https://github.com/komeiji-satori/Dress"><del>同性交友网站</del></a></p>
+<p>而其代码托管本身的实现正是基于上边的 Git</p>
+</blockquote>
+<p>注册 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 账号（虽然全英文无翻译，但是并不难理解，只需记住最常用的选项即可，而且<a target="_blank" rel="noopener" href="https://docs.github.com/">官方文档</a>有中文翻译）</p>
+<p>注册时的英文 ID 将会成为你可以使用的免费域名前缀（比如我的 GitHub ID 是 Big-Cake-jpg ，那么我可以使用的免费域名就是 big-cake-jpg.github.io ）</p>
+<blockquote>
+<p>为啥是这个没中文还天天打不开的东西？</p>
+<p>对于平民来说，第一次搭建网站时也许手头并没有钱去买服务器和域名</p>
+<p>而 GitHub 则提供了 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a> 这一免费服务</p>
+<p>用户们可以利用这一服务部署静态站点</p>
+</blockquote>
+<p>点右上角的 <code>+</code> &#x3D;&gt; <code>New repository</code> 或者左侧边栏里的绿色按钮新建一个仓库</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/build-a-hexo-blog/create-repo.png" alt="create-repo" loading="lazy"><em>创建仓库的页面。我这里因为有同名仓库所以无法创建</em></p>
+<p>仓库名称务必像上图中 <code>用户名.github.io</code> 一样，用户名为英文，大小写可以不区分</p>
+<blockquote>
+<p>为啥子必须要用这个仓库名啊……</p>
+<p>如果你没有自备的域名，这样做可以让 GitHub Pages 将其作为你的专属域名。当然，如果你有自己的域名，可以绑定上去</p>
+</blockquote>
+<p>点击 <code>Create repository</code></p>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
+<ul>
+<li>GitHub：<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">https://github.com/hexojs/hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">官方文档</a> 有较高的理解能力（<del>语文 90 分以上</del>）也可以看官方文档（<del>反正我看不懂</del>)</li>
+</ul>
+<blockquote>
+<p>Hexo 是一个快速、简介、强大的博客框架，基于 Node.js，同样托管与 GitHub 上，拥有良好的生态。你可以用它快速生成静态页面，可以使用他人的主题与插件，也可自己定制</p>
+<p>其它常用的博客框架还有 <a target="_blank" rel="noopener" href="https://wordpress.org/">WordPress</a>、<a target="_blank" rel="noopener" href="https://typecho.org/">Typecho</a>等，但它们往往需要购置自己的服务器，而无法静态化地部署到 GitHub Pages。当然，功能和灵活性也会大大提升。</p>
+<p>静态化站点还有一个优势是访问速度往往更快。</p>
+<p>静态网站生成器还有 <a target="_blank" rel="noopener" href="https://vuepress.vuejs.org/">VuePress</a> 等，但这些多为写文档而量身定制，关于博客的主题与解决办法等会少得多</p>
+</blockquote>
+<p>先在你喜欢的地方创建一个文件夹，起一个喜欢的名字，然后右键这个文件夹选择 <code>Git Bash Here</code></p>
+<p>在打开的终端里输入如下命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p><code>install</code>：安装</p>
+<p><code>hexo-cli</code>：<code>hexo</code> 的终端工具，用于生成后面会用到的模版文件</p>
+<p><code>-g</code>：全局安装，即在电脑任何地方都可使用</p>
+</blockquote>
+<p>然后输入：</p>
+<pre class="line-numbers language-none"><code class="language-none">hexo init 你的 GitHub 用户名.github.io<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p><code>hexo</code> 是因为之前安装了 <code>hexo-cli</code> 这个包，所以我们能够使用 <code>hexo</code> 这一命令</p>
+<p><code>init</code> 初始化博客模版，后面的参数是将会新建的文件夹的名字，建议与仓库名保持一致</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">cd 你的 GitHub 用户名.github.io
+npm install
+# or
+yarn install
+hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>server</code> 意思是告诉 Hexo 开启本地测试服务器。这样的话，你就可以通过浏览器访问 <code>localhost:4000</code> 看到效果了</p>
+<p>按 <code>Ctrl + C</code>终止本地服务器运行</p>
+<p>至此，站点的基本框架已经搭建完成了</p>
+<h2 id="使用第三方-Hexo-主题"><a href="#使用第三方-Hexo-主题" class="headerlink" title="使用第三方 Hexo 主题"></a>使用第三方 Hexo 主题</h2><p>Hexo 默认提供的主题是 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">hexo-theme-landscape</a></p>
+<p>样式简单，功能少，所以大多数人并不会用默认主题</p>
+<p>本处使用<a target="_blank" rel="noopener" href="https://yunyoujun.cn/">云游君</a>的主题 <a target="_blank" rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun">hexo-theme-yun</a></p>
+<blockquote>
+<p>本站的主题即为 hexo-theme-yun</p>
+</blockquote>
+<p>当然，你也可以到 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes｜Hexo</a> 寻找其它主题使用，比如 hexo-theme-next</p>
+<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><p>进入终端，确保路径在你之前初始化的博客文件夹下（下面简称 Hexo 目录），然后执行如下命令</p>
+<blockquote>
+<p>「你知道吗」可以在 VS Code 里直接打开终端</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">yarn add hexo-theme-yun # npm install -g hexo-theme-yun<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>注意：hexo-theme-yun 从 v1.8 开始使用 npm 包分发，你需要按照文档的步骤进行配置迁移</p>
+</blockquote>
+<h3 id="编辑-Hexo-配置"><a href="#编辑-Hexo-配置" class="headerlink" title="编辑 Hexo 配置"></a>编辑 Hexo 配置</h3><blockquote>
+<p>右键 Hexo 文件夹，选择 “使用 VS Code 打开”。此后操作都默认你处在该工作目录中</p>
+</blockquote>
+<p>在此前初始化操作建立的 Hexo 文件目录下，会存在一个 <code>_config.yml</code> 文件</p>
+<p>它是 Hexo 的配置文件，你可以在 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">配置｜Hexo</a> 处查看各配置选项的意义</p>
+<p>在这个文件中找到 <code>theme</code> 字段，将后边的 <code>landscape</code> 修改为 <code>yun</code></p>
+<blockquote>
+<p>后边的 <code>yun</code>根据你选择的主题来设置，比如你使用 <code>hexo-theme-next</code>，那么将后面的字段设置为 <code>next</code></p>
+<p>一般来说，主题都会在使用文档中声明使用了什么渲染器</p>
+<p>如 <code>hexo-theme-yun</code> 使用 pug 和 stylus 渲染器，而 Hexo 自带的一般是 ejs 与 stylus，所以可能需要输入下方命令安装缺失的渲染器</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-renderer-pug hexo-renderer-stylus
+
+# 如果出了问题，可以试试 yarn 安装<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>完成上述步骤以后，再次使用 <code>hexo server</code> 启动测试服务器，即可看到一个全新的页面</p>
+<h3 id="自定义主题配置"><a href="#自定义主题配置" class="headerlink" title="自定义主题配置"></a>自定义主题配置</h3><p>第一次启动使用的是主题的默认配置，不一定符合你的心意</p>
+<p>所以你可以根据自己的需求，对主题进行一些自定义</p>
+<p>主题的默认配置文件放在了 <code>source/主题/_config.yml</code></p>
+<p>但是直接修改这个文件将导致以后主题更新升级麻烦得很</p>
+<p>一般来说，主题的使用文档将会给出这种情况的解决方案</p>
+<p>如 <code>hexo-theme-yun</code> 会让用户在博客根目录新建 <code>_config.yun.yml</code></p>
+<p>更多配置选项请参考主题文档</p>
+<h2 id="生成站点的静态文件并部署"><a href="#生成站点的静态文件并部署" class="headerlink" title="生成站点的静态文件并部署"></a>生成站点的静态文件并部署</h2><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>直到现在为止，你之前的工作都是本地进行，你也许已经迫不及待想让博客上线了</p>
+<p>这时，便轮到 GitHub Pages 登场了</p>
+<pre class="line-numbers language-none"><code class="language-none"># 生成静态文件
+hexo generate
+# 缩写为 hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>当执行完成后，Hexo 目录下会出现一个 <code>public</code> 文件夹，里边存放的是刚才生成的静态文件</p>
+<h3 id="与远程仓库进行关联"><a href="#与远程仓库进行关联" class="headerlink" title="与远程仓库进行关联"></a>与远程仓库进行关联</h3><p>然后执行如下命令初始化 Git 仓库</p>
+<pre class="line-numbers language-none"><code class="language-none">git init #只需执行一次即可<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>部署之前，最好建立一个备份 Hexo 工作目录的分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git checkout -b hexo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>完成后，所有的工作就都将在 hexo 分支进行</p>
+<p>安装 <code>hexo-deployer-git</code> 插件</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 Hexo 配置文件 <code>_config.yml</code> （<strong>不是主题的</strong>）中配置</p>
+<pre class="line-numbers language-none"><code class="language-none">deploy:
+  type: git
+  repo: 你此前新建的仓库的链接 # 比如：https:&#x2F;&#x2F;github.com&#x2F;Big-Cake-jpg&#x2F;big-cake-jpg.github.io
+  branch: master # 默认使用 master 分支
+  message: Update Hexo Static Content # 你可以自定义此次部署更新的说明<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>保存并部署</p>
+<blockquote>
+<p>第一次部署可能需要 GitHub 账号密码，密码输入时不会出现星号，但是密码已经输入进去了</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">hexp deploy
+#缩写为 hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>等待 Git 推送完成后，在 GitHub 上依次打开 <code>仓库</code> &#x3D;&gt; <code>Settings</code> &#x3D;&gt; <code>Pages</code></p>
+<p>选择分支（一般都是 <code>master</code>），点击 <code>save</code></p>
+<p>等待几秒钟，打开 <code>https://你的 GitHub 用户名.github.io</code> 就可以看到线上效果了</p>
+<h2 id="备份-Hexo-工作区以及自动部署"><a href="#备份-Hexo-工作区以及自动部署" class="headerlink" title="备份 Hexo 工作区以及自动部署"></a>备份 Hexo 工作区以及自动部署</h2><h3 id="备份-Hexo-工作区"><a href="#备份-Hexo-工作区" class="headerlink" title="备份 Hexo 工作区"></a>备份 Hexo 工作区</h3><p>上边的做法只是将生成的静态文件部署到了云端而已</p>
+<p>为了方便在不同设备上写作以及以防万一，你的 Hexo 工作目录也应该推送到 GitHub 仓库备份</p>
+<pre class="line-numbers language-none"><code class="language-none"># 只需执行一次，这会与远程仓库建立一个连接
+git remote add origin https:&#x2F;&#x2F;github.com&#x2F;你的用户名&#x2F;你的用户名.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>VS Code 中有比较方便的操作，它会在右侧栏中的“源代码管理”中显示所有你修改过的文件</p>
+<p>你可以在顶部的输入框中输入这次改了工作区的什么文件之类的，然后按跟前的对勾即可提交到本地 Git 仓库</p>
+<p>然后再点击最下方的蓝色大条条中的一个带俩箭头的“同步更改”按钮将 Hexo 工作区推送到 GitHub</p>
+<h3 id="自动部署"><a href="#自动部署" class="headerlink" title="自动部署"></a>自动部署</h3><p>时间长了，你会发现这样还是不方便，在别的设备上你得再拉取一遍仓库，如果碰巧你用的是手机 &#x2F; 平板那更是只能干瞪眼</p>
+<p>所以现在我们需要一个持续集成服务</p>
+<blockquote>
+<p>本文中使用 GitHub Actions，自身便拥有仓库的 Token ，不需要额外的配置，可直接使用 <code>secrets.GITHUB_TOKEN</code></p>
+</blockquote>
+<p>你可以参考 Hexo 官方文档，也可以直接照抄我的 <a target="_blank" rel="noopener" href="https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/.github/workflows/gh-pages.yml">gh-pages.yml</a></p>
+<blockquote>
+<p>记得把 <code>branch</code> 的值改成自己存放 Hexo 工作区的分支名，删掉 <code>algolia</code> 字段</p>
+</blockquote>
+<p>当然，你还可以使用 Netlify、Vercel 等第三方服务</p>
+<p>完成后，你的个人博客便基本搭建完成。你可以再对主题进行自定义，或者开始写作</p>
+<h2 id="开始写作"><a href="#开始写作" class="headerlink" title="开始写作"></a>开始写作</h2><h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><p>输入以下命令即可新建 <code>xxx.md</code> 文件</p>
+<pre class="line-numbers language-none"><code class="language-none">hexo net post xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://younghz.github.io/Markdown/">Markdown 标记语言语法等</a></p>
+</blockquote>
+<h3 id="为文章添加标签-x2F-分类"><a href="#为文章添加标签-x2F-分类" class="headerlink" title="为文章添加标签&#x2F;分类"></a>为文章添加标签&#x2F;分类</h3><p>你可能需要先了解 Hexo 的 Front-matter</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter.html">Front-matter</a></p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">---
+title: 手把手教你如何搭建属于自己的 Hexo 博客
+date: 2021-12-04 16:45:10
+tags:
+  - GitHub  
+  - Hexo 
+  - 博客
+categories:
+  - 大蛋糕的安利
+---
+你的文章内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h3><p>自定义页面在 Hexo 中是可以使用的，譬如直接在 <code>source</code> 下新建 HTML 进行编写</p>
+<p>也可以通过执行下边的命令新建页面（还是 Markdown，不过你可以直接在 Markdown 里写 HTML 的，同样会渲染）</p>
+<pre class="line-numbers language-none"><code class="language-none">hexo new page xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="有打算发视频吗？"><a href="#有打算发视频吗？" class="headerlink" title="有打算发视频吗？"></a>有打算发视频吗？</h3><p>没有打算，电脑被家人收了，不让我动 QWQ</p>
+<p>二是视频制作比较麻烦，文章相对来说更加简单</p>
+<h3 id="我想绑定我自己的域名（"><a href="#我想绑定我自己的域名（" class="headerlink" title="我想绑定我自己的域名（"></a>我想绑定我自己的域名（</h3><p>首先你得有个域名</p>
+<p>将域名用 CNAME 解析到 <code>你的名字.github.io</code>（当然 A 记录直接填 GitHub Pages 的 IP 也可以）</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">GitHub 官方文档，有中文</a></p>
+</blockquote>
+<p>在 <code>source</code> 文件夹下新建 <code>CNAME</code> 文件（没有后缀）并填入你的域名</p>
+<p>然后部署一次即可</p>
+<p>如果你后边把这东西删掉的话，随后不包含它的部署将会把远程仓库里的 CNAME 覆盖掉</p>
+<h3 id="备案"><a href="#备案" class="headerlink" title="备案"></a>备案</h3><p>要用国内服务如 CDN，不备案是真的难于上青天</p>
+<p>这里的备案指的是 ICP 备案（就是每个国内网站页脚挂的 “京 ICP 备 xxxxxxxxxx 号” 之类的</p>
+<p>但国内备案都要求你有一台人家的国内服务器，且购买时长至少 3 个月以上</p>
+<blockquote>
+<p>需要注意的是：</p>
+<ul>
+<li><p>确定域名可以备案（<code>moe</code> 之类的域名无法备案）</p>
+</li>
+<li><p>关闭评论区</p>
+</li>
+<li><p>备注说明不得包含 <code>交流</code> 字样</p>
+</li>
+<li><p>首页不能含有其他网站直达链接</p>
+</li>
+<li><p>遵纪守法（那肯定）</p>
+</li>
+</ul>
+</blockquote>
+<p>你也可以直接下线网站，等备案成功以后再上线（以后偶尔会复查，相对宽松很多）</p>
+<p>按照服务商的备案步骤一步步来即可</p>
+<p>拿到 ICP 备案号以后页脚必须清晰展示备案号，且指向 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">https://beian.miit.gov.cn</a></p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>个人博客可以用作许多用途，比如笔记本、回忆、创作、开发经验、生活等等</p>
+<p>多年后，再打开它看自己写下的内容，回忆纷纷涌上心头，多么美好</p>
+<p>希望大家的博客成功上线以后，能够承载着自己的许多回忆、承载自己的人生，走得更远</p>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">都看了这么多文章了，不考虑打点钱吗（</div><div id="qr" style="display:none;"><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/alipay-qrcode.png"><img loading="lazy" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/alipay-qrcode.png" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><span class="icon iconify" data-icon="ri:alipay-line"></span></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/qq-qrcode.png"><img loading="lazy" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/qq-qrcode.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Big_Cake</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://bigcake.cakemc.top/posts/build-a-hexo-blog/" title="手把手教你如何搭建属于自己的 Hexo 博客">https://bigcake.cakemc.top/posts/build-a-hexo-blog/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/minecraft-problems-solve/" rel="prev" title="如何诊断 Minecraft Java 版客户端中的错误"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">如何诊断 Minecraft Java 版客户端中的错误</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/a-little-teacher/" rel="next" title="关于我讲了节物理课这件事"><span class="post-nav-text">关于我讲了节物理课这件事</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>可以说几句话嘛^_^如果看不到评论，请刷新几次</span><br></div><div id="waline"></div><link rel="stylesheet" href="https://unpkg.onmicrosoft.cn/@waline/client@v2/dist/waline.css"><script>window.CONFIG.waline.config.path = "/posts/build-a-hexo-blog/"</script><div class="js-Pjax"><script src="/js/comments/waline.js" type="module" defer></script></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2021 – 2022 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="fluent:heart-16-filled"></span></span><span class="author"> Big_Cake</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.5</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2021-09-20T22:15:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_uv" title="总访客量"><span><span class="icon iconify" data-icon="fluent:person-24-filled"></span></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><span class="icon iconify" data-icon="fluent:eye-24-filled"></span></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script></div><div class="footer-custom-text"><a href="https://travellings.link" target="_blank"><img height="25" alt="travellings" src="https://travellings.link/assets/logo.svg"></a></div><div class="footer-support"><span>本网站由</span><a class="footer-support-logo" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" target="blank" title="又拍云"><img height="30" src="https://resources.cakeskin.tk/file/bigcake-blog-resources/images/upyun-logo.png" alt="又拍云"></a><span>提供 CDN 加速与云存储服务</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="fluent:arrow-up-24-regular"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#F2BC57" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:search-line"></span></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script defer src="https://unpkg.onmicrosoft.cn/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script><script defer src="https://unpkg.onmicrosoft.cn/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script defer src="/js/search/algolia-search.js" type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div class="algolia-pagination" id="algolia-pagination"></div></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = ["4-4","9-18","12-13"]
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><div id="aplayer"></div><script>function initAplayer() {
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    fixed: true,
+    autoplay: false,
+    theme: "#F2BC57",
+    loop: "all",
+    order: "list",
+    preload: "auto",
+    audio: [{"name":"Eternal Anamnesis 永恒的回忆","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Eternal-Anamnesis.mp3","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"Remembrance 一段回忆","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Remembrance.flac","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"Moonlight in Mondstadt 蒙德的月光","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Moonlight-in-Mondstadt.flac","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"Mondstadt Starlit 星光下的蒙德","artist":"陈致逸 / HOYO-MiX","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Mondstadt-Starlit.flac","cover":"https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg"},{"name":"otherside","artist":"Lena Raine","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/otherside.mp3","cover":"https://p2.music.126.net/ly16g4KsYaOCe6cj09SQMw==/109951166959790351.jpg"},{"name":"ふわふわ♪","artist":"牧野由依","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/ふわふわ♪.mp3","cover":"https://s2.loli.net/2022/06/12/bpgOT9Hr3sWcGv5.jpg"},{"name":"君だったら","artist":"HAPPY BIRTHDAY","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/君だったら.mp3","cover":"https://s2.loli.net/2022/06/12/eQX8Y9rHbmjxstu.jpg"},{"name":"可愛くなりたい","artist":"鎖那","url":"https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/可愛くなりたい.mp3","cover":"https://s2.loli.net/2022/06/12/yak6vnq9GQAViRB.jpg"}],
+    volume: 0.7,
+    mutex: true,
+    lrcType: 0,
+    listFolded: true,
+    listMaxHeight: "340px",
+    storageName: "aplayer-setting"
+  });
+}
+document.addEventListener("DOMContentLoaded", initAplayer);
+document.addEventListener("pjax:success", initAplayer);</script><script src="https://unpkg.onmicrosoft.cn/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
+mediumZoom(images)</script><style>.medium-zoom-image {
+  z-index: 99;
+}</style></body></html>
