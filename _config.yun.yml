@@ -72,7 +72,7 @@ say:
 
 reward:
   enable: true
-  icon: fluent:document-heart-20-regular
+  icon: fluent:person-heart-24-regular
   comment: 都看了这么多文章了，不考虑打点钱吗（
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
