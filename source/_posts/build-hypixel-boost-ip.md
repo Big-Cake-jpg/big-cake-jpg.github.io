@@ -58,7 +58,7 @@ root@192.173.261.222's password: _ # 输入你的密码
 
 然后我们就能连接上我们的服务器了。
 
-![SSH 界面](https://resources.cakeskin.tk/file/bigcake-blog-resources/images/build-hypixel-boost-ip/SSH.png)
+![SSH 界面](https://resources.cakeskin.tk/images/build-hypixel-boost-ip/SSH.png)
 
 ### 设置流量转发
 
@@ -68,7 +68,7 @@ root@192.173.261.222's password: _ # 输入你的密码
 cd /
 mkdir brook
 cd brook
-wget https://resources.cakeskin.tk/file/bigcake-blog-resources/brook.sh
+wget https://resources.cakeskin.tk/brook.sh
 bash brook.sh
 ```
 
@@ -76,11 +76,11 @@ bash brook.sh
 
 然后你就会看到这样的页面
 
-![Brook](https://resources.cakeskin.tk/file/bigcake-blog-resources/images/build-hypixel-boost-ip/Brook.png)
+![Brook](https://resources.cakeskin.tk/images/build-hypixel-boost-ip/Brook.png)
 
 按照其指引进行设置。本地监听端口填写 25565；被监听 IP 填写 `mc.hypixel.net` 解析出的任意 IP；被监听端口填写 25565.
 
-![Ping](https://resources.cakeskin.tk/file/bigcake-blog-resources/images/build-hypixel-boost-ip/Ping.png)_红圈圈住的即是 IP_
+![Ping](https://resources.cakeskin.tk/images/build-hypixel-boost-ip/Ping.png)_红圈圈住的即是 IP_
 
 全部填写完毕后，输入 Y 确认启用转发。
 

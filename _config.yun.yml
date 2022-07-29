@@ -21,35 +21,35 @@ aplayer:
 #        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
       - name: Eternal Anamnesis 永恒的回忆
         artist: 陈致逸 / HOYO-MiX
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Eternal-Anamnesis.mp3
+        url: https://resources.cakeskin.tk/musics/Eternal-Anamnesis.mp3
         cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
       - name: Remembrance 一段回忆
         artist: 陈致逸 / HOYO-MiX
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Remembrance.flac
+        url: https://resources.cakeskin.tk/musics/Remembrance.flac
         cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
       - name: Moonlight in Mondstadt 蒙德的月光
         artist: 陈致逸 / HOYO-MiX
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Moonlight-in-Mondstadt.flac
+        url: https://resources.cakeskin.tk/musics/Moonlight-in-Mondstadt.flac
         cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
       - name: Mondstadt Starlit 星光下的蒙德
         artist: 陈致逸 / HOYO-MiX
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/Mondstadt-Starlit.flac
+        url: https://resources.cakeskin.tk/musics/Mondstadt-Starlit.flac
         cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
       - name: otherside
         artist: Lena Raine
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/otherside.mp3
+        url: https://resources.cakeskin.tk/musics/otherside.mp3
         cover: https://p2.music.126.net/ly16g4KsYaOCe6cj09SQMw==/109951166959790351.jpg
       - name: ふわふわ♪
         artist: 牧野由依
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/ふわふわ♪.mp3
+        url: https://resources.cakeskin.tk/musics/ふわふわ♪.mp3
         cover: https://s2.loli.net/2022/06/12/bpgOT9Hr3sWcGv5.jpg
       - name: 君だったら
         artist: HAPPY BIRTHDAY
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/君だったら.mp3
+        url: https://resources.cakeskin.tk/musics/君だったら.mp3
         cover: https://s2.loli.net/2022/06/12/eQX8Y9rHbmjxstu.jpg
       - name: 可愛くなりたい
         artist: 鎖那
-        url: https://resources.cakeskin.tk/file/bigcake-blog-resources/musics/可愛くなりたい.mp3
+        url: https://resources.cakeskin.tk/musics/可愛くなりたい.mp3
         cover: https://s2.loli.net/2022/06/12/yak6vnq9GQAViRB.jpg
     meting:
       enable: false
@@ -77,18 +77,18 @@ reward:
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
-      path: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/alipay-qrcode.png
+      path: https://resources.cakeskin.tk/images/alipay-qrcode.png
       color: "#00A3EE"
       icon: ri:alipay-line
     - name: QQ 支付
-      path: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/qq-qrcode.png
+      path: https://resources.cakeskin.tk/images/qq-qrcode.png
       color: "#12B7F5"
       icon: ri:qq-line
   
 bg_image:
   enable: true
-  url: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/bg-bright-blur-30px.png # recomend image related to your mode
-  dark: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/bg-dark-blur-30px.png
+  url: https://resources.cakeskin.tk/images/bg-bright-blur-30px.png # recomend image related to your mode
+  dark: https://resources.cakeskin.tk/images/bg-dark-blur-30px.png
 
 cursor:
   enable: true
@@ -114,7 +114,7 @@ pjax:
 
 avatar:
   enable: true
-  url: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg
+  url: https://resources.cakeskin.tk/images/avatar.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -180,7 +180,7 @@ social:
     icon: fluent:mail-16-regular
     color: "#8E71C1"
 
-favicon: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/avatar.jpg
+favicon: https://resources.cakeskin.tk/images/avatar.jpg
 
 baidu_push: true
 
@@ -258,7 +258,7 @@ footer:
     enable: true
     title: 又拍云
     link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    logo: https://resources.cakeskin.tk/file/bigcake-blog-resources/images/upyun-logo.png
+    logo: https://resources.cakeskin.tk/images/upyun-logo.png
     prefix: 本网站由
     suffix: 提供 CDN 加速与云存储服务
   custom_text: <a href="https://travellings.link" target="_blank"><img height="25" alt="travellings" src="https://travellings.link/assets/logo.svg"></a>

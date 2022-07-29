@@ -36,7 +36,7 @@ categories: 一点小技巧
 
 选择你存放文档的仓库，点击“Import”，这里用 PCL 生存服的文档进行展示；
 
-![导入仓库](https://resources.cakeskin.tk/file/bigcake-blog-resources/images/deploy-vuepress-v1-docs-to-vercel/Import-Repo.png)
+![导入仓库](https://resources.cakeskin.tk/images/deploy-vuepress-v1-docs-to-vercel/Import-Repo.png)
 
 <div class="info">
 
@@ -50,7 +50,7 @@ categories: 一点小技巧
 
 其余的可以留着不填，如下图（请不要直接照抄）
 
-![配置](https://resources.cakeskin.tk/file/bigcake-blog-resources/images/deploy-vuepress-v1-docs-to-vercel/Config.png)
+![配置](https://resources.cakeskin.tk/images/deploy-vuepress-v1-docs-to-vercel/Config.png)
 
 点击“Deploy”按钮，然后等待部署。
 
@@ -62,7 +62,7 @@ categories: 一点小技巧
 
 需要注意的是，文档工作区的目录结构一般长这个样：
 
-![文档目录结构](https://resources.cakeskin.tk/file/bigcake-blog-resources/images/deploy-vuepress-v1-docs-to-vercel/Branch.png)
+![文档目录结构](https://resources.cakeskin.tk/images/deploy-vuepress-v1-docs-to-vercel/Branch.png)
 
 设置好，点击“Save”，然后对仓库进行一次提交，更改就会自动部署到生产环境。
 
