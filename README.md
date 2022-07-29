@@ -1,5 +1,9 @@
 # 🍰 大蛋糕的烘焙坊
 
+## Preview ｜ 预览
+
+![Preview](https://resources.cakeskin.tk/images/preview.png)
+
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Big-Cake-jpg/big-cake-jpg.github.io/GitHub%20Pages?label=GitHub%20Pages%20Build&logo=GitHub&style=flat-square) ![Website](https://img.shields.io/website?down_color=red&down_message=Offline&label=BigCake%27s%20Blog&style=flat-square&up_color=success&up_message=Online&url=https%3A%2F%2Fbigcake.cakemc.top) ![Netlify](https://img.shields.io/netlify/1688f720-9e59-44df-a481-8cb2d4141f94?label=Netlify%20Build&logo=netlify&style=flat-square)
 
 Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
@@ -7,7 +11,7 @@ Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
 - 主站：[bigcake.cakemc.top](https://bigcake.cakemc.top) | [big-cake-jpg.github.io](https://big-cake-jpg.github.io)
 - 备用：[bigcake-blog.netlify.app](https://bigcake-blog.netlify.app)
 
-## Usage
+## Usage ｜ 用法
 
 ```
 git clone https://github.com/Big-Cake-jpg/big-cake-jpg.github.io.git
