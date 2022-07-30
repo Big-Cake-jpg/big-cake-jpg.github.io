@@ -21,7 +21,7 @@ Welcome to Hexo! This is your very first post. Check documentation for more info
 
 不过放心，我是不可能关掉博客的，放假只要有时间我就会更新的。
 
-![Live-Time](https://resources.cakeskin.tk/images/hello-world/Live-Time.png)_截止时间：2022/07/07 13:45_
+![Live-Time](https://cdn.cakeskin.tk/images/hello-world/Live-Time.png)_截止时间：2022/07/07 13:45_
 
 hexo-theme-yun 是我这一年来一直在用的主题，在此为云游君打尻（？
 
@@ -33,6 +33,6 @@ hexo-theme-yun 是我这一年来一直在用的主题，在此为云游君打�
 
 就这么多，以后看着再改改罢。
 
-![image](https://resources.cakeskin.tk/images/bg-dark.png)
+![image](https://cdn.cakeskin.tk/images/bg-dark.png)
 
 > 也许我们会分别，但是我们将永远不会忘记彼此
