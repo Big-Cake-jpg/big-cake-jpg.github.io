@@ -20,7 +20,7 @@
         "avatar": "https://img.restent.win/me/profile/avatar.jpg",
         "name": "Restent Ou",
         "color": "#03a9f4",
-        "blog": "Restent's Blog",
+        "blog": "Galaxy City",
         "desc": "遇见你是我一生最幸运的事"
     },
     {
@@ -68,5 +68,13 @@
         "color": "#3790b5",
         "blog": "SeaYJ",
         "desc": "追随大佬的脚步越走越远"
+    },
+    {
+        "url": "https://z0z0r4.top",
+        "avatar": "https://z0z0r4.top/wp-content/uploads/2022/05/cropped-QQ%E5%9B%BE%E7%89%8720220514182530-1-192x192.jpg",
+        "name": "z0z0r4",
+        "color": "#129b8b",
+        "blog": "z0z0r4 Blog",
+        "desc": "我的底线是，不能不咕"
     }
 ]
