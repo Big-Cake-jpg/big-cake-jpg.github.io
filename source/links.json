@@ -84,5 +84,13 @@
         "color": "#052c9f",
         "blog": "黑's Blog",
         "desc": "活出自我"
+    },
+    {
+        "url": "https://cloudw233-bitbucket-io.vercel.app",
+        "avatar": "https://cloudw233-bitbucket-io.vercel.app/assets/img/favicon.ico",
+        "name": "water_clouds",
+        "color": "#568be7",
+        "blog": "屑water的窝",
+        "desc": "博客，但也存了一些 Java 安装包"
     }
 ]
