@@ -76,5 +76,13 @@
         "color": "#129b8b",
         "blog": "z0z0r4 Blog",
         "desc": "我的底线是，不能不咕"
+    },
+    {
+        "url": "https://www.yunfeng.ink",
+        "avatar": "https://www.yunfeng.ink/wp-content/uploads/2022/05/cropped-huygvfc-32x32.png",
+        "name": "Hacker_Yunfeng",
+        "color": "#052c9f",
+        "blog": "黑's Blog",
+        "desc": "活出自我"
     }
 ]
