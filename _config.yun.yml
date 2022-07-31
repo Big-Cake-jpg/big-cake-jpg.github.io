@@ -19,6 +19,10 @@ aplayer:
 #        artist: TECOPARK
 #        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
 #        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
+      - name: Twilight Serenity 宁静的黄昏
+        artist: 陈致逸 / HOYO-MiX
+        url: https://cdn.cakeskin.tk/musics/Twilight-Serenity.mp3
+        cover: https://p2.music.126.net/odoWDzYyHAe-IzLzRxkg3Q==/109951165336802038.jpg
       - name: Eternal Anamnesis 永恒的回忆
         artist: 陈致逸 / HOYO-MiX
         url: https://cdn.cakeskin.tk/musics/Eternal-Anamnesis.mp3
@@ -248,7 +252,7 @@ footer:
     # title: 云游君的赞助者们
   live_time:
     enable: true
-    prefix: 本博客已萌萌哒地运行
+    prefix: 博客已存活
     suffix: (●'◡'●)
     start_time: "2021-09-20T22:15:00"
   powered:
