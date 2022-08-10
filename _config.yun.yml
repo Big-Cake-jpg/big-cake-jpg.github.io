@@ -299,6 +299,7 @@ leancloud_visitors:
   enable: true
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
   app_key: iK4BuSm3M35dNsuMerVlq3JO
+  server_url: https://leancloud-api.cakeskin.tk
 
 wordcount:
   enable: true
