@@ -92,5 +92,13 @@
         "color": "#568be7",
         "blog": "屑water的窝",
         "desc": "博客，但也存了一些 Java 安装包"
+    },
+        {
+        "url": "https://blog.xsnetw.cf/",
+        "avatar": "https://blog.xsnetw.cf/images/avatar.jpg",
+        "name": "小星鑫233",
+        "color": "#008B8B",
+        "blog": "SinGO博客",
+        "desc": "害怕孤独，却享受孤独"
     }
 ]
