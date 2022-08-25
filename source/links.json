@@ -70,14 +70,6 @@
         "desc": "追随大佬的脚步越走越远"
     },
     {
-        "url": "https://z0z0r4.top",
-        "avatar": "https://z0z0r4.top/wp-content/uploads/2022/05/cropped-QQ%E5%9B%BE%E7%89%8720220514182530-1-192x192.jpg",
-        "name": "z0z0r4",
-        "color": "#129b8b",
-        "blog": "z0z0r4 Blog",
-        "desc": "我的底线是，不能不咕"
-    },
-    {
         "url": "https://www.yunfeng.ink",
         "avatar": "https://www.yunfeng.ink/wp-content/uploads/2022/05/cropped-huygvfc-32x32.png",
         "name": "Hacker_Yunfeng",
@@ -100,5 +92,13 @@
         "color": "#008B8B",
         "blog": "SinGO博客",
         "desc": "害怕孤独，却享受孤独"
+    },
+    {
+        "url": "https://blogs.niufuyu.top",
+        "avatar": "https://blogs.niufuyu.top/avatar.jpg",
+        "name": "Niute Fony",
+        "color": "#0078e7",
+        "blog": "Niute Fony",
+        "desc": "Niuteの屑破站"
     }
 ]
