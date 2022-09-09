@@ -293,7 +293,7 @@ waline:
     - https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/
     - https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/qq/
     - https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/
-    - https://jsd.onmicrosoft.cn/gh/waline/emojis@latest/bmoji/
+    - https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/
   locale:
     placeholder: 求求你了，写点评论吧（请先登录）
     
