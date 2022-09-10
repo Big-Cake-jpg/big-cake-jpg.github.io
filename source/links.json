@@ -1,11 +1,11 @@
 [
     {
-      "url": "https://blog.nofated.win",
-      "avatar": "https://www.libravatar.org/gravatarproxy/796943724d362f138d980df111d8077e?s=66",
-      "name": "Nofated",
-      "color": "#276cda",
-      "blog": "Nofated's Blog",
-      "desc": "I hope to be with you everyday."
+        "url": "https://blog.nofated.win",
+        "avatar": "https://www.libravatar.org/gravatarproxy/796943724d362f138d980df111d8077e?s=66",
+        "name": "Nofated",
+        "color": "#276cda",
+        "blog": "Nofated's Blog",
+        "desc": "I hope to be with you everyday."
     },
     {
         "url": "https://xiaojin233.cn",
@@ -78,14 +78,6 @@
         "desc": "活出自我"
     },
     {
-        "url": "https://cloudw233-bitbucket-io.vercel.app",
-        "avatar": "https://cloudw233-bitbucket-io.vercel.app/assets/img/favicon.ico",
-        "name": "water_clouds",
-        "color": "#568be7",
-        "blog": "屑water的窝",
-        "desc": "博客，但也存了一些 Java 安装包"
-    },
-        {
         "url": "https://blog.xsnetw.cf/",
         "avatar": "https://blog.xsnetw.cf/images/avatar.jpg",
         "name": "小星鑫233",
