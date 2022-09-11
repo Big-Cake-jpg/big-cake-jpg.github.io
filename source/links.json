@@ -76,5 +76,13 @@
         "color": "#008B8B",
         "blog": "SinGO博客",
         "desc": "害怕孤独，却享受孤独"
+    },
+    {
+        "url": "https://blog.ltya.top/",
+        "avatar": "https://cravatar.cn/avatar/5af06b461740fb2bd7467b8561399703?s=500",
+        "name": "岚天呀",
+        "color": "#489ffe",
+        "blog": "岚天小窝",
+        "desc": "一只鸽子住在这里~"
     }
 ]
