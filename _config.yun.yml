@@ -113,7 +113,7 @@ banner:
     icon: fluent:chevron-down-16-regular
 
 pjax:
-  enable: true
+  enable: false
   src: /js/pjax.js
 
 avatar:
