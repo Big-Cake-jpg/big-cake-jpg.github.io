@@ -8,14 +8,6 @@
         "desc": "I hope to be with you everyday."
     },
     {
-        "url": "https://xiaojin233.cn",
-        "avatar": "https://xiaojin233.cn/img/avator.png",
-        "name": "Xiao_Jin",
-        "color": "#2e2e2e",
-        "blog": "Xiao_Jin's Home",
-        "desc": "Code Changes Life"
-    },
-    {
         "url": "https://blog.restent.win/",
         "avatar": "https://img.restent.win/me/profile/avatar.jpg",
         "name": "Restent Ou",
@@ -84,13 +76,5 @@
         "color": "#008B8B",
         "blog": "SinGO博客",
         "desc": "害怕孤独，却享受孤独"
-    },
-    {
-        "url": "https://blogs.niufuyu.top",
-        "avatar": "https://blogs.niufuyu.top/avatar.jpg",
-        "name": "Niute Fony",
-        "color": "#0078e7",
-        "blog": "Niute Fony",
-        "desc": "Niuteの屑破站"
     }
 ]
