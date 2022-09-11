@@ -298,7 +298,7 @@ waline:
     placeholder: 求求你了，写点评论吧（请先登录）
     
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
   app_key: iK4BuSm3M35dNsuMerVlq3JO
   server_url: https://leancloud-api.cakeskin.tk
@@ -335,7 +335,7 @@ busuanzi:
   site_uv_icon: fluent:person-24-filled
   site_pv: true
   site_pv_icon: fluent:eye-24-filled
-  page_pv: false
+  page_pv: true
   page_pv_icon: fluent:document-person-16-regular
 
 icons:
