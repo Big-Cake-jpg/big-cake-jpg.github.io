@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: 
 Disallow: /css/
 Disallow: /js/
 Sitemap: https://bigcake.cakemc.top/sitemap.xml
