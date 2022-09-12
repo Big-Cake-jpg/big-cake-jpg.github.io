@@ -326,6 +326,9 @@ algolia_search:
 vendors:
   host: https://unpkg.onmicrosoft.cn/
   busuanzi: https://busuanzi.icodeq.com/busuanzi.pure.mini.js
+  waline:
+    css: https://unpkg.onmicrosoft.cn/@waline/client/dist/waline.css
+    js: https://unpkg.onmicrosoft.cn/@waline/client/dist/waline.js
 
 medium_zoom: true
 
@@ -350,3 +353,5 @@ icons:
   wordcount: fluent:text-word-count-24-regular
   readtime: fluent:timer-24-regular
   
+custom:
+  style: source/_data/style/waline-ua.styl
