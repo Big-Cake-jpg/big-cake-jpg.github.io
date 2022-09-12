@@ -353,5 +353,6 @@ icons:
   wordcount: fluent:text-word-count-24-regular
   readtime: fluent:timer-24-regular
   
-custom:
-  style: source/_data/style/waline-ua.styl
+head:
+  css:
+    custom: /css/waline-ua.css
