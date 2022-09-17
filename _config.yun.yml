@@ -288,7 +288,7 @@ waline:
   enable: true
   serverURL: https://waline.bigcake.cakemc.top
   comment: true
-  pageview: true
+  visitor: true
   emoji:
     - https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/
     - https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/
