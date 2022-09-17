@@ -288,6 +288,7 @@ waline:
   enable: true
   serverURL: https://waline.bigcake.cakemc.top
   comment: true
+  pageview: true
   emoji:
     - https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/
     - https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/
@@ -338,7 +339,7 @@ busuanzi:
   site_uv_icon: fluent:person-24-filled
   site_pv: true
   site_pv_icon: fluent:eye-24-filled
-  page_pv: true
+  page_pv: false
   page_pv_icon: fluent:document-person-16-regular
 
 icons:
