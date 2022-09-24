@@ -76,7 +76,7 @@ say:
 
 reward:
   enable: true
-  icon: fluent:person-heart-24-regular
+  icon: ri:hand-coin-line
   comment: 都看了这么多文章了，不考虑打点钱吗（
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
@@ -110,7 +110,7 @@ banner:
     color: "white"
   go_down:
     enable: true
-    icon: fluent:chevron-down-16-regular
+    icon: ri:arrow-down-s-line
 
 pjax:
   enable: false
@@ -132,15 +132,19 @@ avatar:
 pages:
   - name: 友链
     url: /links/
-    icon: fluent:people-12-regular
+    icon: ri:group-line
     color: dodgerblue
+  - name: 虫洞
+    url: https://foreverblog.cn/go.html
+    icon: ri:checkbox-blank-circle-fill
+    color: gray
 
 social:
   - name: RSS
     # set rss in your root config
     # https://github.com/hexojs/hexo-generator-feed
     link: /atom.xml # config.feed.path
-    icon: fluent:rss-20-regular
+    icon: ri:rss-line
     color: orange
   - name: QQ
     # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
@@ -181,7 +185,7 @@ social:
     color: "#317ef3"
   - name: E-Mail
     link: mailto:bigcake@cakemc.top
-    icon: fluent:mail-16-regular
+    icon: ri:mail-line
     color: "#8E71C1"
 
 favicon: https://cdn.cakeskin.tk/images/avatar.jpg
@@ -216,17 +220,17 @@ local_search:
 menu:
   home:
     path: /
-    icon: fluent:home-24-regular
+    icon: ri:home-4-line
   list:
     - type: archives
       path: /archives/
-      icon: fluent:archive-24-regular
+      icon: ri:archive-line
     - type: categories
       path: /categories/
-      icon: fluent:folder-24-regular
+      icon: ri:folder-2-line
     - type: tags
       path: /tags/
-      icon: fluent:tag-24-regular
+      icon: ri:price-tag-3-line
   custom:
     title: 开往
     path: https://travellings.link
@@ -243,7 +247,7 @@ footer:
   # Icon between year and copyright info.
   icon:
     # `heart` is recommended with animation in red (#ff0000).
-    name: fluent:heart-16-filled
+    name: ri:heart-fill
     # If you want to animate the icon, set it to true.
     animated: true
     # Change the color of icon, using Hex Code.
@@ -273,7 +277,6 @@ google_adsense:
 
 comment:
   enable: true
-  icon: fluent:chat-24-regular
   tips:
     - 可以说几句话嘛^_^如果看不到评论，请刷新几次
   candidates:
@@ -299,7 +302,7 @@ waline:
     placeholder: 求求你了，写点评论吧（请先登录）
     
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
   app_key: iK4BuSm3M35dNsuMerVlq3JO
   server_url: https://leancloud-api.cakeskin.tk
@@ -336,23 +339,11 @@ medium_zoom: true
 busuanzi:
   enable: true
   site_uv: true
-  site_uv_icon: fluent:person-24-filled
+  site_uv_icon: ri:user-line
   site_pv: true
-  site_pv_icon: fluent:eye-24-filled
+  site_pv_icon: ri:eye-line
   page_pv: false
-  page_pv_icon: fluent:document-person-16-regular
-
-icons:
-  # 返回顶部
-  back_to_top: fluent:arrow-up-24-regular
-  # 分类
-  category: fluent:folder-24-regular
-  # 标签
-  tag: fluent:tag-24-regular
-  # 拜访
-  view: fluent:document-person-16-regular
-  wordcount: fluent:text-word-count-24-regular
-  readtime: fluent:timer-24-regular
+  page_pv_icon: ri:eye-line
   
 head:
   css:
