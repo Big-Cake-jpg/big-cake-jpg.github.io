@@ -84,5 +84,13 @@
         "color": "#489ffe",
         "blog": "岚天小窝",
         "desc": "一只鸽子住在这里~"
+    },
+    {
+        "url": "https://off.cx",
+        "avatar": "https://off.cx/avatar.jpg",
+        "name": "Niute Fony",
+        "color": "#0078e7",
+        "blog": "Niute Fony",
+        "desc": "一只鸽子住在这里~"
     }
 ]
