@@ -92,5 +92,13 @@
         "color": "#0078e7",
         "blog": "Niute Fony",
         "desc": "一只鸽子住在这里~"
+    },
+    {
+        "url": "https://blog.ianxia.com",
+        "avatar": "https://cdn.ghink.net/image/avatar/Bigsk.jpg",
+        "name": "Bigsk",
+        "color": "#51ADED",
+        "blog": "Ian Xia's Blog",
+        "desc": "Codice est quasi poem a."
     }
 ]
