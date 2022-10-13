@@ -31,3 +31,4 @@ jobs:
           publish_dir: ./public
           publish_branch: main
           force_orphan: true
+          exclude_assets: ''
