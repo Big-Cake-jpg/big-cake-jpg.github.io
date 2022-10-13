@@ -100,5 +100,13 @@
         "color": "#51ADED",
         "blog": "Ian Xia's Blog",
         "desc": "Codice est quasi poem a."
+    },
+    {
+        "url": "https://xiaomcserver.top",
+        "avatar": "https://cdn.xiaomcserver.top/img/avatar2.jpg",
+        "name": "Xiaomckedou233",
+        "color": "#1E90FF",
+        "blog": "XiaoBlog",
+        "desc": "屑蝌蚪.png"
     }
 ]
