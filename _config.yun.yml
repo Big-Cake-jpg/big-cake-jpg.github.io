@@ -305,7 +305,7 @@ leancloud_visitors:
   enable: true
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
   app_key: iK4BuSm3M35dNsuMerVlq3JO
-  server_url: https://leancloud-api.cakeskin.tk
+  server_url: https://leancloud-api.bigcake.cakemc.top
 
 wordcount:
   enable: true
@@ -329,7 +329,7 @@ algolia_search:
 
 vendors:
   host: https://unpkg.onmicrosoft.cn/
-  # busuanzi: https://busuanzi.icodeq.com/busuanzi.pure.mini.js
+  busuanzi: https://busuanzi.icodeq.com/busuanzi.pure.mini.js
   waline:
     css: https://unpkg.onmicrosoft.cn/@waline/client/dist/waline.css
     js: https://unpkg.onmicrosoft.cn/@waline/client/dist/waline.js
