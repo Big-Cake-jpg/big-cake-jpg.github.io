@@ -124,5 +124,13 @@
         "color": "#df5c9d",
         "blog": "MareDevi の Blog",
         "desc": "苦逼高中生的小站"
+    },
+    {
+        "url": "https://seayay.icu",
+        "avatar": "https://seayay.icu/images/avatar.jpg",
+        "name": "思遥方",
+        "color": "#688DA0",
+        "blog": "思遥方的小家",
+        "desc": "我永远喜欢温迪"
     }
 ]
