@@ -212,6 +212,7 @@ mourn:
     - "4-4"
     - "9-18"
     - "12-13"
+    - "12-6"
 
 local_search:
   enable: false
