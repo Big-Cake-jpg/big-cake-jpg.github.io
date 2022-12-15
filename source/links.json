@@ -54,14 +54,6 @@
         "blog": "Ykueeの窝"
     },
     {
-        "url": "https://seayj.cn",
-        "avatar": "https://seayj.cn/medias/logo.png",
-        "name": "SeaYJ",
-        "color": "#3790b5",
-        "blog": "SeaYJ",
-        "desc": "追随大佬的脚步越走越远"
-    },
-    {
         "url": "https://www.yunfeng.ink",
         "avatar": "https://www.yunfeng.ink/wp-content/uploads/2022/05/cropped-huygvfc-32x32.png",
         "name": "Hacker_Yunfeng",
@@ -139,5 +131,21 @@
         "name": "Eternal9",
         "color": "#DC4437",
         "blog": "Eternal9's Blog"
+    },
+    {
+        "url": "https://liusui.tk/",
+        "avatar": "https://liusui.cf/2022/12/03/69d56584b92ec.jpg",
+        "name": "liusui",
+        "color": "#568be7",
+        "blog": "六岁の博客",
+        "desc": "一只摆烂的咸鱼罢了"
+    },
+    {
+        "url": "https://ztsin.cn",
+        "avatar": "https://s1.ax1x.com/2022/10/22/xc03ee.jpg",
+        "name": "Z_Tsin",
+        "color": "#43bec5",
+        "blog": "Z_Tsin's Home",
+        "desc": "蘑菇森林的尽头，新世界的起点"
     }
 ]
