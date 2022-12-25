@@ -1,5 +1,5 @@
 aplayer:
-  global: true
+  global: false
   meting: false
   # https://github.com/metowolf/MetingJS/tree/v1.2#option
   widget:
