@@ -147,5 +147,13 @@
         "color": "#43bec5",
         "blog": "Z_Tsin's Home",
         "desc": "蘑菇森林的尽头，新世界的起点"
+    },
+    {
+        "url": "https://souike.github.io",
+        "avatar": "https://souiken.github.io/img/souiken.jpg",
+        "name": "Souiken",
+        "color": "#d2f043",
+        "blog": "Souiken's Blog",
+        "desc": "The website only is a blog."
     }
 ]
