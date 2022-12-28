@@ -2,7 +2,7 @@
 title: 关于我
 date: 2021-09-21 13:43:48
 updated: 2022-12-25 10:57:23
-aplayer: false
+aplayer: true
 ---
 
 {% meting "1992698886" "netease" "song" "theme:#F2BC57" %}
