@@ -3,7 +3,7 @@ aplayer:
   meting: false
   # https://github.com/metowolf/MetingJS/tree/v1.2#option
   widget:
-    enable: true
+    enable: false
     autoplay: false
     # theme: "#2980b9"
     loop: all

@@ -145,4 +145,4 @@ aplayer:
   style_cdn: https://unpkg.onmicrosoft.cn/aplayer@latest/dist/APlayer.min.css
   meting: true
   meting_cdn: https://unpkg.onmicrosoft.cn/meting@1/dist/Meting.min.js
-  asset_inject: false
+  asset_inject: true
