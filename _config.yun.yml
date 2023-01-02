@@ -113,7 +113,7 @@ banner:
     icon: ri:arrow-down-s-line
 
 pjax:
-  enable: false
+  enable: true
   src: /js/pjax.js
 
 avatar:
@@ -349,3 +349,7 @@ busuanzi:
 head:
   css:
     custom: /css/waline-ua.css
+    pace-css: https://unpkg.onmicrosoft.cn/pace-js@latest/themes/yellow/pace-theme-minimal.css
+  js:
+    async: 
+      - https://unpkg.onmicrosoft.cn/pace-js@latest/pace.min.js
