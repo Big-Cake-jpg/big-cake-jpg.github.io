@@ -1,6 +1,6 @@
 aplayer:
   global: false
-  meting: false
+  meting: true
   # https://github.com/metowolf/MetingJS/tree/v1.2#option
   widget:
     enable: false
