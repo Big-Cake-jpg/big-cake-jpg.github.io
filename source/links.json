@@ -163,5 +163,13 @@
         "color": "#f5c979",
         "blog": "字节君的思想宇宙",
         "desc": "一个卑微的初三学生"
+    },
+    {
+        "url": "https://lowion.cn",
+        "avatar": "https://lowion.cn/hade.jpg",
+        "name": "WilliamSun",
+        "color": "#3f51b5",
+        "blog": "Williamsun 的博客",
+        "desc": "练习 Python 两年半的个人练习生"
     }
 ]
