@@ -234,7 +234,7 @@ menu:
       icon: ri:price-tag-3-line
   custom:
     title: 开往
-    path: https://travellings.link
+    path: https://www.travellings.cn/go.html
     icon: fluent:vehicle-subway-24-regular
 
 google_analytics:
