@@ -171,5 +171,13 @@
         "color": "#3f51b5",
         "blog": "Williamsun 的博客",
         "desc": "练习 Python 两年半的个人练习生"
+    },
+    {
+        "url": "https://cubik65536.top",
+        "avatar": "https://img.cubik65536.top/CubikLogo.png",
+        "name": "Cubik65536",
+        "color": "#57728B",
+        "blog": "Cubik 的小站",
+        "desc": "RECOMMENDED BY DR.CREATIVE"
     }
 ]
