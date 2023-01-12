@@ -81,18 +81,18 @@ reward:
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
-      path: https://cdn.cakeskin.tk/images/alipay-qrcode.png
+      path: https://r2.cakeskin.tk/alipay-qrcode.webp
       color: "#00A3EE"
       icon: ri:alipay-line
     - name: QQ 支付
-      path: https://cdn.cakeskin.tk/images/qq-qrcode.png
+      path: https://r2.cakeskin.tk/qq-qrcode.webp
       color: "#12B7F5"
       icon: ri:qq-line
   
 bg_image:
   enable: true
-  url: https://cdn.cakeskin.tk/images/bg-bright.png # recomend image related to your mode
-  dark: https://cdn.cakeskin.tk/images/bg-dark-blur-30px.png
+  url: https://r2.cakeskin.tk/bg-bright.webp # recomend image related to your mode
+  dark: https://r2.cakeskin.tk/bg-dark.webp
 
 cursor:
   enable: true
@@ -118,7 +118,7 @@ pjax:
 
 avatar:
   enable: true
-  url: https://cdn.cakeskin.tk/images/avatar.jpg
+  url: https://r2.cakeskin.tk/avatar.webp
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -188,7 +188,7 @@ social:
     icon: ri:mail-line
     color: "#8E71C1"
 
-favicon: https://cdn.cakeskin.tk/images/avatar.jpg
+favicon: https://r2.cakeskin.tk/avatar.webp
 
 baidu_push: true
 
@@ -267,7 +267,7 @@ footer:
     enable: true
     title: 又拍云
     link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    logo: https://cdn.cakeskin.tk/images/upyun-logo.png
+    logo: https://r2.cakeskin.tk/upyun-logo.webp
     prefix: 本网站由
     suffix: 提供 CDN 加速与云存储服务
   custom_text: <a href="https://foreverblog.cn" target="_blank"><img height="25" alt="十年之约" src="https://img.foreverblog.cn/logo_en_default.png"></a>
