@@ -353,3 +353,5 @@ head:
   js:
     async: 
       - https://npm.onmicrosoft.cn/pace-js@latest/pace.min.js
+    defer: 
+      - /_vercel/insights/script.js
