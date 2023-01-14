@@ -329,11 +329,11 @@ algolia_search:
   enable: true
 
 vendors:
-  host: https://unpkg.onmicrosoft.cn/
+  host: https://npm.onmicrosoft.cn/
   busuanzi: https://busuanzi.icodeq.com/busuanzi.pure.mini.js
   waline:
-    css: https://unpkg.onmicrosoft.cn/@waline/client/dist/waline.css
-    js: https://unpkg.onmicrosoft.cn/@waline/client/dist/waline.js
+    css: https://npm.onmicrosoft.cn/@waline/client/dist/waline.css
+    js: https://npm.onmicrosoft.cn/@waline/client/dist/waline.js
 
 medium_zoom: true
 
@@ -349,7 +349,7 @@ busuanzi:
 head:
   css:
     custom: /css/waline-ua.css
-    pace-css: https://unpkg.onmicrosoft.cn/pace-js@latest/themes/yellow/pace-theme-minimal.css
+    pace-css: https://npm.onmicrosoft.cn/pace-js@latest/themes/yellow/pace-theme-minimal.css
   js:
     async: 
-      - https://unpkg.onmicrosoft.cn/pace-js@latest/pace.min.js
+      - https://npm.onmicrosoft.cn/pace-js@latest/pace.min.js
