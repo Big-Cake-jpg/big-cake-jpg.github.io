@@ -91,7 +91,7 @@ reward:
   
 bg_image:
   enable: true
-  url: https://r2.cakeskin.tk/bg-bright.webp # recomend image related to your mode
+  url: https://r2.cakeskin.tk/bg-bright-blur-10px.webp # recomend image related to your mode
   dark: https://r2.cakeskin.tk/bg-dark.webp
 
 cursor:
