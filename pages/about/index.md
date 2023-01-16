@@ -5,7 +5,12 @@ updated: 2022-12-25 10:57:23
 aplayer: true
 ---
 
-{% meting "1992698886" "netease" "song" "theme:#F2BC57" %}
+<meting-js
+ id="1992698886"
+ server="netease"
+ type="song"
+ theme="#F2BC57">
+</meting-js>
 
 远方的朋友，你好！
 

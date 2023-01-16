@@ -1,45 +1,45 @@
-# 🍰 大蛋糕的烘焙坊
+# create-valaxy
 
-## Preview ｜ 预览
+Example: [valaxy.site](https://valaxy.site)
 
-![Preview](https://cdn.cakeskin.tk/images/preview.png)
+## Usage
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Big-Cake-jpg/big-cake-jpg.github.io/GitHub%20Pages?label=GitHub%20Pages%20Build&logo=GitHub&style=flat-square) ![Website](https://img.shields.io/website?down_color=red&down_message=Offline&label=BigCake%27s%20Blog&style=flat-square&up_color=success&up_message=Online&url=https%3A%2F%2Fbigcake.cakemc.top) ![Netlify](https://img.shields.io/netlify/1688f720-9e59-44df-a481-8cb2d4141f94?label=Netlify%20Build&logo=netlify&style=flat-square)
+```bash
+# install
+npm i
+# or pnpm i
 
-Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun)
-
-- 主站：[bigcake.cakemc.top](https://bigcake.cakemc.top) | [big-cake-jpg.github.io](https://big-cake-jpg.github.io)
-- 备用：[bigcake-blog.netlify.app](https://bigcake-blog.netlify.app)
-
-## Usage ｜ 用法
-
-```
-git clone https://github.com/Big-Cake-jpg/big-cake-jpg.github.io.git
-yarn # npm install
-hexo new post
-hexo generate # hexo g
+# start
+npm run dev
+# or pnpm dev
 ```
 
-### 日常发布
+See `http://localhost:4859/`, have fun!
 
-推送至 GitHub，使用 Actions 生成静态页面并推送 main 分支
+### Config
 
-同时触发其它地方的构建（Railway，Netlify……）
+Modify `valaxy.config.ts` to custom your blog.
 
-### Blog Updates
+English & Chinese Docs is coming!
 
-`💡 New post`
+> Wait a minute.
 
-`🐛 Typo`
+## Structure
 
-`⬆️ Upgrade dependencies / themes`
+In most cases, you only need to work in the `pages` folder.
 
-`❤️ Fix CI build`
+### Main folders
 
-`📃 Update config`
+- `pages`: your all pages
+  - `posts`: write your posts here, will be counted as posts
+- `styles`: override theme styles, `index.scss`/`vars.csss`/`index.css` will be loaded automatically
+- `components`: custom your vue components (will be loaded automatically)
+- `layouts`: custom layouts (use it by `layout: xxx` in md)
+- `locales`: custom i18n
 
-## 注释
+### Other
 
-在学校内进行的提交： `( in-school commit )`
-
-日常进行的提交不进行注释
+- `.vscode`: recommend some useful plugins & settings, you can preview icon/i18n/class...
+- `.github`: GitHub Actions to auto build & deploy to GitHub Pages
+- `netlify.toml`: for [netlify](https://www.netlify.com/)
+- `vercel.json`: for [vercel](https://vercel.com/)

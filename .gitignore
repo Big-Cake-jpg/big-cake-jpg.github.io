@@ -1,10 +1,16 @@
+# vite-ssg
+.vite-ssg-dist
+.vite-ssg-temp
+
+temp/
+
 .DS_Store
-Thumbs.db
-db.json
+*.local
+dist
+dist-ssr
+node_modules
+.idea/
 *.log
-node_modules/
-public/
-.deploy*/
-themes/yun
 package-lock.json
-yarn.lock
+
+components.d.ts

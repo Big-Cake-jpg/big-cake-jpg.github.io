@@ -1,35 +1,38 @@
 name: GitHub Pages
+
 on:
   push:
     branches:
-      - source
+      - main
+
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        os: [ubuntu-latest]
+      fail-fast: false
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: "17.x"
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
 
-      - name: Install Dependencies
-        run: yarn
+      - name: 📦 Install Dependencies
+        run: npm i
 
-      - name: algolia
-        env:
-          HEXO_ALGOLIA_INDEXING_KEY: ${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
-        run: yarn algolia
-        
-      - run: yarn build
+      - name: 🌌 Build Valaxy Blog
+        run: npm run build
 
-      - name: Deploy
+      - name: 🪤 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-         # github_token: ${{ secrets.GITHUB_TOKEN }}
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./public
-          publish_branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
           force_orphan: true
-          exclude_assets: ''

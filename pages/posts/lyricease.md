@@ -2,6 +2,7 @@
 title: 诈尸？—— 第三方网易云音乐客户端 LyricEase
 date: 2023-01-08 13:07:43
 updated: 2023-01-08 13:07:43
+cover: https://r2.cakeskin.tk/posts/lyricease/cover.webp
 tags:
   - 分享
   - 软件
@@ -9,7 +10,6 @@ tags:
 categories:
   - 大蛋糕的安利
 ---
-## 前言
 
 以前我提到过，我很喜欢 UWP 应用，因为大多数 UWP 的界面都能与 Windows 完美融合在一起。
 
