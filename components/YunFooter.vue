@@ -7,7 +7,7 @@ useScriptTag('https://busuanzi.icodeq.com/busuanzi.pure.mini.js')
 <template>
   <YunFooter>
     <div class="copyright flex justify-center items-center">
-      <div i-ri-user-line> </div><span id="busuanzi_value_site_pv" />｜<div i-ri-eye-line> </div><span id="busuanzi_value_site_uv" />
+      <div i-ri-user-line> </div><span id="busuanzi_value_site_uv" />｜<div i-ri-eye-line> </div><span id="busuanzi_value_site_pv" />
     </div>
   </YunFooter>
 </template>
