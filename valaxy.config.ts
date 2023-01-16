@@ -23,6 +23,9 @@ export default defineConfig<ThemeConfig>({
   },
   description: '一个屑初三学生的小窝',
   subtitle: '也许我们会分别，但我们将永远不会忘记彼此',
+  cdn: {
+    prefix: 'https://npm.onmicrosoft.cn',
+  },
   social: [
     {
       name: 'RSS',
@@ -122,6 +125,19 @@ export default defineConfig<ThemeConfig>({
     }),
     addonWaline({
       serverURL: 'https://waline.bigcake.cakemc.top',
+      locale:{
+        placeholder: '求求你了，说几句话吧（请先登录）'
+      },
+      comment: true,
+      pageview: true,
+      emoji: [
+        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/',
+        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/',
+        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/qq/',
+        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/',
+        'https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/',
+      ],
+      login: 'force',
     }),
   ],
 
@@ -132,7 +148,6 @@ export default defineConfig<ThemeConfig>({
       enable: true,
       title: '大蛋糕的烘焙坊',
     },
-
     pages: [
       {
         name: '友链',
