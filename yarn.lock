@@ -2914,19 +2914,19 @@ valaxy-addon-waline@0.0.7, valaxy-addon-waline@^0.0.7:
   dependencies:
     "@waline/client" "^2.14.1"
 
-valaxy-theme-yun@^0.12.3:
-  version "0.12.3"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.12.3.tgz#d6fa3689cfff18d9c1b809aa497eabdc35b501c3"
-  integrity sha512-Lzm9+KJUdWCuSiwpqE5B+RcCW0LCrAINloCOWx7raBKmRC/7Tr1iVCVy8YFtrJp3+lkHdVcSwrAdv1oW7QHnPg==
+valaxy-theme-yun@^0.12.4:
+  version "0.12.4"
+  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.12.4.tgz#2f6ea66d9395430041d67f766546f2813875f0c0"
+  integrity sha512-imGnl2oI+ZPiUtkJ0w0+FW5/SnJ6ba74y5KDBUyLWZEfh17IMsVWqd+mFzXNXPgm06gLwTCjItr0Fz+aNDukBQ==
   dependencies:
     "@iconify-json/ant-design" "^1.1.4"
     "@iconify-json/simple-icons" "^1.1.37"
     valaxy-addon-waline "0.0.7"
 
-valaxy@^0.12.3:
-  version "0.12.3"
-  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.12.3.tgz#6b5d2364023b3b972274d9d7c6708b043ecdc0dc"
-  integrity sha512-VGoUsz3X75R/NBe1blVdo5KBUEXJ4O+ETh4XcBO7RSBo1kG/4pf+KSb54Vvn7rMvjiuuEqkkKiQ5Pr35c70g8g==
+valaxy@^0.12.4:
+  version "0.12.4"
+  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.12.4.tgz#fda5a2ed3ea7a089b74aa2a37e24b33fdc5b3fa1"
+  integrity sha512-mdEWrcwAILuO0WCPEN9Waad003uw8IEZc5z2MRWQRgKobM+92k8qsbqP8zWwpcyidyuqjV6N8wtIItrapJg2eQ==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@ctrl/tinycolor" "^3.5.0"
