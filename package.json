@@ -13,9 +13,9 @@
   "dependencies": {
     "@iconify-json/fluent": "^1.1.17",
     "@vercel/analytics": "^0.1.8",
-    "valaxy": "^0.12.4",
+    "valaxy": "^0.12.6",
     "valaxy-addon-algolia": "^0.0.2",
-    "valaxy-addon-waline": "^0.0.7",
-    "valaxy-theme-yun": "^0.12.4"
+    "valaxy-addon-waline": "^0.0.8",
+    "valaxy-theme-yun": "^0.12.6"
   }
 }
