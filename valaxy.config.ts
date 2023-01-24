@@ -147,6 +147,9 @@ export default defineConfig<ThemeConfig>({
     banner: {
       enable: true,
       title: '大蛋糕的烘焙坊',
+      cloud: {
+        enable: true,
+      },
     },
     pages: [
       {
