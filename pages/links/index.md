@@ -6,6 +6,7 @@ links: /links.json
 random: true
 aplayer: true
 toc: false
+aside: false
 ---
 
 <meting-js
