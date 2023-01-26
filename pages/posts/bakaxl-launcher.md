@@ -18,7 +18,7 @@ tags:
 
 ## 官方宣传片
 
-<iframe width="1280" height="480" src="//player.bilibili.com/player.html?aid=350483311&bvid=BV1vR4y1e71b&cid=967435979&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe class="bilibili-video" src="//player.bilibili.com/player.html?aid=350483311&bvid=BV1vR4y1e71b&cid=967435979&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ## 前言
 
