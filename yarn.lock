@@ -4149,14 +4149,7 @@ rollup@^2.43.1:
   optionalDependencies:
     fsevents "~2.3.2"
 
-rollup@^3.7.0:
-  version "3.10.1"
-  resolved "https://registry.npmmirror.com/rollup/-/rollup-3.10.1.tgz#56278901ed11fc2898421e8e3e2c8155bc7b40b4"
-  integrity sha512-3Er+yel3bZbZX1g2kjVM+FW+RUWDxbG87fcqFM5/9HbPCTpbVp6JOLn7jlxnNlbu7s/N/uDA4EV/91E2gWnxzw==
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-rollup@^3.7.2:
+rollup@^3.7.0, rollup@^3.7.2:
   version "3.11.0"
   resolved "https://registry.npmmirror.com/rollup/-/rollup-3.11.0.tgz#89c487441b18b7c689a0c9aa4221e03b87535461"
   integrity sha512-+uWPPkpWQ2H3Qi7sNBcRfhhHJyUNgBYhG4wKe5wuGRj2m55kpo+0p5jubKNBjQODyPe6tSBE3tNpdDwEisQvAQ==
@@ -4704,19 +4697,19 @@ valaxy-addon-waline@0.0.9, valaxy-addon-waline@^0.0.9:
   dependencies:
     "@waline/client" "^2.14.7"
 
-valaxy-theme-yun@^0.13.3:
-  version "0.13.7"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.13.7.tgz#c615084e9e3b126db01111beaf1729b0894a1120"
-  integrity sha512-29Mv4lPq9glb+juux6ozTADmZhkOGijc1qES2eMw9DWV0YIUIDCWJ5rsZ+zvl0Cw2KPKQFLS5gBt7s0dPWkPOQ==
+valaxy-theme-yun@^0.13.8:
+  version "0.13.8"
+  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.13.8.tgz#53268e3cbf1cbcf70f6f62ee7b382f1788d319e7"
+  integrity sha512-HqL3I1T+EM9UoJ3gSwbTxFOeqqu2fA3I8W1BJ2jwXmsEqE5pCNWfKWiqHkawJNfEQHHcNf81LgYPXG/ezlsrmQ==
   dependencies:
     "@iconify-json/ant-design" "^1.1.4"
     "@iconify-json/simple-icons" "^1.1.41"
     valaxy-addon-waline "0.0.9"
 
-valaxy@^0.13.3:
-  version "0.13.7"
-  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.13.7.tgz#5b1358f4ce409b38823e0d0029341cb8340d04e4"
-  integrity sha512-JuKVEKsiqwKx6iZqielk1WUEwIx+td9u0KmvRuf7/oC3odJKG0XXpEXmC2Fe58rWoM8Jpe8kyl7Os2rGqXxkRA==
+valaxy@^0.13.8:
+  version "0.13.8"
+  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.13.8.tgz#7f973cfb795de3ddf0042f84a77b16359deb6ba2"
+  integrity sha512-5A6sUEsBNluAZmdeeamhxsb3+oaUbC1LfILogjUT7XKZmbY+8vCU990qupVuj6bqP505yzgQnaUtqVP5B/K5nA==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@ctrl/tinycolor" "^3.5.0"
