@@ -79,7 +79,7 @@ export default defineSiteConfig({
 
   search: {
     enable: true,
-    type: 'algolia',
+    type: 'fuse',
   },
 
   sponsor: {
@@ -97,6 +97,12 @@ export default defineSiteConfig({
         url: 'https://r2.cakeskin.tk/qq-qrcode.webp',
         color: '#12B7F5',
         icon: 'i-ri-qq-line',
+      },
+      {
+        name: '微信支付',
+        url: 'https://r2.cakeskin.tk/wechat-qrcode.webp',
+        color: '#2DC100',
+        icon: 'i-ri-wechat-pay-line',
       },
     ],
   },
