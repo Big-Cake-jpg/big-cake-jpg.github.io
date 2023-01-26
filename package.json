@@ -13,11 +13,11 @@
   "dependencies": {
     "@iconify-json/fluent": "^1.1.17",
     "@vercel/analytics": "^0.1.8",
-    "valaxy": "^0.13.8",
+    "valaxy": "^0.13.10",
     "valaxy-addon-algolia": "^0.0.2",
     "valaxy-addon-components": "^0.0.1",
     "valaxy-addon-waline": "^0.0.9",
-    "valaxy-theme-yun": "^0.13.8",
+    "valaxy-theme-yun": "^0.13.10",
     "vite-plugin-pwa": "^0.14.1"
   }
 }
