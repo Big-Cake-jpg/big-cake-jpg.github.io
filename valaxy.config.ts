@@ -2,6 +2,7 @@ import type { UserValaxyNodeConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { addonWaline } from 'valaxy-addon-waline'
 import { addonAlgolia } from 'valaxy-addon-algolia'
+import { addonComponents } from 'valaxy-addon-components'
 
 /**
  * User Config
@@ -9,13 +10,14 @@ import { addonAlgolia } from 'valaxy-addon-algolia'
 const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
   addons: [
+    addonComponents(),
     addonAlgolia({
       appId: '8WHCI2MGOD',
       apiKey: '1c51edcec3f0f6e9b2c0e1d3d7d76502',
       indexName: 'BigCake Blog',
     }),
     addonWaline({
-      serverURL: 'https://waline.bigcake.cakemc.top',
+      serverURL: 'https://waline.lihaoyu.cn',
       locale:{
         placeholder: '求求你了，说几句话吧（请先登录）'
       },

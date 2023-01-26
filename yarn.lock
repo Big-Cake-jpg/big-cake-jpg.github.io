@@ -3015,6 +3015,11 @@ valaxy-addon-algolia@^0.0.2:
     "@docsearch/css" "^3.3.0"
     "@docsearch/js" "^3.3.0"
 
+valaxy-addon-components@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmmirror.com/valaxy-addon-components/-/valaxy-addon-components-0.0.1.tgz#7ddd62beca069bb0cbe3d1bafa5f2ac6a3fbc20c"
+  integrity sha512-460ObcDPh19j1wZMU+rTDoWpC9EbqfzEr/kfUFdraJRNv/ZSOn0TjP72FmamQ/21fY/Vb+U4/y+dJbUFUodQgA==
+
 valaxy-addon-waline@0.0.9, valaxy-addon-waline@^0.0.9:
   version "0.0.9"
   resolved "https://registry.npmmirror.com/valaxy-addon-waline/-/valaxy-addon-waline-0.0.9.tgz#b1171bd69d37a7b13eadaf4d6d4abe3148831611"

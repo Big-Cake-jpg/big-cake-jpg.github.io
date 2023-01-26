@@ -1,7 +1,7 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
-  url: 'https://bigcake.cakemc.top',
+  url: 'https://lihaoyu.cn',
   favicon: 'https://r2.cakeskin.tk/avatar.webp',
   lang: 'zh-CN',
   title: '大蛋糕的烘焙坊',

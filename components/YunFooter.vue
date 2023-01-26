@@ -1,14 +1,17 @@
 <script lang="ts" setup>
-import { useScriptTag } from '@vueuse/core'
 import YunFooter from 'valaxy-theme-yun/components/YunFooter.vue'
-useScriptTag('https://busuanzi.icodeq.com/busuanzi.pure.mini.js')
 </script>
 
 <template>
   <YunFooter>
-    <div class="copyright flex justify-center items-center">
-      <div i-ri-user-line> </div><span id="busuanzi_value_site_uv" />｜<div i-ri-eye-line> </div><span id="busuanzi_value_site_pv" />
-    </div>
+    <VCLiveTime start-time="2021-09-20">
+      <template #live-time-before>
+        <span>风雨交加，已经在网络的海洋上航行了</span>
+      </template>
+      <template #live-time-after>
+        <span>(●'◡'●)</span>
+      </template>
+    </VCLiveTime>
     <a href="https://icp.gov.moe/?keyword=20230105" target="_blank">萌 ICP 备 20230105 号</a>
   </YunFooter>
 </template>
