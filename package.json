@@ -17,6 +17,7 @@
     "valaxy-addon-algolia": "^0.0.2",
     "valaxy-addon-components": "^0.0.1",
     "valaxy-addon-waline": "^0.0.9",
-    "valaxy-theme-yun": "^0.13.3"
+    "valaxy-theme-yun": "^0.13.3",
+    "vite-plugin-pwa": "^0.14.1"
   }
 }

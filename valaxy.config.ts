@@ -3,6 +3,7 @@ import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { addonWaline } from 'valaxy-addon-waline'
 import { addonAlgolia } from 'valaxy-addon-algolia'
 import { addonComponents } from 'valaxy-addon-components'
+import { VitePWA } from 'vite-plugin-pwa'
 
 /**
  * User Config
@@ -33,6 +34,28 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
       login: 'force',
     }),
   ],
+
+  vite: {
+    plugins: [
+      VitePWA({ 
+        injectRegister: 'auto',
+        registerType: 'autoUpdate',
+        manifest: {
+          name: '大蛋糕的烘焙坊',
+          short_name: '大蛋糕的烘焙坊',
+          description: '也许我们会分别，但我们将永远不会忘记彼此',
+          theme_color: '#F2BC57',
+          icons: [
+            {
+              src: 'https://r2.cakeskin.tk/avatar.webp',
+              sizes: '192x192',
+              type: 'image/webp'
+            }
+          ]
+        }
+      })
+    ],
+  },
 
   theme: 'yun',
 
