@@ -171,5 +171,13 @@
         "color": "#57728B",
         "blog": "Cubik 的小站",
         "desc": "RECOMMENDED BY DR.CREATIVE"
+    },
+    {
+        "url": "https://blog.booling.cn",
+        "avatar": "https://cdn.jsdelivr.net/gh/bingling-sama/Resources@latest/img/favicon.ico",
+        "name": "bingling_sama",
+        "color": "#0066cc",
+        "blog": "Booling✨",
+        "desc": "The stars are not afraid to appear like fireflies."
     }
 ]
