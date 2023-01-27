@@ -49,8 +49,8 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
           lang: 'zh-CN',
           icons: [
             {
-              src: 'https://r2.cakeskin.tk/avatar.webp',
-              sizes: '192x192',
+              src: '/pwa-512x512.webp',
+              sizes: '512x512',
               type: 'image/webp'
             }
           ]
