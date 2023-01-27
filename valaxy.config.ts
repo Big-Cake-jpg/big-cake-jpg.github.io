@@ -45,7 +45,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
           short_name: '大蛋糕的烘焙坊',
           description: '也许我们会分别，但我们将永远不会忘记彼此',
           theme_color: '#F2BC57',
-          background_color: '#F2BC57',
+          background_color: '#FFFFFF',
           lang: 'zh-CN',
           icons: [
             {
