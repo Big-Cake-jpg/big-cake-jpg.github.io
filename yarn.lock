@@ -3663,6 +3663,11 @@ mdurl@^1.0.1:
   resolved "https://registry.npmmirror.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==
 
+medium-zoom@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmmirror.com/medium-zoom/-/medium-zoom-1.0.8.tgz#2bd1fbcf2961fa7b0e318fe284462aa9b8608ed2"
+  integrity sha512-CjFVuFq/IfrdqesAXfg+hzlDKu6A2n80ZIq0Kl9kWjoHh9j1N9Uvk5X0/MmN0hOfm5F9YBswlClhcwnmtwz7gA==
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmmirror.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
@@ -4489,9 +4494,9 @@ tr46@^3.0.0:
     punycode "^2.1.1"
 
 tslib@^2.0.3, tslib@^2.2.0:
-  version "2.4.1"
-  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
-  integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
+  version "2.5.0"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.5.0.tgz#42bfed86f5787aeb41d031866c8f402429e0fddf"
+  integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
 
 type-check@~0.3.2:
   version "0.3.2"
@@ -4697,19 +4702,19 @@ valaxy-addon-waline@0.0.9, valaxy-addon-waline@^0.0.9:
   dependencies:
     "@waline/client" "^2.14.7"
 
-valaxy-theme-yun@^0.13.8:
-  version "0.13.8"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.13.8.tgz#53268e3cbf1cbcf70f6f62ee7b382f1788d319e7"
-  integrity sha512-HqL3I1T+EM9UoJ3gSwbTxFOeqqu2fA3I8W1BJ2jwXmsEqE5pCNWfKWiqHkawJNfEQHHcNf81LgYPXG/ezlsrmQ==
+valaxy-theme-yun@^0.13.12:
+  version "0.13.12"
+  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.13.12.tgz#c1df3ae2a44c25fd16f5321bd7b6a377ab90ffda"
+  integrity sha512-+0kTuYQGip9RUFezs8WPViepOE4ufSXgBYJ81X3arZObGaC0PncqNiyKvXsc3WyZwhdOQMELEN0dHsvKgsi9rA==
   dependencies:
     "@iconify-json/ant-design" "^1.1.4"
     "@iconify-json/simple-icons" "^1.1.41"
     valaxy-addon-waline "0.0.9"
 
-valaxy@^0.13.8:
-  version "0.13.8"
-  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.13.8.tgz#7f973cfb795de3ddf0042f84a77b16359deb6ba2"
-  integrity sha512-5A6sUEsBNluAZmdeeamhxsb3+oaUbC1LfILogjUT7XKZmbY+8vCU990qupVuj6bqP505yzgQnaUtqVP5B/K5nA==
+valaxy@^0.13.12:
+  version "0.13.12"
+  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.13.12.tgz#64b03f33bccd3d2ea0dc69cd75aa458615688c52"
+  integrity sha512-ExtcAIwwbQ15e9RQahh/NoIU3SqxqWcUrmgEQuidFmwFHvRWxy2hGpoj3gTnLfqx58NjIAFlt41/XqvCA00X7Q==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@ctrl/tinycolor" "^3.5.0"
@@ -4745,6 +4750,7 @@ valaxy@^0.13.8:
     markdown-it-emoji "^2.0.2"
     markdown-it-table-of-contents "^0.6.0"
     markdown-it-task-lists "^2.1.1"
+    medium-zoom "^1.0.8"
     nprogress "^0.2.0"
     open "^8.4.0"
     pascal-case "^3.1.2"
