@@ -17,7 +17,7 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         chatid: ${{ secrets.TELEGRAM_TO }}
         message: |
-          💡 新文章
+          💡 博客有更新
           
           👤 提交人: [${{ github.event.commit[0].author }}]
 
