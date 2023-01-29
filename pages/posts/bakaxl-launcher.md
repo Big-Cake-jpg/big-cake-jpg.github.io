@@ -91,6 +91,4 @@ BakaXL Network！这是 BakaXL 生态中最为重要的一环，它驱动着 Bak
 
 下载地址：https://www.bakaxl.com
 
-哦对了，记得给上面的宣传片一个三连，支持 BakaXL！
-
-有条件的富商也可以到爱发电支持 TT：https://afdian.net/a/TT702
+哦对了，记得给上面的宣传片一个三连来支持 BakaXL！有条件的富商也可以到爱发电支持 TT：https://afdian.net/a/TT702
