@@ -19,7 +19,7 @@ jobs:
         message: |
           💡 新文章
           
-          👤 提交人: [${{ github.event.commit[0].author }}]
+          👤 提交人: [${{ github.actor }}]
 
           📄 提交信息: ${{ github.event.commits[0].message }}
 
