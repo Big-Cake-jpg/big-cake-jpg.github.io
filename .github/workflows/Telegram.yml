@@ -1,5 +1,6 @@
 name: Telegram
 on: 
+  workflow_dispatch:
   push:
     branches: 
       - source
