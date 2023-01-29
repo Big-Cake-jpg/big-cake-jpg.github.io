@@ -1,6 +1,7 @@
 name: Telegram
-on: [push]
-branches:
+on: 
+  push:
+    branches: 
       - source
     paths:
       - 'pages/posts/**'
