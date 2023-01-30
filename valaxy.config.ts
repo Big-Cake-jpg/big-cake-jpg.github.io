@@ -1,7 +1,6 @@
 import type { UserValaxyNodeConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { addonWaline } from 'valaxy-addon-waline'
-import { addonAlgolia } from 'valaxy-addon-algolia'
 import { addonComponents } from 'valaxy-addon-components'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -12,11 +11,6 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
   addons: [
     addonComponents(),
-    addonAlgolia({
-      appId: '8WHCI2MGOD',
-      apiKey: '1c51edcec3f0f6e9b2c0e1d3d7d76502',
-      indexName: 'BigCake Blog',
-    }),
     addonWaline({
       serverURL: 'https://waline.lihaoyu.cn',
       locale:{
@@ -31,7 +25,6 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
         'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/',
         'https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/',
       ],
-      login: 'force',
     }),
   ],
 
@@ -116,9 +109,5 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
     },
   },
 }
-
-config.themeConfig?.pages?.forEach((item) => {
-  config.unocss?.safelist?.push(item?.icon)
-})
 
 export default config
