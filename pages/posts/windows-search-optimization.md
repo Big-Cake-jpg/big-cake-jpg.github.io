@@ -39,7 +39,7 @@ Windows Search 这个东西，一言难尽......
 
 然后我们就能够看到索引状态、索引模式、排除项等等。
 
-![索引设置](https://s2.loli.net/2022/07/04/JrR91X28ep54uh7.png)
+![索引设置](https://img-blog.csdnimg.cn/99238b8afeaf4b54b0c2184a6d57cd8d.png)
 
 > 如果你用的是 Windows 10，则直接在“设置”的第一级页面中进入“搜索”分类即可。
 
@@ -63,21 +63,21 @@ Windows Search 提供了排除项功能，可以根据自己的需要对部分�
 
 将页面滚动到最底部，选择“高级索引选项”在打开的窗口中选择“高级”；
 
-![高级索引选项](https://s2.loli.net/2022/07/04/gGJPfcODSWA4xRh.png)
+![高级索引选项](https://img-blog.csdnimg.cn/018f47f5c09c4a2aa4a94fd50d357ad1.png)
 
 在另一个弹出的窗口中选择“删除和重建索引”；
 
-![删除和重建索引](https://s2.loli.net/2022/07/04/EiyYClHAznk2Jv5.png)
+![删除和重建索引](https://img-blog.csdnimg.cn/e882d462f1614bfd9bbbdb6b0963c01a.png)
 
 选择后，Windows 会弹出一个提示框询问你是否继续操作，我们点击“确定”；
 
-![重建索引](https://s2.loli.net/2022/07/04/CxKjtqHZFYPVwo5.png)
+![重建索引](https://img-blog.csdnimg.cn/dcb513361b5240bc9f22c96002abd5c6.png)
 
 等待几秒，Windows 会自动开始编制索引。
 
 稍微等上几分钟，然后你应该就可以通过任务栏的搜索按钮 / 搜索框体验到完美的 Windows Search 了。
 
-![Windows Search](https://s2.loli.net/2022/07/04/a187XjKnrJTDOkm.png)
+![Windows Search](https://img-blog.csdnimg.cn/bae80d8c35314d67808d46be12857fd9.png)
 
 ## 注意事项
 

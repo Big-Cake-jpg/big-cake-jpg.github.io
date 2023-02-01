@@ -3,7 +3,7 @@ layout: post
 title: 你的下一个启动器，何必是启动器
 date: 2023-01-16 12:19:47
 updated: 2023-01-16 12:19:47
-cover: https://r2.cakeskin.tk/posts/bakaxl-launcher/cover.webp
+cover: https://img-blog.csdnimg.cn/d723dec179f841b09153dc9cecd0bf26.png
 categories: 
  - Minecraft
 tags:

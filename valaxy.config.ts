@@ -42,7 +42,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
           lang: 'zh-CN',
           icons: [
             {
-              src: '/pwa-512x512.webp',
+              src: 'https://img-blog.csdnimg.cn/ce065f18d7b74f7e82031035e6c70c04.png',
               sizes: '512x512',
               type: 'image/webp'
             }
@@ -83,8 +83,8 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
     bg_image: {
       enable: true,
-      url: 'https://r2.cakeskin.tk/bg-bright-blur-10px.webp',
-      dark: 'https://r2.cakeskin.tk/bg-dark.webp',
+      url: 'https://img-blog.csdnimg.cn/9efc77cc284e40558dabef188bed7eb0.png',
+      dark: 'https://img-blog.csdnimg.cn/f32de22f7f7b486c9ed9eddda549557a.png',
     },
 
     say: {
