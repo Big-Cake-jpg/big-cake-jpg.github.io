@@ -22,21 +22,21 @@ Windows 10 发布的时候，传递优化伴随着它一同出现在人们眼前
 
 老样子，让我们打开我们亲爱的“设置”，打开“Windows 更新”；
 
-![设置](https://img-blog.csdnimg.cn/7e74eb0f0a75493e8fef5d565de0ff2f.png)
+![设置](https://img-blog.csdnimg.cn/6c380eea35524e3bb5d231c9d1a10784.webp)
 
 点击“高级选项”，然后点击“传递优化”；
 
-![高级选项](https://img-blog.csdnimg.cn/f7bf90eb9bcf45fd81c3cd114ce59533.png)
+![高级选项](https://img-blog.csdnimg.cn/2a096d6e4e4b447cb0e2e87bb8a81be4.webp)
 
 > 如果你用的是 Windows 10，那么你应该打开“设置”->“更新和安全”->“传递优化”。
 
 然后我们可以看到传递优化的设置界面，如下图：
 
-![传递优化](https://s2.loli.net/2022/07/05/BqeE1HvJS4PmnG5.png)
+![传递优化](https://img-blog.csdnimg.cn/59bae51240c4422ea9511d36d306bbdf.webp)
 
 我们把“允许从其他电脑下载”打开，然后把下面的下载来源改成“Internet 和我的本地网络上的设备”即可。
 
-![传递优化设置](https://img-blog.csdnimg.cn/5eaed0632b1b48cb89943efb416c6430.png)
+![传递优化设置](https://img-blog.csdnimg.cn/59bae51240c4422ea9511d36d306bbdf.webp)
 
 <div class="success">
 
@@ -56,7 +56,7 @@ Windows 10 发布的时候，传递优化伴随着它一同出现在人们眼前
 
 设置中有一个传递优化的活动监视器，可以用来查看传递优化下载的更新来自哪里以及百分比、大小；上传的更新到哪里去了、百分比、大小。
 
-![活动监视器](https://img-blog.csdnimg.cn/ce0d45335f684d09b513610bbd1a9686.png)
+![活动监视器](https://img-blog.csdnimg.cn/c27bb08fc58f49a99d5ebe11fd0cbf84.webp)
 
 就这么多。
 

@@ -3,7 +3,7 @@ layout: post
 title: 你的下一个启动器，何必是启动器
 date: 2023-01-16 12:19:47
 updated: 2023-01-16 12:19:47
-cover: https://img-blog.csdnimg.cn/d723dec179f841b09153dc9cecd0bf26.png
+cover: https://img-blog.csdnimg.cn/97d21042943642739f817c79b5bddb37.webp
 categories: 
  - Minecraft
 tags:

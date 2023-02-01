@@ -15,7 +15,7 @@ updated: '2022-10-02 19:53:24'
 
 停止以后，在访问 translate.google.cn 时只能看到和 google.cn 相同的一张图片。如下图。
 
-![](https://img-blog.csdnimg.cn/525964e6383646939f896525371d6978.png)
+![](https://img-blog.csdnimg.cn/600f4206eda04ec1ad93092be8c41d56.webp)
 
 目前，大陆地区搜索服务的关闭使得部分的 Chrome 用户无法正常使用内置的翻译服务。唯一的解决方案是在系统的 hosts 文件中加入下面一行
 

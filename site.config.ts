@@ -2,12 +2,12 @@ import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
   url: 'https://lihaoyu.cn',
-  favicon: 'https://img-blog.csdnimg.cn/9d7ee2539ccf4b86bc3cd359403f9831.png',
+  favicon: 'https://img-blog.csdnimg.cn/5f3a26e6ee01493f9373a38633e5f2df.webp',
   lang: 'zh-CN',
   title: '大蛋糕的烘焙坊',
   author: {
     name: 'Big_Cake',
-    avatar: 'https://img-blog.csdnimg.cn/9d7ee2539ccf4b86bc3cd359403f9831.png',
+    avatar: 'https://img-blog.csdnimg.cn/5f3a26e6ee01493f9373a38633e5f2df.webp',
   },
   description: '一个屑初三学生的小窝',
   subtitle: '也许我们会分别，但我们将永远不会忘记彼此',
@@ -88,19 +88,19 @@ export default defineSiteConfig({
     methods: [
       {
         name: '支付宝',
-        url: 'https://img-blog.csdnimg.cn/4c93788612114147b9416727c7d66060.png',
+        url: 'https://img-blog.csdnimg.cn/776465d98113494eb4defae15657e8f7.webp',
         color: '#00A3EE',
         icon: 'i-ri-alipay-line',
       },
       {
         name: 'QQ 支付',
-        url: 'https://img-blog.csdnimg.cn/9cda0dac0c9a42ebb7f743c4bf61a9d0.png',
+        url: 'https://img-blog.csdnimg.cn/ab5a8877522a44959d6b06c43d39911a.webp',
         color: '#12B7F5',
         icon: 'i-ri-qq-line',
       },
       {
         name: '微信支付',
-        url: 'https://img-blog.csdnimg.cn/ef65aa336d5b4c3ba99d5a46f46a31a8.png',
+        url: 'https://img-blog.csdnimg.cn/bb44d9e37b224252a86f108054912fcf.webp',
         color: '#2DC100',
         icon: 'i-ri-wechat-pay-line',
       },

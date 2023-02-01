@@ -18,7 +18,7 @@ categories: 生活的点点滴滴
 
 不知不觉中，时间就溜走了，2022 也即将成为历史。这一年来我做了哪些过意不去的事情也需要自己思考一下了。
 
-![calendar](https://img-blog.csdnimg.cn/99a2465b6aa441408a25c74bafcd1f13.png)
+![calendar](https://img-blog.csdnimg.cn/b9158fb2fffd4cd883966614fb7de835.webp)
 
 终于要迎来第一篇年终回顾了呢，心情有点复杂......
 

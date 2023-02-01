@@ -83,8 +83,8 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
     bg_image: {
       enable: true,
-      url: 'https://img-blog.csdnimg.cn/9efc77cc284e40558dabef188bed7eb0.png',
-      dark: 'https://img-blog.csdnimg.cn/f32de22f7f7b486c9ed9eddda549557a.png',
+      url: 'https://img-blog.csdnimg.cn/60fde32511534643bc7cf55e5c55b086.webp',
+      dark: 'https://img-blog.csdnimg.cn/8f0c0360e1934c7c89ffe5ec409006e1.webp',
     },
 
     say: {
