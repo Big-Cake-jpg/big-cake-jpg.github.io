@@ -88,19 +88,19 @@ export default defineSiteConfig({
     methods: [
       {
         name: '支付宝',
-        url: 'https://img-blog.csdnimg.cn/776465d98113494eb4defae15657e8f7.webp',
+        url: 'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4c09db7ea98b4b25877f39aae18571d2~tplv-k3u1fbpfcp-zoom-1.image',
         color: '#00A3EE',
         icon: 'i-ri-alipay-line',
       },
       {
         name: 'QQ 支付',
-        url: 'https://img-blog.csdnimg.cn/ab5a8877522a44959d6b06c43d39911a.webp',
+        url: 'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d12d93b6ce384958a02c194ab5b3adce~tplv-k3u1fbpfcp-zoom-1.image',
         color: '#12B7F5',
         icon: 'i-ri-qq-line',
       },
       {
         name: '微信支付',
-        url: 'https://img-blog.csdnimg.cn/bb44d9e37b224252a86f108054912fcf.webp',
+        url: 'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/87e06b06e03e418bb903b89b9f5cf6a3~tplv-k3u1fbpfcp-zoom-1.image',
         color: '#2DC100',
         icon: 'i-ri-wechat-pay-line',
       },
