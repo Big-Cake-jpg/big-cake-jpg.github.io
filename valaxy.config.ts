@@ -44,7 +44,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
             {
               src: 'https://img-blog.csdnimg.cn/ce065f18d7b74f7e82031035e6c70c04.png',
               sizes: '512x512',
-              type: 'image/webp'
+              type: 'image/png'
             }
           ]
         }
