@@ -25,6 +25,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
         'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/',
         'https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/',
       ],
+      recaptchaV3Key: '6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih',
     }),
   ],
 

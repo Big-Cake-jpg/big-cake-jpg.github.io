@@ -33,8 +33,8 @@ aside: false
 如果你已经满足了这些条件，就可以在评论区内按此格式提交你的信息：
 ```json
 {
-    "url": "https://bigcake.cakemc.top",
-    "avatar": "https://r2.cakeskin.tk/avatar.webp",
+    "url": "https://lihaoyu.cn",
+    "avatar": "https://img-blog.csdnimg.cn/5f3a26e6ee01493f9373a38633e5f2df.webp",
     "name": "Big_Cake",
     "color": "#F2BC57",
     "blog": "大蛋糕的烘焙坊",
