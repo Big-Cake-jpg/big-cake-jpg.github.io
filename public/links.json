@@ -187,5 +187,13 @@
         "color": "#659EB9",
         "blog": "CWorld’s Blog",
         "desc": "求知若愚，虚怀若谷"
+    },
+    {
+        "url": "https://www.ohyee.cc",
+        "avatar": "https://static.oyohyee.com/logo.svg",
+        "name": "OhYee",
+        "color": "#2468ac",
+        "blog": "OhYee 博客",
+        "desc": "个人向笔记性质技术分享，共产主义开源编程🤪"
     }
 ]
