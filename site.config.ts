@@ -71,7 +71,7 @@ export default defineSiteConfig({
     },
     {
       name: 'E-Mail',
-      link: 'mailto:bigcake@cakemc.top',
+      link: 'mailto:me@lihaoyu.cn',
       icon: 'i-ri-mail-line',
       color: '#8E71C1',
     }
