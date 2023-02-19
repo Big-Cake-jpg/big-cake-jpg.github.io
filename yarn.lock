@@ -5300,7 +5300,7 @@ valaxy-addon-waline@0.1.0, valaxy-addon-waline@^0.1.0:
   dependencies:
     "@waline/client" "^2.14.7"
 
-valaxy-theme-yun@^0.14.8:
+valaxy-theme-yun@^0.14.10:
   version "0.14.10"
   resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.10.tgz#f08fd1d7fad14c86509fc87845e9afba68544500"
   integrity sha512-VbRsgJGOQ0JlDPqlz0x0ZcBQjG35AvO4uoKf+L+CdtrOkQYqA49yE3ikIWtyEmpF2QuQKwRaTuz8HCi4W7defQ==
@@ -5309,7 +5309,7 @@ valaxy-theme-yun@^0.14.8:
     "@iconify-json/simple-icons" "^1.1.44"
     valaxy-addon-waline "0.1.0"
 
-valaxy@^0.14.8:
+valaxy@^0.14.10:
   version "0.14.10"
   resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.14.10.tgz#90d3cbe613b80fecfb1b12fd76d3b6dadc4942e0"
   integrity sha512-bGYrQ9cj8HsfqbthCEgY5jdja50fFUqBFtplW67kTTzdYJqvl9ZH6zr8S+Tb6/jL2K3rFWI1qmaW7cWSEFZ1IA==
