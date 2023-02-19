@@ -14,7 +14,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
     addonWaline({
       serverURL: 'https://waline.lihaoyu.cn',
       locale:{
-        placeholder: '求求你了，说几句话吧（请先登录）'
+        placeholder: '填写邮箱的话，可以收到邮件通知哦'
       },
       comment: true,
       pageview: true,
