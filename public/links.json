@@ -211,5 +211,13 @@
         "color": "#7F9C90",
         "blog": "林林杂语",
         "desc": "温迪和提纳里的狂热粉丝"
+    },
+    {
+        "url": "https://www.misaka.rest",
+        "avatar": "https://gcore.jsdelivr.net/gh/Misaka-blog/imgs@main/20230115115530.png",
+        "name": "MisakaNO",
+        "color": "#F423D9",
+        "blog": "MisakaNo の 小破站",
+        "desc": "这只是一个小破站而已！"
     }
 ]
