@@ -54,7 +54,7 @@ BakaXL 是完全符合 Mojang EULA 的，上文已经提到过。BakaXL 在检�
 
 首先，尽管 BakaXL 属于启动器“御三家”的其中一员，但是开发者 TT702 早已在官网中提到“从 2014 年至今，始终没啥人用的启动器”。
 
-![](https://img-blog.csdnimg.cn/7e0f73509be04d86a385bff1c4b5d269.webp)_来源：https://www.bakaxl.com/_
+![](https://img-blog.csdnimg.cn/7e0f73509be04d86a385bff1c4b5d269.webp)_来源：https://www.bakaxl.com_
 
 ![](https://img-blog.csdnimg.cn/894e4b3c09d74f96bbd442eaec3c4533.webp)_局外人用户群中的聊天记录_
 
