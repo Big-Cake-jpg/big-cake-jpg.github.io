@@ -1,37 +1,36 @@
-import type { UserValaxyNodeConfig } from 'valaxy'
-import type { UserThemeConfig } from 'valaxy-theme-yun'
-import { addonWaline } from 'valaxy-addon-waline'
-import { addonComponents } from 'valaxy-addon-components'
-import { VitePWA } from 'vite-plugin-pwa'
+import type { UserValaxyNodeConfig } from "valaxy";
+import type { UserThemeConfig } from "valaxy-theme-yun";
+import { addonWaline } from "valaxy-addon-waline";
+import { addonComponents } from "valaxy-addon-components";
+// import { VitePWA } from "vite-plugin-pwa";
 
 /**
  * User Config
  */
 const config: UserValaxyNodeConfig<UserThemeConfig> = {
-
   addons: [
     addonComponents(),
     addonWaline({
-      serverURL: 'https://waline.lihaoyu.cn',
-      locale:{
-        placeholder: '填写邮箱的话，可以收到邮件通知哦'
+      serverURL: "https://waline.lihaoyu.cn",
+      locale: {
+        placeholder: "填写邮箱的话，可以收到邮件通知哦",
       },
       comment: true,
       pageview: true,
       emoji: [
-        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/',
-        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/',
-        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/qq/',
-        'https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/',
-        'https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/',
+        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/",
+        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/",
+        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/qq/",
+        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/",
+        "https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/",
       ],
-      recaptchaV3Key: '6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih',
+      recaptchaV3Key: "6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih",
     }),
   ],
 
-  vite: {
+   vite: {
     plugins: [
-      VitePWA({ 
+      /* VitePWA({ 
         injectRegister: 'auto',
         registerType: 'autoUpdate',
         manifest: {
@@ -49,32 +48,32 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
             }
           ]
         }
-      })
+      }) */
     ],
   },
 
-  theme: 'yun',
+  theme: "yun",
 
   themeConfig: {
     banner: {
       enable: true,
-      title: '大蛋糕的烘焙坊',
+      title: "大蛋糕的烘焙坊",
       cloud: {
         enable: true,
       },
     },
     pages: [
       {
-        name: '友链',
-        url: '/links/',
-        icon: 'i-ri-genderless-line',
-        color: 'dodgerblue',
+        name: "友链",
+        url: "/links/",
+        icon: "i-ri-genderless-line",
+        color: "dodgerblue",
       },
       {
-        name: '虫洞',
-        url: 'https://foreverblog.cn/go.html',
-        icon: 'i-ri-checkbox-blank-circle-fill',
-        color: 'gray',
+        name: "虫洞",
+        url: "https://foreverblog.cn/go.html",
+        icon: "i-ri-checkbox-blank-circle-fill",
+        color: "gray",
       },
       /* {
         name: '说说',
@@ -90,31 +89,31 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
     bg_image: {
       enable: true,
-      url: 'https://img-blog.csdnimg.cn/60fde32511534643bc7cf55e5c55b086.webp',
-      dark: 'https://img-blog.csdnimg.cn/8f0c0360e1934c7c89ffe5ec409006e1.webp',
+      url: "https://img-blog.csdnimg.cn/60fde32511534643bc7cf55e5c55b086.webp",
+      dark: "https://img-blog.csdnimg.cn/8f0c0360e1934c7c89ffe5ec409006e1.webp",
     },
 
     say: {
       enable: true,
-      api: 'https://el-bot-api.vercel.app/api/words/young',
+      api: "https://el-bot-api.vercel.app/api/words/young",
       hitokoto: {
         enable: true,
-        api: 'https://v1.hitokoto.cn',
+        api: "https://v1.hitokoto.cn",
       },
     },
 
     colors: {
-      primary: '#F2BC57',
+      primary: "#F2BC57",
     },
-    
+
     menu: {
       custom: {
-        title: '开往',
-        url: 'https://www.travellings.cn/go.html',
-        icon: 'i-fluent-vehicle-subway-24-regular'
-      }
+        title: "开往",
+        url: "https://www.travellings.cn/go.html",
+        icon: "i-fluent-vehicle-subway-24-regular",
+      },
     },
   },
-}
+};
 
-export default config
+export default config;
