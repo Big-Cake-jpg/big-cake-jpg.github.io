@@ -76,6 +76,12 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
         icon: 'i-ri-checkbox-blank-circle-fill',
         color: 'gray',
       },
+      /* {
+        name: '说说',
+        url: '/artitalk/',
+        icon: 'i-ri-message-line',
+        color: '#ff9e77',
+      }, */
     ],
 
     footer: {
