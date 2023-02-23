@@ -43,7 +43,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
           lang: 'zh-CN',
           icons: [
             {
-              src: 'https://hub.onmicrosoft.cn/image/eb18d9c0b27651e624111e8f77ab8d25',
+              src: 'https://img-blog.csdnimg.cn/41926c33b9b64e8183a08a558e120f9c.webp',
               sizes: '512x512',
               type: 'image/webp'
             }
