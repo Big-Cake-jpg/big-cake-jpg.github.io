@@ -9,8 +9,7 @@ tags:
   - 网易
   - 侵权
   - B 站
-cover: https://img-blog.csdnimg.cn/f12389f6361c4a01ab7c17cc9b769595.webp
-
+cover: https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/81f036641c2366eeaa33ad875fe6e0e0_1518732140167844802.webp
 ---
 不请自来。
 
@@ -28,9 +27,9 @@ cover: https://img-blog.csdnimg.cn/f12389f6361c4a01ab7c17cc9b769595.webp
 
 请不要认为我是彻头彻尾的盗版玩家，也不要认为我是 BakaXL 请来的水军。前者，我有于 2020 年 7 月 30 日购买 Minecraft：Java 版的交易邮件、以及于 2021 年 3 月购买 Minecraft for Windows 10 的交易记录。在此公布。
 
-![](https://img-blog.csdnimg.cn/a9e1718eab4b4875b0446591f00daab8.png)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/021c32f1a765d9fb08f994b2908c284d_4184835464595562147.webp)
 
-![](https://img-blog.csdnimg.cn/15b24aeee6af4efe87f21881b2564103.png)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/ba0e631f394148f96d03df37f3751571_5744020560047064777.webp)
 
 ## 正文
 
@@ -54,11 +53,11 @@ BakaXL 是完全符合 Mojang EULA 的，上文已经提到过。BakaXL 在检�
 
 首先，尽管 BakaXL 属于启动器“御三家”的其中一员，但是开发者 TT702 早已在官网中提到“从 2014 年至今，始终没啥人用的启动器”。
 
-![](https://img-blog.csdnimg.cn/7e0f73509be04d86a385bff1c4b5d269.webp)_来源：https://www.bakaxl.com_
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/c1d2d972fbe27431256c39a5a0e8656a_2917227228752806272.webp)_来源：https://www.bakaxl.com_
 
-![](https://img-blog.csdnimg.cn/894e4b3c09d74f96bbd442eaec3c4533.webp)_局外人用户群中的聊天记录_
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/dc600ad27318f3917f16f8a62c11f7a7_1845232206905221154.webp)_局外人用户群中的聊天记录_
 
-![](https://img-blog.csdnimg.cn/42b44a3186b04512bb11dd1a7488bc9f.webp)_TT702 提供的近期 AppCenter 日活数据_
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/34b452b982d5851bb4bf9cf472acfea5_1934487185802049034.webp)_TT702 提供的近期 AppCenter 日活数据_
 
 即使最近日活几百，这仍然是现今 HMCL 与 PCL2 的几十分之一。
 

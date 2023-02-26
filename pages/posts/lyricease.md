@@ -2,7 +2,7 @@
 title: 诈尸？—— 第三方网易云音乐客户端 LyricEase
 date: 2023-01-08 13:07:43
 updated: 2023-02-01 11:05:20
-cover: https://img-blog.csdnimg.cn/e95a9cad056848baaf1f9ffe638bc894.webp
+cover: https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/48cf630277f3e043e442db041c43adc6_3211563726773357981.webp
 tags:
   - 分享
   - 软件
@@ -31,13 +31,13 @@ categories:
 
 打开 Windows 设置，导航到“隐私和安全性”下的“开发者选项”页面，启用“开发人员模式”，并启用下方“PowerShell”卡片内的开关。
 
-![](https://img-blog.csdnimg.cn/740d4fd1fdc24ff4b011b9d487426bfa.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/256f5c96860c023582f49a0eedab7495_9013535910728125833.webp)
 
 ### 安装证书与应用
 
 当 LyricEase 下载好以后解压安装包到一个文件夹内，然后你会得到这样的一个文件结构：
 
-![](https://img-blog.csdnimg.cn/181d82ca0c0743d980fe70147e5536e6.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/aad799ddbf9e7197a17ada58e74226ee_154399002653709367.webp)
 
 右键 `Install.ps1` 文件，选择“使用 PowerShell 运行”，证书与应用就会自动安装。期间可能需要确认一下操作，可以直接选择“全部同意”。
 
@@ -53,7 +53,7 @@ LyricEase 支持使用账密登录与扫码登录，但是它是强制登录的�
 
 打开“设置”，将页面滚动到最底部，点击“检查更新”即可。现在也支持下载内部预览版本以及按处理器架构下载。
 
-![](https://img-blog.csdnimg.cn/e57f8f3e03534d709e265473420e86d1.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/d1a873ee56518ebce0a2a4c8a2474e96_7854958118733220003.webp)
 
 ### 桌面歌词
 
@@ -63,7 +63,7 @@ LyricEase 支持使用账密登录与扫码登录，但是它是强制登录的�
 
 之后，每一次启动 LyricEase，热词也会同时启动。当 LyricEase 播放音乐时，热词会自动获取当前曲目的歌词并显示在桌面上，效果如下：
 
-![](https://img-blog.csdnimg.cn/6f038cd2a3444650bb559de0e2233ea9.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/77a67578ced1a66a99d5c4bba7c22cba_292095534601372446.webp)
 
 ## 效果演示
 
@@ -73,21 +73,21 @@ LyricEase 支持使用账密登录与扫码登录，但是它是强制登录的�
 
 </div>
 
-![](https://img-blog.csdnimg.cn/94f5c756ac3c448ebfdc740bb1ec2b08.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/c14c83233edd34af1f1e41a13030ed69_394109266886750307.webp)
 
-![](https://img-blog.csdnimg.cn/f388caebf08a4bc7b87ec0e006a54673.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/ed38d3b8002645d8612d0cebe22e3052_2337541672433967445.webp)
 
-![](https://img-blog.csdnimg.cn/f175232ffd2c40ad8bb30932cd498dc2.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/29b5762b497e87cf851aa3dd21d73c20_3972968517881237330.webp)
 
-![](https://img-blog.csdnimg.cn/8ed90943d0e64e3d9c62d12cc0acd62a.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/7ccc078e4e54a688c97685c6bddb2a87_3991696644480684477.webp)
 
-![](https://img-blog.csdnimg.cn/0219da2173514243b6a7716006d5e08d.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/b6758d4c7086f9b8fa0dfffe47587656_590117347322240111.webp)
 
-![](https://img-blog.csdnimg.cn/b03283f1bb4f4d1e9049e4d14ae283eb.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/6afa0555999c613377af94012a507e82_2089319120000559523.webp)
 
-![](https://img-blog.csdnimg.cn/783c5a57e311426f92faae4b0eff0a5a.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/717bd041f9e8c0a151fb048aed85fa40_3039260496609175468.webp)
 
-![](https://img-blog.csdnimg.cn/08871550ce5b435bae6575658607e9ab.webp)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/57a4f631b84a7dbdf9b81eafee5a5fec_2596380417817259778.webp)
 
 <div class="info">
 

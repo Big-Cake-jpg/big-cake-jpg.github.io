@@ -8,7 +8,7 @@ tags:
   - Valaxy
 categories:
   - 一些小技巧
-cover: https://img-blog.csdnimg.cn/ae652812f8114dc6b020f6d1865ecf1c.webp
+cover: https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/88e6389d5018d7f9ce35d1ff5050e0c8_689716272345683367.webp
 excerpt_type: text
 ---
 
@@ -29,17 +29,17 @@ excerpt_type: text
 
 登录 Cloudflare 仪表盘，在左侧的侧边栏中找到“Pages”，点击进入。
 
-![](https://img-blog.csdnimg.cn/8f30e0013f034c0bb1bceb5676aa587a.png)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/df1b1199dad6c4824665b80a625cf7c3_7170784572772355617.webp)
 
 点击“创建项目”，然后选择“连接到 Git”，按照 Cloudflare 的引导进行 GitHub 账户的添加与 GitHub App 的安装。安装完成后即可返回该页面选择仓库。
 
 此处仓库使用我早期 Valaxy 功能性测试时创建的独立仓库演示，版本为~~极其远古的~~ Valaxy 0.12.3。
 
-![](https://img-blog.csdnimg.cn/bc80c4d7f2304e788f1fd7ed7795f2b4.png)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/ff6d211fb63a32a4727c31e06a10cc01_2384595745881146569.webp)
 
 点击“开始配置”按钮，然后设置一个自己喜欢的项目名称、要部署的分支，“构建设置”请根据下图配置：
 
-![](https://img-blog.csdnimg.cn/f91fa7c8eac74ab8aca635dd818ecbb8.png)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/b697f0501bd85a7ef265e4909f463eb0_3886882695087885493.webp)
 
 :::danger 注意
 下方的环境变量也需要配置，否则 Valaxy 的构建将会因为 Node.js 版本低于 v14 而失败！
@@ -47,7 +47,7 @@ excerpt_type: text
 
 配置完成后，点击“保存并部署”按钮，然后等待 Cloudflare Pages 的部署完成。
 
-![](https://img-blog.csdnimg.cn/dc70f863359748a18eb9529ae2f0d44c.png)_部署成功后的提示_
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/4b75318929031fac45c8bf34a437265b_1362124432555332309.webp)_部署成功后的提示_
 
 ## 添加自定义域名
 
@@ -55,9 +55,9 @@ excerpt_type: text
 
 点击“继续处理项目”，然后点击页面上的“设置自定义域”添加一个自定义域名。
 
-![](https://img-blog.csdnimg.cn/2a0f275c174c4baa93b56c459c7fbfcd.png)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/3314e0fc5554338f9c8cbbf97180cb0c_4128336076909169027.webp)
 
-![](https://img-blog.csdnimg.cn/97079a9d64474d75abcd4e9d1642ecfd.png)
+![](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/dfb1e82ff59e417cbe0363122c4a5019_5669599825006859987.webp)
 
 等待一段时间之后，就可以通过这个域名访问你的博客了。
 

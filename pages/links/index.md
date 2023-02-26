@@ -34,7 +34,7 @@ aside: false
 ```json
 {
     "url": "https://lihaoyu.cn",
-    "avatar": "https://img-blog.csdnimg.cn/5f3a26e6ee01493f9373a38633e5f2df.webp",
+    "avatar": "https://r2.lihaoyu.cn/avatar.webp",
     "name": "Big_Cake",
     "color": "#F2BC57",
     "blog": "大蛋糕的烘焙坊",
