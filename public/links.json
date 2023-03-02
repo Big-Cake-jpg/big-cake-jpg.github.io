@@ -9,7 +9,7 @@
     },
     {
         "url": "https://blog.restent.win/",
-        "avatar": "https://img.restent.win/me/profile/avatar.jpg",
+        "avatar": "https://library.restent.win/images/icons/restent.webp",
         "name": "Restent Ou",
         "color": "#03a9f4",
         "blog": "Galaxy City",
@@ -55,7 +55,7 @@
     },
     {
         "url": "https://www.yunfeng.ink",
-        "avatar": "https://www.yunfeng.ink/wp-content/uploads/2022/05/cropped-huygvfc-32x32.png",
+        "avatar": "https://www.yunfeng.ink/wp-content/uploads/2022/05/cropped-huygvfc.png",
         "name": "Hacker_Yunfeng",
         "color": "#052c9f",
         "blog": "黑's Blog",
@@ -149,8 +149,8 @@
         "desc": "The website only is a blog."
     },
     {
-        "url": "https://blog.lvbyte.tk/",
-        "avatar": "https://i.im5i.com/2021/06/05/CpGnd.png",
+        "url": "https://blog.lvbyte.top/",
+        "avatar": "https://q1.qlogo.cn/g?b=qq&nk=2015078351&s=100",
         "name": "Lvbyte",
         "color": "#f5c979",
         "blog": "字节君的思想宇宙",
