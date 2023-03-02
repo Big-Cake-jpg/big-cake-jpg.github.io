@@ -33,7 +33,7 @@ aside: false
 我的信息如下：
 
 - 链接：https://lihaoyu.cn
-- 头像（大小为 512x ）：https://blog-api.lihaoyu.cn/avatar"
+- 头像（大小为 512x ）：https://blog-api.lihaoyu.cn/avatar
 - 站点名称：大蛋糕的烘焙坊
 - 网名：Big_Cake / 晓雨
 - 主题色：#F2BC57
