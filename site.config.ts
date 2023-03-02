@@ -2,12 +2,12 @@ import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
   url: 'https://lihaoyu.cn',
-  favicon: 'https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/89df57aa673873fca48197e1eb5eda46_1924209351040585826.webp',
+  favicon: 'https://blog-api.lihaoyu.cn/avatar',
   lang: 'zh-CN',
   title: '大蛋糕的烘焙坊',
   author: {
     name: 'Big_Cake',
-    avatar: 'https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/89df57aa673873fca48197e1eb5eda46_1924209351040585826.webp',
+    avatar: 'https://blog-api.lihaoyu.cn/avatar',
   },
   description: '一个屑初三学生的小窝',
   subtitle: '也许我们会分别，但我们将永远不会忘记彼此',

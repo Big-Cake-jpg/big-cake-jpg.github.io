@@ -30,11 +30,20 @@ aside: false
 - **服务器位于国内的，需要进行备案；**
 - **已将本站添加至友链列表。**
 
+我的信息如下：
+
+- 链接：https://lihaoyu.cn
+- 头像（大小为 512x ）：https://blog-api.lihaoyu.cn/avatar"
+- 站点名称：大蛋糕的烘焙坊
+- 网名：Big_Cake / 晓雨
+- 主题色：#F2BC57
+- 描述：也许我们会分别，但我们将永远不会忘记彼此
+
 如果你已经满足了这些条件，就可以在评论区内按此格式提交你的信息：
 ```json
 {
     "url": "https://lihaoyu.cn",
-    "avatar": "https://r2.lihaoyu.cn/avatar.webp",
+    "avatar": "https://blog-api.lihaoyu.cn/avatar",
     "name": "Big_Cake",
     "color": "#F2BC57",
     "blog": "大蛋糕的烘焙坊",

@@ -89,8 +89,8 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
     bg_image: {
       enable: true,
-      url: "https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/056a31f8584a26c084c610c9dc3b6179_1374590945880486187.webp",
-      dark: "https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/ac8596b65f88cbff3b22d9a9b9e14003_1498561711333912422.webp",
+      url: "https://blog-api.lihaoyu.cn/images/bg-bright-blur-10px.webp",
+      dark: "https://blog-api.lihaoyu.cn/images/bg-dark.webp",
     },
 
     say: {
