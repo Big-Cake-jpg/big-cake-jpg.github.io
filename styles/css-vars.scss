@@ -1,12 +1,10 @@
-// todo
-
-/*
-.yun-card {
-    opacity: 0.9;
-}
-*/
-
 :root {
-    --yun-sidebar-bg-color: var(--va-c-bg-light);
-    --yun-sidebar-bg-img: url(https://r2.lihaoyu.cn/alpha-stars-timing-1.webp);
+  --yun-sidebar-bg-color: var(--va-c-bg-light);
+  --yun-sidebar-bg-img: url(https://r2.lihaoyu.cn/alpha-stars-timing-1.webp);
+}
+
+iframe.bilibili-video {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
 }

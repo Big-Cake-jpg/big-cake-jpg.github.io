@@ -15,10 +15,10 @@ aplayer:
     listFolded: true
     listMaxHeight: 340px
     audio:
-#      - name: PICO PARK
-#        artist: TECOPARK
-#        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
-#        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
+      #      - name: PICO PARK
+      #        artist: TECOPARK
+      #        url: https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Music-CakeMC/PICO%20PARK.mp3
+      #        cover: https://s2.loli.net/2022/06/12/xc9iU3YWKnwFqJ1.jpg
       - name: Twilight Serenity 宁静的黄昏
         artist: 陈致逸 / HOYO-MiX
         url: https://cdn.cakeskin.tk/musics/Twilight-Serenity.mp3
@@ -88,7 +88,7 @@ reward:
       path: https://r2.cakeskin.tk/qq-qrcode.webp
       color: "#12B7F5"
       icon: ri:qq-line
-  
+
 bg_image:
   enable: true
   url: https://r2.cakeskin.tk/bg-bright-blur-10px.webp # recomend image related to your mode
@@ -200,7 +200,7 @@ feed:
   hub:
   content:
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
   order_by: -date
   icon: icon.png
   autodiscovery: true
@@ -301,7 +301,7 @@ waline:
     - https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/
   locale:
     placeholder: 求求你了，写点评论吧（请先登录）
-    
+
 leancloud_visitors:
   enable: true
   app_id: ErznielzJTc0MWHWtbaznYKO-MdYXbMMI
@@ -312,11 +312,11 @@ wordcount:
   enable: true
   count: true
   time: true
-  
+
 colors:
   primary: "#F2BC57"
   bg: "#F2F2F2"
-  
+
 fireworks:
   enable: true
   colors:
@@ -345,13 +345,13 @@ busuanzi:
   site_pv_icon: ri:eye-line
   page_pv: false
   page_pv_icon: ri:eye-line
-  
+
 head:
   css:
     custom: /css/waline-ua.css
     pace-css: https://npm.onmicrosoft.cn/pace-js@latest/themes/yellow/pace-theme-minimal.css
   js:
-    async: 
+    async:
       - https://npm.onmicrosoft.cn/pace-js@latest/pace.min.js
-    defer: 
+    defer:
       - /_vercel/insights/script.js

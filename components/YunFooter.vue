@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import YunFooter from 'valaxy-theme-yun/components/YunFooter.vue'
+import YunFooter from "valaxy-theme-yun/components/YunFooter.vue";
 </script>
 
 <template>
@@ -13,6 +13,8 @@ import YunFooter from 'valaxy-theme-yun/components/YunFooter.vue'
         <span>(●'◡'●)</span>
       </template>
     </VCLiveTime>
-    <a href="https://icp.gov.moe/?keyword=20230105" target="_blank">萌 ICP 备 20230105 号</a>
+    <a href="https://icp.gov.moe/?keyword=20230105" target="_blank"
+      >萌 ICP 备 20230105 号</a
+    >
   </YunFooter>
 </template>
