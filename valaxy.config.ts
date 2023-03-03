@@ -28,7 +28,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
     }),
   ],
 
-   vite: {
+  vite: {
     plugins: [
       /* VitePWA({ 
         injectRegister: 'auto',
@@ -108,8 +108,8 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
     menu: {
       custom: {
-        title: "开往",
-        url: "https://www.travellings.cn/go.html",
+        title: "menu.travellings",
+        url: "https://travellings.cn/go.html",
         icon: "i-fluent-vehicle-subway-24-regular",
       },
     },
