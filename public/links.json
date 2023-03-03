@@ -219,5 +219,13 @@
         "color": "#F423D9",
         "blog": "MisakaNo の 小破站",
         "desc": "这只是一个小破站而已！"
+    },
+    {
+        "url": "https://icodeq.com",
+        "avatar": "https://img.onmicrosoft.cn/Avatar.jpg",
+        "name": "zkeq",
+        "color": "#242728",
+        "blog": "Zkeq の Coding 日志",
+        "desc": "自强，弘毅，求是，拓新"
     }
 ]
