@@ -227,5 +227,13 @@
         "color": "#242728",
         "blog": "Zkeq の Coding 日志",
         "desc": "自强，弘毅，求是，拓新"
+    },
+    {
+        "url": "https://dusays.com",
+        "avatar": "https://cdn.dusays.com/avatar.png",
+        "name": "Teacher Du",
+        "color": "#FF6000",
+        "blog": "杜老师说",
+        "desc": "师者，传道，授业，解惑！"
     }
 ]
