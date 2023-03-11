@@ -118,6 +118,10 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
       },
     },
   },
+
+  features: {
+    katex: false
+  },
 };
 
 export default config;
