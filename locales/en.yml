@@ -8,3 +8,17 @@ menu:
   search: Search
   home: Home
   archives: Archives
+  links: Friends
+  wormhole: Worm Hole
+
+social:
+  rss: RSS
+  qq: QQ
+  github: GitHub
+  ncm: Netease Cloud Music
+  zhihu: Zhihu
+  bilibili: Bilibili
+  twitter: Twitter
+  tg-channel: Telegram Channel
+  tieba: Baidu Tieba
+  email: E-Mail

@@ -8,3 +8,17 @@ menu:
   search: 搜索
   home: 首页
   archives: 归档
+  links: 友链
+  wormhole: 虫洞
+
+social:
+  rss: RSS
+  qq: QQ
+  github: GitHub
+  ncm: 网易云音乐
+  zhihu: 知乎
+  bilibili: 哔哩哔哩
+  twitter: Twitter
+  tg-channel: Telegram 频道
+  tieba: 百度贴吧
+  email: 邮箱
