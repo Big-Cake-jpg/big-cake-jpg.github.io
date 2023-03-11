@@ -8,7 +8,7 @@ tags:
   - Valaxy
 categories:
   - 一些小技巧
-cover: https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/88e6389d5018d7f9ce35d1ff5050e0c8_689716272345683367.webp
+cover: https://blog-api.lihaoyu.cn/images/posts/deploy-valaxy-blog-to-cloudflare-pages/cover.webp
 excerpt_type: text
 ---
 

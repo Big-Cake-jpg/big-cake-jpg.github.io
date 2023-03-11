@@ -9,7 +9,7 @@ tags:
   - 网易
   - 侵权
   - B 站
-cover: https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/81f036641c2366eeaa33ad875fe6e0e0_1518732140167844802.webp
+cover: https://blog-api.lihaoyu.cn/images/posts/my-opinions-about-that-post/cover.webp
 ---
 不请自来。
 

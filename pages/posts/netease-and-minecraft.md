@@ -9,7 +9,7 @@ tags:
   - 网易
   - 侵权
   - B 站
-cover: https://hub.onmicrosoft.cn/image/dad2ff447e38989c47db4a3f49927a9d
+cover: https://blog-api.lihaoyu.cn/images/posts/netease-and-minecraft/cover.webp
 
 ---
 
