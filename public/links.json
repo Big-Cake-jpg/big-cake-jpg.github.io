@@ -235,5 +235,13 @@
         "color": "#FF6000",
         "blog": "杜老师说",
         "desc": "师者，传道，授业，解惑！"
+    },
+    {
+        "url": "https://japerz.com",
+        "avatar": "https://q.qlogo.cn/g?b=qq&nk=1952135253&s=100",
+        "name": "杰帕斯",
+        "color": "#FFA600",
+        "blog": "杰帕斯の小窝",
+        "desc": "寻找着,失去了,又去寻找,再去寻找"
     }
 ]
