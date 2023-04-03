@@ -2,6 +2,7 @@ import type { UserValaxyNodeConfig } from "valaxy";
 import type { UserThemeConfig } from "valaxy-theme-yun";
 import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
+import { addonLightGallery } from "valaxy-addon-lightgallery";
 // import { VitePWA } from "vite-plugin-pwa";
 
 /**
@@ -25,6 +26,9 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
         "https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/",
       ],
       recaptchaV3Key: "6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih",
+    }),
+    addonLightGallery({
+      enable: false,
     }),
   ],
 
@@ -93,8 +97,8 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
 
     bg_image: {
       enable: true,
-      url: "https://blog-api.lihaoyu.cn/images/bg-bright-blur-10px.webp",
-      dark: "https://blog-api.lihaoyu.cn/images/bg-dark.webp",
+      url: "https://r2.lihaoyu.cn/bg-bright-blur-10px.webp",
+      dark: "https://r2.lihaoyu.cn/bg-dark.webp",
     },
 
     say: {
@@ -117,10 +121,15 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
         icon: "i-fluent-vehicle-subway-24-regular",
       },
     },
+
+    fireworks: {
+      enable: true,
+      colors: ["#F2BC57", "#F2CD5E", "#F2F2F2"],
+    },
   },
 
   features: {
-    katex: false
+    katex: false,
   },
 };
 

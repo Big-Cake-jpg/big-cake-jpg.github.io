@@ -125,14 +125,6 @@
         "blog": "Eternal9's Blog"
     },
     {
-        "url": "https://liusui.tk/",
-        "avatar": "https://liusui.cf/2022/12/03/69d56584b92ec.jpg",
-        "name": "liusui",
-        "color": "#568be7",
-        "blog": "六岁の博客",
-        "desc": "一只摆烂的咸鱼罢了"
-    },
-    {
         "url": "https://ztsin.cn",
         "avatar": "https://s1.ax1x.com/2022/10/22/xc03ee.jpg",
         "name": "Z_Tsin",
@@ -243,5 +235,13 @@
         "color": "#FFA600",
         "blog": "杰帕斯の小窝",
         "desc": "寻找着,失去了,又去寻找,再去寻找"
+    },
+    {
+        "url": "https://blog.trotyl.xyz",
+        "avatar": "https://blog.trotyl.xyz/img/avatar.png",
+        "name": "Trotyl",
+        "color": "#F7977C",
+        "blog": "Trotyl’s Blog",
+        "desc": "压力马斯呐"
     }
 ]
