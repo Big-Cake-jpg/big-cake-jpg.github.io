@@ -1219,14 +1219,14 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/ri@^1.1.5":
+"@iconify-json/ri@^1.1.6":
   version "1.1.6"
   resolved "https://registry.npmmirror.com/@iconify-json/ri/-/ri-1.1.6.tgz#fcac988d06a1476904d53f5fdb8b2e420457bfc2"
   integrity sha512-SG5mhe2goxMueu8FdP3ph3T8EzHG6tMIKQw66u8WOfNfueGzkfTdF8v1d++4QUb8iw85jvkk23f4zYg/HoPi9w==
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/simple-icons@^1.1.47":
+"@iconify-json/simple-icons@^1.1.48":
   version "1.1.48"
   resolved "https://registry.npmmirror.com/@iconify-json/simple-icons/-/simple-icons-1.1.48.tgz#27a3da33e6a9f0cc954fc0241dc48966de7fde75"
   integrity sha512-haFEPmTPriak+bcmhJawCTW2N2KxcaNNpS3z5hofBUBlCzwRhjM+vU0eImJ6i51HNFlSozt8sxVOZtT7NsWZJg==
@@ -4766,25 +4766,25 @@ valaxy-addon-waline@0.1.0, valaxy-addon-waline@^0.1.0:
   dependencies:
     "@waline/client" "^2.14.7"
 
-valaxy-theme-yun@0.14.23:
-  version "0.14.23"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.23.tgz#a8190f8e689b8181eee0b204a7bc37f8b53ad847"
-  integrity sha512-Zp2DxVs1Zx14yTNQG3DTd1FTG4mGK9XIJPyYz7Gle6YWC0p0eFov2UzY6FXqQJOzASdd00YSuBciIFxcQWf4hw==
+valaxy-theme-yun@^0.14.25:
+  version "0.14.25"
+  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.25.tgz#7595c5e139009e491ba4c36ea2cbb8947eabc947"
+  integrity sha512-rdxn+80IdUCTTT4A3Pse0IsZV+lM4Rb4R9U8K8CGbXZIB9nrmwU9GAfoZZesSw9SnCACOB9NPSwYUE9iykzEqA==
   dependencies:
     "@iconify-json/ant-design" "^1.1.5"
-    "@iconify-json/simple-icons" "^1.1.47"
+    "@iconify-json/simple-icons" "^1.1.48"
     animejs "^3.2.1"
     valaxy-addon-waline "0.1.0"
 
-valaxy@0.14.23:
-  version "0.14.23"
-  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.14.23.tgz#a9d496cee1985e92cfdf72018a7a01ac441193b6"
-  integrity sha512-saU5UticNQmioxJIgYu615IPCWson0ZbRppRJfPAfbgdOAD/C4PFZC1dvjmrGUK+GmX1B7f8ZHcND/u05cyjEA==
+valaxy@^0.14.25:
+  version "0.14.25"
+  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.14.25.tgz#e894bbe2308be4c3f9b0a27b7fd25c29e74dc26e"
+  integrity sha512-wz/LZzDOBpcwGaAj8prrSIiV41Utd6eRDdpoR5WBA74I+bEjANTLKKxQuUCqhseuEtgxivuRtjxnQ562uc0buw==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@ctrl/tinycolor" "^3.6.0"
     "@iconify-json/carbon" "^1.1.16"
-    "@iconify-json/ri" "^1.1.5"
+    "@iconify-json/ri" "^1.1.6"
     "@intlify/unplugin-vue-i18n" "^0.10.0"
     "@types/body-scroll-lock" "^3.1.0"
     "@vitejs/plugin-vue" "^4.1.0"

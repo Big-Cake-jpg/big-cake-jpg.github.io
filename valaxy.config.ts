@@ -1,5 +1,5 @@
-import type { UserValaxyNodeConfig } from "valaxy";
-import type { UserThemeConfig } from "valaxy-theme-yun";
+import { defineValaxyConfig } from 'valaxy'
+import type { ThemeConfig } from 'valaxy-theme-yun'
 import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
@@ -8,7 +8,7 @@ import { addonLightGallery } from "valaxy-addon-lightgallery";
 /**
  * User Config
  */
-const config: UserValaxyNodeConfig<UserThemeConfig> = {
+export default defineValaxyConfig<ThemeConfig>({
   addons: [
     addonComponents(),
     addonWaline({
@@ -74,7 +74,7 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
       {
         name: "友链",
         url: "/links/",
-        icon: "i-ri-genderless-line",
+        icon: "i-ri-link",
         color: "dodgerblue",
       },
       {
@@ -131,6 +131,4 @@ const config: UserValaxyNodeConfig<UserThemeConfig> = {
   features: {
     katex: false,
   },
-};
-
-export default config;
+})
