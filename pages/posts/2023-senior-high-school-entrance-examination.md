@@ -9,6 +9,7 @@ tags:
   - 未来
   - 考试
 cover: https://blog-api.lihaoyu.cn/images/posts/2023-senior-high-school-entrance-examination/cover.webp
+aplayer: true
 ---
 
 写给自己，同时也是写给每一位初三学子。
