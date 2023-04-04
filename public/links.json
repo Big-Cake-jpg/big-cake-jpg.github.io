@@ -243,5 +243,13 @@
         "color": "#F7977C",
         "blog": "Trotyl’s Blog",
         "desc": "压力马斯呐"
+    },
+    {
+        "url": "https://krau.top",
+        "avatar": "https://krau.top/photo/avatar/avatar.jpg",
+        "name": "krau",
+        "color": "#39c5bb",
+        "blog": "krau's blog",
+        "desc": "年轻，就要折腾"
     }
 ]
