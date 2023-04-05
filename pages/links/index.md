@@ -7,6 +7,7 @@ random: true
 aplayer: true
 toc: false
 aside: false
+medium_zoom: false
 ---
 
 <meting-js
