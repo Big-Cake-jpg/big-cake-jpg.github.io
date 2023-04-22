@@ -47,9 +47,22 @@ export default defineValaxyConfig<ThemeConfig>({
           lang: 'zh-CN',
           icons: [
             {
-              src: 'https://blog-api.lihaoyu.cn/images/profile/head.webp',
-              sizes: '100x100',
-              type: 'image/webp'
+              src: 'https://blog-api.lihaoyu.cn/images/profile/avatar.webp',
+              sizes: '2360x2360',
+              type: 'image/webp',
+              purposes: 'any'
+            },
+            {
+              src: 'https://blog-api.lihaoyu.cn/images/profile/avatar-512x.webp',
+              sizes: '512x512',
+              type: 'image/webp',
+              purposes: 'any'
+            },
+            {
+              src: 'https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp',
+              sizes: '128x128',
+              type: 'image/webp',
+              purposes: 'any'
             },
             {
               src: 'https://blog-api.lihaoyu.cn/images/profile/android-chrome-96x96.png',
