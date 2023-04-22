@@ -3,7 +3,7 @@ import type { ThemeConfig } from 'valaxy-theme-yun'
 import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
-// import { VitePWA } from "vite-plugin-pwa";
+import { VitePWA } from "vite-plugin-pwa";
 
 /**
  * User Config
@@ -25,6 +25,7 @@ export default defineValaxyConfig<ThemeConfig>({
         "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/",
         "https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/",
       ],
+      cdn: "https://npm.onmicrosoft.cn/",
       recaptchaV3Key: "6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih",
     }),
     addonLightGallery({
@@ -34,9 +35,9 @@ export default defineValaxyConfig<ThemeConfig>({
 
   vite: {
     plugins: [
-      /* VitePWA({ 
+      VitePWA({ 
         injectRegister: 'auto',
-        registerType: 'autoUpdate',
+        registerType: 'prompt',
         manifest: {
           name: '大蛋糕的烘焙坊',
           short_name: '大蛋糕的烘焙坊',
@@ -46,13 +47,100 @@ export default defineValaxyConfig<ThemeConfig>({
           lang: 'zh-CN',
           icons: [
             {
-              src: 'https://img-blog.csdnimg.cn/41926c33b9b64e8183a08a558e120f9c.webp',
-              sizes: '512x512',
+              src: 'https://blog-api.lihaoyu.cn/images/profile/head.webp',
+              sizes: '100x100',
               type: 'image/webp'
+            },
+            {
+              src: 'https://blog-api.lihaoyu.cn/images/profile/android-chrome-96x96.png',
+              sizes: '96x96',
+              type: 'image/png',
+              purposes: 'any maskable'
+            },
+            {
+              src: 'https://blog-api.lihaoyu.cn/images/profile/apple-touch-icon.png',
+              sizes: '76x76',
+              type: 'image/png',
+              purposes: 'any maskable'
+            }
+          ]
+        },
+        workbox: {
+          globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2,webp,jpg}'],
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'jsdelivr-cdn-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https:\/\/blog-api\.lihaoyu\.cn\/.*/i,
+              handler: 'NetworkFirst',
+              options: {
+                cacheName: 'blog-images-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https:\/\/npm\.onmicrosoft\.cn\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'unpkg-cdn-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'google-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'gstatic-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                },
+              }
             }
           ]
         }
-      }) */
+      })
     ],
   },
 
