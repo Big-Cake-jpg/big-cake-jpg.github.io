@@ -35,7 +35,7 @@ export default defineValaxyConfig<ThemeConfig>({
 
   vite: {
     plugins: [
-      VitePWA({ 
+       VitePWA({ 
         injectRegister: 'auto',
         registerType: 'prompt',
         manifest: {
@@ -140,7 +140,7 @@ export default defineValaxyConfig<ThemeConfig>({
             }
           ]
         }
-      })
+      }) 
     ],
   },
 

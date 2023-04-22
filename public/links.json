@@ -251,5 +251,21 @@
         "color": "#39c5bb",
         "blog": "krau's blog",
         "desc": "年轻，就要折腾"
+    },
+    {
+        "url": "https://dongdong741236.cn",
+        "avatar": "https://dongdong741236.cn/wp-content/uploads/2023/04/%E9%80%8F%E6%98%8E%E5%BA%95%E5%8F%8D%E9%BB%91%E5%9B%BE-e1681661076974.png",
+        "name": "栋dong",
+        "color": "#0c88ed",
+        "blog": "栋dong的个人站点",
+        "desc": "乾坤未定，你我皆是牛马"
+    },
+    {
+        "url": "https://off.cx",
+        "avatar": "https://off.cx/img/avatar.png",
+        "name": "Niute Fony",
+        "color": "#0078e7",
+        "blog": "月光小镇",
+        "desc": "一个一个恶臭的小镇"
     }
 ]

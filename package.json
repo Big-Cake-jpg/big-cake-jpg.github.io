@@ -11,20 +11,14 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@iconify-json/fluent": "^1.1.19",
-    "valaxy": "^0.14.26",
+    "@iconify-json/fluent": "^1.1.17",
+    "@vercel/analytics": "^0.1.8",
+    "valaxy": "^0.14.25",
     "valaxy-addon-algolia": "^0.0.2",
     "valaxy-addon-components": "^0.0.1",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-waline": "^0.1.0",
-    "valaxy-theme-yun": "^0.14.26",
-    "vite-plugin-pwa": "^0.14.6",
-    "workbox-window": "^6.5.4"
-  },
-  "devDependencies": {
-    "esbuild-wasm": "latest"
-  },
-  "overrides": {
-    "esbuild": "npm:esbuild-wasm@latest"
+    "valaxy-theme-yun": "^0.14.25",
+    "vite-plugin-pwa": "^0.14.1"
   }
 }

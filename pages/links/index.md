@@ -34,21 +34,24 @@ medium_zoom: false
 我的信息如下：
 
 - 链接：https://lihaoyu.cn
-- 头像（大小为 512x ）：https://blog-api.lihaoyu.cn/avatar
+- 头像（2360x，WebP）：https://blog-api.lihaoyu.cn/avatar
+  - 512x，WebP：https://blog-api.lihaoyu.cn/images/profile/avatar-512x.webp
+  - 128x，WebP：https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp
+  - Gravatar E-Mail Hash：`636d113ce37111d08f08faee780ce9b8`
 - 站点名称：大蛋糕的烘焙坊
-- 网名：Big_Cake / 晓雨
-- 主题色：#F2BC57
+- 昵称：Big_Cake / 晓雨
+- 主题色：`#F2BC57`
 - 描述：也许我们会分别，但我们将永远不会忘记彼此
 
-如果你已经满足了这些条件，就可以在评论区内按此格式提交你的信息：
+如果你已经满足了这些条件，就可以在评论区内按以下格式提交你的信息。提交时，请注意使用 Markdown 的代码块语法将其包裹并删除注释。
 ```json
 {
-    "url": "https://lihaoyu.cn",
-    "avatar": "https://blog-api.lihaoyu.cn/avatar",
-    "name": "Big_Cake",
-    "color": "#F2BC57",
-    "blog": "大蛋糕的烘焙坊",
-    "desc": "也许我们会分别，但我们将永远不会忘记彼此。"
+    "url": "https://lihaoyu.cn", // 链接
+    "avatar": "https://blog-api.lihaoyu.cn/avatar", // 头像
+    "name": "Big_Cake", // 昵称
+    "color": "#F2BC57", // 主题色
+    "blog": "大蛋糕的烘焙坊", // 站点名称
+    "desc": "也许我们会分别，但我们将永远不会忘记彼此。" // 一句话介绍
 }
 ```
 如果不嫌麻烦的话，也可以编辑[此文件](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/public/links.json)，然后打开一个 Pull Request。如果 CI 通过，我就会将其合并。
