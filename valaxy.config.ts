@@ -160,10 +160,10 @@ export default defineValaxyConfig<ThemeConfig>({
   theme: "yun",
 
   themeConfig: {
-    /* notice: {
+    notice: {
       enable: true,
-      content: "如果您使用 uBlock Origin，请将 umami.lihaoyu.cn 或本站添加到白名单以方便我统计访客信息，谢谢啦！",
-    }, */
+      content: "好耶！本站现已支持 PWA，欢迎大家安装并体验！",
+    },
     banner: {
       enable: true,
       title: "大蛋糕的烘焙坊",
