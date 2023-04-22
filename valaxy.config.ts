@@ -37,7 +37,7 @@ export default defineValaxyConfig<ThemeConfig>({
     plugins: [
       VitePWA({
         injectRegister: "auto",
-        registerType: "prompt",
+        registerType: "autoUpdate",
         manifest: {
           name: "大蛋糕的烘焙坊",
           short_name: "大蛋糕的烘焙坊",
