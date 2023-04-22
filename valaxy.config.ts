@@ -1,5 +1,5 @@
-import { defineValaxyConfig } from 'valaxy'
-import type { ThemeConfig } from 'valaxy-theme-yun'
+import { defineValaxyConfig } from "valaxy";
+import type { ThemeConfig } from "valaxy-theme-yun";
 import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
@@ -35,125 +35,125 @@ export default defineValaxyConfig<ThemeConfig>({
 
   vite: {
     plugins: [
-       VitePWA({ 
-        injectRegister: 'auto',
-        registerType: 'prompt',
+      VitePWA({
+        injectRegister: "auto",
+        registerType: "prompt",
         manifest: {
-          name: '大蛋糕的烘焙坊',
-          short_name: '大蛋糕的烘焙坊',
-          description: '也许我们会分别，但我们将永远不会忘记彼此',
-          theme_color: '#F2BC57',
-          background_color: '#FFFFFF',
-          lang: 'zh-CN',
+          name: "大蛋糕的烘焙坊",
+          short_name: "大蛋糕的烘焙坊",
+          description: "也许我们会分别，但我们将永远不会忘记彼此",
+          theme_color: "#F2BC57",
+          background_color: "#FFFFFF",
+          lang: "zh-CN",
           icons: [
             {
-              src: 'https://blog-api.lihaoyu.cn/images/profile/avatar.webp',
-              sizes: '2360x2360',
-              type: 'image/webp',
-              purposes: 'any'
+              src: "https://blog-api.lihaoyu.cn/images/profile/avatar.webp",
+              sizes: "2360x2360",
+              type: "image/webp",
+              purposes: "any",
             },
             {
-              src: 'https://blog-api.lihaoyu.cn/images/profile/avatar-512x.webp',
-              sizes: '512x512',
-              type: 'image/webp',
-              purposes: 'any'
+              src: "https://blog-api.lihaoyu.cn/images/profile/avatar-512x.webp",
+              sizes: "512x512",
+              type: "image/webp",
+              purposes: "any",
             },
             {
-              src: 'https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp',
-              sizes: '128x128',
-              type: 'image/webp',
-              purposes: 'any'
+              src: "https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp",
+              sizes: "128x128",
+              type: "image/webp",
+              purposes: "any",
             },
             {
-              src: 'https://blog-api.lihaoyu.cn/images/profile/android-chrome-96x96.png',
-              sizes: '96x96',
-              type: 'image/png',
-              purposes: 'any maskable'
+              src: "https://blog-api.lihaoyu.cn/images/profile/android-chrome-96x96.png",
+              sizes: "96x96",
+              type: "image/png",
+              purposes: "any maskable",
             },
             {
-              src: 'https://blog-api.lihaoyu.cn/images/profile/apple-touch-icon.png',
-              sizes: '76x76',
-              type: 'image/png',
-              purposes: 'any maskable'
-            }
-          ]
+              src: "https://blog-api.lihaoyu.cn/images/profile/apple-touch-icon.png",
+              sizes: "76x76",
+              type: "image/png",
+              purposes: "any maskable",
+            },
+          ],
         },
         workbox: {
-          globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2,webp,jpg}'],
+          globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,woff2,webp,jpg}"],
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/i,
-              handler: 'CacheFirst',
+              handler: "CacheFirst",
               options: {
-                cacheName: 'jsdelivr-cdn-cache',
+                cacheName: "jsdelivr-cdn-cache",
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+                  statuses: [0, 200],
+                },
+              },
             },
             {
               urlPattern: /^https:\/\/blog-api\.lihaoyu\.cn\/.*/i,
-              handler: 'NetworkFirst',
+              handler: "NetworkFirst",
               options: {
-                cacheName: 'blog-images-cache',
+                cacheName: "blog-images-cache",
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+                  statuses: [0, 200],
+                },
+              },
             },
             {
               urlPattern: /^https:\/\/npm\.onmicrosoft\.cn\/.*/i,
-              handler: 'CacheFirst',
+              handler: "CacheFirst",
               options: {
-                cacheName: 'unpkg-cdn-cache',
+                cacheName: "unpkg-cdn-cache",
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+                  statuses: [0, 200],
+                },
+              },
             },
             {
               urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-              handler: 'CacheFirst',
+              handler: "CacheFirst",
               options: {
-                cacheName: 'google-fonts-cache',
+                cacheName: "google-fonts-cache",
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+                  statuses: [0, 200],
+                },
+              },
             },
             {
               urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-              handler: 'CacheFirst',
+              handler: "CacheFirst",
               options: {
-                cacheName: 'gstatic-fonts-cache',
+                cacheName: "gstatic-fonts-cache",
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
+                  statuses: [0, 200],
                 },
-              }
-            }
-          ]
-        }
-      }) 
+              },
+            },
+          ],
+        },
+      }),
     ],
   },
 
@@ -232,4 +232,4 @@ export default defineValaxyConfig<ThemeConfig>({
   features: {
     katex: false,
   },
-})
+});
