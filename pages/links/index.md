@@ -6,7 +6,6 @@ links: /links.json
 random: true
 aplayer: true
 toc: false
-aside: false
 medium_zoom: false
 ---
 

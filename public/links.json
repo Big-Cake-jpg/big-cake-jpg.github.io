@@ -267,5 +267,13 @@
         "color": "#0078e7",
         "blog": "月光小镇",
         "desc": "一个一个恶臭的小镇"
+    },
+    {
+        "url": "https://blog.itciraos.cn",
+        "avatar": "https://gcore.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-26-12.webp",
+        "name": "Ciraos 葱苓",
+        "color": "#f9cca2",
+        "blog": "葱苓",
+        "desc": "Dare && Do"
     }
 ]
