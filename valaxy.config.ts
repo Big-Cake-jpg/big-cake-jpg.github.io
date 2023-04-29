@@ -50,24 +50,24 @@ export default defineValaxyConfig<ThemeConfig>({
               src: "https://blog-api.lihaoyu.cn/images/profile/avatar.webp",
               sizes: "2360x2360",
               type: "image/webp",
-              purposes: "any",
+              purposes: "any maskable",
             },
             {
-              src: "https://blog-api.lihaoyu.cn/images/profile/avatar-512x.webp",
+              src: "https://blog-api.lihaoyu.cn/images/profile/pwa-512x512.webp",
               sizes: "512x512",
               type: "image/webp",
-              purposes: "any",
+              purposes: "any maskable",
             },
             {
-              src: "https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp",
+              src: "https://blog-api.lihaoyu.cn/images/profile/pwa-128x128.webp",
               sizes: "128x128",
               type: "image/webp",
-              purposes: "any",
+              purposes: "any maskable",
             },
             {
-              src: "https://blog-api.lihaoyu.cn/images/profile/android-chrome-96x96.png",
+              src: "https://blog-api.lihaoyu.cn/images/profile/android-chrome-96x96.webp",
               sizes: "96x96",
-              type: "image/png",
+              type: "image/webp",
               purposes: "any maskable",
             },
             {
@@ -76,10 +76,16 @@ export default defineValaxyConfig<ThemeConfig>({
               type: "image/png",
               purposes: "any maskable",
             },
+            {
+              src: "https://blog-api.lihaoyu.cn/images/profile/android-chrome-36x36.webp",
+              sizes: "36x36",
+              type: "image/webp",
+              purposes: "any maskable",
+            },
           ],
         },
         workbox: {
-          globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,woff2,webp,jpg}"],
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,jpg,json}'],
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/i,
