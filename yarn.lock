@@ -4815,10 +4815,10 @@ valaxy-addon-waline@0.1.0, valaxy-addon-waline@^0.1.0:
   dependencies:
     "@waline/client" "^2.14.7"
 
-valaxy-theme-yun@^0.14.27:
-  version "0.14.27"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.27.tgz#7daa86f4eee36245d4c5e4c6035ebd250c6d8dff"
-  integrity sha512-4ryuNdCXv0abgyZMzH9jEimISKu6vMffGr1MohfnF4eRvi+lcFYDUZEgTXqAGwLa/7W7lKVQdbxTD8/PlRXJbw==
+valaxy-theme-yun@^0.14.28:
+  version "0.14.28"
+  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.28.tgz#70814805827fbd56e3d83c1ffd3df7a520e7a626"
+  integrity sha512-P/7xpN+2Efbc6vkP/z7vgBFES+0wh+AENps5CyT9L5ftfoXI3qh/0WFT3aDz4EwBH2QmlJvQ92QFoZsheUG7HQ==
   dependencies:
     "@iconify-json/ant-design" "^1.1.5"
     "@iconify-json/simple-icons" "^1.1.49"
