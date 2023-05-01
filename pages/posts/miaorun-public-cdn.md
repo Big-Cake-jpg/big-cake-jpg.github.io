@@ -6,7 +6,7 @@ updated: 2023-05-01 14:40:11
 cover: https://r2.lihaoyu.cn/2023/05/01/644f65d2d92ae.webp
 tags:
   - CDN
-  - 大蛋糕的安利
+catrgories: 大蛋糕的安利
 ---
 又是一个快速的公共 CDN 镜像，感谢 [Zkeq](https://icodeq.com) 提供的服务。
 
