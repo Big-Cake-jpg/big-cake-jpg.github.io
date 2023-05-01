@@ -102,6 +102,34 @@ export default defineValaxyConfig<ThemeConfig>({
               },
             },
             {
+              urlPattern: /^https:\/\/oss-cdn\.lihaoyu\.cn\/.*/i,
+              handler: "CacheFirst",
+              options: {
+                cacheName: "blog-images-cache",
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+            {
+              urlPattern: /^https:\/\/r2\.lihaoyu\.cn\/.*/i,
+              handler: "CacheFirst",
+              options: {
+                cacheName: "blog-images-cache",
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+            {
               urlPattern: /^https:\/\/blog-api\.lihaoyu\.cn\/.*/i,
               handler: "NetworkFirst",
               options: {
