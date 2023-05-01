@@ -1220,10 +1220,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/fluent@^1.1.19":
-  version "1.1.19"
-  resolved "https://registry.npmmirror.com/@iconify-json/fluent/-/fluent-1.1.19.tgz#a100f6839a1e9da7ff98fcc50b372dbe0bf31e8e"
-  integrity sha512-kjJ7EF2mQNJGIHwENpL3kADekSRXmEps/t1h3Ff2iWujWvWthFcYtBgYvCaRrcL/fz7GVBfXXMYW79vh+11rgw==
+"@iconify-json/fluent@^1.1.20":
+  version "1.1.20"
+  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.20.tgz#59f757f02a2c995d048e755f42ddb5500b199876"
+  integrity sha512-13lVK4PtJsV5uWiwKbEryhPT96IbsA7CGvYYA1MOwEwcY6lLaRbdQbKHBOWWYCFlwzi8LC4JBudhjoV6HBvKww==
   dependencies:
     "@iconify/types" "*"
 
