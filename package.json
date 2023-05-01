@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@iconify-json/fluent": "^1.1.19",
-    "valaxy": "^0.14.27",
+    "valaxy": "^0.14.28",
     "valaxy-addon-algolia": "^0.0.2",
     "valaxy-addon-components": "^0.0.1",
     "valaxy-addon-lightgallery": "^0.0.2",

@@ -4825,10 +4825,10 @@ valaxy-theme-yun@^0.14.27:
     animejs "^3.2.1"
     valaxy-addon-waline "0.1.0"
 
-valaxy@^0.14.27:
-  version "0.14.27"
-  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.14.27.tgz#4831bfba1cb6c5fcd373754581c528d5e10e7ace"
-  integrity sha512-bpTdncG1OtqucqjIXWhBrG3qFI7wtQnt36l/PNFOrbJF2INTb1MH0kBzL4I+gQqICVEGeb7q5FlcQlW2ShbKDQ==
+valaxy@^0.14.28:
+  version "0.14.28"
+  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.14.28.tgz#8ef93b2f26cbe7013f89fd80aee1e3b29793e454"
+  integrity sha512-0f9x2sUOkmSIJJ0xBeqrEoDAQyXSzoJHjTxwBrKxUNXT9ylSnx53TYPENAb0Oy9mMYNcAru9MPUtKJZQXUOFzQ==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@ctrl/tinycolor" "^3.6.0"
