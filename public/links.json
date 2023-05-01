@@ -275,5 +275,13 @@
         "color": "#f9cca2",
         "blog": "葱苓",
         "desc": "Dare && Do"
+    },
+    {
+        "url": "https://www.mbrjun.cn/",
+        "avatar": "https://cos.mbrjun.cn/PICS/LG4v3avatar144px.jpg",
+        "name": "MBRjun",
+        "color": "#218bff",
+        "blog": "MBRjun-Blog",
+        "desc": "我们生活在大地上，但我们的梦想超越天空"
     }
 ]
