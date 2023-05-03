@@ -133,7 +133,7 @@ Windows 10 / 11 用户可在微软商店（新版）下载
 
 点右上角的 `+` => `New repository` 或者左侧边栏里的绿色按钮新建一个仓库
 
-![create-repo](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/build-a-hexo-blog/create-repo.png)_创建仓库的页面。我这里因为有同名仓库所以无法创建_
+![create-repo](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/build-a-hexo-blog/create-repo.png)_创建仓库的页面。我这里因为有同名仓库所以无法创建_
 
 仓库名称务必像上图中 `用户名.github.io` 一样，用户名为英文，大小写可以不区分
 

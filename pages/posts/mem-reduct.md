@@ -34,7 +34,7 @@ categories:
 
 将页面拉到最下方，找到下载地址，如图
 
-![memreduct-download](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/download.PNG)
+![memreduct-download](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/download.PNG)
 
 >Windows 系统请下载 exe 文件
 >macOS 请下载 sig 文件
@@ -56,7 +56,7 @@ categories:
 
 >程序有中文翻译，使用起来没有门槛
 
-![memreduct-settings](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/settings.PNG)
+![memreduct-settings](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/settings.PNG)
 
 ### 关闭 UAC 弹出提醒
 
@@ -86,7 +86,7 @@ Mem Reduct 是开源的，如果你有能力，可以去 [GitHub](https://github
 
 从提交日期看，可以发现 Mem Reduct 是一直在更新的。也证明了这位作者维护这个软件已经有长达六年多的时间了
 
-![memreduct-github](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/github.PNG)
+![memreduct-github](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/github.PNG)
 
 ## 结语
 

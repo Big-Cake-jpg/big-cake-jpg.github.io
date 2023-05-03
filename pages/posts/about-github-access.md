@@ -13,11 +13,11 @@ categories:
 
 结果发现 GitHub 突然无法访问了，显示 “连接超时”
 
-![GitHub-unaccessable](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/connection-timeout.png)
+![GitHub-unaccessable](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/connection-timeout.png)
 
 我就去查看 Dev-Sidecar 是否开着，得到的结果是
 
-![Dev-Sidecar-on](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/dev-sidecar-on.png)
+![Dev-Sidecar-on](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/dev-sidecar-on.png)
 
 看来是代理出问题了
 
@@ -27,7 +27,7 @@ categories:
 
 而其他网站没有太大问题
 
-![other-users](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/other-people.png)
+![other-users](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/about-github-access/other-people.png)
 
 >GFW 司马
 

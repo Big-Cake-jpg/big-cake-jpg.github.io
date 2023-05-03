@@ -85,7 +85,7 @@ CakeMC 的前身是我的黑历史：RTMWorld
 
 在内群群文件内找到客户端整合包并下载到你喜欢的地方
 
-![client-download](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/my-mcserver/client-download.png)
+![client-download](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/my-mcserver/client-download.png)
 
 解压压缩包，你会得到一个文件夹，里面包含了客户端文件和启动器
 

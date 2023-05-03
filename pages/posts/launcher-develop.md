@@ -22,11 +22,11 @@ categories:
 
 >感谢 B 站 UP 主 [小叶君](https://space.bilibili.com/495713706) 的教程与微软登录dll
 
-![Cake-Launcher](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/cake-launcher.png)
+![Cake-Launcher](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/cake-launcher.png)
 
 但现在需要解决一个新的问题：如果使用微软登录启动游戏，启动器将无法继续运行后续代码
 
-![problem](https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/problem.png)
+![problem](https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/problem.png)
 
 请等待后续更新……
 
