@@ -8,12 +8,20 @@ export default defineSiteConfig({
   author: {
     name: "Big_Cake",
     avatar: "https://blog-api.lihaoyu.cn/avatar",
+    email: "me@lihaoyu.cn",
+    link: "https://lihaoyu.cn",
   },
   description: "一个屑初三学生的小窝",
   subtitle: "也许我们会分别，但我们将永远不会忘记彼此",
+
+  feed: {
+    favicon: "https://blog-api.lihaoyu.cn/favicon"
+  },
+
   cdn: {
     prefix: "https://npm.onmicrosoft.cn",
   },
+
   social: [
     {
       name: "RSS",
@@ -84,23 +92,23 @@ export default defineSiteConfig({
 
   sponsor: {
     enable: true,
-    title: "我很可爱，请给我钱！",
+    description: "给我打钱，助力晓雨成为虚拟主播（划掉",
     methods: [
       {
         name: "支付宝",
-        url: "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4c09db7ea98b4b25877f39aae18571d2~tplv-k3u1fbpfcp-zoom-1.image",
+        url: "https://r2.lihaoyu.cn/2023/05/03/64520662bf7cc.webp",
         color: "#00A3EE",
         icon: "i-ri-alipay-line",
       },
       {
         name: "QQ 支付",
-        url: "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d12d93b6ce384958a02c194ab5b3adce~tplv-k3u1fbpfcp-zoom-1.image",
+        url: "https://r2.lihaoyu.cn/2023/05/03/645205f8edce4.webp",
         color: "#12B7F5",
         icon: "i-ri-qq-line",
       },
       {
         name: "微信支付",
-        url: "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/87e06b06e03e418bb903b89b9f5cf6a3~tplv-k3u1fbpfcp-zoom-1.image",
+        url: "https://r2.lihaoyu.cn/2023/05/03/6452066936578.webp",
         color: "#2DC100",
         icon: "i-ri-wechat-pay-line",
       },
