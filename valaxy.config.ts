@@ -213,6 +213,12 @@ export default defineValaxyConfig<ThemeConfig>({
         color: "dodgerblue",
       },
       {
+        name: "相册集",
+        url: "/albums/",
+        icon: "i-ri-gallery-line",
+        color: "#F2BC57",
+      },
+      {
         name: "虫洞",
         url: "https://foreverblog.cn/go.html",
         icon: "i-ri-checkbox-blank-circle-fill",
