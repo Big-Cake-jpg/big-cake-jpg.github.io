@@ -283,5 +283,13 @@
         "color": "#218bff",
         "blog": "MBRjun-Blog",
         "desc": "我们生活在大地上，但我们的梦想超越天空"
+    },
+    {
+        "url": "https://xiaojin233.cn/",
+        "avatar": "https://xiaojin233.cn/img/avator.png",
+        "name": "Xiao_Jin",
+        "color": "#665C77",
+        "blog": "Xiao_Jin's Homepage",
+        "desc": "你说得对但是。。。"
     }
 ]
