@@ -1,8 +1,4 @@
 version: 2
-registries:
-  npm-npmjs:
-    type: npm-registry
-    url: https://registry.npmmirror.com
 updates:
   - package-ecosystem: "npm"
     directory: "/"
