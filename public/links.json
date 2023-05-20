@@ -291,5 +291,13 @@
         "color": "#665C77",
         "blog": "Xiao_Jin",
         "desc": "你说得都对，但是。。。"
+    },
+    {
+        "url": "https://www.helim.net",
+        "avatar": "https://www.helim.net/static/remade.png",
+        "name": "李荷林",
+        "color": "#4CAF50",
+        "blog": "李荷林的个人主页",
+        "desc": "一个标准的初三学生"
     }
 ]
