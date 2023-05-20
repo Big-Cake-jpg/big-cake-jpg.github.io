@@ -8,7 +8,7 @@
         "desc": "I hope to be with you everyday."
     },
     {
-        "url": "https://blog.restent.win/",
+        "url": "https://blog.restent.win",
         "avatar": "https://library.restent.win/images/icons/restent.webp",
         "name": "Restent Ou",
         "color": "#03a9f4",
@@ -16,7 +16,7 @@
         "desc": "遇见你是我一生最幸运的事"
     },
     {
-        "url": "https://blog.lfhsheng.com/",
+        "url": "https://blog.lfhsheng.com",
         "avatar": "https://blog.lfhsheng.com/wp-content/uploads/2022/08/photo_2022-08-08_14-06-40.jpg",
         "name": "泠风寒声",
         "color": "#ffa500",
@@ -24,7 +24,7 @@
         "desc": "沉浸在Touch Fish的海洋中无法自拔"
     },
     {
-        "url": "https://shwx52.icu/",
+        "url": "https://shwx52.icu",
         "avatar": "https://s2.loli.net/2022/07/06/LCgyZspvkrRQE2n.jpg",
         "name": "shwx52",
         "color": "#568be7",
@@ -70,7 +70,7 @@
         "desc": "害怕孤独，却享受孤独"
     },
     {
-        "url": "https://blog.ltya.top/",
+        "url": "https://blog.ltya.top",
         "avatar": "https://cravatar.cn/avatar/5af06b461740fb2bd7467b8561399703?s=500",
         "name": "岚天呀",
         "color": "#489ffe",
@@ -110,8 +110,8 @@
         "desc": "苦逼高中生的小站"
     },
     {
-        "url": "https://seayay.icu",
-        "avatar": "https://seayay.icu/images/avatar.jpg",
+        "url": "https://seayay.top",
+        "avatar": "https://seayay.top/images/avatar.jpg",
         "name": "思遥方",
         "color": "#688DA0",
         "blog": "思遥方的小家",
@@ -133,8 +133,8 @@
         "desc": "蘑菇森林的尽头，新世界的起点"
     },
     {
-        "url": "https://blog.soda.net.cn/",
-        "avatar": "https://blog.soda.net.cn/images/souiken.jpg",
+        "url": "https://blog.raineast.icu",
+        "avatar": "https://blog.raineast.icu/images/souiken.jpg",
         "name": "Souiken",
         "color": "#d2f043",
         "blog": "Souiken's Blog",
@@ -192,7 +192,7 @@
         "url": "https://blog.skk.moe",
         "avatar": "https://cdn.skk.moe/avatar/192x192.png",
         "name": "苏卡卡",
-        "color": "#1f6dda",
+        "color": "#bc7e56",
         "blog": "苏卡卡的有底洞",
         "desc": "童话只美在真实却从不续写"
     },
@@ -277,7 +277,7 @@
         "desc": "Dare && Do"
     },
     {
-        "url": "https://www.mbrjun.cn/",
+        "url": "https://www.mbrjun.cn",
         "avatar": "https://cos.mbrjun.cn/PICS/LG4v3avatar144px.jpg",
         "name": "MBRjun",
         "color": "#218bff",
@@ -285,11 +285,11 @@
         "desc": "我们生活在大地上，但我们的梦想超越天空"
     },
     {
-        "url": "https://xiaojin233.cn/",
+        "url": "https://xiaojin233.cn",
         "avatar": "https://xiaojin233.cn/img/avator.png",
         "name": "Xiao_Jin",
         "color": "#665C77",
-        "blog": "Xiao_Jin's Homepage",
-        "desc": "你说得对但是。。。"
+        "blog": "Xiao_Jin",
+        "desc": "你说得都对，但是。。。"
     }
 ]
