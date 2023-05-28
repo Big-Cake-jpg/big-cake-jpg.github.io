@@ -291,5 +291,13 @@
         "color": "#4CAF50",
         "blog": "李荷林的个人主页",
         "desc": "一个标准的初三学生"
+    },
+    {
+        "url": "https://blog.gplane.win",
+        "avatar": "https://blog.gplane.win/images/favicon.webp",
+        "name": "Pig Fang",
+        "color": "#592ce5",
+        "blog": "Pig Fang",
+        "desc": "一只猪，但不是头像里的那只"
     }
 ]
