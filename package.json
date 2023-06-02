@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@iconify-json/fluent": "^1.1.21",
-    "valaxy": "^0.14.28",
+    "valaxy": "^0.14.30",
     "valaxy-addon-algolia": "^0.0.2",
     "valaxy-addon-components": "^0.0.1",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-waline": "^0.1.0",
-    "valaxy-theme-yun": "^0.14.28",
-    "vite-plugin-pwa": "^0.16.0"
+    "valaxy-theme-yun": "^0.14.30",
+    "vite-plugin-pwa": "^0.16.1"
   },
   "devDependencies": {
     "esbuild-wasm": "latest"
