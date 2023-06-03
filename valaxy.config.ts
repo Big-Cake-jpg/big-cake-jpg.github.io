@@ -28,9 +28,7 @@ export default defineValaxyConfig<ThemeConfig>({
       cdn: "https://npm.onmicrosoft.cn/",
       recaptchaV3Key: "6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih",
     }),
-    addonLightGallery({
-      enable: false,
-    }),
+    addonLightGallery(),
   ],
 
   vite: {
