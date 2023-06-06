@@ -4883,10 +4883,10 @@ vite-plugin-pages@^0.30.1:
     picocolors "^1.0.0"
     yaml "^2.2.2"
 
-vite-plugin-pwa@^0.16.1:
-  version "0.16.1"
-  resolved "https://registry.npmmirror.com/vite-plugin-pwa/-/vite-plugin-pwa-0.16.1.tgz#3853a951d8758a60253415867b351b11f6e5d845"
-  integrity sha512-OdD+ck+jiCkeUQPwXCNttR62ZC2On4wasn+03Qyx0x1bLGv1IXgl59WexpWMbgKD7jZVjozWGcy3etRJJzwsvA==
+vite-plugin-pwa@^0.16.3:
+  version "0.16.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.16.3.tgz#123a47c95567c29f83bcf9988c5645733aad2815"
+  integrity sha512-eYt++n1dneEo5cChJ7Rg6ZWJG8Xr9I5EzQss5m3zgMOmfHRH83E5W+jhaoLqlSCu/8g4msy9a4iZOxAmhL4HAQ==
   dependencies:
     debug "^4.3.4"
     fast-glob "^3.2.12"
