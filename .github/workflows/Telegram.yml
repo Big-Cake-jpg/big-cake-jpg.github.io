@@ -17,13 +17,13 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         chatid: ${{ secrets.TELEGRAM_TO }}
         message: |
-          💡 博客发布新文章啦!
+          💡 新文章在博客发布啦！
           
           👤 提交人: ${{ github.event.commits[0].author.name }} (${{ github.event.commits[0].author.username }})
 
           📄 提交信息: ${{ github.event.commits[0].message }}
 
-          ⚠️ 注意：由于 Service Worker 缓存原因，该文章可能不会立刻在博客上显示。可以稍后再来查看，或者清除浏览器缓存。
+          ⚠️ 注意：由于 Service Worker 缓存原因，该文章可能不会立刻在博客上显示。您可以稍后再来查看，或者清除浏览器缓存。
         button: true
         button_name: 👀 立即查看 👀
         button_url: https://lihaoyu.cn/
