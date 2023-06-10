@@ -2,7 +2,7 @@
 title: 我的小伙伴们
 keywords: 链接
 description: 以及穗香咖啡馆的各位！
-links: /links.json
+links: https://api.lihaoyu.cn/api/blog/links
 random: true
 aplayer: true
 toc: false
@@ -15,6 +15,8 @@ medium_zoom: false
  type="song"
  theme="#F2BC57">
 </meting-js>
+
+友链需要一定时间来加载，如果无法显示，请确认 `api.lihaoyu.cn` 是否能够正常访问。
 
 <YunLinks :links="frontmatter.links" :random="frontmatter.random" />
 
@@ -53,6 +55,8 @@ medium_zoom: false
     "desc": "也许我们会分别，但我们将永远不会忘记彼此。" // 一句话介绍
 }
 ```
-如果不嫌麻烦的话，也可以编辑[此文件](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/public/links.json)，然后打开一个 Pull Request。如果 CI 通过，我就会将其合并。
+现已不支持自主提交 Pull Requests 的方式提交友链，请考虑打开一个 Issue 或者按照上述方式在评论区留言。你可以在 `https://api.lihaoyu.cn/api/blog/links` 查看所有友链的 JSON 格式数据。
+
+> 可能以后会考虑搭建自助上链的接口，咕咕咕。
 
 如果没有其它情况出现，我不会移除友链。但如果你在上述流程通过以后移除了我的友链，那么我也会毫不留情的删除你的小站。
