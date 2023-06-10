@@ -39,7 +39,7 @@ medium_zoom: false
   - 512x，WebP：https://blog-api.lihaoyu.cn/images/profile/avatar-512x.webp
   - 128x，WebP：https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp
   - Gravatar E-Mail Hash：`636d113ce37111d08f08faee780ce9b8`
-- 站点名称：大蛋糕的烘焙坊
+- 站点名称：晓雨杂记
 - 昵称：Big_Cake / 晓雨
 - 主题色：`#F2BC57`
 - 描述：也许我们会分别，但我们将永远不会忘记彼此
@@ -51,7 +51,7 @@ medium_zoom: false
     "avatar": "https://blog-api.lihaoyu.cn/avatar", // 头像
     "name": "Big_Cake", // 昵称
     "color": "#F2BC57", // 主题色
-    "blog": "大蛋糕的烘焙坊", // 站点名称
+    "blog": "晓雨杂记", // 站点名称
     "desc": "也许我们会分别，但我们将永远不会忘记彼此。" // 一句话介绍
 }
 ```

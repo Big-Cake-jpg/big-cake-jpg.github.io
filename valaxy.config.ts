@@ -37,8 +37,8 @@ export default defineValaxyConfig<ThemeConfig>({
         injectRegister: "auto",
         registerType: "autoUpdate",
         manifest: {
-          name: "大蛋糕的烘焙坊",
-          short_name: "大蛋糕的烘焙坊",
+          name: "晓雨杂记",
+          short_name: "晓雨杂记",
           description: "也许我们会分别，但我们将永远不会忘记彼此",
           theme_color: "#F2BC57",
           background_color: "#FFFFFF",
@@ -194,11 +194,11 @@ export default defineValaxyConfig<ThemeConfig>({
   themeConfig: {
     notice: {
       enable: true,
-      content: "好耶！本站现已支持 PWA，欢迎大家安装并体验！",
+      content: "本站已更名为“晓雨杂记”。若您有本站友链，请尽快更新您的友链信息。",
     },
     banner: {
       enable: true,
-      title: "大蛋糕的烘焙坊",
+      title: "晓雨杂记",
       cloud: {
         enable: true,
       },

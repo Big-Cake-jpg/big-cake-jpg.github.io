@@ -4,22 +4,23 @@ export default defineSiteConfig({
   url: "https://lihaoyu.cn",
   favicon: "https://blog-api.lihaoyu.cn/favicon",
   lang: "zh-CN",
-  title: "大蛋糕的烘焙坊",
+  title: "晓雨杂记",
   author: {
     name: "Big_Cake",
     avatar: "https://blog-api.lihaoyu.cn/avatar",
     email: "me@lihaoyu.cn",
     link: "https://lihaoyu.cn",
   },
-  description: "一个屑初三学生的小窝",
+  description: "于风雨中 承载所有的回忆",
   subtitle: "也许我们会分别，但我们将永远不会忘记彼此",
+  timezone: "Asia/Shanghai",
 
   feed: {
     favicon: "https://blog-api.lihaoyu.cn/favicon"
   },
 
   cdn: {
-    prefix: "https://npm.onmicrosoft.cn",
+    prefix: "https://npm.onmicrosoft.cn/",
   },
 
   social: [
