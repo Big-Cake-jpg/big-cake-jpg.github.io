@@ -4802,10 +4802,10 @@ valaxy-addon-waline@0.1.0, valaxy-addon-waline@^0.1.0:
   dependencies:
     "@waline/client" "^2.14.7"
 
-valaxy-theme-yun@^0.14.35:
-  version "0.14.35"
-  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.35.tgz#e6a9356448316ffa8de79c033b56a8b8636b2ba4"
-  integrity sha512-7+xVGIQQ7zpi/r/qAozZTdsePsUVUOX/m9eX+qO9aitjxh92oNWJd3+7R7wThiuwOMq1nM88HwBtV3x217ZcGA==
+valaxy-theme-yun@^0.14.36:
+  version "0.14.36"
+  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.36.tgz#0fb9f6799d1ccc4585c280eebb036c9b28eb02dd"
+  integrity sha512-at8pgT7WopVtVg+M6TRTSbVUYi0DV1BHaj3pFZ0H9vND6Va1IPuZbIVmpBUQRue+GRKib5gOKvmrG2z0YNLxfw==
   dependencies:
     "@iconify-json/ant-design" "^1.1.5"
     "@iconify-json/simple-icons" "^1.1.55"
