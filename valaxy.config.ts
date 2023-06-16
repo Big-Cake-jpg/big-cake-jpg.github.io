@@ -222,6 +222,12 @@ export default defineValaxyConfig<ThemeConfig>({
         icon: "i-ri-checkbox-blank-circle-fill",
         color: "gray",
       },
+      {
+        name: "隐私政策",
+        url: "/policies/privacy",
+        icon: "i-ri-chat-private-line",
+        color: "red",
+      },
       /* {
         name: '说说',
         url: '/artitalk/',
