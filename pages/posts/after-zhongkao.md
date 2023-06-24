@@ -4,6 +4,11 @@ title: 中考之后
 date: 2023-06-24 13:11:27
 updated: 2023-06-24 13:11:27
 cover: https://r2.lihaoyu.cn/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp
+categories: 中考
+tags: 
+  - 学习
+  - 未来
+  - 考试
 ---
 中考，结束了。同样的，我也不再是一个初中学生了。
 
