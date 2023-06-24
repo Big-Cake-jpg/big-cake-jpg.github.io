@@ -14,9 +14,9 @@ aplayer: true
 
 远方的朋友，你好！
 
-我是 Big_Cake，欢迎来到大蛋糕的烘焙坊！
+我是 Big_Cake，欢迎来到「晓雨杂记」！
 
-> ~~15 岁，是初三学牲~~，你可以叫我 cake、蛋糕，以及任何你喜欢的称呼。
+> ~~15 岁，事学生~~，你可以叫我 cake、蛋糕，以及任何你喜欢的称呼。
 
 ![xiaoyu](https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/75997cf427b3ba09c10b22eb52442002_3507496047383938720.webp)_这真的不是我，只是一个叫晓雨的少年罢了_
 
@@ -37,3 +37,5 @@ aplayer: true
 今日你我相聚于此，想必是为了更久远的发展。目前，我加入了[「开往」](https://travellings.cn)与[「十年之约」](https://foreverblog.cn)，为的就是激励我能走的更远，能够成为一个自己满意的人。
 
 也许我们会分别，但我们将永远不会忘记彼此。
+
+![](https://r2.lihaoyu.cn/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp)_送我自己的一份中考贺礼！By [委鬼小宸](https://space.bilibili.com/66774358)_
