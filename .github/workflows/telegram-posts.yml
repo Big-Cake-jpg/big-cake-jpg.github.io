@@ -1,4 +1,4 @@
-name: Telegram
+name: telegram-posts
 on: 
   workflow_dispatch:
   push:
