@@ -1,0 +1,25 @@
+name: telegram-commits
+on: 
+  workflow_dispatch:
+  push:
+    branches: 
+      - source
+
+jobs:
+  sendMsg:
+    name: Send Message
+    runs-on: ubuntu-latest
+    steps:
+    - uses: colutius/Telegram-Msg@main
+      with:
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        chatid: ${{ secrets.TELEGRAM_TO }}
+        message: |
+          🛠️ 有新的 Commit！
+          
+          👤 提交人: ${{ github.event.commits[0].author.name }} (${{ github.event.commits[0].author.username }})
+
+          📄 提交信息: ${{ github.event.commits[0].message }}
+        button: false
+        is_notify: false
+        is_preview: false
