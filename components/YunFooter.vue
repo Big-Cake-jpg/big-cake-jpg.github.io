@@ -16,5 +16,6 @@ import YunFooter from "valaxy-theme-yun/components/YunFooter.vue";
       >萌 ICP 备 20230105 号</a
     >
     <ForeverblogLogo />
+    <FooterLink />
   </YunFooter>
 </template>
