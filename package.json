@@ -21,7 +21,8 @@
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-waline": "^0.1.0",
     "valaxy-theme-yun": "^0.14.36",
-    "vite-plugin-pwa": "^0.16.4"
+    "vite-plugin-pwa": "^0.16.4",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "esbuild-wasm": "latest"
