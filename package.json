@@ -2,6 +2,7 @@
   "name": "bigcake-blog",
   "version": "0.11.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "npm run build:ssg && npm run rss && npx valaxy fuse",
     "build:spa": "valaxy build",
@@ -13,16 +14,13 @@
   },
   "dependencies": {
     "@iconify-json/fluent": "^1.1.25",
-    "ansi-regex": "^6.0.1",
-    "axios": "^1.4.0",
     "valaxy": "^0.14.36",
     "valaxy-addon-algolia": "^0.0.2",
     "valaxy-addon-components": "^0.0.1",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-waline": "^0.1.0",
     "valaxy-theme-yun": "^0.14.36",
-    "vite-plugin-pwa": "^0.16.4",
-    "yargs": "^17.7.2"
+    "vite-plugin-pwa": "^0.16.4"
   },
   "devDependencies": {
     "esbuild-wasm": "latest"
