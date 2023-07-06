@@ -2,7 +2,6 @@
   "name": "bigcake-blog",
   "version": "0.11.1",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "npm run build:ssg && npm run rss && npx valaxy fuse",
     "build:spa": "valaxy build",
