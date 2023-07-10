@@ -1259,10 +1259,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/fluent@^1.1.25":
-  version "1.1.25"
-  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.25.tgz#d230ce26a8e634ab90841fc2b3cbd2367a4548ec"
-  integrity sha512-93VTPFM6tDpnws+FqgJ26oHAZc4nhXK9VGpMUnia18onJUqIvkLtXLsKqXqi0L2AGn5afADxMtufqra1d0+dzg==
+"@iconify-json/fluent@^1.1.26":
+  version "1.1.26"
+  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.26.tgz#2ab9230bf2ccfdefac236ba0766b4dc2eebc974c"
+  integrity sha512-vXHEFdDGSrLPL36rPzbaBhzg14mcu6mqK3/YYWTWPU9tNeircyV2jp4IHFhkzpK6HsPJS1/uvVXTlC0w4KzTmw==
   dependencies:
     "@iconify/types" "*"
 
@@ -2044,7 +2044,7 @@ animejs@^3.2.1:
   resolved "https://registry.npmmirror.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
   integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
 
-ansi-regex@5.0.1, ansi-regex@^5.0.1:
+ansi-regex@5.0.1:
   version "5.0.1"
   resolved "https://registry.npmmirror.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
   integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
