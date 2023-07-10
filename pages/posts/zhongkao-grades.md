@@ -1,13 +1,12 @@
 ---
-abbrlink: ''
 aplayer: true
 categories:
 - 中考
-date: '2023-07-09 09:06:15'
+date: 2023-07-09 09:06:15
 tags:
 - 考试
 title: 中考成绩！
-updated: 2023-7-10T17:16:49.661+8:0
+updated: 2023-07-10 17:16:49
 ---
 <meting-js
 id="1870303714"
