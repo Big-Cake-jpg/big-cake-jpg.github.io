@@ -194,7 +194,7 @@ export default defineValaxyConfig<ThemeConfig>({
   themeConfig: {
     notice: {
       enable: true,
-      content: "本站已更名为“晓雨杂记”。若您有本站友链，请尽快更新您的友链信息。",
+      content: "由于 PWA 缓存问题，如果您看到 RSS 订阅更新想要浏览新文章，需要等待约半分钟以让 Service Worker 获取新的内容。获取完成后页面会自动刷新，显示新的内容。",
     },
     banner: {
       enable: true,
