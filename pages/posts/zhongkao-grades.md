@@ -8,16 +8,17 @@ tags:
 title: 中考成绩！
 updated: 2023-07-10 17:16:49
 ---
+
+昨天晚上快 12 点的时候，我查到了自己的中考成绩。
+
+<!-- more -->
+
 <meting-js
 id="1870303714"
 server="netease"
 type="song"
 theme="#F2BC57">
 </meting-js>
-
-昨天晚上快 12 点的时候，我查到了自己的中考成绩。
-
-<!-- more -->
 
 ![1688865574461.webp](https://r2.lihaoyu.cn/2023/07/09/64aa0b2c31555.webp)
 
