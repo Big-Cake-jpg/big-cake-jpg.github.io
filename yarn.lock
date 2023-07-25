@@ -2377,6 +2377,11 @@ crypto-random-string@^2.0.0:
   resolved "https://registry.npmmirror.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
 
+css-i18n@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/css-i18n/-/css-i18n-0.0.2.tgz#80dfe0917607c6fc77e784d23a03c36845a92ea0"
+  integrity sha512-pz6FSzr/WmCcm3djBF/fdnFDeW1lthu00U+eKlzKOHAnc60/+DOyXO7/9Ko3N8XS3Dtvhtfhm5KmQ7Lr55JGRA==
+
 css-select@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmmirror.com/css-select/-/css-select-5.1.0.tgz#b8ebd6554c3637ccc76688804ad3f6a6fdaea8a6"
@@ -4770,10 +4775,10 @@ valaxy-theme-yun@^0.14.45:
     animejs "^3.2.1"
     valaxy-addon-waline "0.1.0"
 
-valaxy@^0.14.42:
-  version "0.14.42"
-  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.14.42.tgz#86b2e032a96c77bac179a694f856f34bd2c1cfff"
-  integrity sha512-UDH+/YCpqXmGKk14vkaKDIaysQ9g7medif19gAsREZqBgzQY5hFl/VbkEi/BUlq8WXVfZucPSy2qE4wcTAHFFA==
+valaxy@^0.14.45:
+  version "0.14.45"
+  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.14.45.tgz#2467fe8a7719f599e6b95e4b6d137900744482c2"
+  integrity sha512-5chJmFcv7Q+5qTLACh3ChMKoOQp3VxsI/gQRRgmMukdgHt2DHWhCq3pweMPb6lTJDZvOu1F+idWFqnaj+7eS8g==
   dependencies:
     "@antfu/utils" "^0.7.5"
     "@ctrl/tinycolor" "^3.6.0"
@@ -4790,6 +4795,7 @@ valaxy@^0.14.42:
     consola "^3.2.3"
     critters "^0.0.18"
     cross-spawn "^7.0.3"
+    css-i18n "^0.0.2"
     dayjs "^1.11.9"
     ejs "^3.1.9"
     escape-html "^1.0.3"
