@@ -25,6 +25,8 @@
 - 主站：[lihaoyu.cn](https://lihaoyu.cn) | [big-cake-jpg.github.io](https://big-cake-jpg.github.io)
 - 备用：[bigcake-blog.netlify.app](https://bigcake-blog.netlify.app)
 
+Hexo 存档分支：`hexo`
+
 ## Usage ｜ 用法
 
 ```bash
@@ -39,15 +41,3 @@ yarn build
 推送至 GitHub，使用 Actions 生成静态页面并推送 main 分支
 
 同时触发其它地方的构建（Vercel，Netlify……）
-
-### Blog Updates
-
-`💡 New post`
-
-`🐛 Typo`
-
-`⬆️ Upgrade dependencies / themes`
-
-`❤️ Fix CI build`
-
-`📃 Update config`
