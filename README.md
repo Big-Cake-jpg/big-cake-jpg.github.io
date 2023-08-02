@@ -14,7 +14,7 @@
 
 ## Preview ｜ 预览
 
-![image](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/assets/76810494/c6da5143-11c9-4ccc-9f32-0f2ef88cbe67)
+![preview](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/assets/76810494/eb75f340-5628-4bd5-bb11-7666146fc098)
 
 ![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/Big-Cake-jpg/big-cake-jpg.github.io/gh-pages.yml?branch=source&label=Pages&logo=GitHub&style=flat-square) ![Netlify](https://img.shields.io/netlify/1688f720-9e59-44df-a481-8cb2d4141f94?label=Netlify%20Build&logo=netlify&style=flat-square)
 
