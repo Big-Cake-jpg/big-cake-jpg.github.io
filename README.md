@@ -1,15 +1,3 @@
-# 公告
-
-各位博主，非常抱歉让大家发现站点无法访问了。`lihaoyu.cn` 正在进行 ICP 备案，目前处于管局审核阶段，应相关法律法规要求主域名暂时关闭一段时间。
-
-如果您有需要，可以删除友链并向 me@lihaoyu.cn 发送一封电子邮件说明情况，抑或是将链接更新为 `bigcake-blog.netlify.app`。
-
-给各位造成了困扰，我深表歉意，今后也请继续关照晓雨杂记。
-
-![image](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/assets/76810494/73fb2558-ab94-432e-a27d-1827c7e4e44e)
-
----
-
 # 🍰 晓雨杂记
 
 ## Preview ｜ 预览
