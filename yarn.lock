@@ -2644,9 +2644,9 @@ es-to-primitive@^1.2.1:
     is-symbol "^1.0.2"
 
 esbuild-wasm@latest:
-  version "0.18.17"
-  resolved "https://registry.yarnpkg.com/esbuild-wasm/-/esbuild-wasm-0.18.17.tgz#d3d8827502c7714212a7b2544ee99132f07189cc"
-  integrity sha512-9OHGcuRzy+I8ziF9FzjfKLWAPbvi0e/metACVg9k6bK+SI4FFxeV6PcZsz8RIVaMD4YNehw+qj6UMR3+qj/EuQ==
+  version "0.18.20"
+  resolved "https://registry.yarnpkg.com/esbuild-wasm/-/esbuild-wasm-0.18.20.tgz#5b09de9766f5a39cdf4fe3ffe78ff1fb70cdecfc"
+  integrity sha512-xRXxH7q4FeC783rORSCyBPWQhcboleKXRPvt3Yl2YMe7jTtu/j7/zjWjqkVhO9BNVHSNVC6igG+XVTPWNQ+kRA==
 
 esbuild@^0.18.10:
   version "0.18.14"
