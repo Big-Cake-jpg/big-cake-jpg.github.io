@@ -2363,10 +2363,10 @@ core-js-compat@^3.30.1, core-js-compat@^3.30.2:
   dependencies:
     browserslist "^4.21.5"
 
-critters@^0.0.18:
-  version "0.0.18"
-  resolved "https://registry.npmmirror.com/critters/-/critters-0.0.18.tgz#37ea730ee3a1f19844e8099c3fd75b526e1bbcc9"
-  integrity sha512-I7t/da29EIWXgxx2RSW1md1DvenEgEuLlki6nHE5+Nc0e3eib5AuGIGbPVuI8q+erCKkSP9T/NqYfvasAy7x7A==
+critters@^0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/critters/-/critters-0.0.20.tgz#08ddb961550ab7b3a59370537e4f01df208f7646"
+  integrity sha512-CImNRorKOl5d8TWcnAz5n5izQ6HFsvz29k327/ELy6UFcmbiZNOsinaKvzv16WZR0P6etfSWYzE47C4/56B3Uw==
   dependencies:
     chalk "^4.1.0"
     css-select "^5.1.0"
@@ -4676,9 +4676,9 @@ universalify@^2.0.0:
   resolved "https://registry.npmmirror.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
-unocss@^0.54.1:
+unocss@^0.54.3:
   version "0.54.3"
-  resolved "https://registry.npmmirror.com/unocss/-/unocss-0.54.3.tgz#9dd21240274f652bc14f1d6287459187230ac629"
+  resolved "https://registry.yarnpkg.com/unocss/-/unocss-0.54.3.tgz#9dd21240274f652bc14f1d6287459187230ac629"
   integrity sha512-uaoCKFigRkqceLmBrtWhLqQR6D6NyBAtSFVUnM1m57BSqA0EwAFmBsgoynzAmZRTQQFsPrBzKQjEmaCUTyUd9Q==
   dependencies:
     "@unocss/astro" "0.54.3"
@@ -4798,10 +4798,10 @@ valaxy-theme-yun@^0.14.45:
     animejs "^3.2.1"
     valaxy-addon-waline "0.1.0"
 
-valaxy@^0.14.45:
-  version "0.14.47"
-  resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.14.47.tgz#ad08c60ce3c2b788253ec426a9a70cb23cea4d95"
-  integrity sha512-uAm1efDRCu5RKSXtnkTOpVNxJWiy0T6/5JgtGHjh53IJvOEjqbN7Xqf0vYTEPsiE+PBmB8mgQxurQFcz5kfu8w==
+valaxy@^0.14.48:
+  version "0.14.48"
+  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.14.48.tgz#c19c6eacb2519c1b824cd58aa2e685fb7e977beb"
+  integrity sha512-TeSP/SeCqfPsb88goHAh8Yr6/PvDaI9LtxD94oVldWqZZmS5VE2NgLVtHlrjKib4nDV9quKIftziAzKIgHGttA==
   dependencies:
     "@antfu/utils" "^0.7.5"
     "@ctrl/tinycolor" "^3.6.0"
@@ -4816,7 +4816,7 @@ valaxy@^0.14.45:
     "@vueuse/schema-org" "^2.2.0"
     body-scroll-lock "4.0.0-beta.0"
     consola "^3.2.3"
-    critters "^0.0.18"
+    critters "^0.0.20"
     cross-spawn "^7.0.3"
     css-i18n "^0.0.2"
     dayjs "^1.11.9"
@@ -4848,9 +4848,9 @@ valaxy@^0.14.45:
     shiki "^0.14.3"
     star-markdown-css "^0.4.2"
     unconfig "^0.3.10"
-    unocss "^0.54.1"
+    unocss "^0.54.3"
     unplugin-vue-components "^0.25.1"
-    vite "^4.4.8"
+    vite "^4.4.9"
     vite-plugin-pages "^0.31.0"
     vite-plugin-vue-layouts "^0.8.0"
     vite-ssg "0.23.1"
@@ -4915,9 +4915,9 @@ vite-ssg@0.23.1:
     prettier "^3.0.0"
     yargs "^17.7.2"
 
-vite@^4.4.8:
+vite@^4.4.9:
   version "4.4.9"
-  resolved "https://registry.npmmirror.com/vite/-/vite-4.4.9.tgz#1402423f1a2f8d66fd8d15e351127c7236d29d3d"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-4.4.9.tgz#1402423f1a2f8d66fd8d15e351127c7236d29d3d"
   integrity sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==
   dependencies:
     esbuild "^0.18.10"
