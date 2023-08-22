@@ -1245,6 +1245,11 @@
   resolved "https://registry.npmmirror.com/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz#786c5f41f043b07afb1af37683d7c33668858f6d"
   integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
 
+"@explosions/fireworks@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@explosions/fireworks/-/fireworks-0.0.2.tgz#1b0ecb9532edd5c44a509eef1cd19bb013b2eb17"
+  integrity sha512-BiF9iWE/8jTmqlxcIhSZlJgUlBJ62Wk9I6jTwfkd0zMn0QS2IxTxypOnV4CSo21bsnmsvJxh9ryepAK+D4OJqA==
+
 "@iconify-json/ant-design@^1.1.8":
   version "1.1.8"
   resolved "https://registry.npmmirror.com/@iconify-json/ant-design/-/ant-design-1.1.8.tgz#f18d4822b555d4d215789de6840ecb3f1fa09542"
@@ -1273,10 +1278,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/simple-icons@^1.1.64":
-  version "1.1.65"
-  resolved "https://registry.npmmirror.com/@iconify-json/simple-icons/-/simple-icons-1.1.65.tgz#316ac59fbc626709ce65a341110e13531273b39b"
-  integrity sha512-pCL5nF80e5YrvnR9VFt7EROEcWE6vvtBaThx+hC1Xaw3e1DkCTc4JioiNnYrON/p2iNVvncAQAgQP1Us/XPInw==
+"@iconify-json/simple-icons@^1.1.67":
+  version "1.1.67"
+  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.67.tgz#913e2aa74c9b8f81f001cbf80d90b2dcaff2e454"
+  integrity sha512-ZVpiOC7+H+ZVRpvCNZLz1AdD2E7TINS4ksQPDHrdSYuezF6wJ0kvonwFechlgUoxaqM/R9HZ/LnYABFCdwWA6g==
   dependencies:
     "@iconify/types" "*"
 
@@ -4781,22 +4786,22 @@ valaxy-addon-lightgallery@^0.0.2:
   dependencies:
     lightgallery "^2.7.1"
 
-valaxy-addon-waline@0.1.0, valaxy-addon-waline@^0.1.0:
+valaxy-addon-waline@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmmirror.com/valaxy-addon-waline/-/valaxy-addon-waline-0.1.0.tgz#0125b856a6caae46f23e23d2babe33358d245574"
   integrity sha512-+P5ElZqgSWK7TCPu1E6jLNxHTSAP9orDFiJR0O3vYYmMcMxmuV1+VXuaGBfWcMQpt3knPCHbwir6rNqWw3O/Cw==
   dependencies:
     "@waline/client" "^2.14.7"
 
-valaxy-theme-yun@^0.14.45:
-  version "0.14.47"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.47.tgz#1263e580c157931f9b020a3a6a8d3f8c181d819d"
-  integrity sha512-UIMdKKC+YqCWc8wrUDTmb6bpFuWfZ0ESQiT61MPwuJPUMAq91/uhrHIPpaviyVeDEXXTPvapSbDHStOQVc941A==
+valaxy-theme-yun@^0.14.54:
+  version "0.14.54"
+  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.14.54.tgz#7be20b4a45270dc869fae8e9a40908c397b4660e"
+  integrity sha512-fpWAwfMotS4fcVKe35R3u7Yd/nlqxegOp1DOLA08F/9BXcvwzowvUUijec2KRSTB4OQYJof6C6UHsVrG0TC2Ag==
   dependencies:
+    "@explosions/fireworks" "^0.0.2"
     "@iconify-json/ant-design" "^1.1.8"
-    "@iconify-json/simple-icons" "^1.1.64"
+    "@iconify-json/simple-icons" "^1.1.67"
     animejs "^3.2.1"
-    valaxy-addon-waline "0.1.0"
 
 valaxy@^0.14.45:
   version "0.14.47"
