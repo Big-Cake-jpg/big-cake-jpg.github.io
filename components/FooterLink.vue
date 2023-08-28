@@ -42,7 +42,7 @@ export default {
   },
   mounted() {
     // change the url to your own
-    axios.get("https://api.lihaoyu.cn/api/blog/links").then((response) => {
+    axios.get("https://api.lihaoyu.cn/blog/links").then((response) => {
       this.blogs = shuffle(response.data); // shuffle the data
       this.loading = false; // set loading to false after getting the data
     });

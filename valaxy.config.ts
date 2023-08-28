@@ -242,8 +242,8 @@ export default defineValaxyConfig<ThemeConfig>({
 
     bg_image: {
       enable: true,
-      url: "https://r2.lihaoyu.cn/bg-bright-blur-10px.webp",
-      dark: "https://r2.lihaoyu.cn/bg-dark.webp",
+      url: "https://r2.lihaoyu.cn/bg-bright-blur-50px.webp",
+      dark: "https://r2.lihaoyu.cn/bg-dark-blur-50px.webp",
     },
 
     say: {

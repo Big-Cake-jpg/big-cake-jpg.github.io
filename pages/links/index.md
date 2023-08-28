@@ -2,7 +2,7 @@
 title: 我的小伙伴们
 keywords: 链接
 description: 以及穗香咖啡馆的各位！
-links: https://api.lihaoyu.cn/api/blog/links
+links: https://api.lihaoyu.cn/blog/links
 random: true
 aplayer: true
 toc: false
@@ -55,7 +55,7 @@ medium_zoom: false
     "desc": "也许我们会分别，但我们将永远不会忘记彼此。" // 一句话介绍
 }
 ```
-现已不支持自主提交 Pull Requests 的方式提交友链，请考虑打开一个 Issue 或者按照上述方式在评论区留言。你可以在 `https://api.lihaoyu.cn/api/blog/links` 查看所有友链的 JSON 格式数据。
+现已不支持自主提交 Pull Requests 的方式提交友链，请考虑打开一个 Issue 或者按照上述方式在评论区留言。你可以在 `https://api.lihaoyu.cn/blog/links` 查看所有友链的 JSON 格式数据。
 
 > 可能以后会考虑搭建自助上链的接口，咕咕咕。
 
