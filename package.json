@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/fluent": "^1.1.33",
     "ansi-regex": "5.0.1",
-    "axios": "^1.4.0",
+    "axios": "^1.5.0",
     "valaxy": "^0.14.54",
     "valaxy-addon-algolia": "^0.0.2",
     "valaxy-addon-components": "^0.0.1",
