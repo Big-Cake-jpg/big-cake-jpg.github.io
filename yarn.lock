@@ -4835,10 +4835,10 @@ valaxy-addon-algolia@^0.0.2:
     "@docsearch/css" "^3.3.0"
     "@docsearch/js" "^3.3.0"
 
-valaxy-addon-components@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmmirror.com/valaxy-addon-components/-/valaxy-addon-components-0.0.1.tgz#7ddd62beca069bb0cbe3d1bafa5f2ac6a3fbc20c"
-  integrity sha512-460ObcDPh19j1wZMU+rTDoWpC9EbqfzEr/kfUFdraJRNv/ZSOn0TjP72FmamQ/21fY/Vb+U4/y+dJbUFUodQgA==
+valaxy-addon-components@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/valaxy-addon-components/-/valaxy-addon-components-0.0.2.tgz#de9f4a295ccb0f6aa39739f161bcb44aee2e07c1"
+  integrity sha512-J6JeNTagohF9fNvYaYiOwVHQGuhoWamy1P01mEUfzreacaJ3CqzJU1G/uSFMTvm3CXvMo8OAQCwqa+OqBG0dkw==
 
 valaxy-addon-lightgallery@^0.0.2:
   version "0.0.2"
