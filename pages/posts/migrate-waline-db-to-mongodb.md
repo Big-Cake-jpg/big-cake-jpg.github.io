@@ -2,17 +2,17 @@
 layout: post
 title: 将 Waline 从 LeanCloud 迁移到 MongoDB Cloud
 date: 2023-08-30 10:34:58
-updated: 2023-08-30 10:34:58
+updated: 2023-09-08 18:33:11
 tags:
   - Waline
   - LeanCloud
   - MongoDB
   - 速度
-catrgories: 优化
+categories: 优化
 ---
 ## 前言
 
-从 Hexo 时代开始，我的 Waline 就是托管在 Vercel 的，而数据存储使用的是 LeanCloud 国际版。这也是 Waline 官方最推荐的部署方式。虽然简单，但是时间长了 Waline 的速度必然会受制于 LeanCloud。之前 [杜老师](https://dusays.com) 就在我博客的[「谈人际交往」](https://lihaoyu.cn/posts/talk-about-communications)这篇文章下评论说我的 Waline 加载速度太慢了。
+从 Hexo 时代开始，我的 Waline 就是托管在 Vercel 的，而数据存储使用的是 LeanCloud 国际版。这也是 Waline 官方最推荐的部署方式。虽然简单，但是时间长了 Waline 的速度必然会受制于 LeanCloud。之前 [杜老师](https://dusays.com) 就在我博客的[「谈人际交往」](/posts/talk-about-communications)这篇文章下评论说我的 Waline 加载速度太慢了。
 
 ![1693363403499.webp](https://r2.lihaoyu.cn/2023/08/30/64eead7ab8b9e.webp)
 
@@ -28,11 +28,11 @@ catrgories: 优化
 
 创建好以后，在 “Network Access” 页面放行所有 IP 的访问请求，然后复制一下 SRV 格式的连接串。在 Navicat 里使用连接串连接到 MongoDB 之后创建一个名为 `waline` 的数据库，记好名字备用。
 
-打开部署在 Vercel 上的 Waline 项目，转到环境变量设置，删除原有的 LeanCloud 相关配置项，然后依照 [Waline 的文档](hhttps://waline.js.org/guide/database.html#mongodb)填写好 MongoDB 的连接信息。这里有一点需要注意：MongoDB Cloud 的 M0 数据库是没有集群信息的，如果设置了错误的 `MONGO_REPLICASET`，会导致 Waline 在获取评论信息时出现 `500` 连接超时错误。我当时迁移的时候就是卡在了这里，后来搜索到了 Waline 仓库里的一个 Issue 才知道这个问题。
+打开部署在 Vercel 上的 Waline 项目，转到环境变量设置，删除原有的 LeanCloud 相关配置项，然后依照 [Waline 的文档](https://waline.js.org/guide/database.html#mongodb)填写好 MongoDB 的连接信息。这里有一点需要注意：MongoDB Cloud 的 M0 数据库是没有集群信息的，如果设置了错误的 `MONGO_REPLICASET`，会导致 Waline 在获取评论信息时出现 `500` 连接超时错误。我当时迁移的时候就是卡在了这里，后来搜索到了 Waline 仓库里的一个 Issue 才知道这个问题。
 
 > 多机连接信息可以在这里找到：
 > 
-> ![1693364544500.webp](https://r2.lihaoyu.cn/2023/08/30/64eeb1460acc0.webp)_选择 `Drivers` 作为连接方式，`Driver` 为 Node.js，`Version`为 `2.2.12 or later`_
+> ![1693364544500.webp](https://r2.lihaoyu.cn/2023/08/30/64eeb1460acc0.webp)_选择 `Drivers` 作为连接方式，`Driver` 为 Node.js，`Version` 为 `2.2.12 or later`_
 > 
 > 其中形似黄色荧光笔勾住的部分即是多机连接信息，不要带端口号，按照 Waline 文档内的格式将其依次填入环境变量。
 
@@ -65,3 +65,13 @@ MongoDB 有一个“索引”功能，能够在一定程度上加快读取大的
 ## 参考
 
 [Hexo去LeanCloud依赖 | Finisky Garden](https://finisky.github.io/hexormleancloud/)
+
+## 坑
+
+后来有一次我发现几乎所有注册用户的绿色小对勾标志都没有了，看着很膈应。
+
+![1694171153453.webp](https://r2.lihaoyu.cn/2023/09/08/64fb000e1965d.webp)
+
+然后一翻数据库，好家伙，几乎所有评论都有一个空的 `user_id` 字段。我打开 `User` 表一对比，才知道这里的 `user_id` 字段其实就是 MongoDB 中每条数据最前面的 `id`。这下好了，得重新为之前的评论设置用户信息字段了。
+
+因为我没有什么编写脚本的经验，所以这一切操作都是在 Navicat 里手动进行的。就，挺累的……

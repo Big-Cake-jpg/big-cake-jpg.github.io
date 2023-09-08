@@ -32,6 +32,9 @@ export default defineValaxyConfig<ThemeConfig>({
   ],
 
   vite: {
+    optimizeDeps: {
+      include: ["@waline/client", "axios"],
+    },
     plugins: [
       VitePWA({
         injectRegister: "auto",
@@ -83,7 +86,7 @@ export default defineValaxyConfig<ThemeConfig>({
           ],
         },
         workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,jpg,json}'],
+          globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,jpg,json}"],
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/i,
@@ -194,7 +197,8 @@ export default defineValaxyConfig<ThemeConfig>({
   themeConfig: {
     notice: {
       enable: true,
-      content: "由于 PWA 缓存问题，如果您看到 RSS 订阅更新想要浏览新文章，需要等待约半分钟以让 Service Worker 获取新的内容。获取完成后页面会自动刷新，显示新的内容。",
+      content:
+        "由于 PWA 缓存问题，如果您看到 RSS 订阅更新想要浏览新文章，需要等待约半分钟以让 Service Worker 获取新的内容。获取完成后页面会自动刷新，显示新的内容。",
     },
     banner: {
       enable: true,
@@ -275,5 +279,12 @@ export default defineValaxyConfig<ThemeConfig>({
 
   features: {
     katex: false,
+  },
+
+  markdown: {
+    theme: {
+      light: "material-theme-lighter",
+      dark: "material-theme-darker",
+    },
   },
 });
