@@ -25,17 +25,24 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap"
     rel="stylesheet"
   />
-  <link
-    rel="stylesheet"
-    href="https://jsd.onmicrosoft.cn/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.css"
-  />
 </head>
 <body>
-  <script>
-    let tianliGPT_typingAnimate = true;
-    let tianliGPT_postSelector = ".content .markdown-body";
-    let tianliGPT_postURL = "*/posts/*";
-    let tianliGPT_key = "54fa14f74fb8e85236b2";
+  <script src="https://jsd.onmicrosoft.cn/gh/qxchuckle/Post-Summary-AI@5.8/chuckle-post-ai.min.js"></script>
+  <script data-pjax defer>
+    new ChucklePostAI({
+      el: ".markdown-body",
+      key: "54fa14f74fb8e85236b2",
+      rec_method: "all",
+      exclude: ["post-ai"],
+      whitelist: ["/posts/"],
+      summary_directly: true,
+      pjax: true,
+      summary_toggle: false,
+      summary_speech: false,
+      interface: {
+        name: "AI 生成的摘要",
+        version: "TianliGPT",
+      },
+    });
   </script>
-  <script src="https://jsd.onmicrosoft.cn/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
 </body>
