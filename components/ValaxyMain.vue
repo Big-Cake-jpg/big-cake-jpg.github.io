@@ -28,21 +28,6 @@ nextTick(() => {
       scrollTo(document.body, route.hash, true)
     }, 0)
   }
-  new ChucklePostAI({
-      el: ".markdown-body",
-      key: "54fa14f74fb8e85236b2",
-      rec_method: "all",
-      exclude: ["post-ai"],
-      whitelist: ["/posts/"],
-      summary_directly: true,
-      pjax: true,
-      summary_toggle: false,
-      summary_speech: false,
-      interface: {
-        name: "AI 生成的摘要",
-        version: "TianliGPT",
-      },
-    });
 })
 
 onContentUpdated(() => {
