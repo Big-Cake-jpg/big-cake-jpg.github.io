@@ -4,6 +4,8 @@ on:
   push:
     branches: 
       - source
+    paths:
+      - '!pages/posts/**'
 
 jobs:
   sendMsg:
