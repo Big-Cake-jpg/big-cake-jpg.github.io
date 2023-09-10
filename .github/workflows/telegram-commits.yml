@@ -4,8 +4,8 @@ on:
   push:
     branches: 
       - source
-    paths:
-      - '!pages/posts/**'
+    paths-ignore:
+      - 'pages/posts/**'
 
 jobs:
   sendMsg:
