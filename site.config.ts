@@ -127,4 +127,8 @@ export default defineSiteConfig({
   statistics: {
     enable: true,
   },
+
+  vanillaLazyload: {
+    enable: true,
+  }
 });
