@@ -16,7 +16,7 @@
     "ansi-regex": "5.0.1",
     "axios": "^1.5.0",
     "valaxy": "^0.14.59",
-    "valaxy-addon-algolia": "^0.0.2",
+    "valaxy-addon-algolia": "^0.0.3",
     "valaxy-addon-components": "^0.0.2",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-waline": "^0.1.0",
