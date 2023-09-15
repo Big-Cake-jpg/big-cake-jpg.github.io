@@ -20,7 +20,7 @@
     "valaxy-addon-components": "^0.0.2",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-waline": "^0.1.0",
-    "valaxy-theme-yun": "^0.14.59",
+    "valaxy-theme-yun": "^0.14.60",
     "vite-plugin-pwa": "^0.16.5"
   },
   "devDependencies": {
