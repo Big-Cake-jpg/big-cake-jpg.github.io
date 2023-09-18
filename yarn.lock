@@ -4795,10 +4795,10 @@ valaxy-theme-yun@^0.14.60:
     "@iconify-json/simple-icons" "^1.1.70"
     animejs "^3.2.1"
 
-valaxy@^0.14.60:
-  version "0.14.60"
-  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.14.60.tgz#db6c53498514d497bc0e29f57af07d0be7385ca4"
-  integrity sha512-bDszjxLgAMlNIQmklw7xagrNwaXKVRETSQ6pXrD87vqwglISDIiYEjxVHKe1b5pI0NyjGdCN+pWsrHM4OVdCHg==
+valaxy@^0.14.61:
+  version "0.14.61"
+  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.14.61.tgz#a6d39251b59ded0cfb5aec7dcca1f43435eba4b5"
+  integrity sha512-uPX8iSDjT3nt9qqPf6M9k4sfpprbtgDpAYPoeqLoh+bYn0VRv1tE8T/yRQVFBs4WfiM0MmOl0Ar9JCQGayyU1g==
   dependencies:
     "@antfu/utils" "^0.7.6"
     "@ctrl/tinycolor" "^4.0.2"
