@@ -1,24 +1,5 @@
 <script lang="ts" setup>
 import YunFooter from "valaxy-theme-yun/components/YunFooter.vue";
-// import { useHead } from "@vueuse/head";
-// import { onMounted } from "vue";
-
-/* useHead({
-  link: [
-    {
-      rel: "stylesheet",
-      href: "https://jsd.onmicrosoft.cn/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.css",
-    },
-  ],
-});
-
-onMounted(() => {
-  let script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src =
-    "https://jsd.onmicrosoft.cn/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js";
-  document.body.appendChild(script);
-}); */
 </script>
 
 <template>

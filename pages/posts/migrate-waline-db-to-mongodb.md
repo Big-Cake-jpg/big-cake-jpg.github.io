@@ -14,11 +14,11 @@ categories: 优化
 
 从 Hexo 时代开始，我的 Waline 就是托管在 Vercel 的，而数据存储使用的是 LeanCloud 国际版。这也是 Waline 官方最推荐的部署方式。虽然简单，但是时间长了 Waline 的速度必然会受制于 LeanCloud。之前 [杜老师](https://dusays.com) 就在我博客的[「谈人际交往」](/posts/talk-about-communications)这篇文章下评论说我的 Waline 加载速度太慢了。
 
-![1693363403499.webp](https://r2.lihaoyu.cn/2023/08/30/64eead7ab8b9e.webp)
-
 我自己后来翻文章、回复评论的时候也发现加载速度上的一些问题，便决定切换数据库，从 LeanCloud 迁出来优化评论区的性能。
 
 <!-- more -->
+
+![1693363403499.webp](https://r2.lihaoyu.cn/2023/08/30/64eead7ab8b9e.webp)
 
 ## 过程
 

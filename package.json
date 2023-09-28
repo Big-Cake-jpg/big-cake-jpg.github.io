@@ -3,7 +3,7 @@
   "version": "0.11.1",
   "private": true,
   "scripts": {
-    "build": "npm run build:ssg && npm run rss && npx valaxy fuse",
+    "build": "valaxy fuse && yarn build:ssg && yarn rss",
     "build:spa": "valaxy build",
     "build:ssg": "valaxy build --ssg",
     "dev": "valaxy",
@@ -24,7 +24,7 @@
     "vite-plugin-pwa": "^0.16.5"
   },
   "devDependencies": {
-    "esbuild-wasm": "^0.19.3"
+    "esbuild-wasm": "^0.19.4"
   },
   "overrides": {
     "esbuild": "npm:esbuild-wasm@latest"

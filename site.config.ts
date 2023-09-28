@@ -129,6 +129,6 @@ export default defineSiteConfig({
   },
 
   vanillaLazyload: {
-    enable: false,
-  }
+    enable: true,
+  },
 });
