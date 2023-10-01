@@ -16,7 +16,7 @@ export default defineSiteConfig({
   timezone: "Asia/Shanghai",
 
   feed: {
-    favicon: "https://blog-api.lihaoyu.cn/favicon"
+    favicon: "https://blog-api.lihaoyu.cn/favicon",
   },
 
   cdn: {

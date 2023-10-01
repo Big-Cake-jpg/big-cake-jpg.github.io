@@ -18,6 +18,7 @@ export default defineValaxyConfig<ThemeConfig>({
       },
       comment: true,
       pageview: true,
+      search: false,
       emoji: [
         "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/",
         "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/",
@@ -25,8 +26,27 @@ export default defineValaxyConfig<ThemeConfig>({
         "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/",
         "https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/",
       ],
-      cdn: "https://npm.onmicrosoft.cn/",
+      cdn: "https://jsd.onmicrosoft.cn/npm/",
       recaptchaV3Key: "6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih",
+      imageUploader: (file) => {
+        let formData = new FormData();
+        let headers = new Headers();
+
+        formData.append("file", file);
+        headers.append(
+          "Authorization",
+          "Bearer 112|jUV6Mnx8c3VZOMlnADP9omOiEiG6X1VLWBn3MI4T"
+        );
+        headers.append("Accept", "application/json");
+
+        return fetch("https://img.iqjty.com/api/v1/upload", {
+          method: "POST",
+          headers: headers,
+          body: formData,
+        })
+          .then((resp) => resp.json())
+          .then((resp) => resp.data.links.url);
+      },
     }),
     addonLightGallery(),
   ],
