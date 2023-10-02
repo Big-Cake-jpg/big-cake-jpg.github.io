@@ -27,7 +27,7 @@ export default defineValaxyConfig<ThemeConfig>({
         "https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/",
       ],
       cdn: "https://jsd.onmicrosoft.cn/npm/",
-      recaptchaV3Key: "6LdLYzUkAAAAAHFU1gBSqoKsrKkb_yKdOgDuJEih",
+      turnstileKey: "0x4AAAAAAALA9mD_xYAnGQhJ",
       imageUploader: (file) => {
         let formData = new FormData();
         let headers = new Headers();
