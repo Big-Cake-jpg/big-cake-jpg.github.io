@@ -1920,7 +1920,7 @@
   resolved "https://registry.npmmirror.com/@vue/shared/-/shared-3.3.4.tgz#06e83c5027f464eef861c329be81454bc8b70780"
   integrity sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==
 
-"@vueuse/core@10.4.1", "@vueuse/core@^10.1.2", "@vueuse/core@^10.4.1":
+"@vueuse/core@10.4.1", "@vueuse/core@^10.4.1":
   version "10.4.1"
   resolved "https://registry.npmmirror.com/@vueuse/core/-/core-10.4.1.tgz#fc2c8a83a571c207aaedbe393b22daa6d35123f2"
   integrity sha512-DkHIfMIoSIBjMgRRvdIvxsyboRZQmImofLyOHADqiVbQVilP8VVHDhBX2ZqoItOgu7dWa8oXiNnScOdPLhdEXg==
@@ -1968,15 +1968,15 @@
   dependencies:
     vue-demi ">=0.14.5"
 
-"@waline/client@^2.14.7":
-  version "2.15.5"
-  resolved "https://registry.npmmirror.com/@waline/client/-/client-2.15.5.tgz#8905b3e4598641aceb94d4168984d428d055af07"
-  integrity sha512-gLVeojWXRIRvXzVJwz9hfBokfde6KqZs+Adf7Z1SsEC3jAfyiqjOkdYkH93DhgMWyI0ck6nDlsBDLuePsFVifQ==
+"@waline/client@^2.15.8":
+  version "2.15.8"
+  resolved "https://registry.yarnpkg.com/@waline/client/-/client-2.15.8.tgz#b775357a8c199165be01f9036c9b0af1ecfef232"
+  integrity sha512-EBL7RXJUJs742miTvOU0Vt8NEmeJ63EN5TtSsYZfzjUdvEtlv+JsBbS5uiz3C9v5qV7Hz+XDZdc8nc13mG9vNQ==
   dependencies:
-    "@vueuse/core" "^10.1.2"
+    "@vueuse/core" "^10.4.1"
     autosize "^6.0.1"
     marked "^4.3.0"
-    vue "^3.3.2"
+    vue "^3.3.4"
 
 abab@^2.0.6:
   version "2.0.6"
@@ -4778,12 +4778,12 @@ valaxy-addon-lightgallery@^0.0.2:
   dependencies:
     lightgallery "^2.7.1"
 
-valaxy-addon-waline@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmmirror.com/valaxy-addon-waline/-/valaxy-addon-waline-0.1.0.tgz#0125b856a6caae46f23e23d2babe33358d245574"
-  integrity sha512-+P5ElZqgSWK7TCPu1E6jLNxHTSAP9orDFiJR0O3vYYmMcMxmuV1+VXuaGBfWcMQpt3knPCHbwir6rNqWw3O/Cw==
+valaxy-addon-waline@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/valaxy-addon-waline/-/valaxy-addon-waline-0.1.1.tgz#5e9b880b39c510eeb3c9a6286aa0b475d27ddcbe"
+  integrity sha512-IvVefifccHJP8asOGEBLf88298Xu1A6atH8qYo3bb+gKvUJBAzch0EvrvvFnP/J2ICHOwQbitSTYBHOqDY481g==
   dependencies:
-    "@waline/client" "^2.14.7"
+    "@waline/client" "^2.15.8"
 
 valaxy-theme-yun@^0.14.61:
   version "0.14.61"
@@ -4960,7 +4960,7 @@ vue-router@^4.2.4:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue@^3.3.2, vue@^3.3.4:
+vue@^3.3.4:
   version "3.3.4"
   resolved "https://registry.npmmirror.com/vue/-/vue-3.3.4.tgz#8ed945d3873667df1d0fcf3b2463ada028f88bd6"
   integrity sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==
