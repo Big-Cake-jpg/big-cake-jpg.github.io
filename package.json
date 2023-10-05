@@ -15,7 +15,7 @@
     "@iconify-json/fluent": "^1.1.36",
     "ansi-regex": "5.0.1",
     "axios": "^1.5.1",
-    "valaxy": "^0.14.61",
+    "valaxy": "^0.15.3",
     "valaxy-addon-algolia": "^0.0.3",
     "valaxy-addon-components": "^0.0.2",
     "valaxy-addon-lightgallery": "^0.0.2",
