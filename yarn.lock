@@ -5211,10 +5211,10 @@ valaxy-theme-yun@^0.15.3:
     "@iconify-json/simple-icons" "^1.1.73"
     animejs "^3.2.1"
 
-valaxy@^0.15.3:
-  version "0.15.3"
-  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.15.3.tgz#abf1f55cb6f50f7d6fa451ea0d462a6de39248f5"
-  integrity sha512-0fyCwD1xiS9dNu3ORzqqlS4CQahl6j7y9YIDcthUNAJrHGdrmQ7ItiGll8r+ahpXHtTByKMdg4CzurVMkJVWqg==
+valaxy@^0.15.4:
+  version "0.15.4"
+  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.15.4.tgz#9f35a54b171701cf6bca37233dfc547219a4a14b"
+  integrity sha512-wFbS2V767g9/sRNwVj7GC6sH2oiNp1K6tTjsHkI8QCwioU+bSKWtTw5uxWSuTUO0ZM8TPWxce2fizSwseFouYg==
   dependencies:
     "@antfu/utils" "^0.7.6"
     "@ctrl/tinycolor" "^4.0.2"
@@ -5267,7 +5267,7 @@ valaxy@^0.15.3:
     unocss "^0.56.5"
     unplugin-vue-components "^0.25.2"
     vanilla-lazyload "^17.8.4"
-    vite "^4.4.10"
+    vite "^4.4.11"
     vite-plugin-pages "^0.31.0"
     vite-plugin-vue-layouts "^0.8.0"
     vite-ssg "0.23.3"
@@ -5337,7 +5337,7 @@ vite-ssg@0.23.3:
     prettier "^3.0.3"
     yargs "^17.7.2"
 
-vite@^4.4.10:
+vite@^4.4.11:
   version "4.4.11"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.4.11.tgz#babdb055b08c69cfc4c468072a2e6c9ca62102b0"
   integrity sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==
