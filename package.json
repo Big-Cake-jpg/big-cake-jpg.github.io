@@ -15,12 +15,12 @@
     "@iconify-json/fluent": "^1.1.36",
     "ansi-regex": "5.0.1",
     "axios": "^1.5.1",
-    "valaxy": "^0.15.4",
+    "valaxy": "^0.15.6",
     "valaxy-addon-algolia": "^0.0.3",
     "valaxy-addon-components": "^0.0.2",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-waline": "^0.1.1",
-    "valaxy-theme-yun": "^0.15.4",
+    "valaxy-theme-yun": "^0.15.6",
     "vite-plugin-pwa": "^0.16.5"
   },
   "devDependencies": {
