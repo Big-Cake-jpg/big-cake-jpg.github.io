@@ -1315,10 +1315,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/simple-icons@^1.1.73":
-  version "1.1.73"
-  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.73.tgz#0dc1eeab4909bd1b0ab4c6b606a2cfae3e29cc2b"
-  integrity sha512-L9ShYHhAkJ7KHx+6wM5HK2tnCkAIKjSIyDUtTexoG8LcZF7MgiUloNfDGPDa4Vt0Oy5yHlnFBiOvqy2ojKB/8Q==
+"@iconify-json/simple-icons@^1.1.74":
+  version "1.1.74"
+  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.74.tgz#70a18276ce09fbdfd79c7a954daea502309b4c77"
+  integrity sha512-KlDN8k/8LyWWe+i1ErGmMHWFbiAFvz1R8ifkXI05vHt0K3Z6Ce1uDZY20CbQVhbwIFStS0fVdJAlYhcL7MYvVg==
   dependencies:
     "@iconify/types" "*"
 
@@ -5202,14 +5202,14 @@ valaxy-addon-waline@^0.1.1:
   dependencies:
     "@waline/client" "^2.15.8"
 
-valaxy-theme-yun@^0.15.6:
-  version "0.15.6"
-  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.15.6.tgz#b00d6ab2e8c98f7bafb2106959f711ce34c6592c"
-  integrity sha512-onet1KLvw22d/0bgAr8iZD289Y1a78BjXQWlbiiXA/Kps48k/Ov2YZvQ7NMKRW1DmWiqgOEYjr0GjJl/Cd8TGA==
+valaxy-theme-yun@^0.15.7:
+  version "0.15.7"
+  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.15.7.tgz#7bb6bb493f61eb882b51574a9d6100153f15ccbb"
+  integrity sha512-7T92fXjxaGDOZnDPAOjCNBEO/C19uoT4B7M1fD68xVcTsejs4Y7ZFzGgA1/x2e3rQPbFe6Fr4rGJOT7WZjqUpA==
   dependencies:
     "@explosions/fireworks" "^0.0.2"
     "@iconify-json/ant-design" "^1.1.10"
-    "@iconify-json/simple-icons" "^1.1.73"
+    "@iconify-json/simple-icons" "^1.1.74"
     animejs "^3.2.1"
 
 valaxy@^0.15.6:
