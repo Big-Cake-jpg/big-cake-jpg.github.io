@@ -1957,7 +1957,7 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.3.4.tgz#06e83c5027f464eef861c329be81454bc8b70780"
   integrity sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==
 
-"@vueuse/core@10.5.0", "@vueuse/core@^10.4.1":
+"@vueuse/core@10.5.0", "@vueuse/core@^10.4.1", "@vueuse/core@^10.5.0":
   version "10.5.0"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-10.5.0.tgz#04d1e6d26592bb997bb755a4830ea7583c3e8612"
   integrity sha512-z/tI2eSvxwLRjOhDm0h/SXAjNm8N5ld6/SC/JQs6o6kpJ6Ya50LnEL8g5hoYu005i28L0zqB5L5yAl8Jl26K3A==
@@ -1967,7 +1967,7 @@
     "@vueuse/shared" "10.5.0"
     vue-demi ">=0.14.6"
 
-"@vueuse/integrations@^10.4.1":
+"@vueuse/integrations@^10.5.0":
   version "10.5.0"
   resolved "https://registry.yarnpkg.com/@vueuse/integrations/-/integrations-10.5.0.tgz#38f00bd5a1cd0160645f0c75efd5d9579061e3d6"
   integrity sha512-fm5sXLCK0Ww3rRnzqnCQRmfjDURaI4xMsx+T+cec0ngQqHx/JgUtm8G0vRjwtonIeTBsH1Q8L3SucE+7K7upJQ==
@@ -4586,10 +4586,10 @@ safe-regex-test@^1.0.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.69.0:
-  version "1.69.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.69.0.tgz#5195075371c239ed556280cf2f5944d234f42679"
-  integrity sha512-l3bbFpfTOGgQZCLU/gvm1lbsQ5mC/WnLz3djL2v4WCJBDrWm58PO+jgngcGRNnKUh6wSsdm50YaovTqskZ0xDQ==
+sass@^1.69.2:
+  version "1.69.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.69.2.tgz#8aeaeb6c1dcdbeaa26bbfeddece67c9fcd4b1d93"
+  integrity sha512-48lDtG/9OuSQZ9oNmJMUXI2QdCakAWrAGjpX/Fy6j4Og8dEAyE598x5GqCqnHkwV7+I5w8DJpqjm581q5HNh3w==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -4672,10 +4672,10 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shiki@^0.14.4:
-  version "0.14.4"
-  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.14.4.tgz#2454969b466a5f75067d0f2fa0d7426d32881b20"
-  integrity sha512-IXCRip2IQzKwxArNNq1S+On4KPML3Yyn8Zzs/xRgcgOWIr8ntIK3IKzjFPfjy/7kt9ZMjc+FItfqHRBg8b6tNQ==
+shiki@^0.14.5:
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.14.5.tgz#375dd214e57eccb04f0daf35a32aa615861deb93"
+  integrity sha512-1gCAYOcmCFONmErGTrS1fjzJLA7MGZmKzrBNX7apqSwhyITJg2O102uFzXUeBxNnEkDA9vHIKLyeKq0V083vIw==
   dependencies:
     ansi-sequence-parser "^1.1.0"
     jsonc-parser "^3.2.0"
@@ -5212,10 +5212,10 @@ valaxy-theme-yun@^0.15.6:
     "@iconify-json/simple-icons" "^1.1.73"
     animejs "^3.2.1"
 
-valaxy@^0.15.6:
-  version "0.15.6"
-  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.15.6.tgz#6590492aa8f0190bf64be1d239454a6eed1c4452"
-  integrity sha512-DwSdjnfGsZfg+vBt9ofEj3GcLksYJEWZ8LK12Cf69T2BPLc/E+oTlRhoAyY6jfbPSQg53rnnoBxusbuppI3KzA==
+valaxy@^0.15.7:
+  version "0.15.7"
+  resolved "https://registry.yarnpkg.com/valaxy/-/valaxy-0.15.7.tgz#d28fd97422e8ae7ac8148aa7f716609768bff526"
+  integrity sha512-3TNsiqzbzOW60bv3G3DMNtHh3mnYdh/tBDMQ3LN9x45I6CGU9aUn2zNRWCRiDKkypnHo/NQ7Qm0bLSzh46+ATQ==
   dependencies:
     "@antfu/utils" "^0.7.6"
     "@ctrl/tinycolor" "^4.0.2"
@@ -5227,8 +5227,8 @@ valaxy@^0.15.6:
     "@unhead/schema-org" "^1.7.4"
     "@unhead/vue" "^1.7.4"
     "@vitejs/plugin-vue" "^4.4.0"
-    "@vueuse/core" "^10.4.1"
-    "@vueuse/integrations" "^10.4.1"
+    "@vueuse/core" "^10.5.0"
+    "@vueuse/integrations" "^10.5.0"
     body-scroll-lock "4.0.0-beta.0"
     consola "^3.2.3"
     critters "^0.0.20"
@@ -5263,8 +5263,8 @@ valaxy@^0.15.6:
     pascalcase "^2.0.0"
     pinia "^2.1.6"
     qrcode "^1.5.3"
-    sass "^1.69.0"
-    shiki "^0.14.4"
+    sass "^1.69.2"
+    shiki "^0.14.5"
     star-markdown-css "^0.4.2"
     unconfig "^0.3.11"
     unocss "^0.56.5"
