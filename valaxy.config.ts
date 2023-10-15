@@ -33,13 +33,11 @@ export default defineValaxyConfig<ThemeConfig>({
         let headers = new Headers();
 
         formData.append("file", file);
-        headers.append(
-          "Authorization",
-          "Bearer 112|jUV6Mnx8c3VZOMlnADP9omOiEiG6X1VLWBn3MI4T"
-        );
+        headers.append("Authorization", `Bearer !{API_TOKEN}`);
         headers.append("Accept", "application/json");
+        headers.append("strategy_id", "3");
 
-        return fetch("https://img.iqjty.com/api/v1/upload", {
+        return fetch("https://img.lihaoyu.cn/api/v1/upload", {
           method: "POST",
           headers: headers,
           body: formData,
@@ -53,7 +51,7 @@ export default defineValaxyConfig<ThemeConfig>({
 
   vite: {
     optimizeDeps: {
-      include: ["@waline/client", "axios"],
+      include: ["@waline/client", "axios", "valaxy-addon-waline"],
     },
     plugins: [
       VitePWA({

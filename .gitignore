@@ -17,3 +17,5 @@ components.d.ts
 
 # valaxy
 public/valaxy-fuse-list.json
+
+.env
