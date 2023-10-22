@@ -22,7 +22,7 @@ const customOptions: WalineInitOptions = {
     headers.append('Accept', 'application/json')
     headers.append('strategy_id', '3')
 
-    return fetch('https://img.lihaoyu.cn/api/v0/upload', {
+    return fetch('https://img.lihaoyu.cn/api/v1/upload', {
       method: 'POST',
       headers,
       body: formData,
