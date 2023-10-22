@@ -10,6 +10,7 @@ const customOptions: WalineInitOptions = {
   locale: {
     placeholder: '填写邮箱，可以收到回复通知',
   },
+  turnstileKey: "0x4AAAAAAALA9mD_xYAnGQhJ",
   imageUploader: (file) => {
     consola.info('Upload file: ', file)
 
