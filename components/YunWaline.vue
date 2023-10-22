@@ -18,7 +18,7 @@ const customOptions: WalineInitOptions = {
     const headers = new Headers()
 
     formData.append('file', file)
-    headers.append('Authorization', ' Bearer !{API TOKEN}')
+    headers.append('Authorization', ' Bearer !{API_TOKEN}')
     headers.append('Accept', 'application/json')
     headers.append('strategy_id', '3')
 
