@@ -1301,10 +1301,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/fluent@^1.1.36":
-  version "1.1.38"
-  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.38.tgz#1f50df64afa03b21d5da07f1c491b29af4aa9e3c"
-  integrity sha512-A39DgadFWTdDBVpqISLqlwtmw8FhqSLPERai8WxB6+lrRktcHipuapDMZA0EDZ/u+XasHyjfsK3+VUiusXg5CA==
+"@iconify-json/fluent@^1.1.39":
+  version "1.1.39"
+  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.39.tgz#8d6316609dd47e7af21c53de77195eece1c6423e"
+  integrity sha512-fGpstFAoAzyXMKlbNIJADr+MAZOZL8edlmzlfD/tT2cMW8xxPN2pEO8lc87n8c3tNV0fWuiW+nleVN79sZ490Q==
   dependencies:
     "@iconify/types" "*"
 
