@@ -11,47 +11,13 @@ import { VitePWA } from "vite-plugin-pwa";
 export default defineValaxyConfig<ThemeConfig>({
   addons: [
     addonComponents(),
-    addonWaline({
-      serverURL: "https://waline.lihaoyu.cn",
-      locale: {
-        placeholder: "填写邮箱的话，可以收到邮件通知哦",
-      },
-      comment: true,
-      pageview: true,
-      search: false,
-      emoji: [
-        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/",
-        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/",
-        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/qq/",
-        "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/",
-        "https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/",
-      ],
-      cdn: "https://jsd.onmicrosoft.cn/npm/",
-      turnstileKey: "0x4AAAAAAALA9mD_xYAnGQhJ",
-      imageUploader: (file) => {
-        let formData = new FormData();
-        let headers = new Headers();
-
-        formData.append("file", file);
-        headers.append("Authorization", `Bearer !{API_TOKEN}`);
-        headers.append("Accept", "application/json");
-        headers.append("strategy_id", "3");
-
-        return fetch("https://img.lihaoyu.cn/api/v1/upload", {
-          method: "POST",
-          headers: headers,
-          body: formData,
-        })
-          .then((resp) => resp.json())
-          .then((resp) => resp.data.links.url);
-      },
-    }),
+    addonWaline(),
     addonLightGallery(),
   ],
 
   vite: {
     optimizeDeps: {
-      include: ["@waline/client", "axios", "valaxy-addon-waline"],
+      include: ["@waline/client", "axios"],
     },
     plugins: [
       VitePWA({
@@ -69,37 +35,37 @@ export default defineValaxyConfig<ThemeConfig>({
               src: "https://blog-api.lihaoyu.cn/images/profile/avatar.webp",
               sizes: "2360x2360",
               type: "image/webp",
-              purposes: "any maskable",
+              purpose: "any maskable",
             },
             {
               src: "https://blog-api.lihaoyu.cn/images/profile/pwa-512x512.webp",
               sizes: "512x512",
               type: "image/webp",
-              purposes: "any maskable",
+              purpose: "any maskable",
             },
             {
               src: "https://blog-api.lihaoyu.cn/images/profile/pwa-128x128.webp",
               sizes: "128x128",
               type: "image/webp",
-              purposes: "any maskable",
+              purpose: "any maskable",
             },
             {
               src: "https://blog-api.lihaoyu.cn/images/profile/android-chrome-96x96.webp",
               sizes: "96x96",
               type: "image/webp",
-              purposes: "any maskable",
+              purpose: "any maskable",
             },
             {
               src: "https://blog-api.lihaoyu.cn/images/profile/apple-touch-icon.png",
               sizes: "76x76",
               type: "image/png",
-              purposes: "any maskable",
+              purpose: "any maskable",
             },
             {
               src: "https://blog-api.lihaoyu.cn/images/profile/android-chrome-36x36.webp",
               sizes: "36x36",
               type: "image/webp",
-              purposes: "any maskable",
+              purpose: "any maskable",
             },
           ],
         },
