@@ -1,19 +1,14 @@
 <script lang="ts" setup>
 import type { WalineInitOptions } from "@waline/client";
 import consola from "consola";
-import { getEmojis } from "../utils/getEmojis";
+import { getEmojis } from "valaxy-addon-waline";
 
-const emoji = getEmojis("https://jsd.onmicrosoft.cn/gh/", [
-  "bilibilitv",
+const emoji = getEmojis("https://jsd.onmicrosoft.cn/npm/", [
+  "bilibili",
+  "bmoji",
+  "qq",
+  "tieba",
   "weibo",
-  "QQ",
-  "Coolapk",
-  "Tieba-New",
-  "Mafumafu",
-  "Menhera-chan",
-  "bilibili2233",
-  "Arcaea",
-  "Sweetie-Bunny",
 ]);
 
 const customOptions: WalineInitOptions = {
