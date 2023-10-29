@@ -4,6 +4,7 @@ import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
 import { VitePWA } from "vite-plugin-pwa";
+import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 /**
  * User Config
@@ -11,7 +12,16 @@ import { VitePWA } from "vite-plugin-pwa";
 export default defineValaxyConfig<ThemeConfig>({
   addons: [
     addonComponents(),
-    addonWaline(),
+    addonWaline({
+      serverURL: "https://waline.lihaoyu.cn",
+      pageview: true,
+      comment: true,
+      search: false,
+      locale: {
+        placeholder: "填写邮箱，可以收到回复通知",
+      },
+      turnstileKey: "0x4AAAAAAALA9mD_xYAnGQhJ",
+    }),
     addonLightGallery(),
   ],
 
@@ -172,6 +182,9 @@ export default defineValaxyConfig<ThemeConfig>({
             },
           ],
         },
+      }),
+      nodePolyfills({
+        include: ["process"],
       }),
     ],
   },
