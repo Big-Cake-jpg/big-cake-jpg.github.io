@@ -5690,10 +5690,10 @@ valaxy-addon-waline@^0.1.1:
   dependencies:
     "@waline/client" "^2.15.8"
 
-valaxy-theme-yun@^0.15.10:
-  version "0.15.12"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.15.12.tgz#9315be11887e30e6a9793ce6e335855262bb67b3"
-  integrity sha512-LmBaaCHIERSYqAfZDlvgYp1kpMlp6JhcYsweNBs7BKhwQIxNFxacFVlpVLukztcz48gnK87+G6DlAAzAcX1EPg==
+valaxy-theme-yun@^0.15.13:
+  version "0.15.13"
+  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.15.13.tgz#ff44bcade4a43d157984708092f118f07529fa00"
+  integrity sha512-uTSsfY+OtY0ZoCIo8MXv76EaaSQcZ+SetiYFZwLIPYUPtTLl8ZB5qQ06gwS+X7jUpXscJo3HvkvZhDRx+RjyUg==
   dependencies:
     "@explosions/fireworks" "^0.0.2"
     "@iconify-json/ant-design" "^1.1.10"
