@@ -5,9 +5,7 @@ description: 以及穗香咖啡馆的各位！
 links: https://api.lihaoyu.cn/blog/links
 random: true
 aplayer: true
-toc: false
 medium_zoom: false
-vanillaLazyload: true
 ---
 
 <meting-js
@@ -56,8 +54,11 @@ vanillaLazyload: true
     "desc": "也许我们会分别，但我们将永远不会忘记彼此。" // 一句话介绍
 }
 ```
-现已不支持自主提交 Pull Requests 的方式提交友链，请考虑打开一个 Issue 或者按照上述方式在评论区留言。你可以在 `https://api.lihaoyu.cn/blog/links` 查看所有友链的 JSON 格式数据。
 
-> 可能以后会考虑搭建自助上链的接口，咕咕咕。
+<!-- 
+如果想要自助提交友链，请移步[这里](https://github.com/Big-Cake-jpg/friend-links) 按照附加说明提交 Pull Request。如果你的友链为全站链接，我会同样将你的小站同时放置在本页与全站页脚。
+ -->
+
+你可以在 `https://api.lihaoyu.cn/blog/links` 查看所有友链的 JSON 格式数据。
 
 如果没有其它情况出现，我不会移除友链。但如果你在上述流程通过以后移除了我的友链，那么我也会毫不留情的删除你的小站。
