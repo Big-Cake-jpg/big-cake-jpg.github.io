@@ -12,7 +12,7 @@ end: false
 ::: tip
 你可以点击下面的按钮切换语言。
 
-最后更新：2023 / 06 / 16
+最后更新：2023 / 11 / 19
 :::
 
 </div>
@@ -22,7 +22,7 @@ end: false
 ::: tip
 You can switch languages by clicking the button below.
 
-Last update: 2023 / 06 / 16.
+Last update: 2023 / 11 / 19.
 :::
 
 </div>
@@ -125,11 +125,11 @@ IP 属地仅精确到大洲或省级的地理位置。
 为了维护站点的浏览体验，我们使用了一些由第三方提供的服务。这些服务的提供商可能会收集和使用更多的数据，并且不在我们的控制范围之内。请查看以下内容来了解对应的主体的隐私政策：
 
 - Cloudflare：[Privacy Policy](https://www.cloudflare.com/privacypolicy/)
-  - 我们使用了 Cloudflare 的静态网站托管（Pages）服务、域名解析（DNS）服务、网络应用防火墙（WAF）服务、内容分发网络（CDN）服务和性能分析服务（Browser Insights）；
+  - 我们使用了 Cloudflare 的静态网站托管（Pages）服务、域名解析（DNS）服务、网络应用防火墙（WAF）服务、内容分发网络（CDN）服务、人机验证服务（Turnstile）和性能分析服务（Browser Insights）；
 - GitHub：[隐私声明](https://docs.github.com/github/site-policy/github-privacy-statement)
   - 我们使用了 GitHub 的代码托管（Git）服务、持续集成（CI）服务和静态网站托管服务（Pages）；
 - Google：[隐私权和条款](https://policies.google.com/privacy)
-  - 我们使用了 Google 的数据分析服务（Analytics）、广告服务（AdSense）和人机验证服务（reCAPTCHA）；
+  - 我们使用了 Google 的数据分析服务（Analytics）、广告服务（AdSense）；
 - Microsoft：[隐私声明](https://privacy.microsoft.com/privacystatement)
   - 我们在站点运营工作中使用了 Microsoft 365（包括 Office 365 专业增强版和 Exchange Online 等）服务；
 - Vercel：[Privacy Policy](https://vercel.com/legal/privacy-policy)
@@ -235,11 +235,11 @@ Some information may be reacquired or generated after being deleted.
 In order to maintain the browsing experience of the site, we use some services provided by third parties. The providers of these services may collect and use additional data and are beyond our control. Please review the following to understand the privacy policy of the corresponding subject:
 
 - Cloudflare: [Privacy Policy](https://www.cloudflare.com/privacypolicy/)
-  - We use Cloudflare's static website hosting (Pages) service, domain name resolution (DNS) service, web application firewall (WAF) service, content delivery network (CDN) service and performance analysis service (Browser Insights);
+  - We use Cloudflare's static website hosting (Pages) service, domain name resolution (DNS) service, web application firewall (WAF) service, content delivery network (CDN) service, human-computer verification service (Turnstile) and performance analysis service (Browser Insights);
 - GitHub: [Privacy Statement](https://docs.github.com/github/site-policy/github-privacy-statement)
   - We used GitHub's code hosting service (Git), continuous integration (CI) service and static website hosting service (Pages);
 - Google: [Privacy and Terms](https://policies.google.com/privacy)
-  - We use Google's analytics service (Analytics), advertising service (AdSense) and human-computer verification service (reCAPTCHA);
+  - We use Google's analytics service (Analytics), advertising service (AdSense);
 - Microsoft: [Privacy Statement](https://privacy.microsoft.com/privacystatement)
   - We use Microsoft 365 (including Office 365 ProPlus, Exchange Online, etc.) services in the operation of the Site;
 - Vercel: [Privacy Policy](https://vercel.com/legal/privacy-policy)

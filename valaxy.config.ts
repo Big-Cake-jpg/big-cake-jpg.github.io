@@ -5,6 +5,7 @@ import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
 import { VitePWA } from "vite-plugin-pwa";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
+// import { addonMeting } from "valaxy-addon-meting";
 
 /**
  * User Config
@@ -23,6 +24,17 @@ export default defineValaxyConfig<ThemeConfig>({
       turnstileKey: "0x4AAAAAAALA9mD_xYAnGQhJ",
     }),
     addonLightGallery(),
+    /*
+    addonMeting({
+      global: true,
+      options: {
+        id: "8048058894",
+        server: "netease",
+        type: "playlist",
+        fixed: true, 
+      },
+    }),
+    */
   ],
 
   vite: {
@@ -243,8 +255,8 @@ export default defineValaxyConfig<ThemeConfig>({
 
     bg_image: {
       enable: true,
-      url: "https://r2.lihaoyu.cn/bg-bright-blur-50px.webp",
-      dark: "https://r2.lihaoyu.cn/bg-dark-blur-50px.webp",
+      url: "https://r2.lihaoyu.cn/2023/11/19/65598e48e257c.webp",
+      dark: "https://r2.lihaoyu.cn/2023/11/19/65598e613e4d0.webp",
     },
 
     say: {

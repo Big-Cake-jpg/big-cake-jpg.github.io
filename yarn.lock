@@ -2260,9 +2260,9 @@ available-typed-arrays@^1.0.5:
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 axios@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.1.tgz#76550d644bf0a2d469a01f9244db6753208397d7"
-  integrity sha512-vfBmhDpKafglh0EldBEbVuoe7DyAavGSLWhuSm5ZSEKQnHhBf0xAAwybbNH1IkrJNGnS/VG4I5yxig1pCEXE4g==
+  version "1.6.2"
+  resolved "https://registry.npmmirror.com/axios/-/axios-1.6.2.tgz#de67d42c755b571d3e698df1b6504cde9b0ee9f2"
+  integrity sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -2459,6 +2459,7 @@ buffer-from@^1.0.0:
   integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
 
 "buffer-polyfill@npm:buffer@^6.0.3", buffer@^6.0.3:
+  name buffer-polyfill
   version "6.0.3"
   resolved "https://registry.npmmirror.com/buffer/-/buffer-6.0.3.tgz#2ace578459cc8fbe2a70aaa8f52ee63b6a74c6c6"
   integrity sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==
@@ -5839,7 +5840,7 @@ valaxy-addon-waline@^0.1.1:
   dependencies:
     "@waline/client" "^2.15.8"
 
-valaxy-theme-yun@^0.15.13:
+valaxy-theme-yun@^0.15.14:
   version "0.15.14"
   resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.15.14.tgz#df0948b10e49776b8211c0b47f2c30bb15acba65"
   integrity sha512-yhsAO34m75c9ACoDE9cPIRLZbMcl5W83OAPha8A81cziNTdZHZNLGaUwcCWKyQ20Vr2JKgUqmDZq4nnkHJUS7w==
@@ -5849,7 +5850,7 @@ valaxy-theme-yun@^0.15.13:
     "@iconify-json/simple-icons" "^1.1.77"
     animejs "^3.2.1"
 
-valaxy@^0.15.13:
+valaxy@^0.15.14:
   version "0.15.14"
   resolved "https://registry.npmmirror.com/valaxy/-/valaxy-0.15.14.tgz#25a72a5c1ed68c80d24127255f4945e7aea726a8"
   integrity sha512-ybocQIWEFGiFnk/9hJq7aX87EmXjT/qZHdfeW3eFjW1y4xKr5NNEirRgGyz12alAssROO7tESwsJURzg8TlqZw==
