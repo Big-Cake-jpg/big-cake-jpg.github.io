@@ -12,7 +12,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@iconify-json/fluent": "^1.1.40",
+    "@iconify-json/fluent": "^1.1.41",
     "ansi-regex": "5.0.1",
     "axios": "^1.6.1",
     "valaxy": "^0.15.14",
@@ -22,10 +22,10 @@
     "valaxy-addon-waline": "^0.1.1",
     "valaxy-theme-yun": "^0.15.14",
     "vite-plugin-node-polyfills": "^0.16.0",
-    "vite-plugin-pwa": "^0.16.7"
+    "vite-plugin-pwa": "^0.17.0"
   },
   "devDependencies": {
-    "esbuild-wasm": "^0.19.4"
+    "esbuild-wasm": "^0.19.7"
   },
   "overrides": {
     "esbuild": "npm:esbuild-wasm@latest"
