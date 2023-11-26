@@ -23,7 +23,9 @@ export default {
   },
   async created() {
     try {
-      const response = await axios.get('https://api.lihaoyu.cn/blog/links');
+      const response = await axios.get(
+        "https://api.lihaoyu.cn/blog/links/global"
+      );
       this.blogs = response.data;
     } catch (error) {
       this.error = error.message;
@@ -41,7 +43,9 @@ export default {
         currentIndex--;
         // Swap it with the current element.
         [array[currentIndex], array[randomIndex]] = [
-          array[randomIndex], array[currentIndex]];
+          array[randomIndex],
+          array[currentIndex],
+        ];
       }
 
       return array;

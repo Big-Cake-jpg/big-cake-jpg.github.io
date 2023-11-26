@@ -2,7 +2,7 @@
 title: 我的小伙伴们
 keywords: 链接
 description: 以及穗香咖啡馆的各位！
-links: https://api.lihaoyu.cn/blog/links
+links: https://api.lihaoyu.cn/blog/links/inpage
 random: true
 aplayer: true
 medium_zoom: false
@@ -55,10 +55,8 @@ medium_zoom: false
 }
 ```
 
-<!-- 
 如果想要自助提交友链，请移步[这里](https://github.com/Big-Cake-jpg/friend-links) 按照附加说明提交 Pull Request。如果你的友链为全站链接，我会同样将你的小站同时放置在本页与全站页脚。
- -->
 
-你可以在 `https://api.lihaoyu.cn/blog/links` 查看所有友链的 JSON 格式数据。
+你可以在 `https://api.lihaoyu.cn/blog/links/inpage` 查看所有友链的 JSON 格式数据。
 
 如果没有其它情况出现，我不会移除友链。但如果你在上述流程通过以后移除了我的友链，那么我也会毫不留情的删除你的小站。
