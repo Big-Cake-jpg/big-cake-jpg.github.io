@@ -1268,10 +1268,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/fluent@^1.1.41":
-  version "1.1.41"
-  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.41.tgz#5fcb35b94234d5c472c70158145398260a82ce39"
-  integrity sha512-Wt3PyWAfpIgf3n0gt99BcnAn5cn4lAefQkib0sDJIObI329l8Jfd/0LctlL/1h/ZCUeylQQCDjyQSsuypUhaJw==
+"@iconify-json/fluent@^1.1.42":
+  version "1.1.42"
+  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.42.tgz#d10f4f274fc06ed78bb7b61335a49294e133de4b"
+  integrity sha512-QftfNi1Q0bNclT+MRSutRAlo1qQROnVqNEsc4w+G3xwmnOHai2zlbAxfrHKXCoP8LBOVxJ1nbfZEgep0IGnKuw==
   dependencies:
     "@iconify/types" "*"
 
