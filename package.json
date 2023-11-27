@@ -25,7 +25,7 @@
     "vite-plugin-pwa": "^0.17.0"
   },
   "devDependencies": {
-    "esbuild-wasm": "^0.19.7"
+    "esbuild-wasm": "^0.19.8"
   },
   "overrides": {
     "esbuild": "npm:esbuild-wasm@latest"
