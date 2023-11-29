@@ -5923,10 +5923,10 @@ vanilla-lazyload@^17.8.5:
   resolved "https://registry.npmmirror.com/vanilla-lazyload/-/vanilla-lazyload-17.8.5.tgz#d63ce6ec9caeb57b5db54bedebce9cb6d464b7f6"
   integrity sha512-SQdQztlVUJqCbyU15zobpAcoTucCzdJiDIEfqinZDdwifhZxQ5H2j0BJfHlrFxi0lrVAdFBRsICH51YdPv18DQ==
 
-vite-plugin-node-polyfills@^0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-node-polyfills/-/vite-plugin-node-polyfills-0.16.0.tgz#3834e15d3adc09854bc40ecca5f70457a0655809"
-  integrity sha512-uj1ymOmk7TliMxiivmXokpMY5gVMBpFPSZPLQSCv/LjkJGGKwyLjpbFL64dbYZEdFSUQ3tM7pbrxNh25yvhqOA==
+vite-plugin-node-polyfills@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-node-polyfills/-/vite-plugin-node-polyfills-0.17.0.tgz#1044a4955174ddaeedbc3679b179e1efac9da006"
+  integrity sha512-iPmPn7376e5u6QvoTSJa16hf5Q0DFwHFXJk2uYpsNlmI3JdPms7hWyh55o+OysJ5jo9J5XPhLC9sMOYifwFd1w==
   dependencies:
     "@rollup/plugin-inject" "^5.0.5"
     buffer-polyfill "npm:buffer@^6.0.3"
