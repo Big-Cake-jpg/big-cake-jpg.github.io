@@ -10,7 +10,7 @@ const upyun = {
   <div class="flex-center">
     <span mr-1>由</span>
     <a inline-flex :href="upyun.url" target="_blank" :title="upyun.name">
-      <img class="netdun-logo" w="18" m="b-2px l-1 r-2" :src="upyun.logo">
+      <img class="upyun-logo" width="100" height="25" m="b-2px l-1 r-2" :src="upyun.logo">
     </a>
     <span>提供云存储服务</span>
   </div>

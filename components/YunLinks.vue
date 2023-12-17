@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useRandomData } from "../node_modules/valaxy-theme-yun/composables";
 import { onImgError } from "../node_modules/valaxy-theme-yun/utils";
+import { defineProps, computed } from "vue";
 
 interface LinkType {
   avatar: string;
@@ -25,10 +26,13 @@ const { data } = useRandomData(props.links, props.random);
 function onError(e: Event) {
   onImgError(e, props.errorImg);
 }
+
+const totalLinks = computed(() => data.value?.length || 0);
 </script>
 
 <template>
   <div class="links">
+    <div class="total-links">友链总数量: {{ totalLinks }}</div>
     <ul class="link-items">
       <li
         v-for="(link, i) in data"
@@ -68,11 +72,7 @@ function onError(e: Event) {
   </div>
 </template>
 
-<stye lang="scss" scoped>
-.link-item {
-  display: inline-flex;
-}
-
+<style lang="scss" scoped>
 .links {
   .link-items {
     display: flex;
@@ -136,4 +136,12 @@ function onError(e: Event) {
     justify-content: center;
   }
 }
-</stye>
+
+li {
+  list-style-type: none;
+}
+
+.total-links {
+  margin-bottom: 1rem;
+}
+</style>

@@ -24,17 +24,15 @@ export default defineValaxyConfig<ThemeConfig>({
       turnstileKey: "0x4AAAAAAALA9mD_xYAnGQhJ",
     }),
     addonLightGallery(),
-    /*
-    addonMeting({
+    /* addonMeting({
       global: true,
       options: {
         id: "8048058894",
         server: "netease",
         type: "playlist",
         fixed: true, 
-      },
-    }),
-    */
+      }, 
+    }),*/
   ],
 
   vite: {
@@ -60,6 +58,12 @@ export default defineValaxyConfig<ThemeConfig>({
               purpose: "maskable",
             },
             {
+              src: "https://blog-api.lihaoyu.cn/images/profile/pwa-512x512.webp",
+              sizes: "512x512",
+              type: "image/webp",
+              purpose: "any",
+            },
+            {
               src: "https://blog-api.lihaoyu.cn/images/profile/pwa-192x192.webp",
               sizes: "192x192",
               type: "image/webp",
@@ -67,7 +71,7 @@ export default defineValaxyConfig<ThemeConfig>({
             },
             {
               src: "https://blog-api.lihaoyu.cn/images/profile/pwa-64x64.webp",
-              sizes: "34x34",
+              sizes: "64x64",
               type: "image/webp",
               purpose: "any",
             },
@@ -137,20 +141,6 @@ export default defineValaxyConfig<ThemeConfig>({
               handler: "CacheFirst",
               options: {
                 cacheName: "unpkg-cdn-cache",
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-                },
-                cacheableResponse: {
-                  statuses: [0, 200],
-                },
-              },
-            },
-            {
-              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-              handler: "CacheFirst",
-              options: {
-                cacheName: "google-fonts-cache",
                 expiration: {
                   maxEntries: 10,
                   maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
@@ -257,7 +247,7 @@ export default defineValaxyConfig<ThemeConfig>({
     menu: {
       custom: {
         title: "menu.travellings",
-        url: "https://travellings.cn/go.html",
+        url: "https://www.travellings.cn/go.html",
         icon: "i-fluent-vehicle-subway-24-regular",
       },
     },

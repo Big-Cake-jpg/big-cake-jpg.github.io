@@ -3,6 +3,7 @@ title: 我的小伙伴们
 keywords: 链接
 description: 以及穗香咖啡馆的各位！
 links: https://api.lihaoyu.cn/blog/links/inpage
+links_global: https://api.lihaoyu.cn/blog/links/global
 random: true
 aplayer: true
 medium_zoom: false
@@ -17,19 +18,25 @@ medium_zoom: false
 
 友链需要一定时间来加载，如果无法显示，请确认 `api.lihaoyu.cn` 是否能够正常访问。
 
+---
+
+## 内页友链
+
+此处的友链仅显示在本页面上。
+
 <YunLinks :links="frontmatter.links" :random="frontmatter.random" />
 
-来交换友链吧！在交换友链之前，你的小站需要满足以下条件：
+## 全站友链
 
-- **支持 HTTPS 协议；**
-  - （可选）支持的 TLS 版本最低为 v1.2
-- **文章数量 >= 10 篇；**
-  - 个人主页不受此条件限制
-  - **原创文章至少有 5 篇**
-- **文章内不得出现违反中华人民共和国法律的内容；**
-- **在中国大陆地区能够正常访问；**
-- **服务器位于国内的，需要进行备案；**
-- **已将本站添加至友链列表。**
+此处友链不仅会显示在本页，也会显示在全站页脚部分。
+
+<YunLinks :links="frontmatter.links_global" :random="frontmatter.random" />
+
+---
+
+## 提交友链
+
+来交换友链吧！在交换友链之前，你需要先添加我的链接，并在此之前与我有过一定的互动。
 
 我的信息如下：
 
@@ -43,7 +50,6 @@ medium_zoom: false
 - 主题色：`#F2BC57`
 - 描述：也许我们会分别，但我们将永远不会忘记彼此
 
-如果你已经满足了这些条件，就可以在评论区内按以下格式提交你的信息。提交时，请注意使用 Markdown 的代码块语法将其包裹并删除注释。
 ```json
 {
     "url": "https://lihaoyu.cn", // 链接
@@ -55,7 +61,7 @@ medium_zoom: false
 }
 ```
 
-如果想要自助提交友链，请移步[这里](https://github.com/Big-Cake-jpg/friend-links) 按照附加说明提交 Pull Request。如果你的友链为全站链接，我会同样将你的小站同时放置在本页与全站页脚。
+如果想要提交友链，请移步[这里](https://github.com/Big-Cake-jpg/friend-links)按照说明提交 Pull Request。如果你的友链为全站链接，我会同样将你的小站同时放置在本页与全站页脚。
 
 你可以在 `https://api.lihaoyu.cn/blog/links/inpage` 查看所有友链的 JSON 格式数据。
 

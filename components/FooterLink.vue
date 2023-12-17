@@ -26,7 +26,7 @@ export default {
       const response = await axios.get(
         "https://api.lihaoyu.cn/blog/links/global"
       );
-      this.blogs = response.data;
+      this.blogs = this.shuffle(response.data);
     } catch (error) {
       this.error = error.message;
     } finally {
