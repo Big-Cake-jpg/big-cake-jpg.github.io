@@ -1437,10 +1437,10 @@
   resolved "https://registry.npmmirror.com/@explosions/fireworks/-/fireworks-0.0.2.tgz#1b0ecb9532edd5c44a509eef1cd19bb013b2eb17"
   integrity sha512-BiF9iWE/8jTmqlxcIhSZlJgUlBJ62Wk9I6jTwfkd0zMn0QS2IxTxypOnV4CSo21bsnmsvJxh9ryepAK+D4OJqA==
 
-"@iconify-json/ant-design@^1.1.10":
-  version "1.1.10"
-  resolved "https://registry.npmmirror.com/@iconify-json/ant-design/-/ant-design-1.1.10.tgz#771d92bcf0b8345e112e331784ba89557282e396"
-  integrity sha512-XgBEAl+3N0QIn3nDN9xFPw5WlU9IgnmJvis2Ev1au4Y6ITG4zReMglXi+I21xmfK3mnjFnfAteZ4EzLVKHm7Hw==
+"@iconify-json/ant-design@^1.1.13":
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/@iconify-json/ant-design/-/ant-design-1.1.13.tgz#22243ccba6964feeeb71548602b8226c59a73b52"
+  integrity sha512-ejb2Tv4z4yvsDu8gZzyr8bYqytj/PSw6i2qqyvpPpGuoADWefApwTXk1VIfpyjeeGslmrTfzKVZCo8y1sM1tEg==
   dependencies:
     "@iconify/types" "*"
 
@@ -1465,10 +1465,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/simple-icons@^1.1.77":
-  version "1.1.77"
-  resolved "https://registry.npmmirror.com/@iconify-json/simple-icons/-/simple-icons-1.1.77.tgz#218791d2c106556cafe658b197733706167ab372"
-  integrity sha512-awFflxKI8LGt3WvgPqmxX+DHX2UH0JG9Ehyv0zgsFOa93qdibtYAbVhVH/S+UWTzqFBV5NmTpTWdJ/v2kRLJIw==
+"@iconify-json/simple-icons@^1.1.84":
+  version "1.1.85"
+  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.85.tgz#7a97386822d3194075b5145e7b6de8dd063da003"
+  integrity sha512-INgYqgh+zZZgqjD22HVSFYy7m0ben88lG4JuS41emxf23BVJcvDidADAh78H/+5U0vdc2zfceglVR893VS+TaQ==
   dependencies:
     "@iconify/types" "*"
 
@@ -2366,10 +2366,10 @@ algoliasearch@^4.19.1:
     "@algolia/requester-node-http" "4.20.0"
     "@algolia/transporter" "4.20.0"
 
-animejs@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.npmmirror.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
-  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
+animejs@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.2.tgz#59be98c58834339d5847f4a70ddba74ac75b6afc"
+  integrity sha512-Ao95qWLpDPXXM+WrmwcKbl6uNlC5tjnowlaRYtuVDHHoygjtIPfDUoK9NthrlZsQSKjZXlmji2TrBUAVbiH0LQ==
 
 ansi-regex@5.0.1, ansi-regex@^5.0.1:
   version "5.0.1"
@@ -6146,15 +6146,15 @@ valaxy-addon-waline@^0.1.1:
   dependencies:
     "@waline/client" "^2.15.8"
 
-valaxy-theme-yun@^0.15.14:
-  version "0.15.14"
-  resolved "https://registry.npmmirror.com/valaxy-theme-yun/-/valaxy-theme-yun-0.15.14.tgz#df0948b10e49776b8211c0b47f2c30bb15acba65"
-  integrity sha512-yhsAO34m75c9ACoDE9cPIRLZbMcl5W83OAPha8A81cziNTdZHZNLGaUwcCWKyQ20Vr2JKgUqmDZq4nnkHJUS7w==
+valaxy-theme-yun@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/valaxy-theme-yun/-/valaxy-theme-yun-0.16.0.tgz#e274a78fa4276448489597f0ae2372582b23e7c8"
+  integrity sha512-mvevaHMEdRre3cEnHhVdqrcJXtIC3h39Hn3k67qm8q7mKtWO+vbkdS6Ae4bfvPCRPuh9FmD8jXAhaaqRYDyyjg==
   dependencies:
     "@explosions/fireworks" "^0.0.2"
-    "@iconify-json/ant-design" "^1.1.10"
-    "@iconify-json/simple-icons" "^1.1.77"
-    animejs "^3.2.1"
+    "@iconify-json/ant-design" "^1.1.13"
+    "@iconify-json/simple-icons" "^1.1.84"
+    animejs "^3.2.2"
 
 valaxy@^0.16.0:
   version "0.16.0"
