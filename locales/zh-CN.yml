@@ -22,3 +22,6 @@ social:
   tg-channel: Telegram 频道
   tieba: 百度贴吧
   email: 邮箱
+
+post:
+  time_warning: 本文最后更新于 {ago}，文中所描述的信息可能已发生改变。

@@ -20,3 +20,11 @@ import YunFooter from "valaxy-theme-yun/components/YunFooter.vue";
     <FooterLink />
   </YunFooter>
 </template>
+
+<style>
+@media (max-width: 1000px) {
+  .va-footer {
+    margin-bottom: 125px;
+  }
+}
+</style>

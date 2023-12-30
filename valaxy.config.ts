@@ -3,7 +3,7 @@ import type { ThemeConfig } from "valaxy-theme-yun";
 import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
-import { VitePWA } from "vite-plugin-pwa";
+// import { VitePWA } from "vite-plugin-pwa";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 // import { addonMeting } from "valaxy-addon-meting";
 
@@ -26,7 +26,7 @@ export default defineValaxyConfig<ThemeConfig>({
     addonLightGallery(),
     /* addonMeting({
       global: true,
-      options: {
+      props: {
         id: "8048058894",
         server: "netease",
         type: "playlist",
@@ -37,136 +37,9 @@ export default defineValaxyConfig<ThemeConfig>({
 
   vite: {
     optimizeDeps: {
-      include: ["@waline/client", "axios"],
+      include: ["@waline/client", "axios", "consola"],
     },
     plugins: [
-      VitePWA({
-        injectRegister: "auto",
-        registerType: "autoUpdate",
-        manifest: {
-          name: "晓雨杂记",
-          short_name: "晓雨杂记",
-          description: "也许我们会分别，但我们将永远不会忘记彼此",
-          theme_color: "#F2BC57",
-          background_color: "#FFFFFF",
-          lang: "zh-CN",
-          icons: [
-            {
-              src: "https://blog-api.lihaoyu.cn/images/profile/maskable-icon-512x512.webp",
-              sizes: "512x512",
-              type: "image/webp",
-              purpose: "maskable",
-            },
-            {
-              src: "https://blog-api.lihaoyu.cn/images/profile/pwa-512x512.webp",
-              sizes: "512x512",
-              type: "image/webp",
-              purpose: "any",
-            },
-            {
-              src: "https://blog-api.lihaoyu.cn/images/profile/pwa-192x192.webp",
-              sizes: "192x192",
-              type: "image/webp",
-              purpose: "any",
-            },
-            {
-              src: "https://blog-api.lihaoyu.cn/images/profile/pwa-64x64.webp",
-              sizes: "64x64",
-              type: "image/webp",
-              purpose: "any",
-            },
-          ],
-        },
-        workbox: {
-          globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,jpg,json}"],
-          runtimeCaching: [
-            {
-              urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/i,
-              handler: "CacheFirst",
-              options: {
-                cacheName: "jsdelivr-cdn-cache",
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-                },
-                cacheableResponse: {
-                  statuses: [0, 200],
-                },
-              },
-            },
-            {
-              urlPattern: /^https:\/\/oss-cdn\.lihaoyu\.cn\/.*/i,
-              handler: "CacheFirst",
-              options: {
-                cacheName: "blog-images-cache",
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-                },
-                cacheableResponse: {
-                  statuses: [0, 200],
-                },
-              },
-            },
-            {
-              urlPattern: /^https:\/\/r2\.lihaoyu\.cn\/.*/i,
-              handler: "CacheFirst",
-              options: {
-                cacheName: "blog-images-cache",
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-                },
-                cacheableResponse: {
-                  statuses: [0, 200],
-                },
-              },
-            },
-            {
-              urlPattern: /^https:\/\/blog-api\.lihaoyu\.cn\/.*/i,
-              handler: "NetworkFirst",
-              options: {
-                cacheName: "blog-images-cache",
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-                },
-                cacheableResponse: {
-                  statuses: [0, 200],
-                },
-              },
-            },
-            {
-              urlPattern: /^https:\/\/npm\.onmicrosoft\.cn\/.*/i,
-              handler: "CacheFirst",
-              options: {
-                cacheName: "unpkg-cdn-cache",
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-                },
-                cacheableResponse: {
-                  statuses: [0, 200],
-                },
-              },
-            },
-            {
-              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-              handler: "CacheFirst",
-              options: {
-                cacheName: "gstatic-fonts-cache",
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-                },
-                cacheableResponse: {
-                  statuses: [0, 200],
-                },
-              },
-            },
-          ],
-        },
-      }),
       nodePolyfills({
         include: ["process"],
       }),
@@ -179,7 +52,7 @@ export default defineValaxyConfig<ThemeConfig>({
     notice: {
       enable: true,
       content:
-        "由于 PWA 缓存问题，如果您看到 RSS 订阅更新想要浏览新文章，需要等待约半分钟以让 Service Worker 获取新的内容。获取完成后页面会自动刷新，显示新的内容。",
+        "由于一些体验上的原因，本站 PWA 功能已下线，恢复时间待定。本站将在寒假期间尝试进行 ICP 备案，如发现站点无法访问请不要见怪。",
     },
     banner: {
       enable: true,

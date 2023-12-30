@@ -15,8 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "~/*": ["./*"]
-    },
-    "types": ["vite-plugin-pwa/client"]
+    }
   },
   "exclude": ["dist", "node_modules"]
 }

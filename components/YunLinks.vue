@@ -32,7 +32,7 @@ const totalLinks = computed(() => data.value?.length || 0);
 
 <template>
   <div class="links">
-    <div class="total-links">友链总数量: {{ totalLinks }}</div>
+    <div class="total-links">友链总数量: <span class=links-number>{{ totalLinks }}</span></div>
     <ul class="link-items">
       <li
         v-for="(link, i) in data"
@@ -143,5 +143,9 @@ li {
 
 .total-links {
   margin-bottom: 1rem;
+  text-align: center;
+  .links-number {
+    font-family: var(--smc-font-serif);
+  }
 }
 </style>
