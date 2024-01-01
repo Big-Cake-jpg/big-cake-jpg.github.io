@@ -7,6 +7,7 @@ categories: 报告
 tags: 
   - 博客
 cover: https://r2.lihaoyu.cn/2023/12/30/658fcf0d16eb0.webp
+aplayer: true
 ---
 终于，我的第一篇正式的年终回顾。
 
