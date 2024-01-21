@@ -14,14 +14,15 @@
   "dependencies": {
     "@iconify-json/fluent": "^1.1.46",
     "ansi-regex": "5.0.1",
+    "artalk": "^2.7.3",
     "axios": "^1.6.5",
-    "valaxy": "^0.16.4",
+    "valaxy": "^0.17.2",
     "valaxy-addon-algolia": "^0.0.3",
     "valaxy-addon-components": "^0.0.2",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-meting": "^0.0.4",
     "valaxy-addon-waline": "^0.1.1",
-    "valaxy-theme-yun": "^0.16.4",
+    "valaxy-theme-yun": "^0.17.2",
     "vite-plugin-node-polyfills": "^0.19.0"
   },
   "devDependencies": {

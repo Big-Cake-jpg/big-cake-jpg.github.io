@@ -7,7 +7,7 @@ const foreverblog = {
 </script>
 
 <template>
-  <div class="flex-center">
+  <div class="flex-center logos">
     <a
       inline-flex
       :href="foreverblog.url"
@@ -18,3 +18,10 @@ const foreverblog = {
     </a>
   </div>
 </template>
+
+<style>
+.logos {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+</style>
