@@ -32,8 +32,8 @@ readmore: true
 
 > 本文抄录自博主的 [手写文章](https://twitter.com/Big_Cake080105/status/1751819366390526391) 并进行了校对。
 > 
-> 抄录: 233355607
+> 抄录：233355607
 > 
-> 校对: 雨山泉
+> 校对：雨山泉
 >
 > 格式修复：Restent Ou & XieXiLin
