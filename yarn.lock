@@ -2570,10 +2570,10 @@ error-stack-parser-es@^0.1.1:
   resolved "https://registry.npmmirror.com/error-stack-parser-es/-/error-stack-parser-es-0.1.1.tgz#9c1d2bbfbba8b51670062e7fbf43c6bcfb6eb4da"
   integrity sha512-g/9rfnvnagiNf+DRMHEVGuGuIBlCIMDFoTA616HaP2l9PlCjGjVhD98PNbVSJvmK4TttqT5mV5tInMhoFgi+aA==
 
-esbuild-wasm@^0.19.11:
-  version "0.19.11"
-  resolved "https://registry.yarnpkg.com/esbuild-wasm/-/esbuild-wasm-0.19.11.tgz#4ed96cdd1a289bc08432a25fd38b7331d3eac98d"
-  integrity sha512-MIhnpc1TxERUHomteO/ZZHp+kUawGEc03D/8vMHGzffLvbFLeDe6mwxqEZwlqBNY7SLWbyp6bBQAcCen8+wpjQ==
+esbuild-wasm@^0.19.12:
+  version "0.19.12"
+  resolved "https://registry.yarnpkg.com/esbuild-wasm/-/esbuild-wasm-0.19.12.tgz#4edf5c2f3a8d90a8e0d38c1c92968ae4a050ded4"
+  integrity sha512-Zmc4hk6FibJZBcTx5/8K/4jT3/oG1vkGTEeKJUQFCUQKimD6Q7+adp/bdVQyYJFolMKaXkQnVZdV4O5ZaTYmyQ==
 
 esbuild@^0.19.3:
   version "0.19.9"
