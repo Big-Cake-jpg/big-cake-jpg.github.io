@@ -885,3 +885,58 @@ html {
 
   /*# sourceMappingURL=APlayer.min.css.map*/
 }
+
+.atk-send-btn {
+  background: var(--va-c-primary) !important;
+}
+.artalk > .atk-list > .atk-list-header .atk-right-action > span.atk-on,
+.artalk > .atk-list > .atk-list-header .atk-right-action > span.atk-on * {
+  color: var(--va-c-primary) !important;
+}
+.atk-comment > .atk-main > .atk-header .atk-item.atk-nick,
+.atk-comment > .atk-main > .atk-header .atk-item.atk-nick a {
+  color: var(--va-c-primary) !important;
+}
+.atk-comment > .atk-main > .atk-header .atk-item.atk-reply-at > .atk-nick {
+  color: var(--va-c-primary) !important;
+}
+.artalk > .atk-list > .atk-list-footer .atk-copyright a {
+  color: var(--va-c-primary) !important;
+}
+
+.atk-dropdown-item:active {
+  color: var(--va-c-primary) !important;
+}
+
+.dark {
+  .artalk {
+    --at-color-font: #fff !important;
+    --at-color-deep: #e7e7e7 !important;
+    --at-color-sub: #e7e7e7 !important;
+    --at-color-grey: #fff !important;
+    --at-color-meta: #fff !important;
+    --at-color-border: #2d3235 !important;
+    --at-color-light: #687a86 !important;
+    --at-color-bg: #1e2224 !important;
+    --at-color-bg-transl: rgba(30, 34, 36, 0.95) !important;
+    --at-color-bg-grey: #46494e !important;
+    --at-color-bg-grey-transl: rgba(8, 8, 8, 0.95) !important;
+    --at-color-bg-light: rgba(29, 161, 242, 0.1) !important;
+    --at-color-red: #ff5652 !important;
+    --at-color-pink: #fa5a57 !important;
+    --at-color-yellow: #ff7c37 !important;
+    --at-color-green: #4caf50 !important;
+    --at-color-gradient: linear-gradient(
+      180deg,
+      transparent,
+      rgba(30, 34, 36, 1)
+    ) !important;
+  }
+}
+
+.artalk {
+  .atk-dropdown-item.active,
+  .atk-dropdown-item:hover {
+    color: var(--va-c-primary) !important;
+  }
+}

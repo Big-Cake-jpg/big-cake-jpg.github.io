@@ -14,7 +14,7 @@ const foreverblog = {
       target="_blank"
       :title="foreverblog.name"
     >
-      <img width="150" height="50" :src="foreverblog.logo" />
+      <img width="150" height="50" loading="lazy" :src="foreverblog.logo" />
     </a>
   </div>
 </template>
