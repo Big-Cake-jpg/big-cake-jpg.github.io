@@ -64,13 +64,13 @@ export default defineValaxyConfig<ThemeConfig>({
     pages: [
       {
         name: "友链",
-        url: "/links/",
+        url: "/links",
         icon: "i-ri-link",
         color: "dodgerblue",
       },
       {
         name: "相册集",
-        url: "/albums/",
+        url: "/albums",
         icon: "i-ri-gallery-line",
         color: "#F2BC57",
       },
