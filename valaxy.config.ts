@@ -4,7 +4,6 @@ import type { ThemeConfig } from "valaxy-theme-yun";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
 // import { VitePWA } from "vite-plugin-pwa";
-import { nodePolyfills } from "vite-plugin-node-polyfills";
 // import { addonMeting } from "valaxy-addon-meting";
 
 /**
@@ -37,13 +36,8 @@ export default defineValaxyConfig<ThemeConfig>({
 
   vite: {
     optimizeDeps: {
-      include: ["@waline/client", "axios", "consola"],
+      include: ["artalk"],
     },
-    plugins: [
-      nodePolyfills({
-        include: ["process"],
-      }),
-    ],
   },
 
   theme: "yun",
