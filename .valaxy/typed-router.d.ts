@@ -93,6 +93,7 @@ declare module 'vue-router/auto/routes' {
     '/posts/reinstall-my-pc-os': RouteRecordInfo<'/posts/reinstall-my-pc-os', '/posts/reinstall-my-pc-os', Record<never, never>, Record<never, never>>,
     '/posts/site-speed-optimization': RouteRecordInfo<'/posts/site-speed-optimization', '/posts/site-speed-optimization', Record<never, never>, Record<never, never>>,
     '/posts/talk-about-communications': RouteRecordInfo<'/posts/talk-about-communications', '/posts/talk-about-communications', Record<never, never>, Record<never, never>>,
+    '/posts/use-artalk-in-valaxy': RouteRecordInfo<'/posts/use-artalk-in-valaxy', '/posts/use-artalk-in-valaxy', Record<never, never>, Record<never, never>>,
     '/posts/valaxy': RouteRecordInfo<'/posts/valaxy', '/posts/valaxy', Record<never, never>, Record<never, never>>,
     '/posts/whats-changed-to-my-blog': RouteRecordInfo<'/posts/whats-changed-to-my-blog', '/posts/whats-changed-to-my-blog', Record<never, never>, Record<never, never>>,
     '/posts/windows-delievry-optimize': RouteRecordInfo<'/posts/windows-delievry-optimize', '/posts/windows-delievry-optimize', Record<never, never>, Record<never, never>>,

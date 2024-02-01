@@ -21,8 +21,8 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  artalk.destroy()
-})
+  artalk.destroy();
+});
 </script>
 
 <template>
@@ -35,8 +35,8 @@ onUnmounted(() => {
 
 <style lang="scss">
 .comment {
-  .atk-list {
-    width: 90%;
+  .atk-list, .atk-main-editor {
+    width: 100%;
   }
   h1 {
     font-size: 2rem;
