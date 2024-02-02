@@ -1,3 +1,7 @@
+# 注意
+
+`lihaoyu.cn` 域名正在尝试备案，预计需要 20 天。在此期间该域名的 WWW 与 @ 记录均无法访问，您如果有本站友链，请考虑更换链接为 `bigcake.cakemc.top` 或 `cf-pages.lihaoyu.cn`。给各位造成不便敬请谅解。
+
 # 🍰 晓雨杂记
 
 ## Preview ｜ 预览
