@@ -3,7 +3,7 @@
   "version": "0.11.1",
   "private": true,
   "scripts": {
-    "build": "valaxy fuse && yarn build:ssg && yarn rss",
+    "build": "valaxy fuse && yarn build:ssg",
     "build:spa": "valaxy build",
     "build:ssg": "valaxy build --ssg",
     "dev": "valaxy",
@@ -16,11 +16,11 @@
     "ansi-regex": "5.0.1",
     "artalk": "^2.8.0",
     "axios": "^1.6.7",
-    "valaxy": "^0.17.3",
+    "valaxy": "^0.17.5",
     "valaxy-addon-components": "^0.0.2",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-addon-meting": "^0.0.4",
-    "valaxy-theme-yun": "^0.17.3"
+    "valaxy-theme-yun": "^0.17.5"
   },
   "devDependencies": {
     "esbuild-wasm": "^0.20.0"
