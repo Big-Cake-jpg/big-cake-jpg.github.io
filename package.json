@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/fluent": "^1.1.47",
     "ansi-regex": "5.0.1",
-    "artalk": "^2.8.0",
+    "artalk": "^2.8.2",
     "axios": "^1.6.7",
     "valaxy": "^0.17.5",
     "valaxy-addon-components": "^0.0.2",
