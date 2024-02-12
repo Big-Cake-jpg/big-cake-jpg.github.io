@@ -481,10 +481,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/fluent@^1.1.47":
-  version "1.1.47"
-  resolved "https://registry.npmmirror.com/@iconify-json/fluent/-/fluent-1.1.47.tgz#262f860d3693178373023a71d793fa1bf087388e"
-  integrity sha512-psi0EPlxzpleQ/I4cbNEELDTII0KCiq0Fr+bkeTYo+eglo5pDnE+o6LBxpI77l87Ll+/P3faoIMujHMuC7NLeQ==
+"@iconify-json/fluent@^1.1.48":
+  version "1.1.48"
+  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.48.tgz#41d6dd40f55ef92f3953e3aab1f568557e080a65"
+  integrity sha512-qp2/ETNldtnNBDKi6kMHGzkqx9ChINikdo5MuaZm9MziguSmij5DAfgOAs2aNoRVHdvMVD8BKcXTeVH8Sl8u8g==
   dependencies:
     "@iconify/types" "*"
 
