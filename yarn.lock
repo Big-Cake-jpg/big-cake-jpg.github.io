@@ -3526,10 +3526,10 @@ valaxy-addon-lightgallery@^0.0.2:
   dependencies:
     lightgallery "^2.7.1"
 
-valaxy-addon-meting@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.npmmirror.com/valaxy-addon-meting/-/valaxy-addon-meting-0.0.4.tgz#15c36e33a32b6fcfc90535d9451e34af96ee988e"
-  integrity sha512-Fcu/sE3LX11eRxasYsbZy3ud/qzvQFd1aA6HpXG0d/dKVUyZAdU3PqHIRwXI9P219UECNbVXPjSn/eMUCRZ+uQ==
+valaxy-addon-meting@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/valaxy-addon-meting/-/valaxy-addon-meting-0.0.5.tgz#5e2ec998ed90d9a8798fdced247f6fdd094a6ea4"
+  integrity sha512-cLlSTwdDOX5SZ42ByBm14lKK8DzYPfijlhrnLpYA+TjuAjMzwVYye6sKu6itttKKQEYJOzprzkVMWEB1zdmrhA==
 
 valaxy-theme-yun@^0.17.5:
   version "0.17.5"
