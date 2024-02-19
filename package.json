@@ -23,7 +23,7 @@
     "valaxy-theme-yun": "^0.18.1"
   },
   "devDependencies": {
-    "esbuild-wasm": "^0.20.0"
+    "esbuild-wasm": "^0.20.1"
   },
   "overrides": {
     "esbuild": "npm:esbuild-wasm@latest"
