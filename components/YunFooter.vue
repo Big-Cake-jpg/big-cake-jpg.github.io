@@ -16,7 +16,7 @@ import YunFooter from "valaxy-theme-yun/components/YunFooter.vue";
       <a href="https://icp.gov.moe/?keyword=20230105" target="_blank"
         >萌 ICP 备 20230105 号</a
       > · 
-      <a href="https://beian.miit.gov.cn/" target="_blank">晋ICP备2024031556号-1</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank">晋 ICP 备 2024031556 号 - 1</a>
     </div>
     <ForeverblogLogo />
     <TravellingsLogo />
