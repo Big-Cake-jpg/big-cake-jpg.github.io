@@ -12,9 +12,12 @@ import YunFooter from "valaxy-theme-yun/components/YunFooter.vue";
         <span>(●'◡'●)</span>
       </template>
     </VCLiveTime>
-    <a href="https://icp.gov.moe/?keyword=20230105" target="_blank"
-      >萌 ICP 备 20230105 号</a
-    >
+    <div>
+      <a href="https://icp.gov.moe/?keyword=20230105" target="_blank"
+        >萌 ICP 备 20230105 号</a
+      > · 
+      <a href="https://beian.miit.gov.cn/" target="_blank">晋ICP备2024031556号-1</a>
+    </div>
     <ForeverblogLogo />
     <TravellingsLogo />
     <UpyunSupport />
