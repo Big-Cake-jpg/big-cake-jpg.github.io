@@ -3,7 +3,7 @@ layout: post
 title: OMORI 初体验
 date: 2023-07-04 11:40:48
 updated: 2023-07-04 11:40:48
-cover: https://r2.lihaoyu.cn/2023/07/04/52d61460907c9908f548e451d40d4e0d.webp
+cover: https://r2.230225.xyz/2023/07/04/52d61460907c9908f548e451d40d4e0d.webp
 categories: 游戏
 tags:
   - 分享
@@ -45,7 +45,7 @@ aplayer: true
 
 在我购买它之前，我提前去萌娘百科之类的地方查了一下主角的信息，然后你猜我发现了什么？
 
-![](https://r2.lihaoyu.cn/2023/07/04/b9fda0f46303e1d1600f7e919c91ad4d.webp)_~~毒瘾犯了~~_
+![](https://r2.230225.xyz/2023/07/04/b9fda0f46303e1d1600f7e919c91ad4d.webp)_~~毒瘾犯了~~_
 
 回到正题。这游戏吸引我的地方有很多，比如：
 

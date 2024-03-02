@@ -28,15 +28,15 @@ Cloudflare 的记录显示 HTTP DDoS 攻击总共有 300 万次请求，其余�
 
 再一看邮箱，好家伙，Cloudflare 直接一口气给我发了 13 封电子邮件，内容全是关于我的网站遭遇 DDoS 攻击的。
 
-![](https://r2.lihaoyu.cn/2023/07/11/5762f7f83764689d4fb5e2cd3c5b0777.webp)
+![](https://r2.230225.xyz/2023/07/11/5762f7f83764689d4fb5e2cd3c5b0777.webp)
 
 > 明明我根本没什么流量，为什么会有人打我（黑人问号脸.webp
 
 我觉得挺搞笑的，逮着我一个静态站打，还打的是 Cloudflare。
 
-![](https://r2.lihaoyu.cn/2023/07/11/b01687ce7fdcfed2bc0533214d3fd9e0.webp)
+![](https://r2.230225.xyz/2023/07/11/b01687ce7fdcfed2bc0533214d3fd9e0.webp)
 
-![](https://r2.lihaoyu.cn/2023/07/11/d74903bb80b80666983ba1817451ff7d.webp)
+![](https://r2.230225.xyz/2023/07/11/d74903bb80b80666983ba1817451ff7d.webp)
 
 本次攻击总共造成了 27 GB 的流量和约 480 万次请求，但由于我的博客托管于 Cloudflare Pages，并未造成任何实质性影响，博客也并未因此无法正常访问。
 

@@ -94,8 +94,8 @@ export default defineValaxyConfig<ThemeConfig>({
 
     bg_image: {
       enable: true,
-      url: "https://r2.lihaoyu.cn/2023/11/19/65598e48e257c.webp",
-      dark: "https://r2.lihaoyu.cn/2023/11/19/65598e613e4d0.webp",
+      url: "https://upyun.lihaoyu.cn/bg-bright.webp",
+      dark: "https://upyun.lihaoyu.cn/bg-dark.webp",
     },
 
     say: {

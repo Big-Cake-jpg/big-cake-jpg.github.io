@@ -97,19 +97,19 @@ export default defineSiteConfig({
     methods: [
       {
         name: "支付宝",
-        url: "https://r2.lihaoyu.cn/2023/05/03/64520662bf7cc.webp",
+        url: "https://r2.230225.xyz/2023/05/03/64520662bf7cc.webp",
         color: "#00A3EE",
         icon: "i-ri-alipay-line",
       },
       {
         name: "QQ 支付",
-        url: "https://r2.lihaoyu.cn/2023/05/03/645205f8edce4.webp",
+        url: "https://r2.230225.xyz/2023/05/03/645205f8edce4.webp",
         color: "#12B7F5",
         icon: "i-ri-qq-line",
       },
       {
         name: "微信支付",
-        url: "https://r2.lihaoyu.cn/2023/05/03/6452066936578.webp",
+        url: "https://r2.230225.xyz/2023/05/03/6452066936578.webp",
         color: "#2DC100",
         icon: "i-ri-wechat-pay-line",
       },

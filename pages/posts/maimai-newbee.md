@@ -7,7 +7,7 @@ tags:
   - 体验
   - 舞萌 DX
 categories: 报告
-cover: https://r2.lihaoyu.cn/2023/08/28/998717272773a788c6bd5b45b1c7af31.webp
+cover: https://r2.230225.xyz/2023/08/28/998717272773a788c6bd5b45b1c7af31.webp
 ---
 ~~我最终还是成为了 mai 批。~~
 
@@ -17,9 +17,9 @@ cover: https://r2.lihaoyu.cn/2023/08/28/998717272773a788c6bd5b45b1c7af31.webp
 
 放假大部分时间我都是缩在家里和网友们聊天，除了补课就没怎么出去玩过，除了 7 月中旬为了 ~~BilibiliWater~~ BilibiliWorld 2023 去了一次上海。
 
-![](https://r2.lihaoyu.cn/2023/08/28/881e05898079e11bd28f4957f73f3f82.webp)
+![](https://r2.230225.xyz/2023/08/28/881e05898079e11bd28f4957f73f3f82.webp)
 
-![](https://r2.lihaoyu.cn/2023/08/28/455138ce96c9274fcc7a95c6fc1fb2c1.webp)
+![](https://r2.230225.xyz/2023/08/28/455138ce96c9274fcc7a95c6fc1fb2c1.webp)
 
 聊天的时候，发现群里似乎很多人都在玩舞萌 DX，于是就打算尝试一下。手机带好、衣服换好就直接出门地铁直奔机厅了。
 
@@ -42,17 +42,17 @@ cover: https://r2.lihaoyu.cn/2023/08/28/998717272773a788c6bd5b45b1c7af31.webp
 :::
 
 :::details 成绩图
-![](https://r2.lihaoyu.cn/2023/08/28/6d6d397d7d1f817e4032d4578a613ef3.webp)
+![](https://r2.230225.xyz/2023/08/28/6d6d397d7d1f817e4032d4578a613ef3.webp)
 
-![](https://r2.lihaoyu.cn/2023/08/28/49b17f670789e45c89486ff3e3b89148.webp)
+![](https://r2.230225.xyz/2023/08/28/49b17f670789e45c89486ff3e3b89148.webp)
 
-![](https://r2.lihaoyu.cn/2023/08/28/1c74dd114b1ab564fcc97eee8ce9db39.webp)
+![](https://r2.230225.xyz/2023/08/28/1c74dd114b1ab564fcc97eee8ce9db39.webp)
 
-![](https://r2.lihaoyu.cn/2023/08/28/74b44f8d538d2db403bf3a574848e211.webp)
+![](https://r2.230225.xyz/2023/08/28/74b44f8d538d2db403bf3a574848e211.webp)
 
-![](https://r2.lihaoyu.cn/2023/08/28/ec9f6496fcb18425369e298b572eb3fe.webp)
+![](https://r2.230225.xyz/2023/08/28/ec9f6496fcb18425369e298b572eb3fe.webp)
 
-![](https://r2.lihaoyu.cn/2023/08/28/2ab6bf8778f649550aff9400cab707f2.webp)
+![](https://r2.230225.xyz/2023/08/28/2ab6bf8778f649550aff9400cab707f2.webp)
 
-![](https://r2.lihaoyu.cn/2023/08/28/31d58adb10f997e138954d5474bce6b7.webp)
+![](https://r2.230225.xyz/2023/08/28/31d58adb10f997e138954d5474bce6b7.webp)
 :::

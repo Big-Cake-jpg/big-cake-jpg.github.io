@@ -33,7 +33,7 @@ Restent 自己的文章里使用的是 Docker 部署，但我玩不来 Docker（
 
 首先，打开 Artalk 的 GitHub 仓库，在 Releases 找到最新版本，选择对应操作系统和架构的后端程序复制链接。
 
-![1706758841310.webp](https://r2.lihaoyu.cn/2024/02/01/65bb12bc6f083.webp)
+![1706758841310.webp](https://r2.230225.xyz/2024/02/01/65bb12bc6f083.webp)
 
 接下来，登录服务器的 SSH，找一个地方，用 wget 下载文件：
 

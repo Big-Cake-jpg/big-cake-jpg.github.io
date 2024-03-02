@@ -2,7 +2,7 @@
 const foreverblog = {
   name: "十年之约",
   url: "https://foreverblog.cn",
-  logo: "https://r2.lihaoyu.cn/2023/06/10/709c21e35d52001fb6da8e99f887980e.webp",
+  logo: "https://r2.230225.xyz/2023/06/10/709c21e35d52001fb6da8e99f887980e.webp",
 };
 </script>
 

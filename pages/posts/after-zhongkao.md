@@ -3,7 +3,7 @@ layout: post
 title: 中考之后
 date: 2023-06-24 13:11:27
 updated: 2023-06-24 13:11:27
-cover: https://r2.lihaoyu.cn/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp
+cover: https://r2.230225.xyz/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp
 categories: 中考
 tags: 
   - 学习
@@ -14,25 +14,25 @@ tags:
 
 <!-- more -->
 
-![](https://r2.lihaoyu.cn/2023/06/24/a74b5294049206c4e28bd2457f230ae3.webp)_老师们的祝福签_
+![](https://r2.230225.xyz/2023/06/24/a74b5294049206c4e28bd2457f230ae3.webp)_老师们的祝福签_
 
 22 日上午 10:30，最后一门考试科目——英语结束。走出考点的那一瞬间，我感觉自己无比愉悦。
 
 回到教室，开始收拾书柜和书桌抽屉里剩下的书，然后就是回家休息。
 
-![](https://r2.lihaoyu.cn/2023/06/24/12b78b88be4832814ccd6183ea3f9f2b.webp)_考点_
+![](https://r2.230225.xyz/2023/06/24/12b78b88be4832814ccd6183ea3f9f2b.webp)_考点_
 
 下午和同宿舍的同学们出去小聚了一下，因为走得比较晚，而我又是从太原坐城际公交去的榆次奥特莱斯，全程差不多花了我快一个半小时。
 
-![](https://r2.lihaoyu.cn/2023/06/24/0bcfaadfdc9e771463ec4bbef39af0d4.webp)
+![](https://r2.230225.xyz/2023/06/24/0bcfaadfdc9e771463ec4bbef39af0d4.webp)
 
 让我没有想到的是，发了朋友圈以后，我的物理老师很快就认出来我们在哪里聚的餐。
 
-![](https://r2.lihaoyu.cn/2023/06/24/27181d316698205e5ed6fa66ba8c65d9.webp)
+![](https://r2.230225.xyz/2023/06/24/27181d316698205e5ed6fa66ba8c65d9.webp)
 
 聚餐完以后又是看电影，回到家已是晚上十一点。
 
-![](https://r2.lihaoyu.cn/2023/06/24/c8ec77c275b2a938718f89a6a564a28c.webp)
+![](https://r2.230225.xyz/2023/06/24/c8ec77c275b2a938718f89a6a564a28c.webp)
 
 23 号休息了一天，24 号上午回学校估分、模拟填报志愿。
 
@@ -54,21 +54,21 @@ tags:
 
 这个总分是这样计算的：
 
-![](https://r2.lihaoyu.cn/2023/06/24/36fe92f922af1cc1053008591a0c6d31.webp)
+![](https://r2.230225.xyz/2023/06/24/36fe92f922af1cc1053008591a0c6d31.webp)
 
 接下来就是两个多月的暑假，我计划 7 月去一下上海逛逛 BilibiliWorld。
 
-![](https://r2.lihaoyu.cn/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp)_送我自己的一份礼物！By [委鬼小宸](https://space.bilibili.com/66774358)_
+![](https://r2.230225.xyz/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp)_送我自己的一份礼物！By [委鬼小宸](https://space.bilibili.com/66774358)_
 
 ---
 
 另外就是，前段时间看到友链评论区下方有人打广告宣传 xLog。
 
-![](https://r2.lihaoyu.cn/2023/06/24/59c750d060369e6a089868da6007e4f4.webp)
+![](https://r2.230225.xyz/2023/06/24/59c750d060369e6a089868da6007e4f4.webp)
 
 尽管我已经通过其他方式了解到了它并且搭建了[试验性的站点](https://decentralized.lihaoyu.cn)，但我个人是比较反感在别人的站点内一上来就打广告的。
 
-![](https://r2.lihaoyu.cn/2023/06/24/69bf7295efd2cc385cd8cb3b21ec0fe3.webp)_Nofated 的友链页面同样也收到了 xLog 的广告_
+![](https://r2.230225.xyz/2023/06/24/69bf7295efd2cc385cd8cb3b21ec0fe3.webp)_Nofated 的友链页面同样也收到了 xLog 的广告_
 
 以及，它是基于 Web3、区块链、NFT 的，这让我从未考虑过迁移至 xLog。
 

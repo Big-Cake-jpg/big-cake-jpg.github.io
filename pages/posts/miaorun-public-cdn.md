@@ -3,7 +3,7 @@ layout: post
 title: 渺软公益 CDN
 date: 2023-05-01 14:40:11
 updated: 2023-05-01 14:40:11
-cover: https://r2.lihaoyu.cn/2023/05/01/644f65d2d92ae.webp
+cover: https://r2.230225.xyz/2023/05/01/644f65d2d92ae.webp
 tags:
   - CDN
 categories: 

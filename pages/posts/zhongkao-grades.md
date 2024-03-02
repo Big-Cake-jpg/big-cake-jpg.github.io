@@ -20,7 +20,7 @@ type="song"
 theme="#F2BC57">
 </meting-js>
 
-![1688865574461.webp](https://r2.lihaoyu.cn/2023/07/09/64aa0b2c31555.webp)
+![1688865574461.webp](https://r2.230225.xyz/2023/07/09/64aa0b2c31555.webp)
 
 那么我们再来看一下我当时在学校里估的分数：
 
@@ -48,16 +48,16 @@ theme="#F2BC57">
 
 :::
 
-![1688866606229.webp](https://r2.lihaoyu.cn/2023/07/09/64aa0f3d019a4.webp)
+![1688866606229.webp](https://r2.230225.xyz/2023/07/09/64aa0f3d019a4.webp)
 
-![1688866701897.webp](https://r2.lihaoyu.cn/2023/07/09/64aa0f928d09d.webp)
+![1688866701897.webp](https://r2.230225.xyz/2023/07/09/64aa0f928d09d.webp)
 
-![1688866737382.webp](https://r2.lihaoyu.cn/2023/07/09/64aa0fb57a250.webp)
+![1688866737382.webp](https://r2.230225.xyz/2023/07/09/64aa0fb57a250.webp)
 
-![1688866887100.webp](https://r2.lihaoyu.cn/2023/07/09/64aa104ac57e4.webp)
+![1688866887100.webp](https://r2.230225.xyz/2023/07/09/64aa104ac57e4.webp)
 
-![1688867016999.webp](https://r2.lihaoyu.cn/2023/07/09/64aa10cfed3c0.webp)
+![1688867016999.webp](https://r2.230225.xyz/2023/07/09/64aa10cfed3c0.webp)
 
 ~~这下好了，暑假可以疯玩了~~ 开玩笑的，还有高中预科班，初中的班主任还让我暑假把数学补一补：
 
-![1688867238606.webp](https://r2.lihaoyu.cn/2023/07/09/64aa11a956d74.webp)
+![1688867238606.webp](https://r2.230225.xyz/2023/07/09/64aa11a956d74.webp)

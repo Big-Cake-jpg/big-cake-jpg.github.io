@@ -37,7 +37,7 @@ Switch to Linux 是不可能的，这辈子都不可能 switch to Linux 的。
 
 工具压缩包下载好，开始制作镜像：
 
-![](https://r2.lihaoyu.cn/2023/07/19/30223c1fed2efedb5d38729a09659950.webp)
+![](https://r2.230225.xyz/2023/07/19/30223c1fed2efedb5d38729a09659950.webp)
 
 它在制作镜像的时候，我出去打了一桶水，回来以后看到镜像已经做好了。于是翻一下目录，挂载镜像开始安装！
 
@@ -47,13 +47,13 @@ Switch to Linux 是不可能的，这辈子都不可能 switch to Linux 的。
 
 走完 OOBE，登录微软账号，就看到了熟悉的桌面。稍微等一会儿，让 Windows 安装一下驱动，然后就是愉快的重装软件和个性化时间咯！
 
-![](https://r2.lihaoyu.cn/2023/07/19/a8cdf347270da80b3f67405022696583.webp)_~~还有限定鼠标指针哦~~！桌面和终端背景是 Pixiv 的 CoCoLo 画的_
+![](https://r2.230225.xyz/2023/07/19/a8cdf347270da80b3f67405022696583.webp)_~~还有限定鼠标指针哦~~！桌面和终端背景是 Pixiv 的 CoCoLo 画的_
 
 > 怪事，LyricEase 和很多 UWP 应用到了这个版本上动画明显卡顿了，不知道是为何。
 
 同时，新版的文件资源管理器向我敞开了怀抱：
 
-![](https://r2.lihaoyu.cn/2023/07/19/f719a8496bc0a3c69e784c93ce3b1064.webp)_Proudly powered by Windows UI 3_
+![](https://r2.230225.xyz/2023/07/19/f719a8496bc0a3c69e784c93ce3b1064.webp)_Proudly powered by Windows UI 3_
 
 ## 坑
 

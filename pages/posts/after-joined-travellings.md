@@ -20,19 +20,19 @@ tags:
 
 这一切都开始于今年 1 月。我添加了开往维护组林林的微信，目的只是为了聊聊天。之后他询问我是否有 HTML 和 CSS 基础，在得到肯定的答复后请我为开往制作一个落地页。
 
-![](https://r2.lihaoyu.cn/2023/05/20/4d77fcd63dd533d9e94504038b2fc7dc.webp)
+![](https://r2.230225.xyz/2023/05/20/4d77fcd63dd533d9e94504038b2fc7dc.webp)
 
 之后我便开始与他交流要求以及一些其余的废话，并且开始了落地页的编写。
 
-![](https://r2.lihaoyu.cn/2023/05/20/ec0211c92ddefacca8b4680ba6a46fe2.webp)
+![](https://r2.230225.xyz/2023/05/20/ec0211c92ddefacca8b4680ba6a46fe2.webp)
 
 在经过了不懈努力以及疯狂的查阅资料之后，第一版落地页交到了林林的手里。说实话，当时的落地页真的只是个半成品：设计简陋、残废的自适应、杂乱的 HTML 与 CSS 排版。但是当时的开往因为新的备案域名的硬性要求，便不得已用了这个半成品。
 
-![](https://r2.lihaoyu.cn/2023/05/20/a7fe8c982ce51b649a890e7e7d829dc8.webp)
+![](https://r2.230225.xyz/2023/05/20/a7fe8c982ce51b649a890e7e7d829dc8.webp)
 
 之后，他在 QQ 上与我进行交流的时候，提出了让我加入开往团队协助巡查的想法，并邀请我加入了开往的 GitHub 组织和维护组 QQ 群。自此，我开始协助他们审核网站。
 
-![](https://r2.lihaoyu.cn/2023/05/20/e41b8f8dfbf20a17d3a21662917aff74.webp)
+![](https://r2.230225.xyz/2023/05/20/e41b8f8dfbf20a17d3a21662917aff74.webp)
 
 目前开往使用的是 v1.1 的落地页，基于 Fluent UI Web Components 和 Bulma CSS。第二版我打算全部换用 Bulma CSS，毕竟纯 HTML 据说 SEO 超级好。
 
@@ -40,7 +40,7 @@ tags:
 
 也没什么做的，就是抽一点空余时间去看一眼 Issue，然后检查一下新的网站是否符合开往的规则并打上对应的 Label。
 
-![](https://r2.lihaoyu.cn/2023/05/20/6ee14f9c51a9501fc75e6b054f44e9fa.webp)
+![](https://r2.230225.xyz/2023/05/20/6ee14f9c51a9501fc75e6b054f44e9fa.webp)
 
 但是这个工作在某些时候会显得很枯燥乏味，因为需要机械性的重复同样的步骤：打开网站、检查外链与文章合规性、回复 Issue、打 Label、修改 JavaScript 与 README......等等。
 

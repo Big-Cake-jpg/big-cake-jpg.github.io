@@ -38,4 +38,4 @@ aplayer: true
 
 也许我们会分别，但我们将永远不会忘记彼此。
 
-![](https://r2.lihaoyu.cn/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp)_送我自己的一份中考贺礼！By [委鬼小宸](https://space.bilibili.com/66774358)_
+![](https://r2.230225.xyz/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp)_送我自己的一份中考贺礼！By [委鬼小宸](https://space.bilibili.com/66774358)_

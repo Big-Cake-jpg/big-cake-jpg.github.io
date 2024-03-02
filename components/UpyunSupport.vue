@@ -2,7 +2,7 @@
 const upyun = {
   name: "又拍云",
   url: "https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral",
-  logo: "https://r2.lihaoyu.cn/2023/09/08/64fb26d231552.webp",
+  logo: "https://r2.230225.xyz/2023/09/08/64fb26d231552.webp",
 };
 </script>
 

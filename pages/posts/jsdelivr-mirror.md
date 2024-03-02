@@ -3,7 +3,7 @@ layout: post
 title: 自建 jsDelivr 镜像
 date: 2023-05-03 12:17:12
 updated: 2023-05-03 12:17:12
-cover: https://r2.lihaoyu.cn/2023/05/03/6451e2aacc37e.webp
+cover: https://r2.230225.xyz/2023/05/03/6451e2aacc37e.webp
 tags:
   - CDN
   - 白嫖

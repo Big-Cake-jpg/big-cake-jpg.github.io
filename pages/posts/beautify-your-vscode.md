@@ -7,7 +7,7 @@ tags:
   - VSCode
   - 美化
 categories: 记录
-cover: https://r2.lihaoyu.cn/2023/10/01/6518f7e39e17c.webp
+cover: https://r2.230225.xyz/2023/10/01/6518f7e39e17c.webp
 ---
 啥？这年头连 VSCode 都能美化？
 
@@ -23,7 +23,7 @@ cover: https://r2.lihaoyu.cn/2023/10/01/6518f7e39e17c.webp
 
 我们首先需要把所有正在运行的 VSCode 关掉，然后以管理员身份启动 VSCode，这样才能进行下一步操作。
 
-![1696135369271.webp](https://r2.lihaoyu.cn/2023/10/01/6518f8cea562b.webp)
+![1696135369271.webp](https://r2.230225.xyz/2023/10/01/6518f8cea562b.webp)
 
 需要注意的一点是，以管理员身份启动 UserSetup 模式的 VSCode 会自动禁用更新。
 
@@ -31,11 +31,11 @@ cover: https://r2.lihaoyu.cn/2023/10/01/6518f7e39e17c.webp
 
 打开侧边栏里的「扩展」，然后搜索 `Fluent`，安装 Fluent Pack 扩展包。这会安装四个扩展（两个主题，两个图标包）。
 
-![1696136046269.webp](https://r2.lihaoyu.cn/2023/10/01/6518fb72a4529.webp)
+![1696136046269.webp](https://r2.230225.xyz/2023/10/01/6518fb72a4529.webp)
 
 安装完成以后，在左下角的「管理」、「主题」内更改「产品图标主题」，然后打开命令面板，输入 `Fluent UI: Enable`，回车启用主题。之后应该会有一个气球通知要求我们重新加载窗口，窗口重新加载完成之后就可以正常看到主题的效果了。
 
-![1696136087172.webp](https://r2.lihaoyu.cn/2023/10/01/6518fb998a767.webp)
+![1696136087172.webp](https://r2.230225.xyz/2023/10/01/6518fb998a767.webp)
 
 主题的设置内能自定义背景图片，设置背景图片之后，主题会根据 Windows 11 云母效果对壁纸进行采样并放在背景层。
 

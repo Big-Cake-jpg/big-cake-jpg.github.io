@@ -7,7 +7,7 @@ tags:
   - Apple Music
   - 体验
 categories: 报告
-cover: https://r2.lihaoyu.cn/2023/10/29/653db199b5658.webp
+cover: https://r2.230225.xyz/2023/10/29/653db199b5658.webp
 ---
 如果你是我的同学或者比较亲近的朋友，你可能知道我已经开了很长时间的 Apple Music 订阅了。
 
@@ -21,7 +21,7 @@ Android 和 iOS 都有官方的 Apple Music App。
 
 至于 Windows，以前得用体验稀烂的 iTunes，性能差字体渲染稀烂不说还没有无损音频。现在 Apple 基于微软的 WinUI 3 开发出了专门的 Apple Music Windows 客户端以后体验真的是好了太多，最重要的是 WinUI 3 在我的 Windows 11 PC 上看着顺眼。
 
-![1698542928197.webp](https://r2.lihaoyu.cn/2023/10/29/653db555f15c6.webp)
+![1698542928197.webp](https://r2.230225.xyz/2023/10/29/653db555f15c6.webp)
 
 > Windows 下还有 Cider，但是由于这玩意儿基于 Web 技术，而且 2.0 版本由开源免费变成闭源收费了，我不喜欢它。
 
@@ -31,7 +31,7 @@ Android 和 iOS 都有官方的 Apple Music App。
 
 网上挺多人都说国区 Apple Music 曲库太少了，但我平常在网易云听的歌基本都有，更何况 Apple Music 还有一个“iCloud 云端音乐资料库”的功能，允许我们自行上传歌曲并在各个设备上同步播放。
 
-![1698546403386.webp](https://r2.lihaoyu.cn/2023/10/29/653dc2e53c975.webp)
+![1698546403386.webp](https://r2.230225.xyz/2023/10/29/653dc2e53c975.webp)
 
 可惜的是，资料库歌曲的歌词不能滚动，歌曲加载速度在我这里也基本上慢到爆炸。因此我现在算是网易云音乐和 Apple Music 交替使用。
 
@@ -51,11 +51,11 @@ Android 和 iOS 都有官方的 Apple Music App。
 
 <div grid="~ cols-3" pb="4">
 
-![IMG_5249.webp](https://r2.lihaoyu.cn/2023/10/29/653dc79c41321.webp)
+![IMG_5249.webp](https://r2.230225.xyz/2023/10/29/653dc79c41321.webp)
 
-![IMG_5250.webp](https://r2.lihaoyu.cn/2023/10/29/653dc79f8ef6b.webp)
+![IMG_5250.webp](https://r2.230225.xyz/2023/10/29/653dc79f8ef6b.webp)
 
-![IMG_5247.webp](https://r2.lihaoyu.cn/2023/10/29/653dc7b88928b.webp)
+![IMG_5247.webp](https://r2.230225.xyz/2023/10/29/653dc7b88928b.webp)
 
 </div>
 
@@ -63,7 +63,7 @@ Android 和 iOS 都有官方的 Apple Music App。
 
 现在 Apple Music 的推荐机制在我这里表现还算不错，会给我通过精选歌单推荐一些歌曲，听了几首也都符合我的口味。
 
-![1698548136142.webp](https://r2.lihaoyu.cn/2023/10/29/653dc9aaab75c.webp)
+![1698548136142.webp](https://r2.230225.xyz/2023/10/29/653dc9aaab75c.webp)
 
 Apple Music 也有类似于网易云“私人漫游”的功能，只不过叫“电台”。
 
