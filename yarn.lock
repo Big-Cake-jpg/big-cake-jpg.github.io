@@ -1444,10 +1444,10 @@ argparse@^2.0.1:
   resolved "https://registry.npmmirror.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
   integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
-artalk@^2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/artalk/-/artalk-2.8.2.tgz#1699bddd0b6f9d58af4b4e354d4b3034b85d12d5"
-  integrity sha512-dz3RssQUrR4sJeqPIxobnrlchEfpVuprNb9c8gkhlTk4Cc8e94ls6OrOPTtcKiMjHF50yDgeu6/+OenXY0k8aA==
+artalk@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/artalk/-/artalk-2.8.3.tgz#e8436d8a33761a5dbb24cde603404016e2334ea3"
+  integrity sha512-AaBPo4LEyikJmJIj2kZ3YgLP3mT/8CuLdbyNffsmdpiMES1Kmn/Jlno2L3cXhON9jPXLuUqZVWz6oJOFQDSLWQ==
   dependencies:
     abortcontroller-polyfill "^1.7.5"
     hanabi "^0.4.0"
