@@ -486,10 +486,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/fluent@^1.1.49":
-  version "1.1.49"
-  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.49.tgz#b4b3dd4c5a179f4996992ac5c8ea2244de006ee1"
-  integrity sha512-BDgdWb8WjWzvfyv1s8JjYViRN/qPDG1cS56tjKt6p0InZq/+PAQFeFBhirTSKtqa8fGzUJpR4dCEBcZDXEb4EA==
+"@iconify-json/fluent@^1.1.50":
+  version "1.1.50"
+  resolved "https://registry.yarnpkg.com/@iconify-json/fluent/-/fluent-1.1.50.tgz#447d5d925716042f58afbff4f82dae1c22cacf2e"
+  integrity sha512-f7VOoWVAOo79dq76JQqYi3s/yXDIhM4YNky+NoX9KttyxSygS/gEPrlJCTP0WH1GdSScCjCE/dvEcliBfH+lZg==
   dependencies:
     "@iconify/types" "*"
 
