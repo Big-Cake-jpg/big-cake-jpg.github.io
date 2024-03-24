@@ -2,7 +2,7 @@
 title: Privacy Policy
 title_zh-CN: 隐私政策
 date: 2023-06-16 10:45:16
-updated: 2023-06-16 10:45:16
+updated: 2024-03-24 10:00:00
 comment: false
 end: false
 ---
@@ -12,7 +12,7 @@ end: false
 ::: tip
 你可以点击下面的按钮切换语言。
 
-最后更新：2023 / 11 / 19
+最后更新：2024 / 03 / 24
 :::
 
 </div>
@@ -22,7 +22,7 @@ end: false
 ::: tip
 You can switch languages by clicking the button below.
 
-Last update: 2023 / 11 / 19.
+Last update: 2024 / 03 / 24.
 :::
 
 </div>
@@ -61,7 +61,7 @@ Last update: 2023 / 11 / 19.
 您应该定期查看本页面，使用浏览器的「刷新」按钮，然后检查本政策的任何修改。如果「最后更新」日期保持不变，可以假设没有更改。
 :::
 
-新修改的政策将立刻替代此前发布的所有版本，但 CDN 提供商、网站托管商、PWA Service Worker、浏览器、运营商和其他组织或个人可能出于节省带宽或其他因素缓存本页面，在这种情况下导致您看到的页面内容可能和实际不符，应当以 GitHub 提交记录为准。您始终可以通过[此链接](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/pages/policies/privacy.md)查看本页面的原始 Markdown 文件。
+新修改的政策将立刻替代此前发布的所有版本，但 CDN 提供商、网站托管商、浏览器、运营商和其他组织或个人可能出于节省带宽或其他因素缓存本页面，在这种情况下导致您看到的页面内容可能和实际不符，应当以 GitHub 提交记录为准。您始终可以通过[此链接](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/pages/policies/privacy.md)查看本页面的原始 Markdown 文件。
 
 ### 我们主动收集的信息和理由
 
@@ -87,7 +87,7 @@ Last update: 2023 / 11 / 19.
 提交评论时，您所留下的身份信息，如昵称、邮箱地址、个人网站等信息将会以 Cookies 的形式储存在您的浏览器中。我们仅会记录您留言时的内容与这些信息，和评论时的 IP 属地、浏览器、操作系统。
 
 :::warning
-IP 属地仅精确到大洲或省级的地理位置。
+IP 属地精确到城市。
 :::
 
 :::danger
@@ -134,10 +134,14 @@ IP 属地仅精确到大洲或省级的地理位置。
   - 我们在站点运营工作中使用了 Microsoft 365（包括 Office 365 专业增强版和 Exchange Online 等）服务；
 - Vercel：[Privacy Policy](https://vercel.com/legal/privacy-policy)
   - 我们使用了 Vercel 的域名解析（DNS）服务和无服务器函数（Serverless Functions）服务；
-- 阿里云：[隐私声明](https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201902141711_54837.html)
-  - 我们使用了 阿里云 的 阿里云企业邮箱 邮件发送服务；
 - Umami: [Privacy Policy](https://umami.is/privacy)
-  - 我们自行部署并使用了 Umami 开发的统计服务。
+  - 我们自行部署并使用了 Umami 开发的统计服务；
+- 阿里云：[隐私声明](https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201902141711_54837.html)
+  - 我们使用了阿里云的邮件发送服务、域名解析（DNS）服务；
+- 多吉云: [隐私权政策](https://www.dogecloud.com/page/privacy-policy)
+  - 我们使用了多吉云的内容分发网络（CDN）服务；
+- 又拍云: [用户隐私政策](https://help.upyun.com/knowledge-base/%e7%94%a8%e6%88%b7%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/)
+  - 我们使用了又拍云的内容分发网络（CDN）服务、对象存储（USS）服务。
 
 </div>
 
@@ -171,7 +175,7 @@ We reserve the right to modify this agreement, amend or update this policy at an
 You should check this page periodically, using your browser's "refresh" button, to check for any revisions to this policy. If the "Last Updated" date remains the same, it can be assumed that no changes have been made.
 :::
 
-The newly revised policy will immediately replace all previously released versions, but CDN providers, website hosts, PWA Service Workers, browsers, ISPs, and other organizations or individuals may cache this page for bandwidth saving or other reasons. In this case, the content of the page you see may not match the actual content, and the GitHub commit record shall prevail. You can always view the original Markdown file of this page via [this link](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/pages/policies/privacy.md).
+The newly revised policy will immediately replace all previously released versions, but CDN providers, website hosts, browsers, ISPs, and other organizations or individuals may cache this page for bandwidth saving or other reasons. In this case, the content of the page you see may not match the actual content, and the GitHub commit record shall prevail. You can always view the original Markdown file of this page via [this link](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/blob/source/pages/policies/privacy.md).
 
 ### Information we actively collect and why
 
@@ -197,7 +201,7 @@ Data such as IP address, browser user agent, cookies, etc. will be automatically
 When submitting a comment, the identity information you leave, such as nickname, email address, personal website and other information will be stored in your browser in the form of cookies. We will only record the content and information when you leave a message, as well as the IP domain, browser, and operating system when you comment.
 
 :::warning
-IP territories are only accurate to geographic locations at the continental or provincial level.
+IP territories are accurate to geographic locations at the city level.
 :::
 
 :::danger
@@ -244,9 +248,13 @@ In order to maintain the browsing experience of the site, we use some services p
   - We use Microsoft 365 (including Office 365 ProPlus, Exchange Online, etc.) services in the operation of the Site;
 - Vercel: [Privacy Policy](https://vercel.com/legal/privacy-policy)
   - We used Vercel's Domain Name Resolution (DNS) service and Serverless Functions (Serverless Functions) service;
-- Alibaba Cloud: [Privacy Statement](https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201902141711_54837.html)
-  - We used Alibaba Cloud's Alibaba Cloud Enterprise Mailbox email delivery service;
 - Umami: [Privacy Policy](https://umami.is/privacy)
-  - We deploy and use a statistics service developed by Umami on our own.
+  - We deployed and used the statistical service developed by Umami ourselves;
+- Alibaba Cloud (`aliyun.com`)：[隐私声明](https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201902141711_54837.html)
+  - We used Alibaba Cloud's email sending service and domain name resolution (DNS) service;
+- DogeCloud (CN Mainland Only): [隐私权政策](https://www.dogecloud.com/page/privacy-policy)
+  - We use DogeCloud's content delivery network (CDN) service;
+- Upyun: [用户隐私政策](https://help.upyun.com/knowledge-base/%e7%94%a8%e6%88%b7%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/)
+  - We use Upyun's content delivery network (CDN) service and object storage (USS) service.
 
 </div>

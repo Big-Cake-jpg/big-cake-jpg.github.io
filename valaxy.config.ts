@@ -46,7 +46,7 @@ export default defineValaxyConfig<ThemeConfig>({
     notice: {
       enable: true,
       content:
-        "由于一些体验上的原因，本站 PWA 功能已下线，恢复时间待定。",
+        "我们已修订我们的隐私政策，请及时查看更新后的内容并在必要时采取行动。",
     },
     banner: {
       enable: true,
