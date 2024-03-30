@@ -2,12 +2,13 @@
 layout: post
 title: 在 Valaxy 中使用 Artalk 作为评论系统
 date: 2024-02-01 11:23:19
-updated: 2024-02-01 11:23:19
+updated: 2024-03-30 15:22:30
 tags:
   - Valaxy
   - Artalk
   - 评论系统
 categories: 技术
+codeHeightLimit: 500
 ---
 废了老半天劲，终于摆脱了 Waline 苦海，投入了 Artalk 的怀抱。
 
@@ -81,16 +82,23 @@ npm i artalk
 
 ```vue
 <script lang="ts" setup>
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import "artalk/dist/Artalk.css";
 import Artalk from "artalk";
+import { isDark } from 'valaxy'
 
 let artalk: Artalk;
 
 const route = useRoute();
 
 onMounted(() => {
+  watch(isDark, (newVal) => {
+    if (artalk) {
+      artalk.setDarkMode(newVal);
+    }
+  });
+
   artalk = Artalk.init({
     el: ".comment",
     pageKey: route.path,
@@ -99,12 +107,13 @@ onMounted(() => {
     site: "示例站点",
     useBackendConf: true,
     locale: "auto",
+    darkMode: isDark.value, // Set initial dark mode based on isDark value
   });
 });
 
 onUnmounted(() => {
-  artalk.destroy()
-})
+  artalk.destroy();
+});
 </script>
 
 <template>
@@ -117,9 +126,11 @@ onUnmounted(() => {
 
 <style lang="scss">
 .comment {
-  .atk-list {
-    width: 90%;
+  .atk-list,
+  .atk-main-editor {
+    width: 100%;
   }
+
   h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -174,62 +185,18 @@ onUnmounted(() => {
 这样做会直接覆盖 Yun 主题的同名组件，实现细致的调整。但日后如果你想换回 Waline 或者 Twikoo，则需要删除这个组件。
 :::
 
-除此以外，我们还需要在 `styles` 文件夹中新建一个 `css-vars.scss` 文件写入样式，从而让 Artalk 适配 Valaxy 的深浅色模式切换而无需再写一堆 TypeScript：
+除此以外，我们还需要在 `styles` 文件夹中新建一个 `css-vars.scss` 文件写入样式，从而让 Artalk 适配 Yun 自动生成的主题色：
 
 ```css
-.atk-send-btn {
-  background: var(--va-c-primary) !important;
-}
-.artalk > .atk-list > .atk-list-header .atk-right-action > span.atk-on,
-.artalk > .atk-list > .atk-list-header .atk-right-action > span.atk-on * {
-  color: var(--va-c-primary) !important;
-}
-.atk-comment > .atk-main > .atk-header .atk-item.atk-nick,
-.atk-comment > .atk-main > .atk-header .atk-item.atk-nick a {
-  color: var(--va-c-primary) !important;
-}
-.atk-comment > .atk-main > .atk-header .atk-item.atk-reply-at > .atk-nick {
-  color: var(--va-c-primary) !important;
-}
-.artalk > .atk-list > .atk-list-footer .atk-copyright a {
-  color: var(--va-c-primary) !important;
-}
-
-.atk-dropdown-item:active {
-  color: var(--va-c-primary) !important;
-}
-
-.dark {
+:root {
   .artalk {
-    --at-color-font: #fff !important;
-    --at-color-deep: #e7e7e7 !important;
-    --at-color-sub: #e7e7e7 !important;
-    --at-color-grey: #fff !important;
-    --at-color-meta: #fff !important;
-    --at-color-border: #2d3235 !important;
-    --at-color-light: #687a86 !important;
-    --at-color-bg: #1e2224 !important;
-    --at-color-bg-transl: rgba(30, 34, 36, 0.95) !important;
-    --at-color-bg-grey: #46494e !important;
-    --at-color-bg-grey-transl: rgba(8, 8, 8, 0.95) !important;
-    --at-color-bg-light: rgba(29, 161, 242, 0.1) !important;
-    --at-color-red: #ff5652 !important;
-    --at-color-pink: #fa5a57 !important;
-    --at-color-yellow: #ff7c37 !important;
-    --at-color-green: #4caf50 !important;
-    --at-color-gradient: linear-gradient(
-      180deg,
-      transparent,
-      rgba(30, 34, 36, 1)
-    ) !important;
+    --at-color-main: var(--va-c-primary);
   }
 }
 
-// 下面这一堆似乎不起作用，我也不知道，先摆了，大家有建议的可以提出来。
-.artalk {
-  .atk-dropdown-item.active,
-  .atk-dropdown-item:hover {
-    color: var(--va-c-primary) !important;
+:root.dark {
+  .artalk {
+    --at-color-main: var(--va-c-primary);
   }
 }
 ```

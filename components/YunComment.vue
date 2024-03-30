@@ -1,14 +1,21 @@
 <script lang="ts" setup>
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import "artalk/dist/Artalk.css";
 import Artalk from "artalk";
+import { isDark } from 'valaxy'
 
 let artalk: Artalk;
 
 const route = useRoute();
 
 onMounted(() => {
+  watch(isDark, (newVal) => {
+    if (artalk) {
+      artalk.setDarkMode(newVal);
+    }
+  });
+
   artalk = Artalk.init({
     el: ".comment",
     pageKey: route.path,
@@ -17,6 +24,7 @@ onMounted(() => {
     site: "晓雨杂记",
     useBackendConf: true,
     locale: "auto",
+    darkMode: isDark.value,
   });
 });
 
@@ -35,9 +43,11 @@ onUnmounted(() => {
 
 <style lang="scss">
 .comment {
-  .atk-list, .atk-main-editor {
+  .atk-list,
+  .atk-main-editor {
     width: 100%;
   }
+
   h1 {
     font-size: 2rem;
     font-weight: 600;
