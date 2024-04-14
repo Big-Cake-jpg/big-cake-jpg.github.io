@@ -12,8 +12,8 @@ dependencies:
     specifier: 5.0.1
     version: 5.0.1
   artalk:
-    specifier: ^2.8.4
-    version: 2.8.4
+    specifier: ^2.8.3
+    version: 2.8.3
   axios:
     specifier: ^1.6.8
     version: 1.6.8(debug@4.3.4)
@@ -1691,13 +1691,13 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: false
 
-  /artalk@2.8.4:
-    resolution: {integrity: sha512-0xeeiFpDoxfaqz5r5yddvZiFwGMSfW7AblatJQb3WbC7TmCCwYYIvui98bHFjbFdLSFVe5cFf/Psqbkp1s3MmQ==}
+  /artalk@2.8.3:
+    resolution: {integrity: sha512-AaBPo4LEyikJmJIj2kZ3YgLP3mT/8CuLdbyNffsmdpiMES1Kmn/Jlno2L3cXhON9jPXLuUqZVWz6oJOFQDSLWQ==}
     dependencies:
       abortcontroller-polyfill: 1.7.5
       hanabi: 0.4.0
       insane: 2.6.2
-      marked: 12.0.1
+      marked: 11.2.0
     dev: false
 
   /assignment@2.0.0:
@@ -3543,8 +3543,8 @@ packages:
       uc.micro: 2.1.0
     dev: false
 
-  /marked@12.0.1:
-    resolution: {integrity: sha512-Y1/V2yafOcOdWQCX0XpAKXzDakPOpn6U0YLxTJs3cww6VxOzZV1BTOOYWLvH3gX38cq+iLwljHHTnMtlDfg01Q==}
+  /marked@11.2.0:
+    resolution: {integrity: sha512-HR0m3bvu0jAPYiIvLUUQtdg1g6D247//lvcekpHO1WMvbwDlwSkZAX9Lw4F4YHE1T0HaaNve0tuAWuV1UJ6vtw==}
     engines: {node: '>= 18'}
     hasBin: true
     dev: false
