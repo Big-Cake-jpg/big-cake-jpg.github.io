@@ -1,7 +1,7 @@
 import { defineSiteConfig } from "valaxy";
 
 export default defineSiteConfig({
-  url: "https://lihaoyu.cn",
+  url: "https://www.lihaoyu.cn",
   favicon: "https://blog-api.lihaoyu.cn/favicon",
   lang: "zh-CN",
   title: "晓雨杂记",
@@ -9,7 +9,7 @@ export default defineSiteConfig({
     name: "Big_Cake",
     avatar: "https://blog-api.lihaoyu.cn/avatar",
     email: "me@lihaoyu.cn",
-    link: "https://lihaoyu.cn",
+    link: "https://www.lihaoyu.cn",
   },
   description: "于风雨中 承载所有的回忆",
   subtitle: "也许我们会分别，但我们将永远不会忘记彼此",
@@ -20,7 +20,7 @@ export default defineSiteConfig({
   },
 
   cdn: {
-    prefix: "https://npm.onmicrosoft.cn/",
+    prefix: "https://npm.elemecdn.com/",
   },
 
   social: [
