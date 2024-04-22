@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@iconify-json/fluent':
-    specifier: ^1.1.52
-    version: 1.1.52
+    specifier: ^1.1.53
+    version: 1.1.53
   ansi-regex:
     specifier: 5.0.1
     version: 5.0.1
@@ -790,8 +790,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: false
 
-  /@iconify-json/fluent@1.1.52:
-    resolution: {integrity: sha512-DO+1206tb8WS/CQqbk47dNjwjmMtIydC56Hvj7TuAy0i8Us8JRUpmINsTGHbNu9CK9tGU2XY8SJJ1qALtDcnlw==}
+  /@iconify-json/fluent@1.1.53:
+    resolution: {integrity: sha512-3bgfkjTw3rjtuT1fFy433k3Ws5GGsT+/4C1JSF6EzHuH6dwJ2pyiNAUP5I4ufCZH7MGQoEt9txdvRIMJK6rtIg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
