@@ -12,8 +12,8 @@ dependencies:
     specifier: 5.0.1
     version: 5.0.1
   artalk:
-    specifier: ^2.8.5
-    version: 2.8.5
+    specifier: ^2.8.6
+    version: 2.8.6
   axios:
     specifier: ^1.6.8
     version: 1.6.8(debug@4.3.4)
@@ -1888,8 +1888,8 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: false
 
-  /artalk@2.8.5:
-    resolution: {integrity: sha512-Ms2Zvxdf5Dn5RmhVDMyw+7MX3e5/3zk1EeEXtBUfWK2XeOjKM/jIT84vm+vR1m6o55FAJfxVvs72BeZWsIcSmw==}
+  /artalk@2.8.6:
+    resolution: {integrity: sha512-Wt6x9F6A9l7Bw6y8tZayheHkJJ2tF0T3yZVxtqHTpDgZOKlOI91UzBvZ2bSjScayy7JH9ZSAkTC/qVDODeUhbA==}
     dependencies:
       abortcontroller-polyfill: 1.7.5
       hanabi: 0.4.0
