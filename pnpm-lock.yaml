@@ -35,8 +35,8 @@ dependencies:
 
 devDependencies:
   esbuild-wasm:
-    specifier: ^0.21.2
-    version: 0.21.2
+    specifier: ^0.21.3
+    version: 0.21.3
 
 packages:
 
@@ -2588,8 +2588,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /esbuild-wasm@0.21.2:
-    resolution: {integrity: sha512-ybee1TGUP+Va98c9xIhPD1UY+sEF2mmaNLzB5l6jvHzZqSYTAQ+3emT4jdXgf/DircV6j8pELTMpxtN+UyZ33Q==}
+  /esbuild-wasm@0.21.3:
+    resolution: {integrity: sha512-DMOV+eeVra0yVq3XIojfczdEQsz+RiFnpEj7lqs8Gux9mlTpN7yIbw0a4KzLspn0Uhw6UVEH3nUAidSqc/rcQg==}
     engines: {node: '>=12'}
     hasBin: true
     dev: true
