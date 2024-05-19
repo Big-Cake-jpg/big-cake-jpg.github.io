@@ -1,6 +1,6 @@
 # 🍰 晓雨杂记
 
-## Preview ｜ 预览
+## Preview | 预览
 
 ![preview](https://github.com/Big-Cake-jpg/big-cake-jpg.github.io/assets/76810494/eb75f340-5628-4bd5-bb11-7666146fc098)
 
@@ -14,8 +14,9 @@
 - 备用：[bigcake-blog.netlify.app](https://bigcake-blog.netlify.app)
 
 Hexo 存档分支：`hexo`
+友链仓库：[`friend-links`](https://github.com/Big-Cake-jpg/friend-links.git)
 
-## Usage ｜ 用法
+## Usage | 用法
 
 ```bash
 git clone https://github.com/Big-Cake-jpg/big-cake-jpg.github.io.git
@@ -24,7 +25,7 @@ valaxy new
 yarn build
 ```
 
-### Publish ｜ 日常发布
+### Publish | 日常发布
 
 推送至 GitHub，使用 Actions 生成静态页面并推送 main 分支
 
