@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, onUnmounted, watch } from "vue";
+import { onMounted, onBeforeUnmount, watch } from "vue";
 import { useRoute } from "vue-router";
 import "artalk/dist/Artalk.css";
 import Artalk from "artalk";
@@ -28,7 +28,7 @@ onMounted(() => {
   });
 });
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
   artalk.destroy();
 });
 </script>
