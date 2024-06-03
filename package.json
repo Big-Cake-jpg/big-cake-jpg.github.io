@@ -12,7 +12,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@iconify-json/fluent": "^1.1.54",
+    "@iconify-json/fluent": "^1.1.56",
     "ansi-regex": "5.0.1",
     "artalk": "^2.8.6",
     "axios": "^1.6.8",
