@@ -1,0 +1,1 @@
+import{E as c,n as i}from"./app-Dw4s-FAf.js";function u(o){if(!o)return{color:"",icon:"",styles:void 0};const n=c();o in n.value.types||(o="link");const r=n.value.types[o].color,s=n.value.types[o].icon,e=i(()=>o?{"--card-c-primary":r}:void 0);return{color:r,icon:s,styles:e}}export{u};
