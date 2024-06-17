@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.1.2
     version: 0.1.2
   valaxy-theme-yun:
-    specifier: ^0.18.7
-    version: 0.18.7
+    specifier: ^0.18.8
+    version: 0.18.8
 
 devDependencies:
   esbuild-wasm:
@@ -4835,8 +4835,8 @@ packages:
     resolution: {integrity: sha512-nps69kRXHsjhQyWp1Ot6oOLkyk4O6f/WwKHVumZABuVqt+LIsXxBCHCBTtTAOsq0dgk3vvisAn0WQ7EOAfX1OA==}
     dev: false
 
-  /valaxy-theme-yun@0.18.7:
-    resolution: {integrity: sha512-+QVAIzfm+cgYC/zPezIOqqDWqBuUOCw0rTXqovUo7R0Fnb0N0fnKdTWSHMLHEjr0NaI5BvkNHYlEzR6wYTyWIw==}
+  /valaxy-theme-yun@0.18.8:
+    resolution: {integrity: sha512-P/anLePhwCNGuubBOnRcwcNb9/kjAT9nHIkeK8Tm5w+8cKUadt8EEX1XC9tVLG1CBQ1sfBAWRjgyVGnO9e+u5A==}
     dependencies:
       '@explosions/fireworks': 0.0.2
       '@iconify-json/ant-design': 1.1.16
