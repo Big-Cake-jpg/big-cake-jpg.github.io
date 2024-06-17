@@ -27,8 +27,8 @@ dependencies:
     specifier: ^0.0.2
     version: 0.0.2
   valaxy-addon-meting:
-    specifier: ^0.1.2
-    version: 0.1.2
+    specifier: ^0.1.3
+    version: 0.1.3
   valaxy-theme-yun:
     specifier: ^0.18.7
     version: 0.18.7
@@ -4831,8 +4831,8 @@ packages:
       lightgallery: 2.7.2
     dev: false
 
-  /valaxy-addon-meting@0.1.2:
-    resolution: {integrity: sha512-nps69kRXHsjhQyWp1Ot6oOLkyk4O6f/WwKHVumZABuVqt+LIsXxBCHCBTtTAOsq0dgk3vvisAn0WQ7EOAfX1OA==}
+  /valaxy-addon-meting@0.1.3:
+    resolution: {integrity: sha512-E/YVyJAmTNXk4bW5C8GXF1NiyvIo5pXHt7dlqbPows2adJ049n6oDsNPTKq3Vv22iA/4w1ZEE4hA6Y3IVRqB6A==}
     dev: false
 
   /valaxy-theme-yun@0.18.7:
