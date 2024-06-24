@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.1.2
     version: 0.1.2
   valaxy-theme-yun:
-    specifier: ^0.18.7
-    version: 0.18.7
+    specifier: ^0.18.9
+    version: 0.18.9
 
 devDependencies:
   esbuild-wasm:
@@ -690,8 +690,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: false
 
-  /@iconify-json/simple-icons@1.1.105:
-    resolution: {integrity: sha512-eSI32492Ga6IR7BhpDy222pSupqshZIVuYllaYHDO0MjmgVvfus5wgXb/U8RXpMZTpcQ/8dNcCK82LkupFqD4w==}
+  /@iconify-json/simple-icons@1.1.107:
+    resolution: {integrity: sha512-IEIekNX+KsA/xOjTCxgdSDe6OJ1rOpio5CJ8GgCiyFZYSkPG1FPTFJIYGT95qh+HvnLAHqtKqZT53vDfyNl8fQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
@@ -4835,12 +4835,12 @@ packages:
     resolution: {integrity: sha512-nps69kRXHsjhQyWp1Ot6oOLkyk4O6f/WwKHVumZABuVqt+LIsXxBCHCBTtTAOsq0dgk3vvisAn0WQ7EOAfX1OA==}
     dev: false
 
-  /valaxy-theme-yun@0.18.7:
-    resolution: {integrity: sha512-+QVAIzfm+cgYC/zPezIOqqDWqBuUOCw0rTXqovUo7R0Fnb0N0fnKdTWSHMLHEjr0NaI5BvkNHYlEzR6wYTyWIw==}
+  /valaxy-theme-yun@0.18.9:
+    resolution: {integrity: sha512-x3Y4+OFchEKFGwLpZCMNJrr+tPhYapcmVh/DtKvbBPhgagTopBtb8LNS3h4JrHoKLgGfttEUTlKW6V5fQD0SYw==}
     dependencies:
       '@explosions/fireworks': 0.0.2
       '@iconify-json/ant-design': 1.1.16
-      '@iconify-json/simple-icons': 1.1.105
+      '@iconify-json/simple-icons': 1.1.107
       animejs: 3.2.2
     dev: false
 
