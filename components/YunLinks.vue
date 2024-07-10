@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useRandomData } from "../node_modules/valaxy-theme-yun/composables";
-import { onImgError } from "../node_modules/valaxy-theme-yun/utils";
+import { useRandomData } from "../valaxy-theme-custom/composables/helper";
+import { onImgError } from "../valaxy-theme-custom/utils/index";
 import { defineProps, computed } from "vue";
 
 interface LinkType {

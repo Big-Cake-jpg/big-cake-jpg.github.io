@@ -3,7 +3,7 @@
   "version": "0.11.1",
   "private": true,
   "scripts": {
-    "build": "valaxy fuse && yarn build:ssg",
+    "build": "valaxy fuse && pnpm build:ssg",
     "build:spa": "valaxy build",
     "build:ssg": "valaxy build --ssg",
     "dev": "valaxy",
