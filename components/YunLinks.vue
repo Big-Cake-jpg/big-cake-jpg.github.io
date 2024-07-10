@@ -32,7 +32,7 @@ const totalLinks = computed(() => data.value?.length || 0);
 
 <template>
   <div class="links">
-    <div class="total-links">友链总数量: <span class=links-number>{{ totalLinks }}</span></div>
+    <div class="total-links">友链总数量: <span>{{ totalLinks }}</span></div>
     <ul class="link-items">
       <li
         v-for="(link, i) in data"
@@ -63,7 +63,7 @@ const totalLinks = computed(() => data.value?.length || 0);
             />
           </div>
           <div class="link-info" m="l-2">
-            <div class="link-blog" font="serif black">{{ link.blog }}</div>
+            <div class="link-blog" font="black">{{ link.blog }}</div>
             <div class="link-desc">{{ link.desc }}</div>
           </div>
         </a>
@@ -79,8 +79,8 @@ const totalLinks = computed(() => data.value?.length || 0);
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
-
     padding-left: 0;
+    margin-left: 0;
   }
 
   .link-url {
@@ -139,13 +139,11 @@ const totalLinks = computed(() => data.value?.length || 0);
 
 li {
   list-style-type: none;
+  margin-top: 0 !important;
 }
 
 .total-links {
   margin-bottom: 1rem;
   text-align: center;
-  .links-number {
-    font-family: var(--smc-font-serif);
-  }
 }
 </style>

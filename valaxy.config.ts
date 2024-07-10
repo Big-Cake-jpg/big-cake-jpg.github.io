@@ -1,5 +1,5 @@
 import { defineValaxyConfig } from "valaxy";
-import type { ThemeConfig } from "valaxy-theme-yun";
+import type { ThemeConfig } from "valaxy-theme-custom";
 // import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
@@ -30,88 +30,60 @@ export default defineValaxyConfig<ThemeConfig>({
     },
   },
 
-  theme: "yun",
+  theme: "custom",
 
   themeConfig: {
-    notice: {
-      enable: true,
-      content:
-        "我们已修订我们的隐私政策，请及时查看更新后的内容并在必要时采取行动。",
+    author: {
+      slogan: "也许我们会分别，但我们将永远不会忘记彼此",
     },
-    banner: {
-      enable: true,
-      title: "晓雨杂记",
-      cloud: {
-        enable: true,
-      },
-    },
-    pages: [
-      {
-        name: "友链",
-        url: "/links",
-        icon: "i-ri-link",
-        color: "dodgerblue",
-      },
-      {
-        name: "相册集",
-        url: "/albums",
-        icon: "i-ri-gallery-line",
-        color: "#F2BC57",
-      },
-      {
-        name: "虫洞",
-        url: "https://foreverblog.cn/go.html",
-        icon: "i-ri-checkbox-blank-circle-fill",
-        color: "gray",
-      },
-      {
-        name: "隐私政策",
-        url: "/policies/privacy",
-        icon: "i-ri-chat-private-line",
-        color: "red",
-      },
-      /* {
-        name: '说说',
-        url: '/artitalk/',
-        icon: 'i-ri-message-line',
-        color: '#ff9e77',
-      }, */
-    ],
 
     footer: {
       since: 2021,
     },
 
-    bg_image: {
-      enable: true,
-      url: "https://upyun.lihaoyu.cn/2024/04/05/660f8e9e2ac7e.png",
-      dark: "https://upyun.lihaoyu.cn/2024/04/05/660f93b2ab657.png",
-    },
-
-    say: {
-      enable: true,
-      api: "https://el-bot-api.vercel.app/api/words/young",
-      hitokoto: {
-        enable: true,
-        api: "https://v1.hitokoto.cn",
+    pages: [
+      {
+        name: "归档",
+        url: "/archives",
       },
-    },
-
-    colors: {
-      primary: "#F2BC57",
-    },
-
-    menu: {
-      custom: {
-        title: "menu.travellings",
-        url: "https://www.travellings.cn/go.html",
-        icon: "i-fluent-vehicle-subway-24-regular",
+      {
+        name: "友链",
+        url: "/links",
       },
+    ],
+
+    asidePages: [
+      {
+        name: "隐私政策",
+        url: "/policies/privacy",
+      },
+      {
+        name: "关于我",
+        url: "/about",
+      },
+    ],
+
+    quickAccess: [
+      {
+        name: "RSS",
+        url: "/atom.xml",
+        icon: "i-ri-rss-line",
+      },
+    ],
+
+    announcement: {
+      enable: false,
     },
 
-    fireworks: {
-      enable: true,
-      colors: ["#F2BC57", "#F2CD5E", "#F2F2F2"],
+    valaxyDarkOptions: {
+      useDarkOptions: {
+        selector: "html",
+        valueDark: "theme-dark",
+        valueLight: "",
+        disableTransition: false,
+      },
+
+      circleTransition: true,
     },
   },
 

@@ -113,6 +113,12 @@ export default defineSiteConfig({
         color: "#2DC100",
         icon: "i-ri-wechat-pay-line",
       },
+      {
+        name: "爱发电",
+        url: "https://afdian.net/a/Big_Cake2577117205",
+        color: "#936be5",
+        icon: "i-ri-flashlight-line",
+      },
     ],
   },
 

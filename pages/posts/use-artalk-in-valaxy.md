@@ -14,7 +14,7 @@ codeHeightLimit: 500
 
 ## 前言
 
-Restent 在使用 VitePress 作为框架驱动博客后便抛弃了 Waline，使用 Artalk 作为评论系统，还写了一篇文章 [迁移评论系统至 Artalk](https://blog.gxres.net/posts/Move-to-Artalk-comment-system.html) 记录。此前他也向我发出邀约并称还能将他的 Artalk 实例开一个站给我，当时我选择考虑一下。
+Restent 在使用 VitePress 作为框架驱动博客后便抛弃了 Waline，使用 Artalk 作为评论系统，还写了一篇文章 [迁移评论系统至 Artalk](https://blog.gxres.net/posts/move-to-artalk-comment-system) 记录。此前他也向我发出邀约并称还能将他的 Artalk 实例开一个站给我，当时我选择考虑一下。
 
 后来他更换了自己的邮箱地址，但由于 Waline 的后端过于简单而无法修改自己注册账号的邮箱，迫不得已麻烦我改数据库。
 
@@ -62,21 +62,9 @@ wget https://github.com/ArtalkJS/Artalk/releases/download/v2.8.0/artalk_v2.8.0_l
 
 首先我们需要安装一下 Artalk 的 npm 包（我自己用的是 yarn）。
 
-::: code-group
-
-```bash [pnpm]
-pnpm i artalk
-```
-
 ```bash [yarn]
 yarn add artalk
 ```
-
-```bash [npm]
-npm i artalk
-```
-
-:::
 
 安装好之后，在 `components` 目录下新建一个 `YunComment.vue` 文件，写入如下内容：
 
