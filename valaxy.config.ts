@@ -3,6 +3,7 @@ import type { ThemeConfig } from "valaxy-theme-custom";
 // import { addonWaline } from "valaxy-addon-waline";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
+import compression from "vite-plugin-compression2";
 // import { VitePWA } from "vite-plugin-pwa";
 // import { addonMeting } from "valaxy-addon-meting";
 
@@ -28,6 +29,9 @@ export default defineValaxyConfig<ThemeConfig>({
     optimizeDeps: {
       include: ["artalk"],
     },
+    plugins: [
+      compression(),
+    ],
   },
 
   theme: "custom",
