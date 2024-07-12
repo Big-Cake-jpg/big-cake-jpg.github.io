@@ -21,6 +21,7 @@ const toggleDark = () => appStore.toggleDark();
             width="28"
             height="28"
             alt="Site favicon"
+            loading="lazy"
           />
           <div class="ml-2 font-medium">{{ siteConfig.title }}</div>
         </RouterLink>

@@ -26,7 +26,7 @@ const tags = useTags();
     <div class="card p-4">
             <div class="mb-1 flex flex-col justify-center items-center text-center">
                 <img width="96" height="96" :src="siteConfig.author.avatar"
-                    class="rounded-full mb-2" :alt="`${siteConfig.author.name}'s Avatar`">
+                    class="rounded-full mb-2" loading="lazy" :alt="`${siteConfig.author.name}'s Avatar`">
                 <p class="text-2xl mb-1">{{ siteConfig.author.name }}</p>
                 <p class="text-sm mb-1">{{ themeConfig.author.slogan }}</p>
             </div>
