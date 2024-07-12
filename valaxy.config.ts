@@ -4,6 +4,7 @@ import type { ThemeConfig } from "valaxy-theme-custom";
 import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
 import compression from "vite-plugin-compression2";
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 // import { VitePWA } from "vite-plugin-pwa";
 // import { addonMeting } from "valaxy-addon-meting";
 
@@ -31,6 +32,11 @@ export default defineValaxyConfig<ThemeConfig>({
     },
     plugins: [
       compression(),
+      ViteMinifyPlugin({
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: true,
+      }),
     ],
   },
 

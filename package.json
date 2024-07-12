@@ -29,7 +29,8 @@
     "vite-plugin-compression2": "^1.1.2"
   },
   "devDependencies": {
-    "esbuild-wasm": "^0.23.0"
+    "esbuild-wasm": "^0.23.0",
+    "vite-plugin-minify": "^1.5.2"
   },
   "overrides": {
     "esbuild": "npm:esbuild-wasm@latest"

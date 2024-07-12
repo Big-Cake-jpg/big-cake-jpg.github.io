@@ -13,7 +13,6 @@ export default defineSiteConfig({
   },
   description: "于风雨中 承载所有的回忆",
   subtitle: "也许我们会分别，但我们将永远不会忘记彼此",
-  timezone: "Asia/Shanghai",
 
   feed: {
     favicon: "https://blog-api.lihaoyu.cn/favicon",
