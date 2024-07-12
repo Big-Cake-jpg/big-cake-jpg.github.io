@@ -35,6 +35,7 @@ const formatDate = (date: string | number | Date) => {
       <PostMeta />
       <br />
       <div class="content break-words">
+        <TimeWarning />
         <div>
           <slot />
         </div>

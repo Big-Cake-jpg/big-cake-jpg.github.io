@@ -2,7 +2,7 @@ import { defineSiteConfig } from "valaxy";
 
 export default defineSiteConfig({
   url: "https://www.lihaoyu.cn",
-  favicon: "https://blog-api.lihaoyu.cn/favicon",
+  favicon: "https://blog-api.lihaoyu.cn/images/profile/head.webp",
   lang: "zh-CN",
   title: "晓雨杂记",
   author: {
@@ -15,7 +15,7 @@ export default defineSiteConfig({
   subtitle: "也许我们会分别，但我们将永远不会忘记彼此",
 
   feed: {
-    favicon: "https://blog-api.lihaoyu.cn/favicon",
+    favicon: "https://blog-api.lihaoyu.cn/images/profile/head.webp",
   },
 
   cdn: {
