@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/jetbrains-mono':
+        specifier: ^5.0.20
+        version: 5.0.20
       '@fontsource/noto-sans-sc':
         specifier: ^5.0.19
         version: 5.0.19
@@ -396,6 +399,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/jetbrains-mono@5.0.20':
+    resolution: {integrity: sha512-QkrihYWqftzs+04TinulIhnFqNwO6990HR07iCUae/6daOZAMy7urUPzytrRT9M8KLTTHBeHOY0CKqOs1+o2OQ==}
 
   '@fontsource/noto-sans-sc@5.0.19':
     resolution: {integrity: sha512-WI9j4N3sz9RQElaBpkIE/gnaX6VhIO4ajOq1FVEVKSrxyfAhXtFBGZuG7KBqhWbWrx/DYrxOjK2O9BPxIWKORA==}
@@ -3319,6 +3325,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource/jetbrains-mono@5.0.20': {}
 
   '@fontsource/noto-sans-sc@5.0.19': {}
 

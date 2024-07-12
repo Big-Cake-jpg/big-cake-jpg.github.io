@@ -20,6 +20,7 @@ const app = useAppStore()
 
 onMounted(async () => {
     await import("@fontsource/noto-sans-sc/400.css");
+    await import('@fontsource/jetbrains-mono/400.css')
     app.showLoading = false
 })
 </script>
