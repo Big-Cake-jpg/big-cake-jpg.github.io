@@ -61,8 +61,8 @@
   }
 }
 
-.shiki,
-.shiki span {
+html[data-theme="light"] .shiki,
+html[data-theme="light"] .shiki span {
   margin-bottom: 0px !important;
   color: var(--shiki-light) !important;
   background-color: var(--shiki-light-bg) !important;
@@ -72,23 +72,32 @@
   text-decoration: var(--shiki-light-text-decoration) !important;
 }
 
-html.theme-dark .shiki,
-html.theme-dark .shiki span {
+html[data-theme="dark"] .shiki,
+html[data-theme="dark"] .shiki span {
+  margin-bottom: 0px !important;
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
   /* 可选，用于定义字体样式 */
   font-style: var(--shiki-dark-font-style) !important;
   font-weight: var(--shiki-dark-font-weight) !important;
   text-decoration: var(--shiki-dark-text-decoration) !important;
-  span.lang {
-    color: rgb(var(--va-c-text-dark-3)) !important;
-  }
 }
 
-.shiki .copy {
+html[data-theme="light"] .markdown-body [class*=language-] > button.copy {
   background-color: var(--shiki-light-bg) !important;
+  border: var(--bulma-body-color);
 }
 
-html.theme-dark .shiki .copy {
+html[data-theme="dark"] .markdown-body [class*=language-] > button.copy {
   background-color: var(--shiki-dark-bg) !important;
+  border: var(--vp-code-copy-code-border-color);
+}
+
+.markdown-body div[class*=language-] {
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.markdown-body [class*=language-] > span.lang {
+  color: rgb(var(--va-c-text)) !important;
 }

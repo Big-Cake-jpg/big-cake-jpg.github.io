@@ -82,8 +82,9 @@ export default defineValaxyConfig<ThemeConfig>({
     valaxyDarkOptions: {
       useDarkOptions: {
         selector: "html",
-        valueDark: "theme-dark",
-        valueLight: "",
+        attribute: 'data-theme',
+        valueDark: "dark",
+        valueLight: "light",
         disableTransition: false,
       },
 

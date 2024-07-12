@@ -44,7 +44,7 @@ html {
   pointer-events: none;
 
   .bar {
-    background: var(--va-c-primary);
+    background: var(--bulma-info);
     opacity: 1;
     position: fixed;
     z-index: 1024;
@@ -62,15 +62,15 @@ html {
   width: 100px;
   height: 100%;
   box-shadow:
-    0 0 10px var(--va-c-primary),
-    0 0 5px var(--va-c-primary);
+    0 0 10px var(--bulma-info),
+    0 0 5px var(--bulma-info);
   opacity: 1;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -ms-transform: rotate(3deg) translate(0px, -4px);
   transform: rotate(3deg) translateY(-4px);
 }
 
-.dark {
+html[data-theme="dark"] {
   .aplayer {
     background: rgba(0, 0, 0, 0.8);
     font-family: Arial, Helvetica, sans-serif;
