@@ -7,7 +7,7 @@ export default defineSiteConfig({
   title: "晓雨杂记",
   author: {
     name: "Big_Cake",
-    avatar: "https://blog-api.lihaoyu.cn/avatar",
+    avatar: "https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp",
     email: "me@lihaoyu.cn",
     link: "https://www.lihaoyu.cn",
   },
