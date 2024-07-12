@@ -1,31 +1,7 @@
-:root {
-  --yun-sidebar-bg-color: var(--va-c-bg-light);
-  --yun-sidebar-bg-img: url(https://r2.230225.xyz/alpha-stars-timing-1.webp);
-}
-
 iframe.bilibili-video {
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16/9;
-}
-
-canvas.fireworks {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 114514;
-  pointer-events: none;
-}
-
-:root {
-  --smc-font-sans: "Noto Sans SC", Raleway, -apple-system, "PingFang SC",
-    "Microsoft YaHei", Arial, sans-serif;
-  --smc-font-serif: "Noto Serif SC", STZhongsong, STKaiti, KaiTi, Roboto, serif;
-  --smc-font-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-html {
-  font-family: "Noto Sans SC";
 }
 
 :root {

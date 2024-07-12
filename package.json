@@ -12,7 +12,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@fontsource/jetbrains-mono": "^5.0.20",
     "@fontsource/noto-sans-sc": "^5.0.19",
     "@iconify-json/fluent": "^1.1.58",
     "@iconify-json/ic": "^1.1.17",
@@ -30,7 +29,6 @@
     "vite-plugin-compression2": "^1.1.2"
   },
   "devDependencies": {
-    "@mojojoejo/vite-plugin-purgecss": "^1.1.0",
     "esbuild-wasm": "^0.23.0",
     "vite-plugin-minify": "^1.5.2"
   },

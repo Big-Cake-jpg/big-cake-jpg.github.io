@@ -5,7 +5,6 @@ import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
 import compression from "vite-plugin-compression2";
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
-import pluginPurgeCss from "@mojojoejo/vite-plugin-purgecss";
 // import { VitePWA } from "vite-plugin-pwa";
 // import { addonMeting } from "valaxy-addon-meting";
 
@@ -37,9 +36,6 @@ export default defineValaxyConfig<ThemeConfig>({
         minifyCSS: true,
         minifyJS: true,
         removeComments: true,
-      }),
-      pluginPurgeCss({
-        variables: true,
       }),
     ],
   },
