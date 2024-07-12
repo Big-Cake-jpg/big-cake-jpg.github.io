@@ -4,6 +4,10 @@ import { ref } from "vue";
 
 const { headers, handleClick } = useOutline();
 const OutlineItemShow = ref(false);
+
+const closeOutline = () => {
+  OutlineItemShow.value = false;
+};
 </script>
 
 <template>
@@ -25,6 +29,7 @@ const OutlineItemShow = ref(false);
             :on-click="handleClick"
             root
             @click="OutlineItemShow = false"
+            @close-menu="closeOutline"
           />
         </div>
       </div>

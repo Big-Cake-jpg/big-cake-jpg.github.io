@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import type { MenuItem } from "valaxy";
+import { defineProps, defineEmits } from "vue";
 
 defineProps<{
   headers: MenuItem[];
   onClick: (e: MouseEvent) => void;
   root?: boolean;
 }>();
+
+const emit = defineEmits(['close-menu']);
 
 const handleClick = (e: MouseEvent, link: string) => {
   e.preventDefault();
@@ -17,6 +20,7 @@ const handleClick = (e: MouseEvent, link: string) => {
       behavior: "smooth",
     });
   }
+  emit('close-menu');
 };
 </script>
 
@@ -33,7 +37,7 @@ const handleClick = (e: MouseEvent, link: string) => {
           {{ title }}
         </a>
         <template v-if="children?.length">
-          <OutlineItem :headers="children" :on-click="onClick" />
+          <OutlineItem :headers="children" @click="handleClick($event, link)" @close-menu="$emit('close-menu')"/>
         </template>
       </li>
     </ul>
