@@ -40,10 +40,8 @@ medium_zoom: false
 
 我的信息如下：
 
-- 链接：https://lihaoyu.cn
-- 头像（2360x，WebP）：https://blog-api.lihaoyu.cn/avatar
-  - 512x，WebP：https://blog-api.lihaoyu.cn/images/profile/avatar-512x.webp
-  - 128x，WebP：https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp
+- 链接：https://www.lihaoyu.cn
+- 头像（128x，WebP）：https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp
   - Gravatar E-Mail Hash：`636d113ce37111d08f08faee780ce9b8`
 - 站点名称：晓雨杂记
 - 昵称：Big_Cake / 晓雨
@@ -52,8 +50,8 @@ medium_zoom: false
 
 ```json
 {
-    "url": "https://lihaoyu.cn", // 链接
-    "avatar": "https://blog-api.lihaoyu.cn/avatar", // 头像
+    "url": "https://www.lihaoyu.cn", // 链接
+    "avatar": "https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp", // 头像
     "name": "Big_Cake", // 昵称
     "color": "#F2BC57", // 主题色
     "blog": "晓雨杂记", // 站点名称
