@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@fontsource/noto-sans-sc": "^5.0.19",
-    "@iconify-json/fluent": "^1.1.58",
+    "@iconify-json/fluent": "^1.1.59",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/material-symbols-light": "^1.1.24",
     "ansi-regex": "5.0.1",
