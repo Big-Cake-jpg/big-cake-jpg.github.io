@@ -3,5 +3,6 @@
         <SidebarProfile />
         <SidebarRecentPosts class="mt-[-16px]" />
         <slot />
+        <SidebarUpyunSupport />
     </div>
 </template>

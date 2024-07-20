@@ -10,6 +10,7 @@ interface LinkType {
   color: string;
   blog: string;
   desc: string;
+  healthy: boolean;
 }
 
 const props = defineProps<{
@@ -23,11 +24,13 @@ const props = defineProps<{
 
 const { data } = useRandomData(props.links, props.random);
 
+const filteredData = computed(() => data.value?.filter(link => link.healthy !== false) || []);
+
 function onError(e: Event) {
   onImgError(e, props.errorImg);
 }
 
-const totalLinks = computed(() => data.value?.length || 0);
+const totalLinks = computed(() => filteredData.value?.length || 0);
 </script>
 
 <template>
@@ -35,7 +38,7 @@ const totalLinks = computed(() => data.value?.length || 0);
     <div class="total-links">友链总数量: <span>{{ totalLinks }}</span></div>
     <ul class="link-items">
       <li
-        v-for="(link, i) in data"
+        v-for="(link, i) in filteredData"
         :key="i"
         class="link-item"
         :style="`--primary-color: ${link.color}`"
