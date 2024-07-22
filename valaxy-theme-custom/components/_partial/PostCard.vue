@@ -38,7 +38,7 @@ const formatDate = (date: string | number | Date) => {
       <div class="grid grid-cols-3">
         <p class="text-left col-span-2">
           {{ formatDate(post.date as Date) }} &#x2022;
-          {{ post.categories ?? "未分类" }}
+          {{ Array.isArray(post.categories) ? post.categories.flat().join(', ') : post.categories ?? "未分类" }}
         </p>
         <p class="text-right">
           <RouterLink v-if="post.path" :to="post.path"> 阅读全文 </RouterLink>

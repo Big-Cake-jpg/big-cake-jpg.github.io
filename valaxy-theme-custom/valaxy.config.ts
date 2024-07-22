@@ -5,8 +5,5 @@ import { defaultThemeConfig } from "node/config";
 export default defineTheme<ThemeConfig>((options) => {
   return {
     themeConfig: defaultThemeConfig,
-    unocss: {
-      safelist: 
-    },
   };
 });

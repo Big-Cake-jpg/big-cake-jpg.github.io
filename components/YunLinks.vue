@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useRandomData } from "../valaxy-theme-custom/composables/helper";
 import { onImgError } from "../valaxy-theme-custom/utils/index";
-import { defineProps, computed } from "vue";
+import { computed } from "vue";
 
 interface LinkType {
   avatar: string;

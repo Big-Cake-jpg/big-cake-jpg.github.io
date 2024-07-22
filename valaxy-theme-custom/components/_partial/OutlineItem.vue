@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { MenuItem } from "valaxy";
-import { defineProps, defineEmits } from "vue";
 
 defineProps<{
   headers: MenuItem[];

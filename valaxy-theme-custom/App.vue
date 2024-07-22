@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue';
 import { onMounted } from 'vue';
-import { useAppStore } from 'valaxy'
+import { useAppStore, useSiteConfig } from 'valaxy'
+import { useRoute } from 'vue-router'
+
+const route = useRoute();
+const site = useSiteConfig();
 
 useHead({
     link: [
         {
             rel: 'canonical',
-            href: 'https://www.lihaoyu.cn'
+            href: site.value.url?.slice(0, -1) + route.path
         },
         {
             rel: 'preconnect',
@@ -19,8 +23,8 @@ useHead({
 const app = useAppStore()
 
 onMounted(async () => {
+    app.showLoading = false,
     await import("@fontsource/noto-sans-sc/400.css");
-    app.showLoading = false
 })
 </script>
 <template>

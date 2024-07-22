@@ -108,4 +108,8 @@ export default defineValaxyConfig<ThemeConfig>({
       dark: "material-theme-darker",
     },
   },
+
+  build: {
+    ssgForPagination: true,
+  },
 });
