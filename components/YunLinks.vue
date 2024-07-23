@@ -35,16 +35,16 @@ const totalLinks = computed(() => filteredData.value?.length || 0);
 
 <template>
   <div class="links">
-    <div class="total-links">友链总数量: <span>{{ totalLinks }}</span></div>
-    <ul class="link-items">
+    <div class="m-4 text-center">友链总数量: <span>{{ totalLinks }}</span></div>
+    <ul class="flex text-center justify-center flex-wrap pl-0">
       <li
         v-for="(link, i) in filteredData"
         :key="i"
-        class="link-item"
+        class="link-item list-none"
         :style="`--primary-color: ${link.color}`"
       >
         <a
-          class="link-url"
+          class="link-url inline-flex text-center justify-self-center leading-normal m-2"
           p="x-4 y-2"
           :href="link.url"
           :title="link.name"
@@ -52,9 +52,9 @@ const totalLinks = computed(() => filteredData.value?.length || 0);
           rel="friend"
           target="_blank"
         >
-          <div class="link-left">
+          <div class="link-left leading-0">
             <img
-              class="link-avatar"
+              class="link-avatar m-0 inline-flex max-w-100% rounded-full bg-white"
               width="64"
               height="64"
               w="16"
@@ -65,9 +65,9 @@ const totalLinks = computed(() => filteredData.value?.length || 0);
               @error="onError"
             />
           </div>
-          <div class="link-info" m="l-2">
+          <div class="link-info inline-flex flex-col justify-center" m="l-2">
             <div class="link-blog" font="black">{{ link.blog }}</div>
-            <div class="link-desc">{{ link.desc }}</div>
+            <div class="text-0.8rem w-40 whitespace-nowrap text-ellipsis overflow-hidden">{{ link.desc }}</div>
           </div>
         </a>
       </li>
@@ -77,23 +77,9 @@ const totalLinks = computed(() => filteredData.value?.length || 0);
 
 <style lang="scss" scoped>
 .links {
-  .link-items {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-left: 0;
-  }
 
   .link-url {
     --smc-link-color: var(--primary-color);
-
-    display: inline-flex;
-    text-align: center;
-    justify-self: center;
-    line-height: 1.5;
-    margin: 0.5rem;
     transition: 0.2s;
     color: var(--primary-color, black);
     border: 1px solid var(--primary-color, gray);
@@ -105,48 +91,22 @@ const totalLinks = computed(() => filteredData.value?.length || 0);
     }
 
     .link {
-      &-left {
-        line-height: 0;
-      }
-
       &-avatar {
-        margin: 0;
-        display: inline-flex;
-        max-width: 100%;
-        border-radius: 50%;
-        background-color: #fff;
         border: 1px solid var(--primary-color, gray);
         transition: 0.5s;
-
         &:hover {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
       }
-
-      &-desc {
-        font-size: 0.8rem;
-        width: 10rem;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
     }
-  }
-
-  .link-info {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
 li {
-  list-style-type: none;
   margin-top: 0 !important;
 }
 
-.total-links {
-  margin-bottom: 1rem;
-  text-align: center;
+ul {
+  margin-left: 0 !important;
 }
 </style>
