@@ -1,7 +1,6 @@
 import { defineValaxyConfig } from "valaxy";
 import type { ThemeConfig } from "valaxy-theme-custom";
 // import { addonWaline } from "valaxy-addon-waline";
-import { addonComponents } from "valaxy-addon-components";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
 import compression from "vite-plugin-compression2";
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
@@ -13,7 +12,6 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
  */
 export default defineValaxyConfig<ThemeConfig>({
   addons: [
-    addonComponents(),
     addonLightGallery(),
     /* addonMeting({
       global: true,
@@ -94,7 +92,7 @@ export default defineValaxyConfig<ThemeConfig>({
         disableTransition: false,
       },
 
-      circleTransition: true,
+      circleTransition: false,
     },
   },
 

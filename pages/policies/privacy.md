@@ -2,27 +2,26 @@
 title: Privacy Policy
 title_zh-CN: 隐私政策
 date: 2023-06-16 10:45:16
-updated: 2024-03-24 10:00:00
+updated: 2024-07-23 12:30:00
 comment: false
-end: false
 ---
-
-<div lang="zh-CN">
-
-::: tip
-你可以点击下面的按钮切换语言。
-
-最后更新：2024 / 03 / 24
-:::
-
-</div>
 
 <div lang="en">
 
 ::: tip
+你可以点击下面的按钮切换语言。
+
+最后更新：2024 / 07 / 23
+:::
+
+</div>
+
+<div lang="zh-CN">
+
+::: tip
 You can switch languages by clicking the button below.
 
-Last update: 2024 / 03 / 24.
+Last update: 2024 / 07 / 23.
 :::
 
 </div>
@@ -129,7 +128,7 @@ IP 属地精确到城市。
 - GitHub：[隐私声明](https://docs.github.com/github/site-policy/github-privacy-statement)
   - 我们使用了 GitHub 的代码托管（Git）服务、持续集成（CI）服务和静态网站托管服务（Pages）；
 - Google：[隐私权和条款](https://policies.google.com/privacy)
-  - 我们使用了 Google 的数据分析服务（Analytics）、广告服务（AdSense）；
+  - 我们使用了 Google 的 OAuth2 服务；
 - Microsoft：[隐私声明](https://privacy.microsoft.com/privacystatement)
   - 我们在站点运营工作中使用了 Microsoft 365（包括 Office 365 专业增强版和 Exchange Online 等）服务；
 - Vercel：[Privacy Policy](https://vercel.com/legal/privacy-policy)
@@ -205,7 +204,7 @@ IP territories are accurate to geographic locations at the city level.
 :::
 
 :::danger
-We generally have no control over data collectors added by third parties such as CDN service providers and Google Ads. You might consider using an ad blocking extension to block these data collectors.
+We generally have no control over data collectors added by third parties such as CDN service providers. You might consider using an ad blocking extension to block these data collectors.
 :::
 
 ### How we use and store your information
@@ -243,7 +242,7 @@ In order to maintain the browsing experience of the site, we use some services p
 - GitHub: [Privacy Statement](https://docs.github.com/github/site-policy/github-privacy-statement)
   - We used GitHub's code hosting service (Git), continuous integration (CI) service and static website hosting service (Pages);
 - Google: [Privacy and Terms](https://policies.google.com/privacy)
-  - We use Google's analytics service (Analytics), advertising service (AdSense);
+  - We use Google's OAuth2 service;
 - Microsoft: [Privacy Statement](https://privacy.microsoft.com/privacystatement)
   - We use Microsoft 365 (including Office 365 ProPlus, Exchange Online, etc.) services in the operation of the Site;
 - Vercel: [Privacy Policy](https://vercel.com/legal/privacy-policy)

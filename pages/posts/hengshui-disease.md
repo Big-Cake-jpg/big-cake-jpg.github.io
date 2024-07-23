@@ -7,7 +7,7 @@ tags:
   - 衡水模式
   - 衡水中学
 categories: 窗边浅谈
-cover: https://upyun.lihaoyu.cn/2024/04/14/661b7cb36c2c0.png
+cover: https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/23/669f24660d5b4.webp
 ---
 没有衡水命，一身衡水病。盲目跟风“复制粘贴”，中国的高中到底怎么了？
 
