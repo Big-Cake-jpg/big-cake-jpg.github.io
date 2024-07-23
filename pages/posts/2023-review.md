@@ -6,7 +6,7 @@ updated: 2023-12-30 15:14:05
 categories: 报告
 tags: 
   - 博客
-cover: https://r2.230225.xyz/2023/12/30/658fcf0d16eb0.webp
+cover: https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/23/669f362e378a3.webp
 aplayer: true
 ---
 终于，我的第一篇正式的年终回顾。
