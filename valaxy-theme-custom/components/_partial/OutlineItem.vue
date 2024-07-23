@@ -25,11 +25,11 @@ const handleClick = (e: MouseEvent, link: string) => {
 
 <template>
   <div class="menu">
-    <ul :class="root ? 'root' : 'nested'" class="toc menu-list">
+    <ul :class="root ? 'root' : 'nested'" class="menu-list">
       <li
         v-for="{ children, link, title, lang } in headers"
         :key="link"
-        class="va-toc-item"
+        class="mr-1.75"
         :lang="lang || 'zh-CN'"
       >
         <a class="outline-link" :href="link" @click="handleClick($event, link)">
