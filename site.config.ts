@@ -114,7 +114,7 @@ export default defineSiteConfig({
       },
       {
         name: "爱发电",
-        url: "https://afdian.net/a/Big_Cake2577117205",
+        url: "https://afdian.com/a/Big_Cake2577117205",
         color: "#936be5",
         icon: "i-ri-flashlight-line",
       },
