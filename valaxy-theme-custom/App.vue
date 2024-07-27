@@ -1,34 +1,36 @@
 <script setup lang="ts">
-import { useHead } from '@unhead/vue';
-import { onMounted } from 'vue';
-import { useAppStore, useSiteConfig } from 'valaxy'
-import { useRoute } from 'vue-router'
+import { useHead } from "@unhead/vue";
+import { onMounted } from "vue";
+import { useAppStore, useSiteConfig } from "valaxy";
+import { useRoute } from "vue-router";
 
 const route = useRoute();
 const site = useSiteConfig();
 
 useHead({
-    link: [
-        {
-            rel: 'canonical',
-            href: site.value.url?.slice(0, -1) + route.path
-        },
-        {
-            rel: 'preconnect',
-            href: 'https://objects.lihaoyu.cn'
-        }
-    ]
-})
+  link: [
+    {
+      rel: "canonical",
+      href: site.value.url?.slice(0, -1) + route.path,
+    },
+    {
+      rel: "preconnect",
+      href: "https://objects.lihaoyu.cn",
+    },
+  ],
+});
 
-const app = useAppStore()
+const app = useAppStore();
 
 onMounted(async () => {
-    app.showLoading = false,
-    window.addEventListener('load', async () => {
+  (app.showLoading = false),
+    window.addEventListener("load", async () => {
+      setTimeout(async () => {
         await import("@fontsource/noto-sans-sc/400.css");
+      }, 500);
     });
-})
+});
 </script>
 <template>
-    <PageLoading v-if="app.showLoading" />
+  <PageLoading v-if="app.showLoading" />
 </template>

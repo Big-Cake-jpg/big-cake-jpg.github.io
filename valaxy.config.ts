@@ -1,11 +1,8 @@
 import { defineValaxyConfig } from "valaxy";
 import type { ThemeConfig } from "valaxy-theme-custom";
-// import { addonWaline } from "valaxy-addon-waline";
 import { addonLightGallery } from "valaxy-addon-lightgallery";
 import compression from "vite-plugin-compression2";
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
-// import { VitePWA } from "vite-plugin-pwa";
-// import { addonMeting } from "valaxy-addon-meting";
 
 /**
  * User Config
@@ -13,20 +10,11 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 export default defineValaxyConfig<ThemeConfig>({
   addons: [
     addonLightGallery(),
-    /* addonMeting({
-      global: true,
-      props: {
-        id: "8048058894",
-        server: "netease",
-        type: "playlist",
-        fixed: true, 
-      }, 
-    }),*/
   ],
 
   vite: {
     optimizeDeps: {
-      include: ["artalk"],
+      include: ["artalk", "axios"],
     },
     plugins: [
       compression(),
@@ -110,4 +98,11 @@ export default defineValaxyConfig<ThemeConfig>({
   build: {
     ssgForPagination: true,
   },
+
+  modules: {
+    rss: {
+      enable: true,
+      fullText: false,
+    },
+  }
 });
