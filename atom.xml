@@ -1,0 +1,2938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.lihaoyu.cn/</id>
+    <title>晓雨杂记</title>
+    <updated>2024-07-27T11:36:50.104Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Big_Cake</name>
+        <email>me@lihaoyu.cn</email>
+        <uri>https://www.lihaoyu.cn</uri>
+    </author>
+    <link rel="alternate" href="https://www.lihaoyu.cn/"/>
+    <link rel="self" href="https://www.lihaoyu.cn/atom.xml"/>
+    <subtitle>于风雨中 承载所有的回忆</subtitle>
+    <logo>https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp</logo>
+    <icon>https://www.lihaoyu.cnhttps://blog-api.lihaoyu.cn/images/profile/head.webp</icon>
+    <rights>CC BY-NC-SA 4.0 2024 © Big_Cake</rights>
+    <entry>
+        <title type="html"><![CDATA[通过自定义主题重写我的博客]]></title>
+        <id>https://www.lihaoyu.cn/posts/rewrite-my-blog</id>
+        <link href="https://www.lihaoyu.cn/posts/rewrite-my-blog"/>
+        <updated>2024-07-10T06:43:13.000Z</updated>
+        <content type="html"><![CDATA[<p><s>我的老天，感谢 Restent 的馈赠（不是</s></p>
+<!-- more -->
+<h2>起因</h2>
+<p>其实 Yun 主题挺好看的，功能也很丰富。唯一可惜的一点是 PageSpeed Insights 的评分太低了。</p>
+<p>Restent 最近又用 Nuxt 自己车了一套博客给自己用，然后他将<a href="https://github.com/s-complex/previous-valaxy-blog">之前所写的 Valaxy 主题</a>开源了出来。</p>
+<p>一开始我为了统一风格，想基于他的这个“半成品”自己写一个 Material You 风格的主题，但由于 Vite 配置文件的一些问题不得不作罢，使用 Bulma 来进行重写。</p>
+<p>目前基本上大多数东西都能正常用，但是标签、分类浏览 Restent 当时没有做，我也没有写出来，就先放缓了。</p>
+<h2>实践</h2>
+<h3>本地引用主题</h3>
+<p>首先我把他的主题文件夹下载了下来，放在项目根目录下，然后进行了链接：</p>
+<pre><code class="language-bash">pnpm install ./valaxy-theme-custom
+</code></pre>
+<p>这样一来这个文件夹应该就可以像 npm 包一样进行使用了。</p>
+<h3>移除不需要的东西</h3>
+<p>Restent 使用了 Roboto 和 JetBrains Mono 作为显示字体，但我个人不是很喜欢这两个字体和 Bulma 在一起搭配的效果，于是删了。</p>
+<pre><code class="language-diff">&lt;script setup lang=&quot;ts&quot;&gt;
+import { useHead } from '@unhead/vue';
+import { onMounted } from 'vue';
+
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: 'https://blog.gxres.net'
+        },
+        {
+            rel: 'preconnect',
+            href: 'https://i.yecdn.com'
+        }
+    ]
+})
+
+onMounted(async () =&gt; {
+    const script = document.createElement('script')
+    script.async = true
+    script.src = 'https://umami.slirv.vip/script.js'
+    script.dataset.websiteId = 'a1102895-db17-4356-8d49-355b6fef337e'
+    document.head.appendChild(script)
+
+-   await import('@fontsource/roboto/400.css')
+-   await import('@fontsource/jetbrains-mono/400.css')
+})
+&lt;/script&gt;
+</code></pre>
+<h3>重新排版</h3>
+<p>原本的主题中，Restent 设计的是双栏布局，而我在使用 Yun 时已经习惯了三栏式布局，于是将样式调整为了三栏，并且适当增大了宽度。</p>
+<p><img src="https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/10/668e3659ec493.webp" alt="1720596051888.webp"></p>
+<p>方法也很简单，把 layouts 文件夹中那几个布局模板改下，加一个 Grid column 就好了。</p>
+<h3>适配其他页面</h3>
+<p>在我尝试搬友链页面的时候，发现什么东西都没用，只有渲染过的 Markdown。</p>
+<p>然后翻了翻文档，看到了这个：</p>
+<p><img src="https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/10/668e373ea6de3.webp" alt="1720596284917.webp"></p>
+<p>Restent 自己的主题原本是只写了一个 <code>&lt;RouterView /&gt;</code> 在里面的，于是我将其他 layout 随便复制了一个过来改了一下，得到了下面的效果：</p>
+<p><img src="https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/10/668e39765bcb3.webp" alt="1720596852329.webp"></p>
+<p>因为实在是懒得再用 Bulma 写一个友链组件了，于是直接上了 Yun 的，只是改了一下不让它再去用衬线字体了。</p>
+<h3>修改组件样式与逻辑</h3>
+<h4>文章目录</h4>
+<p>文章目录组件里的样式是 Restent 自己写的，他后来也跟我说本来就不该像当时那样写。</p>
+<p>我后来自己改成了这样：</p>
+<p><img src="https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/10/668e3a0719a28.webp" alt="1720596997454.webp"></p>
+<h4>捐赠</h4>
+<p>一开始捐赠组件中的捐赠途径 Restent 写死了，我后来自己改了一下，使得它可以通过 siteConfig 自定义了。</p>
+<p><img src="https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/10/668e3ffb94fd3.webp" alt="1720598521438.webp"></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div class=&quot;card&quot; v-if=&quot;siteConfig.sponsor.enable&quot;&gt;
+    &lt;div class=&quot;card-content&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;p class=&quot;text-center&quot;&gt;喜欢这篇文章？能不能考虑一下投喂我（x&lt;/p&gt;
+        &lt;div class=&quot;grid grid-cols-4 justify-items-center&quot;&gt;
+          &lt;a
+            target=&quot;_blank&quot;
+            v-for=&quot;methods in siteConfig.sponsor.methods&quot;
+            :style=&quot;{ backgroundColor: methods.color }&quot;
+            class=&quot;button is-link&quot;
+            :href=&quot;methods.url&quot;
+          &gt;
+            &lt;span :class=&quot;methods.icon&quot;&gt;&lt;/span&gt;&amp;nbsp;{{ methods.name }}
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { useSiteConfig } from &quot;valaxy&quot;;
+
+const siteConfig = useSiteConfig();
+&lt;/script&gt;
+</code></pre>
+<h4>页脚</h4>
+<p>页脚的话，我加了一个一言和修改说明。因为备案了，所以还得再加一个备案显示。最后的效果是这样的：</p>
+<p><img src="https://objects.lihaoyu.cn/bigcake-blog-images/2024/07/10/668e42a36cc6d.webp" alt="1720599200979.webp"></p>
+<h4>返回顶部</h4>
+<p>我一直觉得此前用 <code>&lt;a href=&quot;#&quot; /&gt;</code> 的方式实现返回页面顶部不是特别舒服，因为没有平滑滚动，于是自己写了一点 JavaScript。现在感觉很舒服了。</p>
+<h3>添加新的组件</h3>
+<p>由于变成三栏式了，所以两边显得有些空空的，于是瞎写了一堆可有可无的组件加上去充个数。</p>
+<p>我个人认为目录应该位于侧栏最顶部，于是正好把这玩意儿放在了右栏的最上方。至于右栏剩下的地方，则通过全站友情链接来充数了。</p>
+<p>顶栏的空间没办法放太多页面导航链接，就又糊了一个组件放其他的页面链接。</p>
+<h3>颜色主题切换</h3>
+<p>我的老天爷，一打开 <code>Navbar.vue</code>，我人都傻了：怎么一大堆 document 啊？！仔细一看，哦，原来是 Restent 实现深浅色模式切换的代码。</p>
+<p>不得不说用是能用，但是有点问题：Artalk 似乎不会随系统切换自己的颜色模式。</p>
+<p>没关系，Valaxy 有个全局状态 <code>isDark</code> 和 <code>toggleDark()</code>，短短几行 JS 就可以直接实现很不错的切换了。</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;button class=&quot;navbar-item&quot; @click=&quot;toggleDark&quot; aria-label=&quot;Switch theme&quot;&gt;
+    &lt;div class=&quot;icon text-xl i-ri-contrast-2-line&quot; /&gt;
+  &lt;/button&gt;
+&lt;/template&gt;
+&lt;script lang=&quot;ts&quot; setup&gt;
+import { useAppStore } from &quot;valaxy&quot;;
+
+const appStore = useAppStore();
+const toggleDark = () =&gt; appStore.toggleDark();
+&lt;/script&gt;
+</code></pre>
+<p>差不多也就是这些了，看看之后会怎么样吧。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/rewrite-my-blog" target="_blank">https://www.lihaoyu.cn/posts/rewrite-my-blog</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-07-10T06:43:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[窗边浅谈：形同陌路的“朋友”]]></title>
+        <id>https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2</id>
+        <link href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2"/>
+        <updated>2024-04-26T10:30:00.000Z</updated>
+        <content type="html"><![CDATA[<p>其实，我不想用冒号作连接符的，但 Restent 他们码字的时候换成冒号了。不过无所谓了。</p>
+<!-- more -->
+<p>高一下半学期已经过去一半了。在这期间，我应老同学的邀请开始接触羽毛球（一个月了，怎么连点长进都没有啊喂），也感到了被同学笑话却无力反击的痛苦。</p>
+<p>一个多月前的一次数学练习，因为一些难以描述的原因，我只得了 9 分。当时我压根没想到，这居然能成为一个被津津乐道一个多月的事情。回了宿舍之后，同宿舍的人几乎都在当着我的面说这件事情，然后嘲笑我——我甚至把他们当朋友看……然而我没什么可说的，毕竟这是事实。或者说，我根本无力还击。</p>
+<p>再者就是舞萌 DX。之前在宿舍里，他们很喜欢提起一些和舞萌 DX 有关的话题，然后像嘲笑弱智一样嘲笑我，仿佛我就是那整天说了：“我真傻，真的”的祥林嫂一样。但这还没什么，三月末大假，他们建了宿舍群，顺便把我拉了进去。第二天他们居然故意去拍机厅的舞萌 DX 发群里，还不忘配文：“XX（我）的最爱”，仅仅只是为了看我破防然后图一乐。还有人一直在 at 我，试图把我召唤出来。我骂了他们一句，发了个流汗黄豆，就有人出来跳脸阴阳——“完了”。后面我退了这个宿舍群。前几天他们又说：“退了就别想再进来了，除非求我们”，甚至还说：“你不是我们宿舍的”。</p>
+<p>我真想去死。</p>
+<p>我的情绪已经崩过一次了。</p>
+<p>我的关系网已经支离破碎了。</p>
+<p>我的好多曾经的朋友都不能再称得上是朋友了。</p>
+<p>我已经什么都没有了。</p>
+<p>我甚至已经记不清，曾经有多少次希望自己能跟 Restent 或谢老师在一起学习，那样至少我还有可以聊天、倾诉的朋友。可事实是，Restent 的病还没完全好起来，谢老师现在的精神状态也很差。我只能给现实中的他们带去更大的麻烦。</p>
+<p>我最后还是只能独自承受一切，逐渐变得不堪一击，并且越来越容易、频繁地崩溃。</p>
+<p>这个世界，真是残酷。</p>
+<p>I'd rather die. :-)</p>
+<blockquote>
+<p>本文抄录自博主的 <a href="https://twitter.com/Big_Cake080105/status/1783708885557313774">手写文章</a> 并进行了适当修改。</p>
+<p>抄录：Restent Ou × SliverRiver</p>
+<p>校对：雨山泉</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2" target="_blank">https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-04-26T10:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[没有衡水命，一身衡水病——盲目复制衡水模式的意义何在？]]></title>
+        <id>https://www.lihaoyu.cn/posts/hengshui-disease</id>
+        <link href="https://www.lihaoyu.cn/posts/hengshui-disease"/>
+        <updated>2024-04-14T06:37:21.000Z</updated>
+        <content type="html"><![CDATA[<p>没有衡水命，一身衡水病。盲目跟风“复制粘贴”，中国的高中到底怎么了？</p>
+<!-- more -->
+<p>大概是在 4 月 10 日到 11 日，我的学校组织一些优秀教师前去忻州一中参观学习。</p>
+<p>按理来讲，参观学习是很好的。然而实际上，老师们学到了真东西。反观所谓的主任、领导们，却只学来了“衡水模式”。</p>
+<p><img src="https://upyun.lihaoyu.cn/2024/04/14/661b7ef186f09.png" alt="1713078006073.png" title="维基百科对于衡水模式的解释"></p>
+<p>从表面上看，忻州一中的管理制度和衡水模式别无二异，而忻州一中在过去一段时间内的高考成绩也令人惊叹。</p>
+<p>如果我没记错的话，我的数学老师在一次上课时曾提到“忻州一中一本达线率 95% 以上，600 余分者 50 多人”。</p>
+<p>就其所创造出的奇迹而言，衡水模式不能被一味否定。但其实际上是应试教育的产物，而应试教育却又是最适合当代中国的教育制度。追溯历史，应试教育的基础早在 1951 年新中国成立不久就被打下了。</p>
+<p><img src="https://upyun.lihaoyu.cn/2024/04/14/661b859bf414a.png" alt="1713079713386.png"></p>
+<p>如今，“衡水模式”几乎已经成了人们心中的神，许多学校争先恐后复制衡水模式，意图以此来提升学校声誉和高考成绩，甚至诸如“军事化管理”等都成了学校宣传必不可少的一点。</p>
+<p><strong>“没有衡水命，一身衡水病”</strong>，这句话反映了一个现实——<strong>并非所有学生</strong>都适合或能够承受如此高强度的学习压力。衡水模式可能会导致学生出现过度焦虑、睡眠不足甚至更严重的心理健康问题。此外，不同学校教情学情不一致，盲目移植只能出现严重的“水土不服”。</p>
+<p>必须承认的是，衡水模式在提高学生成绩方面效果非常显著。通过长时间的学习、频繁的测试和严格的纪律，学生们在高考中取得了优异的成绩。但是，这种成功是否可持续，以及它对学生的全面发展是否有益，是一个值得深思的问题。</p>
+<p>教育，不应仅仅是分数的竞赛。教育，应该是能够让学生全面发展的。学生不是考试机器，是有着各自特长与爱好的活生生的人。</p>
+<p>中国的教育观念也在随着实际情况而改变，从新高考做出的一系列调整中就能看到。但让学习不再以分为王、让衡水模式不再成为学生心头的梦魇，我们的国家所需要做的，还有很多。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/hengshui-disease" target="_blank">https://www.lihaoyu.cn/posts/hengshui-disease</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-04-14T06:37:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 Valaxy 中使用 Artalk 作为评论系统]]></title>
+        <id>https://www.lihaoyu.cn/posts/use-artalk-in-valaxy</id>
+        <link href="https://www.lihaoyu.cn/posts/use-artalk-in-valaxy"/>
+        <updated>2024-02-01T03:23:19.000Z</updated>
+        <content type="html"><![CDATA[<p>废了老半天劲，终于摆脱了 Waline 苦海，投入了 Artalk 的怀抱。</p>
+<h2>前言</h2>
+<p>Restent 在使用 VitePress 作为框架驱动博客后便抛弃了 Waline，使用 Artalk 作为评论系统，还写了一篇文章 <a href="https://blog.gxres.net/posts/move-to-artalk-comment-system">迁移评论系统至 Artalk</a> 记录。此前他也向我发出邀约并称还能将他的 Artalk 实例开一个站给我，当时我选择考虑一下。</p>
+<p>后来他更换了自己的邮箱地址，但由于 Waline 的后端过于简单而无法修改自己注册账号的邮箱，迫不得已麻烦我改数据库。</p>
+<p>同时，Waline 基于无服务器函数也带来了一系列弊端：评论速度过于缓慢、Vercel 限制、图床找不到合适解决方案等等。</p>
+<p>自此，我便决定更换评论系统。在网上搜索以后才发现这简直是前无古人后无来者——根本没有现成的为 Valaxy 更换 Artalk 评论系统的资料。我决定做这个第一人。</p>
+<!-- more -->
+<h2>那么，怎么做？</h2>
+<h3>部署 Artalk 后端</h3>
+<p>Artalk 的后端大家都知道是 Go，所以需要一个服务器了。我这里使用的是我朋友 <a href="https://www.xiexilin.com">XieXiLin</a> 购买的云服务器。</p>
+<p>Restent 自己的文章里使用的是 Docker 部署，但我玩不来 Docker（指会被 Docker 搞高血压），于是选择了直接部署。</p>
+<p>首先，打开 Artalk 的 GitHub 仓库，在 Releases 找到最新版本，选择对应操作系统和架构的后端程序复制链接。</p>
+<p><img src="https://r2.230225.xyz/2024/02/01/65bb12bc6f083.webp" alt="1706758841310.webp"></p>
+<p>接下来，登录服务器的 SSH，找一个地方，用 wget 下载文件：</p>
+<pre><code class="language-bash">wget https://github.com/ArtalkJS/Artalk/releases/download/v2.8.0/artalk_v2.8.0_linux_amd64.tar.gz
+</code></pre>
+<p>:::warning<br>
+鉴于 GitHub 在国内的连通性，如果你想在国内服务器上部署，则可能需要配置代理或者使用镜像。<br>
+:::</p>
+<p>下载完成并解压，先对 <code>artalk.yml</code> 进行编辑，配置 Artalk，然后执行 <code>./artalk admin</code> 创建管理员账号。创建完成后，执行 <code>./artalk server</code> 启动后端。</p>
+<h3>公网访问</h3>
+<p>尽管这台服务器有公网 IP，但是我打算使用 Cloudflare Tunnels 将它直接连接到 Cloudflare 网络，这样不仅能够在公网上访问，也能体验到一系列 Cloudflare 的服务。</p>
+<p>具体方式请查看 Cloudflare 的文档或者互联网上的资料，这里不再赘述。</p>
+<h3>插入到 Valaxy 博客</h3>
+<p>现在才是重头戏：插入到 Valaxy 博客。</p>
+<p>我使用的主题是 Yun，一般来讲不同主题大同小异（虽然 Valaxy 也没多少主题吧）。</p>
+<p>首先我们需要安装一下 Artalk 的 npm 包（我自己用的是 yarn）。</p>
+<pre><code class="language-bash">yarn add artalk
+</code></pre>
+<p>安装好之后，在 <code>components</code> 目录下新建一个 <code>YunComment.vue</code> 文件，写入如下内容：</p>
+<pre><code class="language-vue">&lt;script lang=&quot;ts&quot; setup&gt;
+import { onMounted, onUnmounted, watch } from &quot;vue&quot;;
+import { useRoute } from &quot;vue-router&quot;;
+import &quot;artalk/dist/Artalk.css&quot;;
+import Artalk from &quot;artalk&quot;;
+import { isDark } from 'valaxy'
+
+let artalk: Artalk;
+
+const route = useRoute();
+
+onMounted(() =&gt; {
+  watch(isDark, (newVal) =&gt; {
+    if (artalk) {
+      artalk.setDarkMode(newVal);
+    }
+  });
+
+  artalk = Artalk.init({
+    el: &quot;.comment&quot;,
+    pageKey: route.path,
+    pageTitle: `${document.title}`,
+    server: &quot;https://artalk.example.com&quot;,
+    site: &quot;示例站点&quot;,
+    useBackendConf: true,
+    locale: &quot;auto&quot;,
+    darkMode: isDark.value, // Set initial dark mode based on isDark value
+  });
+});
+
+onUnmounted(() =&gt; {
+  artalk.destroy();
+});
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;YunCard w=&quot;full&quot; p=&quot;4&quot; class=&quot;comment yun-comment sm:p-6 lg:px-12 xl:px-16&quot;&gt;
+    &lt;ClientOnly&gt;
+      &lt;div ref=&quot;el&quot;&gt;&lt;/div&gt;
+    &lt;/ClientOnly&gt;
+  &lt;/YunCard&gt;
+&lt;/template&gt;
+
+&lt;style lang=&quot;scss&quot;&gt;
+.comment {
+  .atk-list,
+  .atk-main-editor {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  ol {
+    list-style: decimal;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+&lt;/style&gt;
+</code></pre>
+<p>:::warning<br>
+这样做会直接覆盖 Yun 主题的同名组件，实现细致的调整。但日后如果你想换回 Waline 或者 Twikoo，则需要删除这个组件。<br>
+:::</p>
+<p>除此以外，我们还需要在 <code>styles</code> 文件夹中新建一个 <code>css-vars.scss</code> 文件写入样式，从而让 Artalk 适配 Yun 自动生成的主题色：</p>
+<pre><code class="language-css">:root {
+  .artalk {
+    --at-color-main: var(--va-c-primary);
+  }
+}
+
+:root.dark {
+  .artalk {
+    --at-color-main: var(--va-c-primary);
+  }
+}
+</code></pre>
+<p>做完这一切之后，我们就可以部署到线上了。现在打开你的站点，开始体验 Artalk 的极致速度吧！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/use-artalk-in-valaxy" target="_blank">https://www.lihaoyu.cn/posts/use-artalk-in-valaxy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-03-30T07:22:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[窗边浅谈：序章]]></title>
+        <id>https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows</id>
+        <link href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows"/>
+        <updated>2024-01-29T04:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>嘛，咱终于也有个像样的分类啦</p>
+</blockquote>
+<p>通常情况下，每次写文章的分类与标签都是现想，不仅要费很多时间，还让文章的分类变得杂乱无章。如果你看过分类与标签页面，就会发现有很多重复的项目以及奇怪的命名。与此同时我最近的精神状况也不是太好——期末考试考砸、同学的嘲讽、学不会 TypeScript 和 Vue、音游打不好、数学不会、理化不及格……各方面的打击给我增添了很多焦虑，再加上某些朋友的影响，导致我的情绪开始有些失控，甚至让我整个人变得过于敏感。因此创建这一分类也是为了让自己能有一个倾诉的地方。</p>
+<!-- more -->
+<p>回归正题，“序章”即是一起的开始；既然是“浅谈”，这里的文章就不会有太多对某个问题的探讨；“窗边”则是我在家时书桌的位置。每篇文章的字数应该会在 600 到 2000 字左右，会包含我心里想向别人倾诉的事情——因为现实中的朋友几乎没人会认真倾听的诉说，或者换句话说，我在现实中没有一个朋友。反而是和我没有太多交集的网友（比如 Restent 和 Timicasto）会时刻为我提供帮助，安慰我、觉察我心里的每一分变化。</p>
+<p>真是可笑，也许有一天我也会得抑郁症吧。<strong>我受够了</strong>。</p>
+<p>现在的高中生活与我而言如同地狱。分班几乎摧毁了我原本的人际关系网，新同学又以不同方式表现出对我的冷淡。我根本无法正常融入这个班级，甚至开始畏惧现实中的交往，对外逐渐封闭自己的内心，靠网络与最近才开始的舞萌DX维持那破碎不堪的人际关系。我不想与同学分享我的想法，因为他们只会把我当乐子；我不想跟他们提起我的周末，因为他们会骂我“音游魔怔人”；我不想说任何对我所长之处有关的话，因为他们会喝倒彩，然后把我说的话变成梗像观猴一样在我面前重复。</p>
+<p>我喜爱某个事物，却被他们骂“魔怔”；我做某一件事情却被他们当乐子。</p>
+<p>我说的话被当成梗，在班里广为流传；我做的一切被当成笑话，自己也被他们当猴子看。</p>
+<p>我曾那么想与人并行，如今却不得不独自一人来往于城市中。</p>
+<p>身边是如此人来人往，却是空无一人。</p>
+<p>就连网络——我最后的交往方式，也显得脆弱不堪。学校的限制让我无法携带手机，极品班主任的阻挠更让我在使用一体机时提心吊胆。我的人际交往简直不堪一击。</p>
+<p>我的身边，原来一个人都没有。</p>
+<blockquote>
+<p>本文抄录自博主的 <a href="https://twitter.com/Big_Cake080105/status/1751819366390526391">手写文章</a> 并进行了校对。</p>
+<p>抄录：233355607</p>
+<p>校对：雨山泉</p>
+<p>格式修复：Restent Ou &amp; XieXiLin</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows" target="_blank">https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-01-29T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【转载】关于 HiPer 的安全性讨论，以及对于近期一些小事的简单介绍]]></title>
+        <id>https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper</id>
+        <link href="https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper"/>
+        <updated>2024-01-01T07:21:52.000Z</updated>
+        <content type="html"><![CDATA[<p>:::warning<br>
+本文转载自 MainTest233 于知乎上的专栏文章 <a href="https://zhuanlan.zhihu.com/p/675492255">https://zhuanlan.zhihu.com/p/675492255</a>，已获得其授权。转载时请遵循 CC BY-NC-SA 协议。<br>
+:::</p>
+<p>知乎链接：<a href="https://zhuanlan.zhihu.com/p/675492255">https://zhuanlan.zhihu.com/p/675492255</a></p>
+<p>V2EX 链接：<a href="https://v2ex.com/t/1004968">https://v2ex.com/t/1004968</a></p>
+<p>还有一句废话：我的两份一个月的许可目前已经被全局覆盖为过期许可，阿猫，你在害怕什么呢？</p>
+<hr>
+<p>各位好，这里是 MainTest233，一位曾经在 HiPer 相关事件中作为 HiPer 方发言人</p>
+<p>相信各位应该大多还没有忘记这个一年前的事件</p>
+<blockquote>
+<p>PS: 如果你忘了或者不知道这个事情是什么, 你可以看看这几篇文章</p>
+<ul>
+<li><a href="https://www.bilibili.com/read/cv19532914/">BakaXL 针对近期相关文章的回应</a></li>
+<li><a href="https://www.bilibili.com/read/cv19553725/">PCL2 / HMCL / BakaXL 对联机功能下一步发展的联合公告</a></li>
+<li><a href="https://www.bilibili.com/read/cv19845645/">MC 启动器纷纷关闭联机功能，背后隐藏了多少不可告人之事？</a></li>
+<li><a href="https://www.v2ex.com/t/893156">当开源社区遇到公然违反开源协议的商业公司，除了无能为力，我们还能做什么</a></li>
+</ul>
+</blockquote>
+<p>很抱歉在临近新年的这个时候让大家想起这个十分令人烦心的事情，但我们今天不得不来提一提这个事情</p>
+<!-- more -->
+<p>通过某些小道消息以及，我得知 HiPer 近期已经<strong>换皮成功</strong>并准备<strong>再次出道</strong></p>
+<p>尽管目前我个人已经不再参与 Minecraft 圈子，但出于某些原因，也算是给以前做的事情做一些微不足道的弥补，我将披露一些我曾经在 HiPer 联合开发组所了解的一些皮毛，并借此给各位提供一个警醒，一定程度的遏制 HiPer 的复出 <em>(当然，我也知道猫猫不会因此放弃，毕竟，<s>黑粉也是流量</s>)</em></p>
+<p>本篇文章我已尽可能的采用 Markdown 语法进行美化，并经过多次校验修改，尽可能的改正以前发文的排版混乱以及逻辑不通顺的问题</p>
+<p>还请各位放下烦躁的戾气，耐心将本文读完后</p>
+<p><strong>请注意，我个人已经退出 HiPer 相关的事情，并且不再参与任何启动器相关的事情，因此，本篇文章不代表任何立场，仅为个人对近期的一些情况的总结以及担忧</strong></p>
+<hr>
+<p>由于之前各个启动器作者的文章已将过往事件进行了一个完善的总结，并且由于我本人手中有关之前的事情所留下的证据已经残缺不全，此处便只讨论近期发生的新的事情</p>
+<h2>起因</h2>
+<p><strong>2023 年 12 月 29 日晚间 11 点 24 分</strong>, 一位名叫 <strong>xqzi</strong> 的 GitHub 用户在 <a href="https://hmcl.huangyuhui.net">HMCL</a> 的官方开源仓库中提交了一个 <a href="https://github.com/huanghongxun/HMCL/issues/2616">Issue</a>, 其内容简单概括就是这位 xqzi 本人自己模仿 <code>HiPer</code> 实现了一个类似的工具，并自己采购了一个 2C?G4M 的阿里云用于替代 <code>HiPer</code> 的中继服务器</p>
+<p>但说实话，真不是咱嘲讽你，当时 HiPer 主要依托于其企业产品 Matrix 的骨干线路服务器，我们那时候给人拿 8C16G12M 的腾讯云搭建的中继节点在压根就没接入骨干网络的情况下都快被挤爆了，你这个体量的小服务器想要拿来带动少说节假日也得上百万人同时使用的工具真的是很不自量力</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_1.png" alt=""></p>
+<p>出于我知晓 <code>HiPer</code> 之前给各位开发者和用户造成的影响有多深，不希望再让此事重新出现在大众面前，同时介于此 人所提供的资源确实太过稀少，因此，我建议此人不要再尝试对此进行建议，但很明显，<s>我失败了</s></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_2.png" alt=""></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_3.png" alt=""></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_4.png" alt=""></p>
+<p>这时候问题并不是很严重，很快，一位 HMCL 的代码提交者，<strong>burningtnt</strong> 注意到了此 Issue，并联系了有权限操作 Issue 的人，只需要等仓库管理员过来锁定 Issue 并给出最终回复后，此事也就算结束了</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_contributor_1.png" alt=""></p>
+<p>但这个时候，一个造成这一切的人出现了</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_neko_1.png" alt=""></p>
+<p>熟悉的语调，色气的头像，简短的名称，<em><s>是他，是他，就是他，我们的，猫猫</s></em></p>
+<p>给各位介绍一下，这个 <strong>ffip</strong> 即为 <code>HiPer</code> 的作者，<strong>阿猫</strong></p>
+<p>自此，整个 Issue 开始向着不可控制的方向发展</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_6.png" alt=""></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_neko_2.png" alt=""></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_neko_3.png" alt=""></p>
+<p>熟悉的话语勾起没好的回忆，很明显，猫猫又准备开始调动他的诱惑大法欺骗一个棋子，利用其完成 <code>HiPer</code> 的复出大业，同时不忘了再顺带抛下几句嘲讽</p>
+<p>但我无法理解的是，你欺骗一个仍旧未完成学业的高中生是一个昧着良心就可以完成的事情，毕竟我确实什么负担也没有，哪怕抛弃了也没有任何能力可以对你后续的生意造成任何影响</p>
+<p><strong>但是这是一个已经有了工作的中年人了</strong>，前文这位 xqzi 也确实说过了，如果被发现当成干私活的话，这将会出现很严重的后果，而你现在的行为何尝不是<strong>引导其误入歧途，甚至毁掉自己的人生？</strong></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_0.png" alt=""></p>
+<p>由于我尚未完成学业，尚无法完全理解中年人的压力以及负担，但就我个人的家庭而言，倘若我父母突然失去工作，那造成的后果将是一个家庭彻底的分崩离析，这已经不是简单的为了自己的利益将他人作为棋子或垫脚石踩于脚下这么简单的事情了</p>
+<p>但很显然，猫猫并没有放弃这个可以让 <code>HiPer</code> 再次复出的机会，毕竟，对于他来说，<strong>没有什么可以比自己的利益更加重要了</strong></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/pmcl.png" alt=""></p>
+<p>顺带, 你的这个项目取名又撞衫了, 还是个 6 年前的项目</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/pmcl_2.png" alt=""></p>
+<p>如此，我便不能再继续作为一个旁观者当乐子人了<br>
+但正如前文所说，我并没有什么强大的能力可以反制 <code>HiPer</code>，不过我还有一个 <code>HiPer</code> 从未向大众公布过的东西， 现在该到它向各位露面的时候了</p>
+<h2>奇怪的端口</h2>
+<blockquote>
+<p>这里插入一个题外话，经过又一次改名换代，目前 <code>HiPer</code> 已更名为 <code>VLAN</code></p>
+<p>同时，由于某些意外，我在发布此文之前将消息泄漏到了某个阿猫内鬼所在的群聊，目前阿猫已经将此配置公开向所有人 (后文我会提供)，但我可以告诉各位的是，这个东西仍旧具有极大的安全风险，详情请继续往下看</p>
+</blockquote>
+<p>实际上，这个问题说起来十分简单，也并不是一个特别巨大的问题</p>
+<p>不知道大家是否注意过 <code>HiPer</code> 在启动时会创建一个很奇怪的监听</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/vlan.png" alt=""></p>
+<p>如图所示，<code>38154 (UDP)</code> 是 STUN 专用的端口，而 <code>6699 (TCP)</code> 是用于进行 P2P 连接的端口<br>
+(PS: 我这时候只是拿 <code>nmap</code> 粗略的扫了一下，也没用 <code>WireShark</code> 具体抓包去查，只是依赖记忆说的，你只要知道这俩端口是正常的即可)</p>
+<p>但图中却存在一个很奇怪的 <code>22222 (TCP)</code> 端口, 这到底是干什么用的呢?</p>
+<p>因为 <code>lsof</code> 和 <code>netstat</code> 都无法识别这个端口的作用，所以让我们利用 <code>nmap</code> 对这个端口进行一个快速扫描来看看</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/scanning_info_local.png" alt="">.</p>
+<p>真是不看不知道，一看吓一跳，我还以为我什么 SSH 端口设错了呢！</p>
+<p>不过这个 <code>fingerprint-strings</code> 也很好的证明了这正是 <code>HiPer</code> 所为，这上面还带着一个我从来没有见过的 SSH 公钥对，为此我还专门检查了一遍我的 SSH 公钥文件，发现这里什么都没有</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/ssh_key.png" alt=""></p>
+<p>为此，我曾专程前去问过阿猫这是什么，阿猫美名其曰 &quot;边缘控制&quot;，怎么说呢，这个起名方法只能说不愧是阿猫了~~(当然，我早就没有这段聊天记录的截图了，欢迎吐槽我造谣)~~</p>
+<p>信我, 别去搜什么是边缘控制, 不然你会得到跟我一样脑洞大开的感觉</p>
+<p>简单来说，根据当时猫猫给我的回答，这个 SSH 是一个 &quot;备用方案&quot;，当某些用户做出了违反 <a href="https://en.wikipedia.org/wiki/Terms_of_service">ToS</a> 甚至违反法律的行为后，猫猫就可以利用这个采集相关证据以供警方执法使用</p>
+<p>这个东西如果真的应用到警方执法上的话确实是一个很棒的东西，但，如真？</p>
+<h2>门户大开</h2>
+<p>你们不会以为这就结束了罢？<strong>远远不止</strong></p>
+<p>我曾天真的认为这个东西只有中控服务器可以访问，但试想一下，如果这个网络是<strong>没有隔离</strong>的呢？</p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/scanning_info.png" alt=""></p>
+<p>而此时我不得不对以前的固执与粗鲁向 TT702 道歉，并献上最诚挚的尊敬，其曾经对 <code>HiPer</code> 的观点在这一刻得到了彻底的验证</p>
+<p><strong>HiPer 的边缘控制功能并没有做任何的额外鉴权，只需要加入网络，并且拥有一个正确的私钥，他就可以通过这个后门访问任意没有配置防火墙的在网用户的设备</strong></p>
+<p>你可能会觉得 <strong>&quot;啊这个东西不就是开了防火墙就可以阻隔了吗?&quot;</strong>，事实也确实如此，但倘若我告诉你，中国大部分家用设备都不会开启防火墙呢？倘若他会自行申请防火墙开放权限但是不会告诉你这个东西是干什么用的呢？而当一个小白想要用这个东西联机，或者一个不太懂这个的人想要用它来组网，当他们被防火墙阻拦时，他是会选择认真琢磨防火墙规则，还是直接关闭防火墙呢？</p>
+<p>也许你会觉得 <strong>&quot;这个东西只是一个 SSH 罢了，他也没有任何权限，他能拿来干点什么？&quot;</strong>，那么我可以用另外一个简单的实验来告诉你为什么这个东西如此危险</p>
+<blockquote>
+<p>PS: 不知道 SSH 是什么的可以看这个: <a href="https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E5%A4%96%E5%A3%B3%E5%8D%8F%E8%AE%AE/50921179">安全外壳协议</a></p>
+</blockquote>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/no_permission_1.png" alt=""></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/no_permission_2.png" alt=""></p>
+<p>如图，此时我创建了一个测试用的无权账户，并尝试重新运行 <code>HiPer</code>，你可以很明显的看到，<code>HiPer</code> <strong>必须使用管理员权限来运行以实现某些操作</strong>，这并不难理解，因为对于采用 TUN 实现的网络转发是<strong>几乎不可能不采用管理员权限实现的</strong>，也就是说，我的服务器上现在正运行着一个<strong>拥有管理员权限的可以被任何拥有 SSH 密钥文件的人登录访问的 SSH 服务</strong></p>
+<p>如果你不能理解的话，那么我给你简单举个例子，这就像你把你家的大门敞开之后还把你的贵重物品全部拿出来罗列好了一样</p>
+<blockquote>
+<p>PS: 根据我们进一步的调查发现，这个 SSH 同时也内置了完整的 SFTP 功能 (当然，这应当是 SSH 的标配，所以此处也不赘述了)</p>
+</blockquote>
+<p>而且，这个功能在官方的教程中<strong>并未给出关闭方式</strong>，并且我的配置中<strong>没有启用此功能</strong></p>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/no_ssh_config.png" alt=""></p>
+<p>若按照 <code>HiPer</code> 官方教程中的写法，我确实可以通过添加 <code>ssh</code> 部分并成功的将该服务更改端口并将密钥更换为自己的，但我<strong>仍旧无法彻底关闭此功能</strong>，一旦我删除掉这部分配置，SSH 又将<strong>重新恢复</strong>成公钥为那个带有一个公钥的 SSH；并且，此功能必须删除掉如图所示的 <code>sync</code> 部分，而该部分内容主要为同步上方的 <code>point.yml</code> 与官方仓库中的相同，<strong>而这部分是你连接整个网络的主要中继节点，并且会定期动态更新</strong>，倘若不删除该部分，你的任何修改都将被重置，而删除掉之后，你又将失去保证你与整个网络稳定快速连接的中继节点更新权限，好一个二选一！</p>
+<blockquote>
+<p>哦对了，如果没有提前泄密的话，恐怕到现在这个 <code>ssh</code> 部分的提示也不会出现</p>
+</blockquote>
+<p>并且，这个功能在当初三家启动器与 <code>HiPer</code> 对立并且并未将 <code>HiPer</code> 完全移除之时，此功能<strong>已经存在</strong></p>
+<p>而且，往远了说，我看到 <code>HiPer</code> 曾经的<a href="https://mcer.cn/">论坛官网</a>现如今已经有了一些政府相关的内容，看得 出来，阿猫已经准备或可能已经将 <code>HiPer</code> 的业务推入了 B/G 端，我想，恐怕没有一个企业或者政府希望自己所采用的组网工具中留下一个如此严重的后门</p>
+<p>当时猫猫某一次交谈时，猫猫和我讲过这个事情，他也曾表达过使用这个来获得压倒性局面的可能，是否真实无人知晓，大概也就只有猫猫心里知道了</p>
+<h2>后记</h2>
+<p>本篇文章到此也基本结束，此问题我已尝试提交至 <code>CVE</code> 官方平台以及 <code>CNNVD</code> (不过这种东西收录的可能性几乎为零，大家当个乐子看就行)</p>
+<p>看完本篇文章之后，想必各位对 <code>HiPer</code> 也有了一个全新的理解</p>
+<p>尽管本文披露的内容并不严重，但还请各位对 <code>HiPer</code> 以及其作者<strong>阿猫</strong>多加小心，这很有可能只是 <code>HiPer</code>的冰山一角</p>
+<p>对于目前的这种状况，我能给出的建议也没有多少，毕竟我的学识也很短浅</p>
+<ul>
+<li>少用阿猫的作品</li>
+<li>开启防火墙，确保每一个申请开放端口的应用是否是你信任的</li>
+<li>做好权限控制，不要随随便便就给软件管理员权限</li>
+</ul>
+<p>我该说的已经全部说完了，如果你想喷我，欢迎来到这篇帖子下面畅所欲言，本帖不会进行任何的评论删除，我也不会介意任何人对我个人的人身攻击，毕竟，<strong>黑粉也是流量</strong></p>
+<p>哦对了，如果这个帖子被删掉的话，我还会继续发帖，不行了我们可以换着平台发，我们可以比拼一下是你的举报多还是我的帐号多<br>
+当然，你也可以动用一点钞能力，直接把我全平台封死，不过这样的话，各位，谁黑谁白大概也就全明白了</p>
+<p>本篇文章的观点全部由各位评判，我仅仅是客观的描述事实，如果你觉得我有作假造谣的可能，欢迎来到我的文章下面评论告诉我<br>
+我所采用的版本是 <code>VLAN (1.15.1.0)</code> 的 <code>Linux_x86-64</code> 版本进行测试，两个服务器的系统均为 <code>Debian 12 (Bookwarm)</code>，这份二进制文件我会一直保留下去，已经做好了异地多中心备份，如果你想，可以挨个攻破 <code>ED25516</code>，<code>OneDrive</code>，<code>群晖 NAS</code>，<code>LUKS</code> 等，并追查到我的个人住址，在我的家中找到我藏起来的最后一份文件，删除掉这些内容，不过我觉得你大概也不会在乎，毕竟这只是很少的一点东西罢了</p>
+<p>哦对了，你不是喜欢 <strong>Wayback Machine</strong> 吗，我在这篇文章编写之时给你的主要使用教程和仓库主页都打了一份快照，虽然没有能抓到你没写 SSH 配置的时候，不过我很好奇你之后会开放多少没有写出来的配置，同时我也好奇你会为我上文给出的问题做出多少的改变，让我们拭目以待罢</p>
+<p>各位如果不相信的话，可以看看仓库的提交记录，其已经更新到 <code>1.15.1.0</code> 版了，但是仓库提交却仅仅只有 2 个，这其中经历了多少 <code>git pull</code> 和 <code>git push</code> 十分值得我们深思</p>
+<p>相关链接：</p>
+<ul>
+<li>官方教程：<a href="https://docs.qq.com/aio/DTEpsR1lmbnZLQmln?p=gbkSEKVrKc6kV7qa6SLZ0y">https://docs.qq.com/aio/DTEpsR1lmbnZLQmln?p=gbkSEKVrKc6kV7qa6SLZ0y</a>
+<ul>
+<li>WayBack Machine：<a href="https://web.archive.org/web/20231231141501/https://docs.qq.com/web/20231231141501/https://docs.qq.com/aio/DTEpsR1lmbnZLQmln?p=gbkSEKVrKc6kV7qa6SLZ0y">https://web.archive.org/web/20231231141501/https://docs.qq.com/web/20231231141501/https://docs.qq.com/aio/DTEpsR1lmbnZLQmln?p=gbkSEKVrKc6kV7qa6SLZ0y</a></li>
+</ul>
+</li>
+<li>官方二进制文件仓库：<a href="https://gitcode.net/to/vlan">https://gitcode.net/to/vlan</a>
+<ul>
+<li>WayBack Machine： <a href="https://web.archive.org/web/20231231142556/https://gitcode.net/to/vlan">https://web.archive.org/web/20231231142556/https://gitcode.net/to/vlan</a></li>
+</ul>
+</li>
+<li>官方二进制文件仓库提交页面：<a href="https://gitcode.net/to/vlan/-/commits/master/">https://gitcode.net/to/vlan/-/commits/master/</a>
+<ul>
+<li>WayBack Machine：<a href="https://web.archive.org/web/20231231142645/https://gitcode.net/to/vlan/-/commits/master/">https://web.archive.org/web/20231231142645/https://gitcode.net/to/vlan/-/commits/master/</a></li>
+</ul>
+</li>
+<li>CVE 介绍 Gist: <a href="https://gist.github.com/FunnyShadow/ba8177d50f146034b47de296e514f5de">https://gist.github.com/FunnyShadow/ba8177d50f146034b47de296e514f5de</a></li>
+</ul>
+<hr>
+<ul>
+<li>2024.1.1 更新: 添加了几个新的查毒报告 (均已脱除 UPX 壳)
+<ul>
+<li>VirusTotal: <a href="https://www.virustotal.com/gui/file/7c9d58dd8a3b43137732532e909954feeac9049d7633ca7a52d40014bd8d2332">https://www.virustotal.com/gui/file/7c9d58dd8a3b43137732532e909954feeac9049d7633ca7a52d40014bd8d2332</a></li>
+<li>Hybrid Analysis: <a href="https://www.hybrid-analysis.com/sample/7c9d58dd8a3b43137732532e909954feeac9049d7633ca7a52d40014bd8d2332">https://www.hybrid-analysis.com/sample/7c9d58dd8a3b43137732532e909954feeac9049d7633ca7a52d40014bd8d2332</a></li>
+<li>微步云沙箱: <a href="https://s.threatbook.com/report/file/7c9d58dd8a3b43137732532e909954feeac9049d7633ca7a52d40014bd8d2332">https://s.threatbook.com/report/file/7c9d58dd8a3b43137732532e909954feeac9049d7633ca7a52d40014bd8d2332</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>对了，这里其实还有一个解决办法，你可以给猫猫交钱以获取一份定制版本的不需要管理员权限的 <code>HiPer</code> 互联工具，你怎么看？<br>
+<img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/offical_introduction.png" alt=""></p>
+<hr>
+<p>最后，<strong>xqzi</strong> 希望我给你一个答复，了解为什么阻止你参和这件事情的真相，这便是缘由，甚至还不止这些</p>
+<blockquote>
+<p>“能说出来的都不叫痛苦”</p>
+</blockquote>
+<p><img src="https://cdn.crashmc.com/https://raw.githubusercontent.com/FunnyShadow/some-backups-of-hiper/main/screenshot/github_issue_7.png" alt=""></p>
+<hr>
+<p>最后一句，本文章所有的图片均来自于 GitHub 中的个人仓库，因此，当 GitHub 仓库中的内容被修改时，此处也会被动态修改</p>
+<p>为表诚意，我将图片存储仓库的 Commits 也进行了 WayBack Machine 处理，下为链接</p>
+<ul>
+<li>图片仓库提交页面： <a href="https://github.com/FunnyShadow/some-backups-of-hiper/commits/main/">https://github.com/FunnyShadow/some-backups-of-hiper/commits/main/</a>
+<ul>
+<li>WayBack Machine： <a href="https://web.archive.org/web/20231231143949/https://github.com/FunnyShadow/some-backups-of-hiper/commits/main/">https://web.archive.org/web/20231231143949/https://github.com/FunnyShadow/some-backups-of-hiper/commits/main/</a></li>
+</ul>
+</li>
+</ul>
+<p>此文章就此存档，不再修改</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper" target="_blank">https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-01-01T07:21:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023 年终回顾]]></title>
+        <id>https://www.lihaoyu.cn/posts/2023-review</id>
+        <link href="https://www.lihaoyu.cn/posts/2023-review"/>
+        <updated>2023-12-30T07:14:05.000Z</updated>
+        <content type="html"><![CDATA[<p>终于，我的第一篇正式的年终回顾。</p>
+<!-- more -->
+<h2>校园生活</h2>
+<p>今年，我参加了中考并取得了一个还算可喜的成绩，顺利进入了普通高中。</p>
+<p>高中的知识相对初中而言整体的逻辑性大幅度的提高，这让我不知如何是好，成绩也有下滑（<s>虽然期中考试也成功拿到了班级第五的排名</s>）。</p>
+<p>期末考试学校定在了 1 月 25 日左右，但我对理科毫无把握。但愿能考一个和期中考试相比差不了多少的成绩吧。</p>
+<h2>外出旅行</h2>
+<p>今年 7 月 20 日，我和一个同学离开山西，动身前往上海参加 BilibiliWorld 2023，顺便在上海逛了逛，总共三天时间。</p>
+<p>为了省一点钱，我们乘坐的是 Z198 和 Z195 次列车，经过一晚上的折腾以后终于在 21 日到达了上海站。</p>
+<blockquote>
+<p>话说这似乎是我第一次来上海呢……</p>
+</blockquote>
+<p>21 日主要就是逛了一天的漫展，可惜没有拍自己喜欢的 Coser，整个国家会展中心绕了几圈也没有找到岷叔的展台<s>以至于我现在非常嫉妒某位同样参加了 BW 也见到了岷叔的朋友</s>。</p>
+<h2>博客等的运营</h2>
+<p>中考完之后，我接手了维护 LittleSkin 消息转发机器人的任务。前两位负责这东西的朋友都因为一些原因没有再做下去，我便自行承担了这个看似已经不可能完成的任务。现在看来转发的运行状态还算可以。</p>
+<p>我个人认为我对我的网站比较重视，也为此付出了许多时间与精力。</p>
+<h3>新的主域名</h3>
+<p>一月的时候，我购入了现在所用的域名 <code>lihaoyu.cn</code> 并将大多数服务迁移到了它上面。原有的 <code>cakemc.top</code> 域名则作为了试水 Next.js 的个人主页和之后完成备案之后可能会用到的资源文件 CDN。</p>
+<p>暑假时在 NameSilo 买了一个域名 <code>230225.xyz</code>，本来是打算给晓雨以后可能出道成为虚拟主播留一个根据地用的，现在则成为了个人主页与预留的又拍云图床，以及 Q2TG 所使用的转发消息查看器。</p>
+<h3>站点的迁移</h3>
+<p>在今年 1 月 16 日，站点完成了从 Hexo 到 Valaxy 的迁移，也因此得到了更好的 PJAX 体验等等。</p>
+<p>之所以抛弃 Hexo，主要是因为它的热重载简直是屎。我当时从来没想到这东西改了 Markdown 居然还得在浏览器里手动刷新才能看到更改。</p>
+<blockquote>
+<p>你不能说它没有热重载，因为有插件搁那儿放着呢。</p>
+<pre><code class="language-bash">npm install hexo-browsersync
+</code></pre>
+</blockquote>
+<p>可能有人会说“为什么不用 VuePress 或者 VitePress？”，首先，这俩本来是用来做文档网站的，用来作为博客使用对我来说多少有些不合适。</p>
+<p>迁移以后，我也开始在摸爬滚打之中探索 Vue 的语法，并尝试创建了一个自己的 Vue 项目。</p>
+<p>Valaxy 的个性化程度还算高，可以通过覆盖主题组件的方式自定义样式并插入许多东西，也可以通过安装现有 Vite 和 Vue 插件的方式实现一些功能、解决初期生态贫瘠的痛点。</p>
+<blockquote>
+<p><s>果然万物之源都是 Vue，这就去用 Vue 重构个人主页（bushi）</s></p>
+</blockquote>
+<h2>音游</h2>
+<p>手机上有 Phigros，但是不是太习惯在小屏幕上玩；Steam 库里有喵斯快跑，但没下到本地。因为群友的原因，我接触到了舞萌 DX，<s>摇身一变变成 mai 批</s>。</p>
+<p><meting-js
+   id="2110353550"
+   server="netease"
+   type="song"
+   theme="#F2BC57"><br>
+</meting-js></p>
+<blockquote>
+<p>↑ 手感中断.webp</p>
+</blockquote>
+<p>后来我也有在逐渐把舞萌 DX 作为日常融入到我的生活中去，可惜因为 12 月中旬把币花完导致<s>没法再前进了</s>，家人给我充游戏币的要求则是期末考试考好……</p>
+<h2>GitHub 的贡献</h2>
+<p>今年一共有 612 次贡献，去年则是 450 次。</p>
+<p><img src="https://r2.230225.xyz/2023/12/30/658fdbb73c6a3.webp" alt="1703926714147.webp"></p>
+<p>我成为了开往团队的一员，也尝试用自己的方式为社区献上自己的一份力量，比如贡献字段翻译、文档补充、修复简单的小问题等等。</p>
+<hr>
+<p>Goodbye, 2023.</p>
+<p>Hello, 2024.</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/2023-review" target="_blank">https://www.lihaoyu.cn/posts/2023-review</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-12-30T07:14:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[期中前半学期回顾]]></title>
+        <id>https://www.lihaoyu.cn/posts/midterm-review</id>
+        <link href="https://www.lihaoyu.cn/posts/midterm-review"/>
+        <updated>2023-11-19T05:49:53.000Z</updated>
+        <content type="html"><![CDATA[<p>那么，期中考试已经结束了。还有两个月，高一上半学期就要结束了。</p>
+<p>新的一年即将到来。2023 年即将成为过去，我也将在一个多月后迎来自己的 16 周岁生日了。</p>
+<blockquote>
+<p>但是……很不幸，时间的流逝永远不会停止。</p>
+<p>时光如箭，你的过去在不停增多，你的未来在不断减少，未知的可能性只会越来越少，而无法改变的后悔在累积如山。</p>
+<p>你明白了吗？</p>
+</blockquote>
+<!-- more -->
+<h2>期中考试</h2>
+<p>总体来看，这次期中考试取得的成绩还算可以，相比月考时的成绩进步了 100 余名。</p>
+<table>
+<thead>
+<tr>
+<th>科目</th>
+<th>分数</th>
+<th>校排名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>语文</td>
+<td>108</td>
+<td>17</td>
+</tr>
+<tr>
+<td>数学</td>
+<td>56</td>
+<td>370</td>
+</tr>
+<tr>
+<td>英语</td>
+<td>129</td>
+<td>7</td>
+</tr>
+<tr>
+<td>政治</td>
+<td>83</td>
+<td>53</td>
+</tr>
+<tr>
+<td>历史</td>
+<td>69</td>
+<td>300</td>
+</tr>
+<tr>
+<td>地理</td>
+<td>84</td>
+<td>14</td>
+</tr>
+<tr>
+<td>生物</td>
+<td>92</td>
+<td>65</td>
+</tr>
+<tr>
+<td>物理</td>
+<td>53</td>
+<td>313</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>47</td>
+<td>358</td>
+</tr>
+<tr>
+<td>总分</td>
+<td>721 / 1050</td>
+<td>122（班内第五）</td>
+</tr>
+</tbody>
+</table>
+<p>然而数理化三门学科的成绩引起了我的担忧：我一个选物化生走计算机专业的，物化<strong>不及格</strong>？！？！？！</p>
+<p><img src="https://r2.230225.xyz/2023/11/19/6559a512e31e3.webp" alt="1700373775784.webp"></p>
+<p>这次考试显示出我的文科几乎全面领先理科，但由于专业以及将来的就业问题，我不可能选择文科。在教室里同学们知道我的英语成绩以后<s>一个比一个羡慕</s>，但我并不明白英语好有什么特别的：英语没有特长生、没什么我喜欢的专业、甚至 10 月的一期《看天下》还报道称中科大“拟取消英语本科专业等”。</p>
+<p>由此不禁联想到云游君、尤雨溪、苏卡卡等人，尤其是尤雨溪。我真的非常羡慕尤雨溪的技术力，时不时幻想自己什么时候能成为像他一样有能力的人。甚至就连平常和我差不了多少的 Restent 都学会了 Nuxt.js，还重写了他的博客。反观现在的我，连 Vue 都玩不明白。</p>
+<h2>16 周岁</h2>
+<p>我的生日是 1 月 5 日。</p>
+<p>从我上小学开始我的生日就一直是在学校迎来的。</p>
+<p>年满 16 周岁对我而言有着一种说不上来的意味：我可以创建属于自己的微信公众号，让更多的人看到我的日常；我可以给 <code>lihaoyu.cn</code>、<code>cakemc.top</code> 和 <code>230225.xyz</code> 进行网站备案，为我的博客立下一块里程碑；我可以自主决定生活中的许多事情，而不需要让家长替我决定……</p>
+<p>但是在学校过生日，于我而言不是什么好事。</p>
+<p>一来我没法光明正大地在社交媒体上和大家一起分享我的喜悦，二来我不能畅快地玩一天，反而还要写一大堆 ** 生物作业。</p>
+<p><img src="https://r2.230225.xyz/2023/11/19/6559aa35d3f3b.webp" alt="1700375091626.webp"></p>
+<blockquote>
+<p>吐槽一下，就算没有生物课和生物晚自习，我的生物老师依旧会布置大量的作业。多到自由自习完全被占用，甚至没时间写其他科的作业。</p>
+</blockquote>
+<h2>窥镜自视，弗如远甚</h2>
+<p>前几天在班里的一体机上偷偷看过李荷岭发布在他博客上的日记。说实话，和我比较起来他的字实在是太好了。再者，他有的日记是纯英文、有的是中文，又给了我不小的冲击力。</p>
+<blockquote>
+<p>大家都是高中生，怎么差距就这么大呢……</p>
+</blockquote>
+<p>班里有位女同学还是艺考生，最拿手的就是画画，字也写得不错。反观我自己，字不仅写的烂的一批，还几乎没什么特长可言。</p>
+<h2>多余之言</h2>
+<p>之前因为一些原因我一直在使用 Edge 作为主力浏览器，但随着时间的推移 Edge 的功能也变得越来越臃肿。因为这个，最近我开始尝试逐渐迁移回 Chrome 并把 Chrome Canary 当作我在 Windows 上的主力浏览器。</p>
+<p>不得不说，Material You 加上 Mica 标题栏，Chrome 真的好看了很多（我个人对 Material Design 2 不是特别喜欢，但 Material Design 3 确实符合我的审美）。</p>
+<p><img src="https://r2.230225.xyz/2023/11/19/6559ae5f6f927.webp" alt="1700376153741.webp"></p>
+<hr>
+<p>博客背景图片换了，浅色和深色模式下的图片分别是 Pixiv 上 <a href="https://www.pixiv.net/users/8196623">榊鳶</a> 和 <a href="https://www.pixiv.net/users/87830748">Futen</a> 的作品。</p>
+<p>就这样吧。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/midterm-review" target="_blank">https://www.lihaoyu.cn/posts/midterm-review</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-11-21T10:08:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用起来还不错——国区 Apple Music 浅谈]]></title>
+        <id>https://www.lihaoyu.cn/posts/apple-music-experience</id>
+        <link href="https://www.lihaoyu.cn/posts/apple-music-experience"/>
+        <updated>2023-10-29T00:44:00.000Z</updated>
+        <content type="html"><![CDATA[<p>如果你是我的同学或者比较亲近的朋友，你可能知道我已经开了很长时间的 Apple Music 订阅了。</p>
+<!-- more -->
+<p>之前因为 Lyricify 也尝试用了一下 Spotify Free，发现问题太多便没有继续再用了。但是 Spotify 的会员价格让我难以接受（我网易云黑胶都是趁便宜的时候开的），由于住校而一向不怎么从父母那里要零花钱的我，对这个问题发起了愁。正好 Apple Music 的价格与体验让我心动不已，于是便<s>从某爹爹上开了大学生订阅</s>一直用到现在。</p>
+<h2>跨平台支持</h2>
+<p>Android 和 iOS 都有官方的 Apple Music App。</p>
+<p>至于 Windows，以前得用体验稀烂的 iTunes，性能差字体渲染稀烂不说还没有无损音频。现在 Apple 基于微软的 WinUI 3 开发出了专门的 Apple Music Windows 客户端以后体验真的是好了太多，最重要的是 WinUI 3 在我的 Windows 11 PC 上看着顺眼。</p>
+<p><img src="https://r2.230225.xyz/2023/10/29/653db555f15c6.webp" alt="1698542928197.webp"></p>
+<blockquote>
+<p>Windows 下还有 Cider，但是由于这玩意儿基于 Web 技术，而且 2.0 版本由开源免费变成闭源收费了，我不喜欢它。</p>
+</blockquote>
+<p>但是我有时候会用 Ubuntu，而 Apple 并没有为 Linux 专门开发客户端，这样一来只能用网页播放器，体验不算太好。</p>
+<h2>曲库</h2>
+<p>网上挺多人都说国区 Apple Music 曲库太少了，但我平常在网易云听的歌基本都有，更何况 Apple Music 还有一个“iCloud 云端音乐资料库”的功能，允许我们自行上传歌曲并在各个设备上同步播放。</p>
+<p><img src="https://r2.230225.xyz/2023/10/29/653dc2e53c975.webp" alt="1698546403386.webp"></p>
+<p>可惜的是，资料库歌曲的歌词不能滚动，歌曲加载速度在我这里也基本上慢到爆炸。因此我现在算是网易云音乐和 Apple Music 交替使用。</p>
+<h2>播放列表 / 歌单</h2>
+<p>歌单问题不大，iOS 17 以后，Apple Music 添加了“喜爱的歌曲”列表，在播放歌曲时点一下右上角折叠菜单旁边的星星就可以添加喜爱了。在这之前则需要先将歌曲添加到资料库，然后再添加到播放列表。</p>
+<p>现在来看，操作逻辑和网易云等国内音乐平台都差不多其实。</p>
+<h2>“正在播放”页面</h2>
+<p>我一般习惯看着歌词听歌，这样顺便就会记一记歌词。而歌词动画一直都可以说是 Apple Music 的看家本领，“正在播放”页面的歌词动画可以根据歌曲自行适应，间曲也会有呼吸动画。</p>
+<p>歌词背景则是会根据 BPM（大概？）自适应的流体，能够伴随着歌曲震动（我不知道怎么表述，大概是这样吧）。</p>
+<p>逐字歌词更是重量级：歌词辉光、字词上浮，其实挺震撼我的。虽然有的歌曲歌词对不上进度吧。</p>
+<div grid="~ cols-3" pb="4">
+<p><img src="https://r2.230225.xyz/2023/10/29/653dc79c41321.webp" alt="IMG_5249.webp"></p>
+<p><img src="https://r2.230225.xyz/2023/10/29/653dc79f8ef6b.webp" alt="IMG_5250.webp"></p>
+<p><img src="https://r2.230225.xyz/2023/10/29/653dc7b88928b.webp" alt="IMG_5247.webp"></p>
+</div>
+<h2>推荐机制</h2>
+<p>现在 Apple Music 的推荐机制在我这里表现还算不错，会给我通过精选歌单推荐一些歌曲，听了几首也都符合我的口味。</p>
+<p><img src="https://r2.230225.xyz/2023/10/29/653dc9aaab75c.webp" alt="1698548136142.webp"></p>
+<p>Apple Music 也有类似于网易云“私人漫游”的功能，只不过叫“电台”。</p>
+<h2>总结</h2>
+<p>怎么说呢，Apple Music 整体来讲体验比其他的音乐平台好太多了，至少对我来说是这样的。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/apple-music-experience" target="_blank">https://www.lihaoyu.cn/posts/apple-music-experience</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-10-29T00:44:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[万物皆可美化之 VSCode]]></title>
+        <id>https://www.lihaoyu.cn/posts/beautify-your-vscode</id>
+        <link href="https://www.lihaoyu.cn/posts/beautify-your-vscode"/>
+        <updated>2023-10-01T04:35:37.000Z</updated>
+        <content type="html"><![CDATA[<p>啥？这年头连 VSCode 都能美化？</p>
+<!-- more -->
+<h2>起因</h2>
+<p>一直以来，VSCode 给我的印象就只是一个黑乎乎或者亮瞎眼的再普通不过的界面了。从某种程度上来讲，这样的界面和 Windows 11 很不搭配，我就在想 VSCode 不是有主题嘛，社区肯定也会有一些好看的主题吧。事实上，真的有。</p>
+<h2>操作</h2>
+<h3>以管理员身份启动 VSCode</h3>
+<p>我们首先需要把所有正在运行的 VSCode 关掉，然后以管理员身份启动 VSCode，这样才能进行下一步操作。</p>
+<p><img src="https://r2.230225.xyz/2023/10/01/6518f8cea562b.webp" alt="1696135369271.webp"></p>
+<p>需要注意的一点是，以管理员身份启动 UserSetup 模式的 VSCode 会自动禁用更新。</p>
+<h3>安装主题</h3>
+<p>打开侧边栏里的「扩展」，然后搜索 <code>Fluent</code>，安装 Fluent Pack 扩展包。这会安装四个扩展（两个主题，两个图标包）。</p>
+<p><img src="https://r2.230225.xyz/2023/10/01/6518fb72a4529.webp" alt="1696136046269.webp"></p>
+<p>安装完成以后，在左下角的「管理」、「主题」内更改「产品图标主题」，然后打开命令面板，输入 <code>Fluent UI: Enable</code>，回车启用主题。之后应该会有一个气球通知要求我们重新加载窗口，窗口重新加载完成之后就可以正常看到主题的效果了。</p>
+<p><img src="https://r2.230225.xyz/2023/10/01/6518fb998a767.webp" alt="1696136087172.webp"></p>
+<p>主题的设置内能自定义背景图片，设置背景图片之后，主题会根据 Windows 11 云母效果对壁纸进行采样并放在背景层。</p>
+<p>修改设置之后，需要在命令面板内重载主题才能生效。</p>
+<h3>我不想用了，怎么办？</h3>
+<p>以管理员身份启动 VSCode，先在命令面板内执行禁用指令，重载窗口之后再卸载主题。</p>
+<p>如果你以普通用户身份禁用并卸载了主题，那么你的 <code>workbench.html</code> 将会变得面目全非。这时你需要打开 <code>C:\Users\{username}\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench</code>，以管理员身份打开 <code>workbench.html</code> 手动编辑它，删除主题加入的所有处在 <code>&lt;!-- FUI-CSS-START --&gt;</code> 和 <code>&lt;!-- FUI-CSS-END --&gt;.</code> 注释之间的东西。删完之后，<code>workbench.html</code> 看起来应该是这样的：</p>
+<pre><code class="language-html">&lt;!-- Copyright (C) Microsoft Corporation. All rights reserved. --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta
+            http-equiv=&quot;Content-Security-Policy&quot;
+            content=&quot;default-src 'none'; img-src 'self' https: data: blob: vscode-remote-resource:; media-src 'self'; frame-src 'self' vscode-webview:; object-src 'self'; script-src 'self' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; connect-src 'self' https: ws:; font-src 'self' https: vscode-remote-resource:;&quot;
+        /&gt;
+        &lt;meta
+            http-equiv=&quot;Content-Security-Policy&quot;
+            content=&quot;require-trusted-types-for 'script'; trusted-types amdLoader cellRendererEditorText defaultWorkerFactory diffEditorWidget stickyScrollViewLayer editorGhostText domLineBreaksComputer editorViewLayer diffReview dompurify notebookRenderer safeInnerHtml standaloneColorizer tokenizeToString;&quot;
+        /&gt;
+    &lt;/head&gt;
+
+    &lt;body aria-label=&quot;&quot;&gt;&lt;/body&gt;
+
+    &lt;!-- Startup (do not modify order of script tags!) --&gt;
+    &lt;script src=&quot;workbench.js&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p>或者你也可以单纯直接重装 VSCode。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/beautify-your-vscode" target="_blank">https://www.lihaoyu.cn/posts/beautify-your-vscode</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-10-01T04:35:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[博客二周年——我对博客的想法]]></title>
+        <id>https://www.lihaoyu.cn/posts/2-years-anniversary</id>
+        <link href="https://www.lihaoyu.cn/posts/2-years-anniversary"/>
+        <updated>2023-09-16T14:00:54.000Z</updated>
+        <content type="html"><![CDATA[<p>诸君安好。</p>
+<p>光阴似箭，日月如梭。如今寒舍己立兩載，值此喜庆之日，撰此文，以述心之所想，亦是与君共勉。</p>
+<hr>
+<h2>起</h2>
+<p>博客，我是这样理解字面意思的：博客，“博“众”客”之欢。在维基百科、百度</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/2-years-anniversary" target="_blank">https://www.lihaoyu.cn/posts/2-years-anniversary</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-09-16T14:00:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我过不去的坎——数学]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-poor-mathematics</id>
+        <link href="https://www.lihaoyu.cn/posts/my-poor-mathematics"/>
+        <updated>2023-09-08T11:22:15.000Z</updated>
+        <content type="html"><![CDATA[<p>数学，一直以来都是我的心头大患。</p>
+<!-- more -->
+<p>初中三年，六本练习册我没有一本是全部改错的；别的同学一看就会的题，我却需要花很长时间，有时甚至根本毫无头绪。这个问题在升入初三开始学习二次函数后被放大了，为此我的班主任头痛不己，经常在课上批评我的改错情况，卷子上压轴的二次函数图像题，我在大部分情况下只会解第一问……这就造成 2023 年山西中考那么简单的数学卷子我只拿到了 90 分（满分 120 分）。</p>
+<p>暑假上预科班时，我又发现一天元二次不等式我根本不知道怎么做，同时“集合”当中的一部分内容我也没有记住，因此做题对我而言约等于折磨。而现在学科高合、跨学科题型大行其道导致数学几乎无处不在。我又只得忍受。</p>
+<p>高中开学之后，有一段时间的街接课，主要是回顾初中的知识。然而那些学案我做出来的效果很差，让我怀疑我究竞学没学过初中数学。</p>
+<p>似乎我周围的人不管是网友还是同学，数学从来都不是他们所担忧的。印象当中，信息技术与数学有很大的联系，可为什么我总是学不好数学呢？</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-poor-mathematics" target="_blank">https://www.lihaoyu.cn/posts/my-poor-mathematics</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-09-08T11:22:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[将 Waline 从 LeanCloud 迁移到 MongoDB Cloud]]></title>
+        <id>https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb</id>
+        <link href="https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb"/>
+        <updated>2023-08-30T02:34:58.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>从 Hexo 时代开始，我的 Waline 就是托管在 Vercel 的，而数据存储使用的是 LeanCloud 国际版。这也是 Waline 官方最推荐的部署方式。虽然简单，但是时间长了 Waline 的速度必然会受制于 LeanCloud。之前 <a href="https://dusays.com">杜老师</a> 就在我博客的<a href="/posts/talk-about-communications">「谈人际交往」</a>这篇文章下评论说我的 Waline 加载速度太慢了。</p>
+<p>我自己后来翻文章、回复评论的时候也发现加载速度上的一些问题，便决定切换数据库，从 LeanCloud 迁出来优化评论区的性能。</p>
+<!-- more -->
+<p><img src="https://r2.230225.xyz/2023/08/30/64eead7ab8b9e.webp" alt="1693363403499.webp"></p>
+<h2>过程</h2>
+<h3>配置数据库与 Waline</h3>
+<p>首先，我在 MongoDB Cloud 上创建了一个位于中国香港地域的 Azure 免费的 M0 数据库，存储空间大小是 512 MB，对 Waline 来说可谓绰绰有余了。如果不够了，以后再迁到 5 GB 免费的 TiDB 也可以。</p>
+<p>创建好以后，在 “Network Access” 页面放行所有 IP 的访问请求，然后复制一下 SRV 格式的连接串。在 Navicat 里使用连接串连接到 MongoDB 之后创建一个名为 <code>waline</code> 的数据库，记好名字备用。</p>
+<p>打开部署在 Vercel 上的 Waline 项目，转到环境变量设置，删除原有的 LeanCloud 相关配置项，然后依照 <a href="https://waline.js.org/guide/database.html#mongodb">Waline 的文档</a>填写好 MongoDB 的连接信息。这里有一点需要注意：MongoDB Cloud 的 M0 数据库是没有集群信息的，如果设置了错误的 <code>MONGO_REPLICASET</code>，会导致 Waline 在获取评论信息时出现 <code>500</code> 连接超时错误。我当时迁移的时候就是卡在了这里，后来搜索到了 Waline 仓库里的一个 Issue 才知道这个问题。</p>
+<blockquote>
+<p>多机连接信息可以在这里找到：</p>
+<p><img src="https://r2.230225.xyz/2023/08/30/64eeb1460acc0.webp" alt="1693364544500.webp"><em>选择 <code>Drivers</code> 作为连接方式，<code>Driver</code> 为 Node.js，<code>Version</code> 为 <code>2.2.12 or later</code></em></p>
+<p>其中形似黄色荧光笔勾住的部分即是多机连接信息，不要带端口号，按照 Waline 文档内的格式将其依次填入环境变量。</p>
+</blockquote>
+<p>:::warning 注意<br>
+你的 Vercel 项目的地域也需要设置在与数据库所在地域相同的地域或者尽可能靠近，否则速度会大打折扣！</p>
+<p><img src="https://r2.230225.xyz/2023/08/30/64eeb54319853.webp" alt="1693365560260.webp"><em>数据库所在地域</em></p>
+<p><img src="https://r2.230225.xyz/2023/08/30/64eeb56b2b670.webp" alt="1693365602464.webp"><em>项目所在地域</em><br>
+:::</p>
+<h3>备份与恢复数据</h3>
+<p>配置好之后，先去 Waline 管理后台“导入导出”页面导出所有数据，如果一段时间后浏览器没有自动下载导出的 JSON，很可能是因为 Vercel 的无服务器函数超时了，此时尝试再执行一次导出操作应该就能导出了。</p>
+<p>导出的是标准的 JSON，包含了所有的评论与注册用户的信息。将其留下来，不要删除，然后在 Vercel 上重新部署一次 Waline。部署完成之后访问管理页面，重新注册账号或者使用 OAuth 注册账号。登录之后，再在“导入导出”页面执行一次导入操作，然后选中此前导出的包含 Waline 所有数据的 JSON 文件，Waline 就会开始自动进行导入与索引建立操作了。</p>
+<p>这里建议打开浏览器的 DevTools，切换到“网络”面板，这样在一定程度上可以判断 Waline 的导入操作是否正常进行。如果导入突然停止并且管理页面的进度指示没有走完就消失掉的话，多半是 Vercel 的无服务器函数超时了（Hobby 计划的每个 Vercel 无服务器函数最长只能持续运行 10 秒，否则会超时并返回 <code>504</code> 错误）。这时候不管怎么样，重新执行一次导入操作，应该就可以了。</p>
+<blockquote>
+<p>这里我并没有遇到导入失败的情况，只能提供一个这样的解决方案了。</p>
+</blockquote>
+<p>导入完成之后，应该就一切正常了。退出评论区的登录状态，用原来 LeanCloud 作为数据库时 Waline 的账号密码进行登录即可。之后多翻翻博客的每一篇文章，你会发现评论的加载速度有了极大提升。到演示页面测试一下评论，也会发现相比 LeanCloud 有了极大提升。</p>
+<h3>其他优化</h3>
+<p>MongoDB 有一个“索引”功能，能够在一定程度上加快读取大的集合时数据库的响应速度。因此，为一些太大的集合设置索引能够提升 Waline 的响应速度。</p>
+<p>这些大体量的集合通常是页面浏览量和评论信息（<code>Counter</code> 和 <code>Comment</code> 集合），因此为它们设置索引即可。</p>
+<h2>参考</h2>
+<p><a href="https://finisky.github.io/hexormleancloud/">Hexo去LeanCloud依赖 | Finisky Garden</a></p>
+<h2>坑</h2>
+<p>后来有一次我发现几乎所有注册用户的绿色小对勾标志都没有了，看着很膈应。</p>
+<p><img src="https://r2.230225.xyz/2023/09/08/64fb000e1965d.webp" alt="1694171153453.webp"></p>
+<p>然后一翻数据库，好家伙，几乎所有评论都有一个空的 <code>user_id</code> 字段。我打开 <code>User</code> 表一对比，才知道这里的 <code>user_id</code> 字段其实就是 MongoDB 中每条数据最前面的 <code>id</code>。这下好了，得重新为之前的评论设置用户信息字段了。</p>
+<p>因为我没有什么编写脚本的经验，所以这一切操作都是在 Navicat 里手动进行的。就，挺累的……</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb" target="_blank">https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-09-08T10:33:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初入舞萌 DX]]></title>
+        <id>https://www.lihaoyu.cn/posts/maimai-newbee</id>
+        <link href="https://www.lihaoyu.cn/posts/maimai-newbee"/>
+        <updated>2023-08-28T05:12:45.000Z</updated>
+        <content type="html"><![CDATA[<p><s>我最终还是成为了 mai 批。</s></p>
+<h2>原因</h2>
+<p>我以前是没有尝试过舞萌的，因为一直以为太原这座城市没有啥电玩城会有舞萌机台，即使后来看了一下音游地图发现是有的。</p>
+<p>放假大部分时间我都是缩在家里</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/maimai-newbee" target="_blank">https://www.lihaoyu.cn/posts/maimai-newbee</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-08-28T05:12:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记一次重装 Windows]]></title>
+        <id>https://www.lihaoyu.cn/posts/reinstall-my-pc-os</id>
+        <link href="https://www.lihaoyu.cn/posts/reinstall-my-pc-os"/>
+        <updated>2023-07-19T10:55:53.000Z</updated>
+        <content type="html"><![CDATA[<p><s>受不了啦！我要 switch to Linux！我与 <code>0x800707e7</code> 不共戴天！</s></p>
+<p>Switch to Linux 是不可能的，这辈子都不可能 switch to Linux 的。</p>
+<!-- more -->
+<h2>因</h2>
+<p>最近更新最新的 Canary 预览版 Windows 一直失败，同时 C 盘可用空间也所剩无几，我使出浑身解数也才清理出了 80 GB 的可用空间。同时，QQNT 的系统通知在当时我的电脑上不知为何一直没有效果。</p>
+<p>最后终于决定咬一咬牙，备份好必要资料准备重装 Windows，同时回到 Dev 渠道。</p>
+<h2>过</h2>
+<p>还好手边有一个自己的移动硬盘，顺手拿来插到电脑上，然后开始在 C 盘里到处翻找，将安装到 C 盘的和其他一些必要软件的安装包保存到了硬盘里。</p>
+<p>之后就开始从 AppData 目录把一些重要的东西扒出来，也放到硬盘里；哦对，BakaXL、PCL2 等启动器的注册表和设置项目不能忘掉。</p>
+<p>做完这一切，把硬盘拔了出来，我开始下载 Dev 最新版本 23493 的镜像。</p>
+<p>看了一下，微软并没有在官网上更新 Dev 频道的镜像，于是我只好转战 uupdump 来自己制作一份镜像。</p>
+<p>系统，Windows 11；体系结构，x64；版本号，Dev 23493；SKU，家庭中文版……</p>
+<p>至于为何选家庭版，因为笔记本出厂预装的都是家庭版 Windows，我就选了家庭版。</p>
+<p>工具压缩包下载好，开始制作镜像：</p>
+<p><img src="https://r2.230225.xyz/2023/07/19/30223c1fed2efedb5d38729a09659950.webp" alt=""></p>
+<p>它在制作镜像的时候，我出去打了一桶水，回来以后看到镜像已经做好了。于是翻一下目录，挂载镜像开始安装！</p>
+<p>让我意想不到的是，重装的进度走的如此之快，更新的进度走到一半花了我快一个小时<s>还失败了</s>……</p>
+<p>重启以后等了大概五六分钟，进了 OOBE 阶段。这时因为没有驱动，看起来很卡。</p>
+<p>走完 OOBE，登录微软账号，就看到了熟悉的桌面。稍微等一会儿，让 Windows 安装一下驱动，然后就是愉快的重装软件和个性化时间咯！</p>
+<p><img src="https://r2.230225.xyz/2023/07/19/a8cdf347270da80b3f67405022696583.webp" alt=""><em><s>还有限定鼠标指针哦</s>！桌面和终端背景是 Pixiv 的 CoCoLo 画的</em></p>
+<blockquote>
+<p>怪事，LyricEase 和很多 UWP 应用到了这个版本上动画明显卡顿了，不知道是为何。</p>
+</blockquote>
+<p>同时，新版的文件资源管理器向我敞开了怀抱：</p>
+<p><img src="https://r2.230225.xyz/2023/07/19/f719a8496bc0a3c69e784c93ce3b1064.webp" alt=""><em>Proudly powered by Windows UI 3</em></p>
+<h2>坑</h2>
+<p>但是在重装软件、安装新游戏时，我遇到了一个坑：D 盘的文件权限问题，还很严重。</p>
+<p>具体来说，就是有一些目录在重装系统之后莫名需要管理员权限才能访问，甚至 Minecraft 都无法往某些目录中写入文件。</p>
+<p>对于这些目录，我的解决方案是：在 Windows 的“属性”窗口里修改所有者和权限，不行的话直接重启到 Ubuntu <s>扬了那个目录</s>。</p>
+<p>以及，MacType 死活无法渲染开始菜单和一部分 UWP 应用了，Edge Beta 打开的网页也无法渲染了。然而隔壁 Chrome Canary 一切正常，我甚至没有更改任何 Flag 就能使用 MacType 渲染 Chrome 的网页。</p>
+<hr>
+<p>哦对了，博客开始使用思源黑体作为网页字体了，还是老朋友 Google Fonts 哦。<s>究其原因还是因为我受不了没有 MacType 的微软雅黑</s>。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/reinstall-my-pc-os" target="_blank">https://www.lihaoyu.cn/posts/reinstall-my-pc-os</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-19T10:55:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记一次被 DDoS]]></title>
+        <id>https://www.lihaoyu.cn/posts/ddos-attack-record</id>
+        <link href="https://www.lihaoyu.cn/posts/ddos-attack-record"/>
+        <updated>2023-07-11T12:05:45.000Z</updated>
+        <content type="html"><![CDATA[<p>哇哦，终于也轮到我被打了吗？</p>
+<h2>太长不读</h2>
+<p>这次 DDoS 攻击并未造成任何实质性的损失，也并未影响到博客的正常访问。</p>
+<p>Cloudflare 的记录显示 HTTP DDoS 攻击总共有 300 万次请求，其余的一百多万次请求被自定义防火墙规则所拦截。</p>
+<!-- more -->
+<h2>经过</h2>
+<p>本来我并没有注意到博客遭遇到了 DDoS 攻击的。当时我在 TG 和 QQ 里跟天南海北的网友们胡吹海吹，打开 Cloudflare 仪表盘后，我像往常一样简单看了一眼 WAF 事件，然后发现了许多不正常的访问记录。</p>
+<p>再翻一下，好家伙，HTTP DDoS。Cloudflare 仪表盘满页写着两个字是“阻止”。</p>
+<p>再一看邮箱，好家伙，Cloudflare 直接一口气给我发了 13 封电子邮件，内容全是关于我的网站遭遇 DDoS 攻击的。</p>
+<p><img src="https://r2.230225.xyz/2023/07/11/5762f7f83764689d4fb5e2cd3c5b0777.webp" alt=""></p>
+<blockquote>
+<p>明明我根本没什么流量，为什么会有人打我（黑人问号脸.webp</p>
+</blockquote>
+<p>我觉得挺搞笑的，逮着我一个静态站打，还打的是 Cloudflare。</p>
+<p><img src="https://r2.230225.xyz/2023/07/11/b01687ce7fdcfed2bc0533214d3fd9e0.webp" alt=""></p>
+<p><img src="https://r2.230225.xyz/2023/07/11/d74903bb80b80666983ba1817451ff7d.webp" alt=""></p>
+<p>本次攻击总共造成了 27 GB 的流量和约 480 万次请求，但由于我的博客托管于 Cloudflare Pages，并未造成任何实质性影响，博客也并未因此无法正常访问。</p>
+<p>这是我的博客第一次遭遇 DDoS 攻击，<s>这不得记录一下</s>？</p>
+<p>总之，希望各位永远不用因为被攻击而担惊受怕。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/ddos-attack-record" target="_blank">https://www.lihaoyu.cn/posts/ddos-attack-record</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-11T12:05:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中考成绩！]]></title>
+        <id>https://www.lihaoyu.cn/posts/zhongkao-grades</id>
+        <link href="https://www.lihaoyu.cn/posts/zhongkao-grades"/>
+        <updated>2023-07-09T01:06:15.000Z</updated>
+        <content type="html"><![CDATA[<p>昨天晚上快 12 点的时候，我查到了自己的中考成绩。</p>
+<!-- more -->
+<p><meting-js
+id="1870303714"
+server="netease"
+type="song"
+theme="#F2BC57"><br>
+</meting-js></p>
+<p><img src="https://r2.230225.xyz/2023/07/09/64aa0b2c31555.webp" alt="1688865574461.webp"></p>
+<p>那么我们再来看一下我当时在学校里估的分数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>科目</strong></th>
+<th style="text-align:center"><strong>分数</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">语文</td>
+<td style="text-align:center">85</td>
+</tr>
+<tr>
+<td style="text-align:center">数学</td>
+<td style="text-align:center">101</td>
+</tr>
+<tr>
+<td style="text-align:center">英语</td>
+<td style="text-align:center">113</td>
+</tr>
+<tr>
+<td style="text-align:center">历史</td>
+<td style="text-align:center">88</td>
+</tr>
+<tr>
+<td style="text-align:center">道德与法治</td>
+<td style="text-align:center">83</td>
+</tr>
+<tr>
+<td style="text-align:center">物理</td>
+<td style="text-align:center">95</td>
+</tr>
+<tr>
+<td style="text-align:center">化学</td>
+<td style="text-align:center">98</td>
+</tr>
+<tr>
+<td style="text-align:center">总分</td>
+<td style="text-align:center">661.8</td>
+</tr>
+<tr>
+<td style="text-align:center">满分</td>
+<td style="text-align:center">745</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>这里纠个错，满分应该是 745 分</p>
+</blockquote>
+<p>我的语文一直都不算太好，但这次能拿到 106 分我也是很震惊的；英语低了 5 分，应该大部分都扣在作文上了；历史上了 90 分，其他的科目都多少有些下滑。</p>
+<p>就很怪的，明明大多数科目都有些下滑，然而最后的总分却比估的分高。其他同学的成绩我也大致看了一下，也差不多都是 660 多分。</p>
+<p>:::danger</p>
+<p>多图注意！</p>
+<p>:::</p>
+<p><img src="https://r2.230225.xyz/2023/07/09/64aa0f3d019a4.webp" alt="1688866606229.webp"></p>
+<p><img src="https://r2.230225.xyz/2023/07/09/64aa0f928d09d.webp" alt="1688866701897.webp"></p>
+<p><img src="https://r2.230225.xyz/2023/07/09/64aa0fb57a250.webp" alt="1688866737382.webp"></p>
+<p><img src="https://r2.230225.xyz/2023/07/09/64aa104ac57e4.webp" alt="1688866887100.webp"></p>
+<p><img src="https://r2.230225.xyz/2023/07/09/64aa10cfed3c0.webp" alt="1688867016999.webp"></p>
+<p><s>这下好了，暑假可以疯玩了</s> 开玩笑的，还有高中预科班，初中的班主任还让我暑假把数学补一补：</p>
+<p><img src="https://r2.230225.xyz/2023/07/09/64aa11a956d74.webp" alt="1688867238606.webp"></p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/zhongkao-grades" target="_blank">https://www.lihaoyu.cn/posts/zhongkao-grades</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-10T09:16:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OMORI 初体验]]></title>
+        <id>https://www.lihaoyu.cn/posts/omori</id>
+        <link href="https://www.lihaoyu.cn/posts/omori"/>
+        <updated>2023-07-04T03:40:48.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>“那个时候……</p>
+<p>明明我们最需要的就是彼此的陪伴，大家却选择了分道扬镳。</p>
+<p><strong>这一次……我们不能再犯相同的错误了。</strong>”</p>
+<p><em>——英雄</em></p>
+</blockquote>
+<!-- more -->
+<hr>
+<p>:::danger 剧透警告</p>
+<p>本文可能包含对 OMORI 的主要剧情或相关重要剧情点的剧透。</p>
+<p>:::</p>
+<p><meting-js
+   id="1870303714"
+   server="netease"
+   type="song"
+   theme="#F2BC57"><br>
+</meting-js></p>
+<p>好久不见。</p>
+<p>前几天，我<s>凭我自己的实力</s>在 B 站刷到了下面这个视频，然后就接触到了 OMORI 这个游戏。</p>
+<iframe class="bilibili-video" src="https://www.lihaoyu.cn//player.bilibili.com/player.html?aid=438133948&bvid=BV1Mj411u7ye&cid=1043803450&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>在我购买它之前，我提前去萌娘百科之类的地方查了一下主角的信息，然后你猜我发现了什么？</p>
+<p><img src="https://r2.230225.xyz/2023/07/04/b9fda0f46303e1d1600f7e919c91ad4d.webp" alt=""><em><s>毒瘾犯了</s></em></p>
+<p>回到正题。这游戏吸引我的地方有很多，比如：</p>
+<ul>
+<li>心理恐怖
+<ul>
+<li>我一直以来都只是局限于单调的几个游戏，几乎没怎么尝试过新的游戏。（虽然也有电脑配置的原因）</li>
+</ul>
+</li>
+<li>像素风
+<ul>
+<li>虽然我不玩传说之下，但是 OMORI 和 UT 对比一下就可以发现它们是有一些共同点的。</li>
+</ul>
+</li>
+</ul>
+<p>（第一眼看过去就这么多）</p>
+<p>对我来说，OMORI 对游戏场景的渲染是很完美的，几乎每个场景、每个战斗都有自己的配乐，甚至你在打鳄鱼男的时候音乐都能让你瞬间变得高雅起来。</p>
+<p>战斗机制是我较为熟悉的回合制，加上了独特的情感系统，不同的情感会对角色产生不同的影响。</p>
+<p>画风非常独特，采用了像素风格和手绘风格相结合的方式，营造出一种既温馨又诡异的氛围。游戏中有很多细节和彩蛋，让玩家可以不断地发现新的东西。游戏的音乐也非常出色，由多位音乐人合作创作，包括 Toby Fox、slime girls、Bo en 等。游戏中有很多动人的旋律和激昂的战斗音乐，让玩家可以感受到不同的情绪和气氛。</p>
+<p>我花了 30 多个小时，达成了 Happy Ending 和额外的一个过场动画。（Sunny 和贝瑟尔相视一笑，“那个东西”永远消失）</p>
+<p>在这三十多个小时里，我看到脑内世界的 OMORI 一行人寻找贝瑟尔时遭遇的重重困难，也感受到了现实世界 Sunny 和贝瑟尔乃至所有人心中那仿佛永远也抹不掉的阴影、以及蛰居四年期间 Sunny 所感受到的孤独。</p>
+<p>Sunny 进入白色空间并面对手抓尖刀的 OMORI 的场面是极为压抑的，战斗越是持续，场景和音乐也会越来越压抑。</p>
+<blockquote>
+<p>“OMORI <strong>不会</strong>屈服。”</p>
+</blockquote>
+<p>最终的战斗中，Sunny 内心的罪恶感通过 OMORI 对他的攻击充分的流露了出来，OMORI 通过不断提醒 Sunny 他对玛里做的事以及他不配得到原谅击溃了他。</p>
+<p>但是如果在此时出现的独特的 GAME OVER 界面中选择继续的话，他会再次站起来，恢复斗志并准备演奏他的小提琴。他会与玛里表演二重奏，回忆起过去他和玛里及其他朋友们度过的美好时光。</p>
+<p>在医院醒来后，他开始哭泣，右眼因为之前被贝瑟尔的园艺剪戳伤而被绷带覆盖着。他离开了他自己的病房，看到了脑内空间版本的他的朋友们和陌生人，跟着陌生人走向贝瑟尔的房间。在进入房间后，面对他的朋友们，他终于打算告诉他们玛里死亡背后的真相。</p>
+<p>因为我并没有太多的时间继续推其他结局了，所以我打算通过观看实况得以目睹。</p>
+<p>总而言之，OMORI 值得每一个喜欢游戏和故事的人去玩一玩。</p>
+<blockquote>
+<p>“你一定能够原谅自己的……对吗……Sunny？”</p>
+<p><em>——玛里</em></p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/omori" target="_blank">https://www.lihaoyu.cn/posts/omori</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-04T03:40:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中考之后]]></title>
+        <id>https://www.lihaoyu.cn/posts/after-zhongkao</id>
+        <link href="https://www.lihaoyu.cn/posts/after-zhongkao"/>
+        <updated>2023-06-24T05:11:27.000Z</updated>
+        <content type="html"><![CDATA[<p>中考，结束了。同样的，我也不再是一个初中学生了。</p>
+<!-- more -->
+<p><img src="https://r2.230225.xyz/2023/06/24/a74b5294049206c4e28bd2457f230ae3.webp" alt=""><em>老师们的祝福签</em></p>
+<p>22 日上午 10:30，最后一门考试科目——英语结束。走出考点的那一瞬间，我感觉自己无比愉悦。</p>
+<p>回到教室，开始收拾书柜和书桌抽屉里剩下的书，然后就是回家休息。</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/12b78b88be4832814ccd6183ea3f9f2b.webp" alt=""><em>考点</em></p>
+<p>下午和同宿舍的同学们出去小聚了一下，因为走得比较晚，而我又是从太原坐城际公交去的榆次奥特莱斯，全程差不多花了我快一个半小时。</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/0bcfaadfdc9e771463ec4bbef39af0d4.webp" alt=""></p>
+<p>让我没有想到的是，发了朋友圈以后，我的物理老师很快就认出来我们在哪里聚的餐。</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/27181d316698205e5ed6fa66ba8c65d9.webp" alt=""></p>
+<p>聚餐完以后又是看电影，回到家已是晚上十一点。</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/c8ec77c275b2a938718f89a6a564a28c.webp" alt=""></p>
+<p>23 号休息了一天，24 号上午回学校估分、模拟填报志愿。</p>
+<p>大家都在互相合影留念，整个教室到处都是奶油和笑声。但实际上，也夹杂了一些不舍。</p>
+<p>最后我估下来的分是这样的：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>科目</strong></th>
+<th style="text-align:center"><strong>分数</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">语文</td>
+<td style="text-align:center">85</td>
+</tr>
+<tr>
+<td style="text-align:center">数学</td>
+<td style="text-align:center">101</td>
+</tr>
+<tr>
+<td style="text-align:center">英语</td>
+<td style="text-align:center">113</td>
+</tr>
+<tr>
+<td style="text-align:center">历史</td>
+<td style="text-align:center">88</td>
+</tr>
+<tr>
+<td style="text-align:center">道德与法治</td>
+<td style="text-align:center">83</td>
+</tr>
+<tr>
+<td style="text-align:center">物理</td>
+<td style="text-align:center">95</td>
+</tr>
+<tr>
+<td style="text-align:center">化学</td>
+<td style="text-align:center">98</td>
+</tr>
+<tr>
+<td style="text-align:center">总分</td>
+<td style="text-align:center">661.8</td>
+</tr>
+<tr>
+<td style="text-align:center">满分</td>
+<td style="text-align:center">740</td>
+</tr>
+</tbody>
+</table>
+<p>这个总分是这样计算的：</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/36fe92f922af1cc1053008591a0c6d31.webp" alt=""></p>
+<p>接下来就是两个多月的暑假，我计划 7 月去一下上海逛逛 BilibiliWorld。</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/7971f01df6da5a0567cdcf9e5456b009.webp" alt=""><em>送我自己的一份礼物！By <a href="https://space.bilibili.com/66774358">委鬼小宸</a></em></p>
+<hr>
+<p>另外就是，前段时间看到友链评论区下方有人打广告宣传 xLog。</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/59c750d060369e6a089868da6007e4f4.webp" alt=""></p>
+<p>尽管我已经通过其他方式了解到了它并且搭建了<a href="https://decentralized.lihaoyu.cn">试验性的站点</a>，但我个人是比较反感在别人的站点内一上来就打广告的。</p>
+<p><img src="https://r2.230225.xyz/2023/06/24/69bf7295efd2cc385cd8cb3b21ec0fe3.webp" alt=""><em>Nofated 的友链页面同样也收到了 xLog 的广告</em></p>
+<p>以及，它是基于 Web3、区块链、NFT 的，这让我从未考虑过迁移至 xLog。</p>
+<p>就其本身来说，它的功能比较少，无法满足我的写作需求；长远看来，依赖 Web3 让我不由得下意识流露出了一种不明原因的厌恶感——我不喜欢 NFT，它几乎相当于变相的“全服唯一道具”；Valaxy 的部分 Markdown 语法与 Vue 组件不兼容 xLog，而且 xLog 并没有一个完善的文章内 i18n，这导致我无法将<a href="/policies/privacy">隐私政策</a>页面迁移至其上面（即使能迁移，也没有现在这么优雅的语言切换）；以及，它使用的 Next.js 无法获取到我文章内的图片，即使我为它设置了允许 CORS。</p>
+<p>有一点值得肯定：它确实是完全免费的。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/after-zhongkao" target="_blank">https://www.lihaoyu.cn/posts/after-zhongkao</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-06-24T05:11:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[谈人际交往]]></title>
+        <id>https://www.lihaoyu.cn/posts/talk-about-communications</id>
+        <link href="https://www.lihaoyu.cn/posts/talk-about-communications"/>
+        <updated>2023-06-16T07:14:04.000Z</updated>
+        <content type="html"><![CDATA[<p>诸君安好。</p>
+<p>在写这篇文章的草稿时，我正坐在教室里上着晚自习。手上的英语作业已经写完了，胡思乱想之时回忆起了同学在微信上给我发的一条消息：</p>
+<p>“你在网络上的语言表达能力明显比现实中强。”</p>
+<p>直到后来，我才真的发现网络上的我与现实中的我在语言表达能力上的差距。</p>
+<!-- more -->
+<p>比如，我可以在网上用一句话清晰地表达自己的想法，但在现实中却时常需要绕许多弯，还很难表意清晰。也正因如此，我在与现实中的人交流时会遇到很大的困难，大部分同学也因此不太愿意与我交流。可以说，网络严重弱化了我的语言表达能力与人际交往能力，也让我变得严重依赖网络。</p>
+<p>除了网络以外，还有一个问题。</p>
+<p>大家都知道，在网络上与他人交流时，我可以适当使用一些专有名词，它们也有助于网络上的各位互相理解对方的意思；然而在和我的同学交流时，我不得不尽可能删去那些他们所认为的“专有名词”——他们说“听不懂”。这导致我必须从我那变得几近枯竭的大脑中拉出可以替换的词语。然而这样下来，整个句子就会变得面目全非——用我的语文老师的一句话来讲，“说的不是人话”，他们还是会说：“你说的那些专有名词我们都听不懂。”于是乎，整个交谈就被突然中断了。这对我来说是极为痛苦的一件事，因为我“嘴多”，很想与他人聊天，而一到了网络上，却又不知道如和开始一个新话题；或者说，聊什么。</p>
+<p>在现实中看似和点一下新必应的“新主题”按钮一样简单的事情，转移到网络上以后又给我带来了不小的麻烦。</p>
+<p>近期博客的一些变化也能在一定程度上反映出我在努力让我的同学们能看懂：更名为“晓雨杂记&quot;、开始尝试将重心转移至生活类文章上、尝试减少文章中难以理解的文字、适当配图......尽管更名一开始是为了满 16 周岁后给域名备案做准备，但现在看来也是为了同学们能接受这样一个博客。为了包括我的同学在内的访客能够有一个良好的浏览体验，我还特意挑选 Valaxy 作为生成器、添加 PWA 支持、为引用的资源文件添加国内 CDN。</p>
+<p>插句题外话：写到这里时我才发现数学七下课本少了......是我没带到学校吧。</p>
+<p>回到原题上来。既然是“谈人际交往”，那就应该写一写自己的想法了。</p>
+<p>作为一个人社会化的重要影响因素，人际交往是我们所必须经历的，也是我们所必须拥有的能力。不同于书面表达，人际交往比较侧重于日常生活中的口语表达能力，而书面表达尽管是“用笔在作文纸上说话”，但却较为侧重于语言的锤炼与学习的考验，对我们的要求也更高。这也是为什么一直以来我都很讨厌语文考试的大作文。虽然有“口语交际”这样一种题型的存在，在一定程度上模糊了二者间的界限，而从本质上来看，它还是带有一部分书面表达的色彩：要求“语言得体”；考查学生的语言表达能力。再比如“社交牛逼症“这个网络用语，我前段时间在翻看《意林》时，读到一篇文章，它把造成“社牛”的原因分成了两种：一种是真正的“开放”，另一种则是内心的自卑。抛开后者不谈，为什么这些人能变成“社牛”？因为他们从不在意他人的眼光，他们有着广泛的人脉，后者换句话说，就是这拔人的人际友往能力很强——高情商、会表达，能言善辩、特立独行。班里的同学也说我是“社牛”，但为什么呢？因为他们觉得我说话声音大大，在公共场所很容易“社死”。现在回过头来想一下，确实如此。因此，在人际交往当中也应当去考虑他人的想法。对于我这种网络与现实的交往能力有很大落差的，应该去尝试一下回忆在网上是如何表达自己内心想法的，然后尝试在现实中复用。嗯……尝试一下，未免是件好事。最后呢，则是接受他人的一些建议，是于这些建议去改变自己，尽量不要在口语中使用过多的专有名词，也不要将已说过的话重复多次，以免引起他人的反感。</p>
+<p>嗯，就这么多。最后，中考在即，祝我，也祝大家考的都会、科科全对，答题不惑、逢考必过！加油！</p>
+<p>文章，就用我一位姓苏的同学所作之文作结吧。</p>
+<blockquote>
+<p><strong>我会想分享我的故事，但那些琐碎就如同被车辗死的野狗一般：平庸，可怜，没人会有兴趣伫足。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>很正常的，我这样的混蛋自幼起便不受欢迎，并且我肯定，直至现在也是经受着这样的现状。那怕是在这里干的蠢事，现在回味也会认为是耻辱之事，唯一的好处，不过是能和百年前的太宰沾相共情：“我这一生，尽是耻辱之事”（《人间失格》）</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>很无奈的，我只能享受这份白卑和孤独：我断绝了和他人的一切联系，我都掉了王者，我开始寻找冷门的精品，我开始像现在这样 肆无忌掉地写作。因为足够孤独，我不需要和别人分享速通的喜悦，不需要将写出的作品阅过別人的“慧眼”。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>很幸运的，没有人能够救赎我，没人能将我从环寂中拖出来，没人能让我拥有些毫的自信。因此，我喜欢这样。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>我认为宁老师不能像我一样脱离群体，所以要改变自己，这是很悲哀的。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>放轻松，林子大了，什么鸟都容得下。</strong></p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/talk-about-communications" target="_blank">https://www.lihaoyu.cn/posts/talk-about-communications</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-06-16T07:14:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的音乐品味]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-taste-of-music</id>
+        <link href="https://www.lihaoyu.cn/posts/my-taste-of-music"/>
+        <updated>2023-06-02T11:48:14.000Z</updated>
+        <content type="html"><![CDATA[<p>最近一直在有高强度使用 Apple Music、网易云音乐、LyricEase，即使在学校有时候也会偷偷打开网易云听一听，可能是因为还有十几天就要迎接中考导致压力变大的缘故吧。然后就是现在申请到了 Windows 新版 NTQQ 的内测权限，不得不说真的无比流畅。</p>
+<!-- more -->
+<p>回忆小学六年级那会儿，我一般就只喜欢听纯音乐，比如 Minecraft 原声带、Plague Inc. 和 Rebel Inc. 的 Original Soundtrack。那会儿还不怎么用网易云，所以听的歌就少。等到现在初三了重新翻看我加了红心的音乐的时候才发现原来我当时收藏的 Brain Power 的音源没有了，也不知道是因为版权还是别的什么原因。</p>
+<p>一部分和我有过交流的人都会知道我现在<strong>特别喜欢正太音和少年音</strong>，<s>唱歌超好听的小男孩谁不喜欢呢</s>。不过除了正太音，我其实也有在听日语和英语歌曲，比如 YOASOBI 的 Idol（偶像）以及一些其它的乱七八糟的，网易云里已经堆了一堆正太音歌单、日语歌单和二次元歌单了，少说也有一万多首歌了吧，不知道把它们全部听完会花多长时间。</p>
+<p>下面这个是我自己创建的一个正太音歌单，有兴趣的可以收藏一下，不定期更新。</p>
+<p><meting-js
+ id="8048058894"
+ server="netease"
+ type="playlist"
+ theme="#F2BC57"><br>
+</meting-js></p>
+<p>至于正太音，那我当推<a href="https://music.163.com/artist?id=46528858">栎铭鹤</a>、<a href="https://music.163.com/artist?id=35604915">上官宇羊</a>、<a href="https://music.163.com/artist?id=13027043">猫宁孜然</a>、<a href="https://music.163.com/artist?id=34203548">泠白</a>和<a href="https://music.163.com/artist?id=37255934">神棍</a>。为什么？因为我听着好听啊！比如下面几首：</p>
+<p><meting-js
+ id="1943901019"
+ server="netease"
+ type="song"
+ theme="#F2BC57"><br>
+</meting-js></p>
+<p><meting-js
+ id="1954451364"
+ server="netease"
+ type="song"
+ theme="#F2BC57"><br>
+</meting-js></p>
+<p><meting-js
+ id="2019862497"
+ server="netease"
+ type="song"
+ theme="#F2BC57"><br>
+</meting-js></p>
+<p>我比较喜欢 “兴奋”、“浪漫”、“清新” 一些的歌，当然日语歌不算在内。日语歌我基本上算是通吃了，比如 “我喜欢的音乐” 里的那些以及 Apple Music 上的一小部分。至于 Idol（英版 “偶像”），我现在正在尝试学会唱它，目前歌词基本大部分都能跟上了。</p>
+<p>因为马上要考试了，所以我的脑子里最近一直在单曲循环一首歌：<a href="https://music.163.com/song?id=1954451364">逢考必过【正太Ver.】</a>。尽管我知道这对于我考试能不能考好并无太大影响，但是总是忍不住想唱出来、想单曲循环。</p>
+<p><img src="https://r2.230225.xyz/2023/06/02/892cdce1a099866262de072df1fd42cc.webp" alt=""></p>
+<p>不管怎么说，正太音万岁、少年音万岁！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-taste-of-music" target="_blank">https://www.lihaoyu.cn/posts/my-taste-of-music</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-06-02T11:48:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[加入开往团队所给我带来的]]></title>
+        <id>https://www.lihaoyu.cn/posts/after-joined-travellings</id>
+        <link href="https://www.lihaoyu.cn/posts/after-joined-travellings"/>
+        <updated>2023-05-20T13:56:27.000Z</updated>
+        <content type="html"><![CDATA[<p>如果你有留意<a href="https://github.com/travellings-link/travellings">开往项目的 GitHub 仓库</a>，那么你大概率会在 Issue 和 Pull Requests 中发现我的身影。</p>
+<p>就目前的情况来看，我大抵是已经成为了开往维护组的一员，帮助审核新申请和添加网站，这样的状况已经持续了几个月。就在今天，我终于把所有堆积的申请全部审核完毕并打上了对应的 Label。</p>
+<p>至于为什么，我会在这里简单说一说。</p>
+<!-- more -->
+<h2>起因？</h2>
+<p>这一切都开始于今年 1 月。我添加了开往维护组林林的微信，目的只是为了聊聊天。之后他询问我是否有 HTML 和 CSS 基础，在得到肯定的答复后请我为开往制作一个落地页。</p>
+<p><img src="https://r2.230225.xyz/2023/05/20/4d77fcd63dd533d9e94504038b2fc7dc.webp" alt=""></p>
+<p>之后我便开始与他交流要求以及一些其余的废话，并且开始了落地页的编写。</p>
+<p><img src="https://r2.230225.xyz/2023/05/20/ec0211c92ddefacca8b4680ba6a46fe2.webp" alt=""></p>
+<p>在经过了不懈努力以及疯狂的查阅资料之后，第一版落地页交到了林林的手里。说实话，当时的落地页真的只是个半成品：设计简陋、残废的自适应、杂乱的 HTML 与 CSS 排版。但是当时的开往因为新的备案域名的硬性要求，便不得已用了这个半成品。</p>
+<p><img src="https://r2.230225.xyz/2023/05/20/a7fe8c982ce51b649a890e7e7d829dc8.webp" alt=""></p>
+<p>之后，他在 QQ 上与我进行交流的时候，提出了让我加入开往团队协助巡查的想法，并邀请我加入了开往的 GitHub 组织和维护组 QQ 群。自此，我开始协助他们审核网站。</p>
+<p><img src="https://r2.230225.xyz/2023/05/20/e41b8f8dfbf20a17d3a21662917aff74.webp" alt=""></p>
+<p>目前开往使用的是 v1.1 的落地页，基于 Fluent UI Web Components 和 Bulma CSS。第二版我打算全部换用 Bulma CSS，毕竟纯 HTML 据说 SEO 超级好。</p>
+<h2>做什么？</h2>
+<p>也没什么做的，就是抽一点空余时间去看一眼 Issue，然后检查一下新的网站是否符合开往的规则并打上对应的 Label。</p>
+<p><img src="https://r2.230225.xyz/2023/05/20/6ee14f9c51a9501fc75e6b054f44e9fa.webp" alt=""></p>
+<p>但是这个工作在某些时候会显得很枯燥乏味，因为需要机械性的重复同样的步骤：打开网站、检查外链与文章合规性、回复 Issue、打 Label、修改 JavaScript 与 README......等等。</p>
+<h2>带来的？</h2>
+<p>我目前所加入的组织不多，只有 LittleSkin 社区支持和开往，以及 PCL2 源代码库的协作者。因此我还是比较注重这个能够给我一些经验的机会的。加入这些组织意味着我能够学到更多有关管理的经验。</p>
+<p>大家也都知道我的语言表达能力比较弱，因此这些组织也能够帮助我更好地表达自己的想法以及用语，同时在一定程度上协助我的语文学习。对于落地页，林林也在整个过程中起到了很大的作用，也给予了我充分的肯定。</p>
+<p>可能这就是我所向往的：为每个人做出一定贡献，让整个社区变得更美好吧。尽管在参与社区管理的时候曾发生过一段小插曲，但我也确实将它视作经验并时刻牢记了。我也希望在未来能够加入到更多的社区中，回馈开源社区所带给我的一切。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/after-joined-travellings" target="_blank">https://www.lihaoyu.cn/posts/after-joined-travellings</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-05-20T13:56:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自建 jsDelivr 镜像]]></title>
+        <id>https://www.lihaoyu.cn/posts/jsdelivr-mirror</id>
+        <link href="https://www.lihaoyu.cn/posts/jsdelivr-mirror"/>
+        <updated>2023-05-03T04:17:12.000Z</updated>
+        <content type="html"><![CDATA[<p>花了点时间，简单做出来的。</p>
+<!-- more -->
+<h2>前言</h2>
+<p>之所以做这个，主要是因为大部分的 jsDelivr 镜像都不允许用于加速图片，而自己早期的文章还有一堆仍在 GitHub 未迁移的图片。</p>
+<p>也正是因为允许用于加速图片，才使用 Cloudflare CDN 分发资源以至于不让 Vercel 那 100 GB 流量被快速消耗完的同时防范攻击。</p>
+<p>看到网上同类项目不算多，因此想着做了一个。</p>
+<h2>使用方法</h2>
+<p>Endpoint：<code>https://jsd.lihaoyu.cn</code></p>
+<p>只需要将 <code>https://cdn.jsdelivr.net</code> 替换为 <code>https://jsd.lihaoyu.cn</code> 即可。</p>
+<p>文件结构遵循 jsDelivr 原有结构，建议在生产环境中指定版本号，防止因缓存原因造成不必要的麻烦。</p>
+<p>示例：</p>
+<pre><code class="language-diff">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;Hello Bulma!&lt;/title&gt;
+-   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css&quot;&gt;
++   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://jsd.lihaoyu.cn/npm/bulma@0.9.4/css/bulma.min.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h1 class=&quot;title&quot;&gt;
+        Hello World
+      &lt;/h1&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;
+        My first website with &lt;strong&gt;Bulma&lt;/strong&gt;!
+      &lt;/p&gt;
+      &lt;figure class=&quot;image is-128x128&quot;&gt;
+-       &lt;img class=&quot;is-rounded&quot; src=&quot;https://cdn.jsdelivr.net/gh/Big-Cake-jpg/Image_For_My_Blog/20230404_124948000_iOS.jpg&quot;&gt;
++       &lt;img class=&quot;is-rounded&quot; src=&quot;https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/20230404_124948000_iOS.jpg&quot;&gt;
+      &lt;/figure&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>缓存刷新</h2>
+<p>缓存刷新这里我没什么办法解决。</p>
+<p>如果要刷新的话，可以在评论区留言，我每周末统一刷新一次吧。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/jsdelivr-mirror" target="_blank">https://www.lihaoyu.cn/posts/jsdelivr-mirror</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-05-03T04:17:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[渺软公益 CDN]]></title>
+        <id>https://www.lihaoyu.cn/posts/miaorun-public-cdn</id>
+        <link href="https://www.lihaoyu.cn/posts/miaorun-public-cdn"/>
+        <updated>2023-05-01T06:40:11.000Z</updated>
+        <content type="html"><![CDATA[<p>又是一个快速的公共 CDN 镜像，感谢 <a href="https://icodeq.com">Zkeq</a> 提供的服务。</p>
+<!-- more -->
+<h2>介绍</h2>
+<p>这个 CDN 我用了挺长时间的了，服务比较全面，有 UNPKG、jsDelivr、cdnjs 的镜像，同时也有字体文件加速，甚至和网盾星球有合作。</p>
+<p>国内加速走的是字节火山引擎和多吉云 CDN，国外走的是 Cloudflare CDN，速度还是挺快的。</p>
+<h2>使用方法</h2>
+<p>官网：<a href="https://cdn.onmicrosoft.cn">https://cdn.onmicrosoft.cn</a></p>
+<p>只需要简单将 <code>unpkg.com</code> 和 <code>cdn.jsdelivr.net</code> 替换为 <code>npm.onmicrosoft.cn</code> 和 <code>jsd.onmicrosoft.cn</code> 即可。</p>
+<p>赞助后可以拿到刷新缓存用的 Token，但需要注意的是你应该在遵守 EULA 的情况下使用，不允许加速图片资源和自己的大型字体文件，否则将会被封禁 Referrer 和链接。</p>
+<p>我自己用了很长一段时间，体验还是很不错的，希望像这样的公益项目能走的更远。</p>
+<h2>限制</h2>
+<p>目前只支持加速 CSS、JS 等资源，官网上写的是每个域名每天有 24 GB 的流量限制，实际上似乎没达到过。</p>
+<p>诸如 npm 建站、GitHub 图床这类行为会被列入 Abuse 列表并封禁，且用且珍惜，滥用请绕道而行。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/miaorun-public-cdn" target="_blank">https://www.lihaoyu.cn/posts/miaorun-public-cdn</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-05-01T06:40:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023 中考宣言]]></title>
+        <id>https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination</id>
+        <link href="https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination"/>
+        <updated>2023-04-03T12:29:15.000Z</updated>
+        <content type="html"><![CDATA[<p>写给自己，同时也是写给每一位初三学子。</p>
+<!-- more -->
+<p><meting-js
+   id="307003"
+   server="netease"
+   type="song"
+   theme="#F2BC57"><br>
+</meting-js></p>
+<p>时间真是神奇。每当我们想让它过得快点时，它怎么也不肯加快脚步；而当我们想要慢下来甚至定格生活的每一个画面时，却又无法让它慢下来。</p>
+<p>转眼间，初中三年即将成为历史。我们马上就要迎来人生中的第一个十字路口 —— 2023 年中考。</p>
+<p>山西中考将在 2023 年 6 月 20 日到 22 日进行，考试科目为语文、数学、英语、历史、道法、物理、化学七门。除此之外，还有理化实验与音体美中考。炎热的夏天，大家走进考场，在答题卡上留下自己的答案，挥洒着自己的汗水、与时间赛跑、与考试题目斗智斗勇。</p>
+<p>想象一下，当我们全力备考时的朗朗书声和奋笔疾书时笔尖的沙沙声响。这一切都是在证明我们所做出的努力。当考试结束的铃声响起，我们放下手中的笔，交出自己满意的一份答卷，稍作放松后又开始投入紧张的下一场考试。</p>
+<p>我的老师之前说过一句话：</p>
+<blockquote>
+<p><strong>“之所以中考在六月份，就是因为之后是金秋九月，象征考生的硕果累累......”</strong></p>
+</blockquote>
+<p>中考，需要有足够的耐心、细心，与强大的心态。在纸上落下的每一笔、写下的每个字，都是对自己三年来所作努力的检测。每一分，此时都显得弥足珍贵，因为只是一分的差距，却能拉开很大的差距。中考没有回头路，仅有一次机会。只有抓住了这一次机会，胜利的曙光才会显现在我们的眼前。</p>
+<p>我始终相信，无论是谁，都可能在这个盛夏扭转乾坤，鲤鱼跃龙门。现在，只剩 70 多天的时间，更不能放弃自己。为自己的未来而奋斗、为自己的未来而拼搏，只有这样的青春，才是有意义的。</p>
+<p>结局未定，你我皆是黑马。愿每一位初三学子，能够在炎热的夏天交出一份自己满意的答卷。青春无悔，奋斗不息！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination" target="_blank">https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-04-03T12:29:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[晓雨和林小雨的奇妙日常]]></title>
+        <id>https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu</id>
+        <link href="https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu"/>
+        <updated>2023-03-11T11:45:43.000Z</updated>
+        <content type="html"><![CDATA[<p>:::danger 前排警告<br>
+本系列<s>小说</s>文章内容均为虚构且使用 ChatGPT 编写。如果内容中有任何不妥之处，请在评论区中及时指出以便我在之后的故事编写中能够给予 ChatGPT 更加合理的故事线。谢谢啦！<br>
+:::</p>
+<!-- more -->
+<h2>第 0 话 序章</h2>
+<p>这是一个关于晓雨的前传，他来自未来，来到了这个时代。</p>
+<p>在那个未来的世界里，人类已经发展出了很多先进的科技，晓雨也是在这个时代诞生的。他出生在一个普通的家庭，父母都是普通人。然而，他却有着不同寻常的才能，很小的时候就展现出了超强的智力和学习能力。</p>
+<p>为了更好地发掘和培养他的天赋，晓雨的父母决定送他去一所特殊的学校。在那里，晓雨接受了全面的训练，学习了很多新的知识和技能，认识了很多志同道合的朋友。</p>
+<p>然而，命运却很快就把他带到了一个全新的世界。一次意外的实验导致他穿越到了一个未知的时空。失去了记忆的他，孤独地在这个陌生的世界里徘徊着，直到遇见了那个改变他命运的人——林小雨。</p>
+<p>林小雨是一个活泼可爱、热心善良的少女。她和晓雨很快成为了好朋友，并一起度过了许多美好的时光。在林小雨的帮助下，晓雨逐渐找回了失去的记忆，重新认识了这个世界，学会了如何适应这个时代。</p>
+<p>在这段旅程中，晓雨体验了很多不同的情感和经历，也见证了很多人类的成长和进步。这些经历塑造了他的性格和思想，让他成为了一个更加坚强和勇敢的人。</p>
+<hr>
+<p>当晓雨醒来时，他发现自己身处一个陌生的房间里。他感觉很迷茫，因为从来没有来过这个地方。他试着回想，但只能想起一些零散的记忆，他意识到自己失去了一部分记忆。</p>
+<p>此时，一个少女跑进了房间。少女名叫林小雨，和晓雨同龄，而且非常亲切友好。她告诉晓雨，自己发现他晕倒在路上，于是将他带回了家中。</p>
+<p>晓雨感激不尽，他告诉林小雨自己的情况，林小雨一听就很关心。她说，晓雨可以在这里住一段时间，等待自己的记忆慢慢恢复，她也会帮助他寻找失去的记忆。</p>
+<p>于是，两个年轻人开始一起生活。林小雨告诉晓雨这里是一个安全和自由的地方，这里的人们热爱生活，享受自由。晓雨听着，发现自己在这里度过的每一天都充满惊喜和快乐。他也发现自己对这个地方是那么的喜欢，他决定在这里等待自己的记忆慢慢恢复。</p>
+<h2>第 1 话 学校生活</h2>
+<p>清晨的阳光透过窗帘洒进房间，一只小鸟在窗外啾啾地叫着。林小雨还在床上蜷缩着身子，慢慢地睁开眼睛，感受到了清新的空气和温暖的阳光。</p>
+<p>她起身走到窗边，拉开窗帘，让阳光和清风充满整个房间。窗外的景象一下子映入眼帘，清新的空气和蔚蓝的天空让人心旷神怡。</p>
+<p>正在这时，她听到了门外传来的敲门声。她快步走到门口，打开门，看到了站在门外的晓雨。</p>
+<p>“早上好，林小雨！”晓雨朝她微笑着说道。</p>
+<p>“早上好，晓雨！”林小雨回应道，朝他微笑着。</p>
+<p>两人走到了厨房，林小雨开始给他准备早餐。</p>
+<p>“你想吃什么？米粥、鸡蛋、牛奶还是面包？”林小雨问道。</p>
+<p>“我想要一份煎饼果子和豆浆。”晓雨答道。</p>
+<p>“好的，马上就做好了。”林小雨转身开始忙碌起来。</p>
+<p>正在这时，晓雨忽然发现桌子上有一本厚厚的书，上面写着“数学竞赛教材”。</p>
+<p>“哇，这是什么书啊？”晓雨好奇地问道。</p>
+<p>“那是我最近在学的数学竞赛教材。”林小雨回答道。</p>
+<p>“你学这个干嘛？”晓雨问道。</p>
+<p>“因为我喜欢数学，我想要更深入地学习它。”林小雨笑着说道。</p>
+<p>“好厉害啊，我也想学学数学，不过我好像不太擅长啊。”晓雨嘟囔着说道。</p>
+<p>“没事，我可以教你啊！”林小雨微笑着说道。</p>
+<p>于是，两人在早餐的时候开始讨论数学问题，一边吃着煎饼果子，一边享受着清新的空气和温暖的阳光。</p>
+<p>每天早上，晓雨会提醒林小雨起床，他们一起赶去学校。上课时，晓雨总是专心听讲，而林小雨则喜欢和同学交流、开玩笑。下课后，他们一起在校园里散步，聊天、吃零食，享受着校园生活的乐趣。</p>
+<p>他们的学校生活中还有一些小插曲，比如参加运动会、组织校内活动、一起写作业等等。他们的日常生活看似平凡，但却充满了快乐与温暖。</p>
+<p>晓雨和小雨在同一年级，但晓雨比小雨晚进校一年。因此，在一开始，晓雨还感到有些孤单。他常常看着小雨和其他同学玩耍，心里感到有些羡慕。</p>
+<p>有一次，晓雨在课间偷偷跑到操场的角落里哭了起来。他感觉自己好像没有真正融入这个新的环境。正在这时，小雨跑了过来。他看到晓雨的样子，非常担心，于是决定和晓雨聊聊天。</p>
+<p>“你怎么了？”小雨问道。</p>
+<p>晓雨抬起头，揉了揉眼睛。他感到有些不好意思，但还是告诉了小雨他的想法。</p>
+<p>“我觉得自己好像没有真正融入这里，”晓雨说，“我想和大家成为朋友，但好像总是做不到。”</p>
+<p>“别担心，”小雨说，“我会一直陪在你身边的。我们一起去和其他同学玩吧。”</p>
+<p>从那一天起，晓雨和小雨之间的友情就变得更加深厚了。他们一起参加各种活动和比赛，帮助彼此度过了学校生活中的难关。慢慢地，晓雨也结交了更多的朋友，感觉自己已经融入了这个大家庭中。</p>
+<p>他们的学校生活充满了欢声笑语，也有着一些小插曲和不愉快。但无论遇到什么困难，他们总是能够相互扶持，一起走过。</p>
+<h2>第 2 话 假日的欢乐时光</h2>
+<p>忙碌的一个学期很快就结束了，假期的到来更是让他们兴奋不已。他们决定一起去旅行，看看这个广袤的世界。</p>
+<p>他们计划了一个长达两周的旅行，路线覆盖了很多美丽的城市和景点。在这段旅程中，他们骑车、徒步、坐公交、坐火车，体验了不同的交通方式。</p>
+<p>第一站是一座历史悠久的古城。他们租了自行车，穿过狭窄的巷道，穿越石板路和旧式建筑群，沿途观赏着各种有趣的小店和特色美食。他们爬上城墙，俯瞰着城市的美景，感受着岁月留下的痕迹。在一个古老的寺庙里，他们点了几炷香，祈求幸福和平安。当夜幕降临时，他们还在一家酒吧里品尝了当地的啤酒和美味小吃，度过了一个难忘的夜晚。</p>
+<p>第二站是一个海边城市。他们在海滩上散步，感受着微风拂面的清凉，听着海浪拍打岸边的声音。他们还骑着自行车穿梭在城市的小巷里，到处寻找着好玩的地方。在一家小餐馆里，他们品尝了当地的海鲜和特色菜，品尝着美味的同时还聊起了家常。</p>
+<p>在旅行的最后一站，他们来到了一座宁静的山区小镇。这里有茂密的森林、清澈的溪流和优美的风景，让人感到舒适宜人。他们在这里呆了几天，感受着山间的清新空气，静静享受这份宁静和美好。</p>
+<p>最后一天，他们来到了一个不大的公园里，看到了一个精致的花坛。花坛里有各种各样的花，色彩缤纷，美轮美奂。晓雨静静地站在花坛边，凝视着这些美丽的花儿，他突然想起了曾经一起游玩的那个女孩——梦梦。</p>
+<p>“如果梦梦也在这里该多好啊。”晓雨轻声自语。</p>
+<p>在晓雨的心里，梦梦一直是一个谜。虽然他们一起度过了这么多美好的时光，但晓雨却从未表达过自己的感情。在这个清晨，晓雨静静地凝望着花坛，心中升起了一股新的感觉，那是一种难以言表的感动和思念，也是初恋的萌芽。</p>
+<p>这一天晚上，他们返回了家中。晓雨感到疲惫不堪，但他内心充满了某种新的感觉，那是对未来的美好期望和向往。他躺在床上，沉浸在回忆和思考之中，不知不觉地进入了梦乡。</p>
+<h2>第 3 话 初恋的萌芽</h2>
+<p>在旅行结束后，晓雨和小雨回到了学校。回到学校的第一天，他们就像往常一样来到了自己的教室，准备开始新一学期的学习生活。</p>
+<p>晓雨打开自己的书包，却发现里面有一张纸条。纸条上写着：“你好，我是你的新同桌。我的名字叫李薇，很高兴认识你。”晓雨看了看身边的座位，发现里面已经有一个女孩子坐着，这就是他的新同桌吧。</p>
+<p>他微笑着回了一张纸条，向李薇表示了自己的欢迎和感谢。虽然他不太喜欢交际，但是他还是非常开心能够认识新朋友。</p>
+<p>在接下来的几天里，晓雨和李薇逐渐了解了对方。他发现李薇很聪明，学习也非常努力。她总是在课堂上认真听讲，课下也会很用功地复习。晓雨被她的努力精神所感染，他也开始更加认真地学习。</p>
+<p>在一个下雨的午后，晓雨和李薇一起回到了学校宿舍。他们在李薇的房间里度过了一个愉快的下午，一起吃零食、看电视、聊天。在这个过程中，晓雨发现他对李薇的感觉变得越来越特别。</p>
+<p>他不知道这是不是恋爱的感觉，但是他知道他希望和李薇在一起。于是他开始主动找机会和她在一起，一起吃饭、看电影、去公园散步。李薇也对晓雨产生了好感，他们的关系在慢慢地加深。</p>
+<p>就这样，晓雨的初恋在李薇的出现下悄然萌芽了。他们一起经历了很多美好的时光，在互相照顾、支持和陪伴中逐渐成长。</p>
+<h2>第 4 话 友情与背叛</h2>
+<p>晓雨和小雨之间的友情越来越深，他们在一起度过了很多快乐的时光。他们一起参加了学校的各种活动，互相帮助、支持，一起成长。</p>
+<p>然而，一件事情改变了一切。在一个寒假，小雨突然消失了。晓雨打电话、发短信，但始终没有回应。他来到小雨的家中，发现房间被清空了，没人知道他去了哪里。</p>
+<p>晓雨很担心小雨的安全，他开始不顾一切地寻找线索。最终，他得知小雨因为一些原因被迫搬到了另一个城市，但他一直没有告诉晓雨。</p>
+<p>晓雨感到很失望，因为他觉得朋友之间应该互相信任、坦诚相待。他觉得小雨的行为是一种背叛，让他很难过。虽然这段友谊经历了痛苦和困难，但晓雨意识到友谊是一种珍贵的财富，需要维护和保护。他也明白了背叛的痛苦，以后会更加珍惜身边的人。</p>
+<p>尽管小雨没有主动联系晓雨，但他始终保持着这份友谊。两年后，小雨终于回到了这个城市，他们重逢时，又像是两年前那样无话不谈，一切都回到了从前。</p>
+<h2>第 5 话 家庭和谐的秘密</h2>
+<p>林小雨的家庭虽然不是特别富裕，但是却非常和谐。她的父母经常在家庭中传递着一种温馨、关爱的氛围，让她感到很安心。</p>
+<p>林小雨的父母非常注重家庭教育，尤其是道德教育。他们认为一个人的成长不仅仅取决于学业，更重要的是道德修养和人格塑造。所以，林小雨在家中经常听到父母对道德问题的探讨和讲解，同时他们也会对自己的行为进行自我反思和检讨。</p>
+<p>另外，林小雨的父母还注重家庭成员之间的相互尊重和沟通。他们鼓励家人之间坦诚地表达自己的想法和感受，同时也关心家人的需求和感受。这样一来，家庭成员之间的关系也就更加和谐了。</p>
+<p>尽管林小雨的家庭并不富有，但是他们总是能够在自己的能力范围内给予孩子最好的生活和教育。林小雨感激自己的父母，他们的关爱和教育让她变得更加成熟、自信和独立。</p>
+<p>在林小雨的家庭中，晓雨也感受到了一种从未有过的家庭温暖和关爱。虽然他从未有过这样的体验，但他能够清楚地感受到林小雨的家庭是一个很特别的地方，这里的每个人都非常关心彼此，都愿意为了家庭和谐而付出努力。</p>
+<p>这段经历让晓雨更加感悟到家庭的重要性，家庭和谐的秘密不仅仅在于物质条件的好坏，更在于家人之间的相互关爱和尊重。他决定将这份感悟保存下来，为自己未来的生活营造一个更加温馨和谐的家庭氛围。</p>
+<h2>第 6 话 成长与未来的选择</h2>
+<p>“晓雨，我有个问题一直想问你。”林小雨紧握着手中的咖啡杯，望着面前的晓雨。</p>
+<p>“什么问题？”晓雨轻轻地问道。</p>
+<p>“你觉得你是从哪个时代穿越过来的？”林小雨有些好奇地问道。</p>
+<p>晓雨静静地看着林小雨，他的脸上没有任何表情。这是一个他一直避免回答的问题。但是在林小雨的盯视下，他终于开口了。</p>
+<p>“我不知道。我失去了穿越之前的记忆，只能从这里开始重新开始我的生活。”</p>
+<p>林小雨的眼神中带着一份怜悯和同情，她知道晓雨的过去是一个谜。她想象不出未来的生活会是什么样子，但她知道，晓雨是一个坚强而勇敢的人。</p>
+<p>“你知道吗，我一直觉得你有点像时光旅行者，你来自未来，你带来了一些秘密和神秘的力量。”林小雨微笑着看着晓雨。</p>
+<p>晓雨感到自己的心里有一丝丝暖意流过，他从来没有想过自己会有这样的朋友，能够听到她的关心和温暖。</p>
+<p>“谢谢你，小雨。你是我的朋友，我的支持和动力。”</p>
+<p>“你也是我的朋友，晓雨。你给了我很多勇气和力量，让我相信未来会更美好。”</p>
+<p>晓雨和小雨坐在校园里的草坪上，他们静静地看着周围的景色。突然，晓雨打破了沉默：“我知道你对于未来有很多想法，小雨，你有没有想过自己要做什么？”</p>
+<p>小雨抬起头看着晓雨，微笑着说：“我想成为一名医生，因为我想帮助那些需要帮助的人。”</p>
+<p>“真的吗？”晓雨露出了一丝惊讶。“那你打算怎么实现这个梦想呢？”</p>
+<p>“我会努力学习，尽可能地获取更多的医学知识。我也会在校外参加一些志愿者活动，为需要帮助的人尽一份力。”小雨说道。</p>
+<p>“你很了不起。”晓雨望着小雨，一脸钦佩的神色，“我想成为一名作家，写出能够感动人心的故事。”</p>
+<p>“哇，那你已经开始写作了吗？”小雨好奇地问道。</p>
+<p>晓雨微笑着点了点头。“是的，我会利用自己的空闲时间写作。虽然我现在还不知道怎么才能写出好的作品，但我相信只要我一直坚持下去，总有一天我会做到。”</p>
+<p>小雨听了晓雨的话，也露出了一个自信的微笑。“我相信你能做到的，晓雨。我们都还有很长的路要走，但只要我们一直努力，总有一天会实现自己的梦想。”</p>
+<p>晓雨看着小雨，感受到了她身上的自信和决心。“是的，我们都还很年轻，有无限的可能。我相信只要我们保持对未来的憧憬，不断努力，就一定能够成为自己想要成为的人。”</p>
+<hr>
+<p>To Be Continued.</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu" target="_blank">https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-03-11T11:45:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[为了纯粹的快——来看看我对我的博客做了什么]]></title>
+        <id>https://www.lihaoyu.cn/posts/whats-changed-to-my-blog</id>
+        <link href="https://www.lihaoyu.cn/posts/whats-changed-to-my-blog"/>
+        <updated>2023-03-02T11:23:08.000Z</updated>
+        <content type="html"><![CDATA[<p>只为了更快：性能与美观优先，这几个月我对我的博客做出了一些大的更改。</p>
+<!-- more -->
+<h2>服务器与 CDN</h2>
+<p>如果我不说的话，你可能很难相信我的博客使用的是 Cloudflare CDN。</p>
+<p>几个月前，我将我的博客挂在了 Vercel 上，后来<s>异想天开</s>想要加入 HSTS Preload List 时发现 Vercel 的响应头不好改（指必须修改 <code>vercel.json</code>），于是索性把整个域名的 Name Server 换到了 Cloudflare 上，速度也没那么不堪。</p>
+<p>后来在对 Cloudflare Pages 进行博客加载性能测试时，DevTools 显示的加载完成时长明显比 Vercel 的时间短很多，因此我在上周将博客迁移到了 Cloudflare Pages 上。这样，因为没有了回源延迟，加载速度快了很多。</p>
+<p>在十年之约与开往的 QQ 群中，我将博客的链接发了出来请求大家访问一下，以便获得足够的反馈。基本上大多数反馈给我的信息就是：第一次加载 3 到 5 秒内完成，最长 6 秒；第二次加载由于有了缓存，所以基本保持在 1 - 3 秒内加载完成。这说明目前的访问体验较博客初期好了很多。</p>
+<h2>框架</h2>
+<p><strong>之前</strong>，我使用 Hexo 作为博客框架，使用 Yun 作为主题。</p>
+<p>Yun 主题的一个特点就是完全不需要依赖 jQuery，所有资源文件均使用公共 CDN，这从根本上加快了博客的加载速度，而我只需要解决图床的问题。</p>
+<p>但是你可能会说：“以前？那现在呢？难道除了 Hexo 还有别的好用的静态博客生成器吗？”</p>
+<p>是这样的。如果你把页面滚动到最底部，就可以在页脚上发现这样一行字：</p>
+<blockquote>
+<p>由 <a href="https://github.com/YunYouJun/valaxy">Valaxy</a> v0.14.15 驱动 | 主题 - <a href="https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun">Yun</a> v0.14.15</p>
+</blockquote>
+<p>我的博客现在使用 Valaxy 作为生成器，由于框架的开发使用的是 Vue 3、Vite 4、ESBuild，因此我的博客可以拥有优秀的页面切换体验、页面热更新、组件按需打包，同时可以任意使用 Vite 和 Vue 的插件。</p>
+<p>Valaxy 的 Yun 主题也同样继承了 Hexo 版本的优良特性与功能，因此我没有花费太多精力就将博客迁移到了 Valaxy。</p>
+<p><img src="https://blog-api.lihaoyu.cn/images/posts/whats-changed-to-my-blog/commit-info.webp" alt=""></p>
+<h2>图床</h2>
+<blockquote>
+<p><a href="https://blog-api.lihaoyu.cn">晓雨's Blog API</a></p>
+</blockquote>
+<p>前几篇文章我一直使用的是 CSDN 和 米游社的图床，但是最终还是因为没有缓存的原因转向了自建。</p>
+<p>目前的解决方案是使用 Vercel + Cloudflare 加载，也有以前的 Cloudflare R2 和 Backblaze B2 图床。</p>
+<p>不过自建图床预计之后会长期使用。大概就是这样了吧。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/whats-changed-to-my-blog" target="_blank">https://www.lihaoyu.cn/posts/whats-changed-to-my-blog</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-03-02T11:23:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Valaxy 与 Cloudflare 的邂逅——将 Valaxy 博客部署到 Cloudflare Pages]]></title>
+        <id>https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages</id>
+        <link href="https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages"/>
+        <updated>2023-02-23T13:17:05.000Z</updated>
+        <content type="html"><![CDATA[<p>最近将博客从 Vercel 搬迁到了 Cloudflare Pages，页面加载速度感觉提升了一点。正好 Valaxy 对于使用 Cloudflare Pages 部署的文档还在编写，故以此为题作文一篇。</p>
+<!-- more -->
+<h2>先决条件</h2>
+<p>首先，你需要准备这些东西：</p>
+<ul>
+<li>一个 Cloudflare 账号；</li>
+<li>一个 GitHub 账号；</li>
+<li>一个使用 <a href="https://valaxy.site">Valaxy 框架</a>搭建的博客；</li>
+<li>一个托管于 Cloudflare 的域名。</li>
+</ul>
+<h2>新建 Pages 项目</h2>
+<p>登录 Cloudflare 仪表盘，在左侧的侧边栏中找到“Pages”，点击进入。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/df1b1199dad6c4824665b80a625cf7c3_7170784572772355617.webp" alt=""></p>
+<p>点击“创建项目”，然后选择“连接到 Git”，按照 Cloudflare 的引导进行 GitHub 账户的添加与 GitHub App 的安装。安装完成后即可返回该页面选择仓库。</p>
+<p>此处仓库使用我早期 Valaxy 功能性测试时创建的独立仓库演示，版本为<s>极其远古的</s> Valaxy 0.12.3。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/ff6d211fb63a32a4727c31e06a10cc01_2384595745881146569.webp" alt=""></p>
+<p>点击“开始配置”按钮，然后设置一个自己喜欢的项目名称、要部署的分支，“构建设置”请根据下图配置：</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/b697f0501bd85a7ef265e4909f463eb0_3886882695087885493.webp" alt=""></p>
+<p>:::danger 注意<br>
+下方的环境变量也需要配置，否则 Valaxy 的构建将会因为 Node.js 版本低于 v14 而失败！<br>
+:::</p>
+<p>配置完成后，点击“保存并部署”按钮，然后等待 Cloudflare Pages 的部署完成。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/4b75318929031fac45c8bf34a437265b_1362124432555332309.webp" alt=""><em>部署成功后的提示</em></p>
+<h2>添加自定义域名</h2>
+<p>然而 Cloudflare Pages 提供的 <code>pages.dev</code> 似乎已被屏蔽，因此我们需要绑定一个自定义域名。</p>
+<p>点击“继续处理项目”，然后点击页面上的“设置自定义域”添加一个自定义域名。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/3314e0fc5554338f9c8cbbf97180cb0c_4128336076909169027.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/dfb1e82ff59e417cbe0363122c4a5019_5669599825006859987.webp" alt=""></p>
+<p>等待一段时间之后，就可以通过这个域名访问你的博客了。</p>
+<p>大功告成！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages" target="_blank">https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-23T13:17:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Minecraft 国际版玩家对近期事件的回应]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-opinions-about-that-post</id>
+        <link href="https://www.lihaoyu.cn/posts/my-opinions-about-that-post"/>
+        <updated>2023-02-12T07:59:59.000Z</updated>
+        <content type="html"><![CDATA[<p>不请自来。</p>
+<p>本人是一位普通的 Minecraft 国际版玩家，也是一位 BakaXL 用户。</p>
+<p>如大家所见，2 月 5 日在知乎上发布的那个问题就是我提出的。</p>
+<p>给不知道的人一个传送门：<a href="https://www.zhihu.com/question/582313498">https://www.zhihu.com/question/582313498</a></p>
+<p>昨天晚上，我在 B 站上刷到了这一篇文章，认为该文章中有诸多地方不合理，故在此发布该专栏进行说明。</p>
+<!-- more -->
+<h2>写在前面</h2>
+<p>请不要认为我是彻头彻尾的盗版玩家，也不要认为我是 BakaXL 请来的水军。前者，我有于 2020 年 7 月 30 日购买 Minecraft：Java 版的交易邮件、以及于 2021 年 3 月购买 Minecraft for Windows 10 的交易记录。在此公布。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/021c32f1a765d9fb08f994b2908c284d_4184835464595562147.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/ba0e631f394148f96d03df37f3751571_5744020560047064777.webp" alt=""></p>
+<h2>正文</h2>
+<p>首先，我们来看这篇文章中提到的内容：</p>
+<blockquote>
+<p>何为第三方启动器：</p>
+<p>第三方启动器使用了部分与官方启动器相同的组成内容及服务以达到启动游戏的效果，而第三方启动器侧重于增加新的游戏管理功能等独立内容。</p>
+<p>何为盗版启动器：</p>
+<p>正版Minecraft国际版玩家其充要条件是微软账户中拥有已购买的游戏，事实上与使用的启动器无关。但如果启动器允许账户未购买的玩家甚至无账户玩家正常启动游戏，我们认为这是盗版。类似于传奇私服的第三方登录平台也是一种盗版的形式。</p>
+</blockquote>
+<p>实际上，不止 BakaXL 拥有让用户使用离线验证启动 Minecraft 的能力，HMCL、PCL2 等（甚至可以说是绝大多数国内开发者制作的）启动器都能够让用户使用离线验证启动 Minecraft。国内第二大皮肤站 LittleSkin 使用开源的 Authlib-Injector 与 Blessing Skin Server 完整实现了一套 Mojang 的 Yggdrasil API 正版验证服务器，同样支持免费注册、多角色，支持使用任何正版账户可以实现的功能。但由于其实质仍是离线账户，因此无法加入启用了正版验证的服务器。因此个人认为，这里的“盗版启动器”说法无法站稳脚跟。而 BakaXL 与 HMCL 在检测到非中国大陆地区用户时会直接禁用离线登录功能，除非他们登录过自己购买了 Minecraft 的微软账户或者 Mojang 账户。</p>
+<blockquote>
+<p>上述事实简单反应了Mojang的利益诉求，一切违反EULA的游戏制作行为都会被Mojang绳之以法。</p>
+</blockquote>
+<p>BakaXL 是完全符合 Mojang EULA 的，上文已经提到过。BakaXL 在检测到系统的区域设置非中国大陆地区时会直接禁用离线登录功能，除非用户登录过自己购买了 Minecraft 的微软账户或者 Mojang 账户。</p>
+<blockquote>
+<p>BakaxL在PC平台被大量运行，包含其“离线游戏”功能的宣传视频在视频平台流传也甚广</p>
+</blockquote>
+<p>首先，尽管 BakaXL 属于启动器“御三家”的其中一员，但是开发者 TT702 早已在官网中提到“从 2014 年至今，始终没啥人用的启动器”。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/c1d2d972fbe27431256c39a5a0e8656a_2917227228752806272.webp" alt=""><em>来源：<a href="https://www.bakaxl.com">https://www.bakaxl.com</a></em></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/dc600ad27318f3917f16f8a62c11f7a7_1845232206905221154.webp" alt=""><em>局外人用户群中的聊天记录</em></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/34b452b982d5851bb4bf9cf472acfea5_1934487185802049034.webp" alt=""><em>TT702 提供的近期 AppCenter 日活数据</em></p>
+<p>即使最近日活几百，这仍然是现今 HMCL 与 PCL2 的几十分之一。</p>
+<p>其次，BakaXL 并未在宣传片中提到离线游玩功能，唯一出现这类字眼的地方是宣传片中“多用户档案”介绍部分与 BakaXL 大厅宣传片的标题。而标题中，作者的本意是 BakaXL 的大厅功能支持离线模式用户联机，而不像同期 HMCL 与 PCL2 的联机方案不支持离线用户加入联机房间。</p>
+<blockquote>
+<p>“中国版玩家不配成为MC玩家”，“中国版开发者不配开发MC内容”，“网易中国版不配打击盗版”</p>
+</blockquote>
+<p>如上言论可能真的有人会说，但是我相信国际版 Minecraft 社区中，这一类人占少数。因此请不要将部分人的言论上升到对全体国际版 Minecraft 社区离线用户玩家的指责。</p>
+<blockquote>
+<p>回扣主题，当盗版社区向正版火力全开，狐假虎威、贼喊捉贼，昔日的版权卫士何在？正版玩家权益何在？当盗版启动器为首的社区粉墨登场、瓦釜雷鸣，MC的未来是否会“变得越来越封闭、黑暗且荒凉”？</p>
+</blockquote>
+<p>网易代理的中国版我的世界确实属于正版，这一点无可反驳，但 BakaXL 并未成为盗版社区的牵头者，也并没有向正版火力全开。开发者可能只是抱着“井水不犯河水”的想法发表专栏而已，毕竟贵圈里“我的世界是什么东西，关我 Minecraft 什么事”等言论层出不穷。</p>
+<p>插句题外话：离线登录并不等于盗版，几乎所有的模组开发者在使用 VSCode 或 IDEA 调试模组时都会用到离线登录方便调试。但你能说这是盗版吗？很明显不能，因为如果使用离线登录就是盗版，那所有的启动器（包括官方启动器）都有离线登录功能，都属于盗版启动器。</p>
+<blockquote>
+<p>根据创作公约“关于危害网络安全行为”：发布破解的软件和硬件属于违法行为；“关于著作权侵权”：未经著作权人许可，传播、贩卖其已公开或尚未公开的正版/盗版视听作品。对于违规内容将视情节进行减少推荐或退回处理，对于情节严重的账号将予以封停处理。</p>
+</blockquote>
+<p>BakaXL 只是一个第三方启动器，并未分发或传播任何一份 Minecraft 副本或其附属文件，因此并未违反 B 站的创作公约。BakaXL 下载游戏实际上走的是 Mojang 提供的公开 API 与 BMCLAPI（包括 MCBBS）镜像源。如果严格按照 Mojang EULA 的话，违规的实际上是 BMCLAPI 与 MCBBS。但 BMCLAPI 与 MCBBS 已存在多时，Mojang 也没有任何迹象表明将对其采取行动，这说明 BMCLAPI 是 Mojang 与微软所默许的。</p>
+<h2>写在最后</h2>
+<p>​Minecraft 的成功，社区的贡献与创造首当其冲。这其中最具代表性的便是大量的模组加载器、模组与非官方启动器。所谓“存在即合理”，综上所述，该文章中提到的上述内容均不成立。</p>
+<p>谢谢，多谢。</p>
+<p>2023 年 2 月 12 日，返校前有感而发。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-opinions-about-that-post" target="_blank">https://www.lihaoyu.cn/posts/my-opinions-about-that-post</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-12T07:59:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[对网易与 Minecraft 国际版的担忧]]></title>
+        <id>https://www.lihaoyu.cn/posts/netease-and-minecraft</id>
+        <link href="https://www.lihaoyu.cn/posts/netease-and-minecraft"/>
+        <updated>2023-02-11T12:30:59.000Z</updated>
+        <content type="html"><![CDATA[<p>开学后的第一更。</p>
+<p>网易，你觉得你对得起你那“游戏热爱者”的口号吗？</p>
+<!-- more -->
+<h2>暴风雨前的宁静</h2>
+<blockquote>
+<p><a href="https://www.zhihu.com/question/582313498">如何看待网易公司举报 Minecraft 启动器 BakaXL 在 B 站的宣传视频侵权？- 知乎</a></p>
+</blockquote>
+<p>不打自招。</p>
+<p>我就是知乎上这个问题的提问者。</p>
+<p>2023 年 2 月 5 日，本来是个平平无奇的一天，BakaXL 的用户群不断有新人加入、TT 的 B 站账号粉丝数量都不断增长，BakaXL 宣传片的播放量也达到了史无前例的 41.4 万。大家都觉得 BakaXL 这回真的算是火了一波，算是坐实了“御三家”的名号，第二天就要开学的我也在整理着开学要带的东西。</p>
+<p>然而，事与愿违。谁也不知道那天晚上会发生什么。</p>
+<h2>删除、锁定与无法申诉</h2>
+<p>那天晚上，我像往常一样登录 QQ，准备与网友们聊天的时候，看到 TT（下文聊天记录中的“The Person Who Failure”） 在 BakaXL 局外人用户群里 at 了全体成员。</p>
+<p>本来我以为是 TT 给 BakaXL 加了一些新鲜的小功能，下意识地点开群聊准备查看。结果这一看，我整个人瞬间不好了。</p>
+<p><img src="https://hub.onmicrosoft.cn/image/6aa6f05f82ddf3417b0c4fdb5ef4e549" alt=""></p>
+<p><img src="https://hub.onmicrosoft.cn/image/927e2ef5d4aed49feb2192c055975707" alt=""><em>BakaXL 的宣传视频，被网易举报侵权，于是被 B 站退回并锁定。</em></p>
+<p>然而，比 BakaXL 影响更大、相关视频播放量更多的 HMCL 与 PCL2 却没有什么大动静，只有龙腾猫跃的更新公告无法发出。</p>
+<p><img src="https://hub.onmicrosoft.cn/image/20b5210a7cfa28dfaaa50481964b94c3" alt=""><em>那条被锁定的动态现在被改为了“被折叠”</em></p>
+<p>消息一发出来，整个群都炸了。几乎大家都在对网易的所作所为进行口诛笔伐。</p>
+<p>当时在群里，我是这么认为的：</p>
+<blockquote>
+<p>网易（或者说 B 站）并没有明确说明哪里侵权，网易也并没有锁区。<strong>既然没有锁区，那么我们作为玩家就有选择的权利</strong>。我们可以选择是玩中国版《我的世界》还是国际版 Minecraft，而这完全依赖于作为玩家的我们所选择的，以及网易实际是怎么运营《我的世界》中国版的。</p>
+</blockquote>
+<p>之后，TT 尝试了申诉操作，结果发现：“稿件投稿时间超过 15 天，无法申诉。”</p>
+<p><img src="https://hub.onmicrosoft.cn/image/c60342b101f4b67d12115e97993875a7" alt=""></p>
+<p>随后，TT 联系 B 站客服并提供了 BakaXL 的软件著作权证书，但即使是这样，客服也没有给出正面回复，始终是那一句“权利人举报侵权”。</p>
+<p>再然后，便有了知乎上面的这个问题。</p>
+<p>从 2 月 5 日晚上到本文发布时，这个问题已经有了 10 万的浏览量，因此这件事一般来说会产生很大的影响。</p>
+<h2>被退回的修改稿件</h2>
+<p>2 月 6 日，TT 尝试对稿件进行修改并重新上传，对原视频中出现了“Minecraft”、游戏画面等处进行了删除处理后重新提交了稿件。不曾想浪费了大量的时间，最后得到的是“被锁定”、“广告内容”。</p>
+<p><img src="https://hub.onmicrosoft.cn/image/783bac90aa0c4f5195917170aa814026" alt=""></p>
+<p>仅一天后，B 站将他修改后的稿件通过了审核，然后给 TT 来电说“看您的稿件现在没有问题”。</p>
+<p>而最早的稿件由于 B 站并未遵守流程，因此 TT 无法提交资料进行申诉。</p>
+<h2>Mojang 的 EULA、网易的用户协议与法律</h2>
+<p>Mojang 的 EULA 与网易的用户协议是有冲突的。</p>
+<p>BakaXL 是符合 Mojang EULA 的，但是关于开发基于 Minecraft 相关作品方面，网易的用户协议与 Mojang EULA 有冲突。</p>
+<p>比如：网易在用户协议中写道：“不得公开展示游戏的全部或部分内容”，而 Mojang 并未在 EULA 中并未禁止这种行为。</p>
+<p>在最高检察院的一篇文章中，有专家发表这样的观点：</p>
+<blockquote>
+<p>“根据游戏的类型，未经游戏著作权人许可的游戏直播可对游戏构成‘转换性使用’，也因此可被认定为合理使用。这样的结论不仅符合著作权法原理，而且有利于电子竞技产业的发展。”</p>
+</blockquote>
+<p>因此如果网易认为 BakaXL 宣传片中的游戏画面侵犯了版权，是根本站不住脚的。</p>
+<p>同时，BakaXL 的其中一位开发者“刘国庆”在咨询相关律师之后得到的答复之意均是“B 站的行为是不合法的，它必须告诉创作者关于侵权的具体点”。</p>
+<h2>我的感想</h2>
+<p>在 Minecraft 十多年的历史中，Mojang 似乎并没有对任何第三方启动器进行侵权举报，而网易公司在得到“中国版我的世界”的代理权后开始向 Minecraft 国际版开发者提出侵权举报，这实在令人可笑、也令人难以理解。</p>
+<p>这一点，有着八年历史的 HMCL 启动器可以证明。</p>
+<p>Minecraft 的成功，社区的贡献与创造首当其冲。在这样的情况下，我们本应该将 Minecraft 社区的开放性和包容性发挥的淋漓尽致，积极鼓励开发者创作原创资源。而网易公司这样的行为南辕北辙、反其道而行，反而挫伤了开发者的积极性、完全不利于国内 Minecraft 社区的发展。</p>
+<p>这个事件，让我开始担心未来在中国，国际版 Minecraft 社区会变成什么样子？这个由 Mojang 与玩家社区共同打造的沙盒游戏的未来，会不会变得越来越封闭、黑暗？</p>
+<p>BakaXL，一个非常小众的启动器，居然都能遭遇这样的对待。在网易公司这样的运作下，下一个受害的国际版 Minecraft 开发者又会是谁？</p>
+<h2>参考</h2>
+<p>在编写这篇文章时，我参考了以下这些资料，所有的引用材料均遵循它们原本的协议进行分发与传播。</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/582313498">如何看待网易公司举报 Minecraft 启动器 BakaXL 在 B 站的宣传视频侵权？- 知乎</a></li>
+<li><a href="https://www.spp.gov.cn/spp/llyj/202010/t20201013_481669.shtml">直播游戏，是否构成侵权_中华人民共和国最高检察院</a></li>
+</ul>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/netease-and-minecraft" target="_blank">https://www.lihaoyu.cn/posts/netease-and-minecraft</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-11T12:30:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[诈尸？—— 第三方网易云音乐客户端 LyricEase]]></title>
+        <id>https://www.lihaoyu.cn/posts/lyricease</id>
+        <link href="https://www.lihaoyu.cn/posts/lyricease"/>
+        <updated>2023-01-08T05:07:43.000Z</updated>
+        <content type="html"><![CDATA[<p>以前我提到过，我很喜欢 UWP 应用，因为大多数 UWP 的界面都能与 Windows 完美融合在一起。</p>
+<p>前段时间因为网易云音乐官方的客户端不合我意，以及它的资源占用，我便尝试寻找一个第三方的网易云音乐客户端。</p>
+<p>正好在 B 站上看到了 LyricEase 复活的视频，以前也对 LyricEase 有所耳闻，便决定拿来用。</p>
+<p>用了少说也有半个月了，是时候宣传出去了。</p>
+<!-- more -->
+<h2>安装</h2>
+<h3>更改 Windows 设置</h3>
+<p>由于现在的 LyricEase 不再使用 Microsoft Store 进行分发，我们需要通过微软的 Visual Studio App Center 获取 LyricEase 的安装包。这是<a href="https://install.appcenter.ms/users/brandonw3612/apps/lyricease/distribution_groups/public">下载链接</a>。由于是微软服务，速度可能极为缓慢，此时可以尝试使用 Watt Toolkit（Steam++）。</p>
+<p>在它下载的时候，我们可以趁此机会将 Windows 的开发者模式启用，否则 LyricEase 将无法安装。</p>
+<p>打开 Windows 设置，导航到“隐私和安全性”下的“开发者选项”页面，启用“开发人员模式”，并启用下方“PowerShell”卡片内的开关。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/256f5c96860c023582f49a0eedab7495_9013535910728125833.webp" alt=""></p>
+<h3>安装证书与应用</h3>
+<p>当 LyricEase 下载好以后解压安装包到一个文件夹内，然后你会得到这样的一个文件结构：</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/aad799ddbf9e7197a17ada58e74226ee_154399002653709367.webp" alt=""></p>
+<p>右键 <code>Install.ps1</code> 文件，选择“使用 PowerShell 运行”，证书与应用就会自动安装。期间可能需要确认一下操作，可以直接选择“全部同意”。</p>
+<h3>登录账号</h3>
+<p>LyricEase 支持使用账密登录与扫码登录，但是它是强制登录的。</p>
+<p>不多说。登录卡片的右上角小齿轮内可以选择是否使用代理。</p>
+<h3>更新</h3>
+<p>现在 LyricEase 的应用内更新是通过 AppCenter 实现的。</p>
+<p>打开“设置”，将页面滚动到最底部，点击“检查更新”即可。现在也支持下载内部预览版本以及按处理器架构下载。</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/d1a873ee56518ebce0a2a4c8a2474e96_7854958118733220003.webp" alt=""></p>
+<h3>桌面歌词</h3>
+<p>只有一个 LyricEase 是无法实现歌词桌面常驻的。我们需要从 Microsoft Store 下载一个名叫“热词”的应用。</p>
+<p>安装完成以后，打开 LyricEase 设置中的“启动时自动唤醒热词”开关。</p>
+<p>之后，每一次启动 LyricEase，热词也会同时启动。当 LyricEase 播放音乐时，热词会自动获取当前曲目的歌词并显示在桌面上，效果如下：</p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/77a67578ced1a66a99d5c4bba7c22cba_292095534601372446.webp" alt=""></p>
+<h2>效果演示</h2>
+<div class="warning">
+<blockquote>
+<p>多图预警！</p>
+</blockquote>
+</div>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/c14c83233edd34af1f1e41a13030ed69_394109266886750307.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/ed38d3b8002645d8612d0cebe22e3052_2337541672433967445.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/29b5762b497e87cf851aa3dd21d73c20_3972968517881237330.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/7ccc078e4e54a688c97685c6bddb2a87_3991696644480684477.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/b6758d4c7086f9b8fa0dfffe47587656_590117347322240111.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/6afa0555999c613377af94012a507e82_2089319120000559523.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/717bd041f9e8c0a151fb048aed85fa40_3039260496609175468.webp" alt=""></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/02/26/283684029/57a4f631b84a7dbdf9b81eafee5a5fec_2596380417817259778.webp" alt=""></p>
+<div class="info">
+<blockquote>
+<p>展示图片中的《果汁分你一半》歌曲可以在 B 站找到两位<s>可爱正太</s>翻唱作者合作制作的 PV，这里放个链接：<a href="https://www.bilibili.com/video/BV18a411d7bY">https://www.bilibili.com/video/BV18a411d7bY</a> 。图片仅作展示用途。</p>
+</blockquote>
+</div><br/><p>访问 <a href="https://www.lihaoyu.cn/posts/lyricease" target="_blank">https://www.lihaoyu.cn/posts/lyricease</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-01T03:05:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[再见，Notepad++]]></title>
+        <id>https://www.lihaoyu.cn/posts/goodbye-npp</id>
+        <link href="https://www.lihaoyu.cn/posts/goodbye-npp"/>
+        <updated>2023-01-28T06:08:24.000Z</updated>
+        <content type="html"><![CDATA[<h2>声明</h2>
+<p><strong>首先说明：我坚定的支持“一国两制”，坚决反对一切分裂国家、破坏统一的行为。任何邪恶，终将被绳之以法！</strong></p>
+<h2>前言</h2>
+<blockquote>
+<p>本文在 Windows 11 + Ubuntu 双系统</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/goodbye-npp" target="_blank">https://www.lihaoyu.cn/posts/goodbye-npp</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-01-28T06:08:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[你的下一个启动器，何必是启动器]]></title>
+        <id>https://www.lihaoyu.cn/posts/bakaxl-launcher</id>
+        <link href="https://www.lihaoyu.cn/posts/bakaxl-launcher"/>
+        <updated>2023-01-16T04:19:47.000Z</updated>
+        <content type="html"><![CDATA[<p>隆重向您介绍 BakaXL！全新的 BakaXL 3.0 版本为各位带来了更直观的本体设置界面、全新装修过的笨蛋广场、更丰富多彩的个性化选项、更快速的核心安装，以及对 Modrinth 的完整支持！</p>
+<!-- more -->
+<p>此外，BakaXL 还支持自动安装 Java 运行时环境、Quilt 加载器安装、更可以利用“皮肤妙享”功能在不安装 Mod 也不使用第三方皮肤站的前提下向好友展示自己的皮肤，以及大家最想要的：禁用 Minecraft 聊天举报系统！</p>
+<h2>官方宣传片</h2>
+<iframe class="bilibili-video" src="https://www.lihaoyu.cn//player.bilibili.com/player.html?aid=350483311&bvid=BV1vR4y1e71b&cid=967435979&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<h2>前言</h2>
+<p><s>啊，以上的都是些废话，可以直接跳过。</s></p>
+<p>在 2021 年末笨蛋广场完工以后，我就将我电脑上所有的 Minecraft 核心整理到了一个文件夹，然后转了 BakaXL。</p>
+<p>BakaXL 对我来说挺不错的，无论是动画还是设计都符合我的口味，之后我也没有删除其他的启动器，虽然偶尔也有使用，但是基本上 BakaXL 已经成为了我的主力启动器。</p>
+<h2>好东西</h2>
+<h3>免费、高度的个性化与主题</h3>
+<p>BakaXL 的个性化一直以来是一个很大的亮点，因为它有着丰富的配色、大量的社区主题以及许多个性化选项。比如你可以安装 Wallpaper Engine，然后开启本体设置中的“使用实况背景功能”，亦或者是设置一张背景图片，然后开启背景虚化和背景图片视差。</p>
+<p>如果你很懒，也可以到笨蛋广场（后面会提到）或者用户群里下载社区制作的主题，放置在 <code>BakaXL/Tema</code> 文件夹，然后从本体设置中的“浏览已安装的 BakaXL 主题”来选择并应用它。</p>
+<p>主题作者还可以在打包主题时为“本体设置”、“贴士”、“主页”三个页面分别设置背景音乐。</p>
+<h3>核心极速安装</h3>
+<p>什么？你觉得 BakaXL 下载速度很慢？那你就错了！</p>
+<p>BakaXL 支持设置下载源与下载线程数量，默认的线程数量为 256 线程。配合 MCBBS 下载源能够轻松跑满你的带宽，甚至能够在仅仅 3 秒内安装好一个核心！</p>
+<p>啊？不是吧，你还觉得不够快？没事！我们还有重头戏：<strong>发射模式</strong>！</p>
+<p>发射模式的线程数量为 2048 线程，在启动器作者的测试视频中，使用发射模式全新安装一个原版核心只需要十多秒。</p>
+<p>同样是多线程下载，PCL2 最大只支持 256 线程。</p>
+<p>:::danger 前排警告<br>
+发射模式可能会在一些性能不佳的设备上造成严重的卡顿，一般情况下 256 / 512 个线程足矣。<br>
+:::</p>
+<h3>笨蛋广场</h3>
+<p>接下来，是 BakaXL 最重要的功能之一：笨蛋广场！</p>
+<p>在笨蛋广场，你可以极为便捷地搜索、浏览、下载任何你想要的资源，包括但不限于 BakaXL 主题、Minecraft 资源包、整合包、模组、光影包。</p>
+<p>同时，笨蛋广场的主页还会显示世界中流行的热门内容，以及今日推荐的资源包、地图、整合包、模组。而在未来的本体更新中，笨蛋广场还会支持显示你所在城市中热门的资源。</p>
+<p>笨蛋广场将 Modrinth 与 CurseForge 的搜索结果混合在一个列表中，这样一来，无需选择来源即可同时看到仅在 Modrinth 或者 CurseForge 发布的资源。</p>
+<h3>Quilt 加载器支持</h3>
+<p>BakaXL 是国内第一个支持 Quilt 模组加载器自动安装与识别的启动器。对 Quilt 的支持意味着 BakaXL 完全支持 Modrinth 生态（因为部分 Modrinth 整合包已在使用 Quilt）。</p>
+<h3>BakaXL Network</h3>
+<p>BakaXL Network！这是 BakaXL 生态中最为重要的一环，它驱动着 BakaXL 的好友系统、大厅以及皮肤妙享，这些功能都需要 BakaXL Network 的支持。</p>
+<p>有了它，你可以与他人交换 BakaXL Network ID，成为好友、并时刻了解对方在游戏中的信息等，更可与他人在大厅中一起娱乐、向他人展示自己的皮肤。</p>
+<h3>禁用 Minecraft 聊天举报</h3>
+<p>你可能不会相信，但是 BakaXL 支持不安装任何模组即可禁用聊天举报！</p>
+<p>在“本体设置”-“账户与档案”中选择自己的微软正版档案，启用“加入 BakaXL Network SkinShare 皮肤妙享”后即可禁用聊天举报！</p>
+<h3>其他的</h3>
+<ul>
+<li>贴士
+<ul>
+<li>随时浏览最新的资讯，比如 MCBBS 幻翼块讯、BakaXL 开发资讯</li>
+</ul>
+</li>
+<li>预览体验计划
+<ul>
+<li>三种更新通道，随时体验最新的功能</li>
+</ul>
+</li>
+</ul>
+<p>说了这么多了，大家快去试一试吧！</p>
+<p>下载地址：<a href="https://www.bakaxl.com">https://www.bakaxl.com</a></p>
+<p>哦对了，记得给上面的宣传片一个三连来支持 BakaXL！有条件的富商也可以到爱发电支持 TT：<a href="https://afdian.net/a/TT702">https://afdian.net/a/TT702</a></p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/bakaxl-launcher" target="_blank">https://www.lihaoyu.cn/posts/bakaxl-launcher</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-01-16T04:19:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Valaxy —— 快到没边的全新静态博客框架]]></title>
+        <id>https://www.lihaoyu.cn/posts/valaxy</id>
+        <link href="https://www.lihaoyu.cn/posts/valaxy"/>
+        <updated>2022-10-17T00:35:47.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>其实我已经关注云游君的 <a href="https://valaxy.site">Valaxy</a> 很久了，无奈没有条件只能一直用 Hexo。</p>
+<p>最近上网课拿到电脑，便想着“不然把博客迁移到 Valaxy 吧”，便打开了 Valaxy 的文档开始一顿操作，设置好以后已经基本处于可以用在生产环境的情况了。</p>
+<p>同时我也感受到了它超快的速度以及原生的页面热重载，便打算把它介绍给大家。</p>
+<!-- more -->
+<h2>开始</h2>
+<blockquote>
+<p>⚡️ Vue 3, Vite 2, pnpm, ESBuild - born with fastness</p>
+</blockquote>
+<h3>本地初始化</h3>
+<p><a href="https://github.com/YunYouJun/valaxy">项目地址</a></p>
+<p>新建一个文件夹，然后在这个文件夹内打开终端，输入如下内容进行初始化：</p>
+<pre><code class="language-bash">npm init valaxy
+# `pnpm create valaxy` is recommened by author
+</code></pre>
+<p>根据命令行提示即可完成项目初始化。默认使用 Yun 主题，也可以选择文档主题（theme-press）。</p>
+<p>进入到生成的项目文件夹内，输入指令安装依赖并启动本地预览</p>
+<pre><code class="language-bash">npm install 
+# yarn
+npm run dev
+# yarn dev
+</code></pre>
+<p>本地预览启动以后，可以访问 <code>http://localhost:4859</code> 查看效果。然后就可以修改 <code>valaxy.config.ts</code> 来自定义你的博客了。</p>
+<h3>自动构建</h3>
+<p>可以使用 GitHub Pages/Netlify/Vercel/Cloudflare Pages。</p>
+<p><code>.github/workflows/gh-pages.yml</code> 将会自动部署 GitHub Pages，其他请参考文档。</p>
+<h3>手动部署</h3>
+<p>输入如下指令生成静态文件，然后就可以把 <code>dist</code> 文件夹下的内容部署到自己的服务器上了：</p>
+<pre><code class="language-bash">npm run build
+# npm run build:spa for SPA
+</code></pre>
+<h2>注意事项</h2>
+<p>Valaxy 目前还处于早期开发阶段，Yun 主题的功能仅复刻了 Hexo 版本的主要功能，你可以通过反馈 Bug/捐助云游君来支持 Valaxy 的开发。</p>
+<blockquote>
+<p><s>现在使用就是高贵的内测用户</s></p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/valaxy" target="_blank">https://www.lihaoyu.cn/posts/valaxy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-10-17T00:35:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[见证历史了——谷歌取消大陆地区翻译服务]]></title>
+        <id>https://www.lihaoyu.cn/posts/google-translate-unavailable</id>
+        <link href="https://www.lihaoyu.cn/posts/google-translate-unavailable"/>
+        <updated>2022-10-02T10:40:35.000Z</updated>
+        <content type="html"><![CDATA[<p>近几天在群里聊天，发现几乎每个群都在传 Chrome 翻译用不了了和竹新社的新闻，一搜才知道原来谷歌把国内的翻译服务 <a href="http://translate.google.cn">translate.google.cn</a> 停止了。理由是“低使用率”。</p>
+<blockquote>
+<p>*根据</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/google-translate-unavailable" target="_blank">https://www.lihaoyu.cn/posts/google-translate-unavailable</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-10-02T11:53:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 iOS 桌面查看你的原神账号信息——原神披萨小助手]]></title>
+        <id>https://www.lihaoyu.cn/posts/genshin-pizza-helper</id>
+        <link href="https://www.lihaoyu.cn/posts/genshin-pizza-helper"/>
+        <updated>2022-09-10T12:36:27.000Z</updated>
+        <content type="html"><![CDATA[<p>emmmm，这个 App 我是在暑假的时候看到的。</p>
+<p>当时我在刷 B 站，忽然间就看到了这个 App 的作者发布的视频。</p>
+<p>虽然当时的版本很简陋，但是因为当时米游社还没有实装实时便签小组件，而我的确有这种需求，便装了一个。</p>
+<!-- more -->
+<p>以下为 App Store 链接和原视频：</p>
+<p><a href="https://apps.apple.com/cn/app/%E5%8E%9F%E7%A5%9E%E6%8A%AB%E8%90%A8%E5%B0%8F%E5%8A%A9%E6%89%8B/id1635319193?platform=iphone">https://apps.apple.com/cn/app/原神披萨小助手/id1635319193?platform=iphone</a></p>
+<iframe src="https://www.lihaoyu.cn//player.bilibili.com/player.html?aid=729042215&bvid=BV1sS4y1x7gj&cid=791864186&page=1" height="480" width="720" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=515228692&bvid=BV1Lg411S7wa&cid=822732575&page=1" height="480" width="720" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<h2>步骤</h2>
+<h3>下载</h3>
+<p>不详细解释，自行前往 App Store 搜索。</p>
+<h3>初始化</h3>
+<p>打开 App，点击下方导航栏中的设置按钮，在“我的账号”类别里选择“添加账号”；</p>
+<p>点击“登录米游社账户”按钮，然后选择服务器（支持国服和国际服，B 服暂不清楚）；</p>
+<p>在打开的页面中登录米游社账号，登录完成后点击“完成”按钮即可。</p>
+<div class="warning">
+<blockquote>
+<p>需要注意的是，在登录米游社账号之前，请先绑定角色</p>
+</blockquote>
+</div>
+<h3>固定小组件</h3>
+<p>共有三种尺寸的小组件可选。</p>
+<p>小号组件只显示树脂恢复情况、每日委托完成情况；</p>
+<p>中号组件显示树脂、委托、探索派遣、洞天财瓮、周本；</p>
+<p>大号组件显示树脂、委托、探索派遣、洞天财瓮、周本以及角色探索完成情况、今日可刷材料。</p>
+<p>将小组件固定到桌面之后，长按小组件并点击“编辑小组件”，选择你绑定的账号即可。</p>
+<p>剩余的可配置选项可以自行根据喜好设置。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/genshin-pizza-helper" target="_blank">https://www.lihaoyu.cn/posts/genshin-pizza-helper</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-09-10T12:36:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中秋节快乐！以及一些碎碎念]]></title>
+        <id>https://www.lihaoyu.cn/posts/happy-mid-autumn-festival</id>
+        <link href="https://www.lihaoyu.cn/posts/happy-mid-autumn-festival"/>
+        <updated>2022-09-10T11:18:49.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>(｡･∀･)ﾉﾞ嗨，各位老爷们大家好！</p>
+<p>先祝贺大家 <s>PHP Fatal Error</s> 中秋节快乐！</p>
+<p>如大家所见，我已经开学了，我也真正成为了一名初三年级的学生。</p>
+<p>放假三天，这是我开学后第一次更新文章。这三天我打算给博客再做点事情，以及日常维护。</p>
+<p>不知不觉中，时间就溜走了，2022 也即将成为历史。这一年来我做了哪些过意不去的事情也需要自己思考一下了。</p>
+<p><img src="https://img-blog.csdnimg.cn/b9158fb2fffd4cd883966614fb7de835.webp" alt="calendar"></p>
+<p>终于要迎来第一篇年终回顾了呢，心情有点复杂......</p>
+<p>接下来，我要开始介绍这个部落格在未来一段时间内的计划了。</p>
+<!-- more -->
+<blockquote>
+<p>首先在此为英国女王伊丽莎白二世默哀一秒，感谢她为中英关系做出的贡献。</p>
+</blockquote>
+<h2>未来的计划</h2>
+<h3>加入开往、十年之约</h3>
+<p>就像这一部分的标题所说，我会尽己所能让博客挤进开往和十年之约的名单里。</p>
+<p>十年之约我今天已经发起申请了，或许过几天或者几个月就能通过了。</p>
+<p>至于开往的话可能有点困难。因为开往强制要求文章数量达到 20 篇，而我又是个<s>鸽子🕊</s></p>
+<p>不过我也会尽力的，可不要对我失去信心啊（</p>
+<h3>持续更新</h3>
+<p>虽然开学，但我也会尽可能的抽出时间更新，但一般不会那么频繁，或者是只维护。</p>
+<p>不过考试前夕我可能会停更，因为要复习嘛（</p>
+<hr>
+<p>差不多就这两个吧，等以后看情况补......？</p>
+<p>也希望各位的博客也能够长久的更新下去，保留住自己的成长历程，为开放的互联网出一份自己的力量。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/happy-mid-autumn-festival" target="_blank">https://www.lihaoyu.cn/posts/happy-mid-autumn-festival</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-09-10T11:18:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[与朋友联机游玩 Minecraft]]></title>
+        <id>https://www.lihaoyu.cn/posts/play-minecraft-with-friends</id>
+        <link href="https://www.lihaoyu.cn/posts/play-minecraft-with-friends"/>
+        <updated>2022-08-22T07:45:05.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p><s>这年头连启动器都开始卷了</s></p>
+<p>从最开始的 PCL2，到现在的 BakaXL、HMCL、FSM3，它们都相继支持了联机。</p>
+<p>但是这个体验嘛，就可能天上地下了。</p>
+<p>目前在我用过的所有支持联机的启动器里，BakaXL 的体验可以说是最好的了。毕竟完全免费的中继、正版盗版随意联机和友好的失败原因提示摆在那里。</p>
+<p>正因如此，本文将使用 BakaXL 进行演示。</p>
+<!-- more -->
+<h2>为什么不是？</h2>
+<h3>HMCL</h3>
+<p>HMCL 的联机功能出了点问题，现在无法使用。（最后更新：2022/08/22）</p>
+<h3>PCL2</h3>
+<p>尽管 PCL2 是启动器御三家里最早推出联机功能的启动器，但是这也无法隐瞒龙猫<s>摆烂</s>不更新联机模块还在用老旧的 ioi。</p>
+<p>且 PCL2 的联机延迟通常很高，高到离谱。</p>
+<h2>步骤</h2>
+<h3>设置 BakaXL</h3>
+<p>不多说，这是<a href="https://www.bakaxl.com">下载链接</a>。</p>
+<p>下载好后，把它转移到一个你喜欢的位置（不要是桌面），双击运行。</p>
+<p>第一次启动，BakaXL 可能会提示你更新到最新版本，这时候我们点击弹窗中的任意一个按钮就可以进行更新。</p>
+<p>更新完成后，BakaXL 会让你完成设置向导。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822170843.png" alt="step-1"></p>
+<p>我们一直下一步，当来到设置方式步骤时，我们需要确保选择的是快速设置，否则 Java 自动选择默认将不会开启。</p>
+<p>在这里，主屏幕显示模式建议选择“传统”，不过你如果想要个性化效果更好的话可以选择“标准”。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822171137.png" alt="step-2"></p>
+<p>点击下一步继续，登录你的正版账户。如果你没有正版，点击“我没有购买正版 Minecraft”。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822171318.png" alt="step-3"></p>
+<div class="warning">
+<blockquote>
+<p>需要注意的是，如果你电脑的国家和地区选项设置为了中国大陆以外的地区，你将需要先登录一次正版账户才能创建离线模式档案。</p>
+</blockquote>
+</div>
+<p>Minecraft 档案设置完成后，我们就完成了设置向导。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822172231.png" alt="step-5"></p>
+<p>接下来点击左上角的“主页”按钮返回开始菜单。</p>
+<p>如果你要安装新的版本，点击下方的“安装 Minecraft 核心”。</p>
+<blockquote>
+<p><s>让我先把我的设置都恢复一下（（（</s></p>
+</blockquote>
+<h3>注册 BakaXL Network 账户</h3>
+<p>接下来我们需要一个 BakaXL Network 的账户。</p>
+<p><a href="https://account.bakaxl.com">注册链接</a></p>
+<p>注册完成以后，打开“BakaXL 本体设置”，导航到“账户与档案”，点击“登录至现有的 BakaXL 账户”</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822172838.png" alt="login"></p>
+<p>输入注册用的邮箱和密码，点击登录按钮就可以了。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822173013.png" alt="login-2"></p>
+<p>至此，你已经完成了 90% 的工作了！</p>
+<h3>创建或加入大厅</h3>
+<p>启动一个你要联机的版本，进入地图后暂停游戏。找到“对局域网开放”按钮。一切设置都可以保持默认，不过要想让朋友能使用指令，你需要启用作弊。</p>
+<p>对局域网开放后，就可以返回 BakaXL 创建大厅了。</p>
+<div class="info">
+<blockquote>
+<p>什么？你觉得要手动输入端口号？不需要的，BakaXL 会自动检测端口，无需设置</p>
+</blockquote>
+</div>
+<p>点击开始菜单中的“领域/联机大厅”磁贴，导航到“大厅”页面。对于大多数人来说，点击“创建大厅”按钮即可。我这里是因为赞助了 BakaXL 所以能够自定义大厅编号。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822173800.png" alt="bakaverse"></p>
+<p>创建好大厅以后，在大厅页面打开“在无法建立直接连接时通过中继连接”，这样即使你的网络环境比较差也不会影响到联机。需要注意的是这个功能需要联机双方都开启才会有效。</p>
+<p>记得打开“自动同意加入大厅请求”。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822174811.png" alt="bakaverse-2"></p>
+<p>说到网络环境，你可以在大厅看到一个“本地网络环境”，这里显示的内容决定了你联机的质量。其中最为重要的是“NAT 类型”。</p>
+<p>NAT 类型通常会受到各种因素影响，比如是否拥有公网 IP、是否支持 UPnP等。最好的是完全圆锥，这种网络环境适合作为大厅创建者；最差的是严格（对称），这种网络环境通常出现在校园网之类的情况中。这样的网络环境，联机的成功率会极大下降，可以通过 UPnP/中继/<s>暴打运营商</s>来缓解。BakaXL 的用户群内有一位神秘人精通 NAT 类型优化，可以去问问？</p>
+<p>大厅成员与你成功联机的方式和失败原因都会写在成员列表中。</p>
+<p><img src="https://cdn.cakeskin.tk/images/2022/08/20220822180719.png" alt="bakaverse-3"></p>
+<p>如果你要加入一个大厅，直接在大厅页面输入他人发给你的大厅编号即可。</p>
+<blockquote>
+<p>其他 BakaXL 的<s>进阶食用技巧</s>帮助可以看<a href="https://bakaxl.ml">这里</a>。如果 BakaXL <s>出锅</s> 疑似出现 Bug，可以加入 <a href="https://jq.qq.com/?_wv=1027&amp;k=3WQFYmP1">QQ 群</a> 询问</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/play-minecraft-with-friends" target="_blank">https://www.lihaoyu.cn/posts/play-minecraft-with-friends</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-08-22T07:45:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[优化站点速度之见解]]></title>
+        <id>https://www.lihaoyu.cn/posts/site-speed-optimization</id>
+        <link href="https://www.lihaoyu.cn/posts/site-speed-optimization"/>
+        <updated>2022-07-15T05:32:45.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>有没有一种可能，大家当中的一部分人都在为自己的网站速度而苦恼呢？</p>
+<p>特别是去年 12 月 jsDelivr 的备案被吊销以后，很多网站的速度明显下降。</p>
+<p>这篇文章，我会把我的经验分享给大家，希望能对各位的情况有点作用。</p>
+<!-- more -->
+<h2>使用 CDN</h2>
+<p>如同标题所言，CDN 可以帮助分发你的网站资源，加快网站访问速度。</p>
+<p>当然，想使用国内的 CDN，意味着你需要为你的网站进行备案。</p>
+<p>不过你也可以选择仅使用 CDN 加速资源文件。有很多类似的服务，如 unpkg、jsDelivr、Staticfiles、饿了么等等。</p>
+<p>但这些 CDN 都多多少少有点问题，比如国内速度缓慢、被和谐、版本不齐全或不是最新版本、屏蔽匿名访问等等......</p>
+<p>大家可以按照自己的喜好选择合适的 CDN 为己所用，如果有其它的服务商也可以在评论区留言造福其他站长。</p>
+<p>统一 CDN 也有利于加快网站加载速度，这个嘛就仁者见仁智者见智了。</p>
+<h2>更换网站托管提供商</h2>
+<p>很多人把自己的 Hexo 站点部署到了 GitHub Pages，然后整天抱怨速度慢，为何不换一个服务商呢？</p>
+<p>很多大厂都免费提供了一些无服务器架构，比如 Vercel、Netlify、Railway。</p>
+<p>特别是 Vercel，据说它还为了中国大陆地区的服务专门买了优化线路；</p>
+<p>而且 Vercel 用的是 Amazon Global Accelerator（ AGA，好像还是定制的），线路质量和速度自然不用说。</p>
+<p>不过即使这样，Vercel 仍然有被和谐的可能性，所以三思而后行。</p>
+<blockquote>
+<p>不建议使用 Netlify，因为它真的很慢。</p>
+</blockquote>
+<h2>减小资源文件体积</h2>
+<p>图片、JavaScript、网页等的大小都会影响网站加载速度，</p>
+<p>这就是为什么 JavaScript、HTML、CSS 文件都要尽量去除空格。</p>
+<p>图片的话，可以进行压缩。如果你不在意使用旧版 Safari / iOS 的用户，也可以使用 WebP 格式图片。</p>
+<p>而使用 WebP 格式可以在不影响图片质量的情况下进一步压缩体积。</p>
+<p>大概就这样了，如果各位还有别的办法，也可以在评论区提出来。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/site-speed-optimization" target="_blank">https://www.lihaoyu.cn/posts/site-speed-optimization</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-15T05:32:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[搭建 Hypixel 加速 IP]]></title>
+        <id>https://www.lihaoyu.cn/posts/build-hypixel-boost-ip</id>
+        <link href="https://www.lihaoyu.cn/posts/build-hypixel-boost-ip"/>
+        <updated>2022-07-13T08:48:21.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>其实在这之前我一直用的是网上公开的加速 IP，比如 NoCheatPlus 团队的公益加速 IP。</p>
+<p>然而昨天这个加速 IP 出了点问题，Minecraft 连不上去了。</p>
+<p>我就想，要不然自己搭建一个算了，稳定还省心呢。</p>
+<p>于是这篇文章应运而生。</p>
+<!-- more -->
+<h2>步骤</h2>
+<h3>选购合适的服务器</h3>
+<p>想要搭建加速 IP，我们首先需要选购一个合适的服务器。</p>
+<p>当然，这年头云服务器提供商也不少了，阿里云、腾讯云、UCloud、华为云等等。</p>
+<p>你可以根据自己的喜好，到对应的服务商处购买服务器。</p>
+<p>需要注意的是，服务器需要位于国外并且有良好的 CN2 线路。</p>
+<p>华南地区可以选择位于香港的服务器，其它地区可以选择日本、美国的服务器。</p>
+<p>服务器系统请选 CentOS 系，宽带建议 5 Mbps。</p>
+<p>买下服务器后，你会得到一个 IP 地址和一个密码。</p>
+<p>接下来我们要确认电脑内是否有 SSH 工具。</p>
+<p>如果你是 Windows 10/11 用户，那么电脑内已经自带了 SSH 工具。如果没有，请去“打开或关闭 Windows 功能”内手动启用。</p>
+<p>其它系统可以选择安装 Xshell、FinalShell、PuTTY 之类的 SSH 工具。</p>
+<h3>连接服务器</h3>
+<p>接下来，用你拿到手的 IP 和密码进行连接吧。</p>
+<p>这里假设我的服务器 IP 是 192.173.261.222，那么我需要在终端内输入：</p>
+<pre><code class="language-bash">ssh root@192.173.261.222
+# 第一次连接的话会显示一个未知主机的警告，输入 yes 确认
+root@192.173.261.222's password: _ # 输入你的密码
+# 如果你发现屏幕没反应，不要慌，其实密码已经输进去了
+</code></pre>
+<p>然后我们就能连接上我们的服务器了。</p>
+<p><img src="https://cdn.cakeskin.tk/images/build-hypixel-boost-ip/SSH.png" alt="SSH 界面"></p>
+<h3>设置流量转发</h3>
+<p>接下来我们需要一个流量转发脚本。这个就看大家喜好了，只要是自己常用的就行，这里使用 Brook 作为示例。</p>
+<pre><code class="language-bash">cd /
+mkdir brook
+cd brook
+wget https://cdn.cakeskin.tk/brook.sh
+bash brook.sh
+</code></pre>
+<p>然后输入 1 安装 Brook，等待安装完成后再次输入 <code>bash brook.sh</code>，按顺序分别输入 7 和 1。</p>
+<p>然后你就会看到这样的页面</p>
+<p><img src="https://cdn.cakeskin.tk/images/build-hypixel-boost-ip/Brook.png" alt="Brook"></p>
+<p>按照其指引进行设置。本地监听端口填写 25565；被监听 IP 填写 <code>mc.hypixel.net</code> 解析出的任意 IP；被监听端口填写 25565.</p>
+<p><img src="https://cdn.cakeskin.tk/images/build-hypixel-boost-ip/Ping.png" alt="Ping"><em>红圈圈住的即是 IP</em></p>
+<p>全部填写完毕后，输入 Y 确认启用转发。</p>
+<h3>填写 Hosts</h3>
+<p>但这还没完。如果你尝试直接使用 IP 地址进入 Hypixel，会收到一个“非官方的 IP 地址”，叫你使用 Hypixel 提供的连接地址进行游玩。</p>
+<p>可笑的是，这个检测很容易破解，它只是在检测你连接用的域名是不是属于 Hypixel 而已。</p>
+<p>所以，我们以管理员模式打开记事本或任意一个文本编辑器，然后打开文件资源管理器，在上方的地址栏内输入：</p>
+<pre><code>C:\Windows\System32\drivers\etc\
+# 出问题的话，可以试试把 Windows 换成 WINDOWS
+</code></pre>
+<p>找到名为 <code>hosts</code> 的没有后缀名的文件，用刚才打开的文本编辑器进行编辑，加入下面这行：</p>
+<pre><code>xxx.xxx.xxx.xxx mc.hypixel.net
+# 如果你想保持 mc.hypixel.net 原有的解析，只需要把 mc 换成任意字符串就行
+# xxx.xxx.xxx.xxx 替换为你自己的服务器 IP 地址
+</code></pre>
+<p>保存文件。</p>
+<p>现在打开 Minecraft，输入你刚才在 Hosts 里填的域名，然后尝试连接一下？</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/build-hypixel-boost-ip" target="_blank">https://www.lihaoyu.cn/posts/build-hypixel-boost-ip</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-13T08:48:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[部署 VuePress v1 文档到 Vercel]]></title>
+        <id>https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel</id>
+        <link href="https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel"/>
+        <updated>2022-07-10T00:43:54.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>可能大家用 VuePress 做文档的已经厌烦了每天对着终端敲 <code>yarn docs:build</code> 了吧。</p>
+<p>想用 CI 却苦于配置无从下手。</p>
+<p>这里我来和大家分享一下，如何将 VuePress 文档部署到 Vercel 上。</p>
+<!-- more -->
+<div class="danger">
+<blockquote>
+<p>本文仅适用于 VuePress v1 文档。关于 v2 文档，还请各位看官自行摸索。</p>
+</blockquote>
+</div>
+<h2>步骤</h2>
+<h3>注册 Vercel</h3>
+<p>不多说了，这是<a href="https://vercel.com/signup">注册链接</a>，推荐使用 GitHub 账号进行 OAuth 登录。</p>
+<h3>创建项目</h3>
+<p>进入 Dashboard 以后，点击右上角的“New Project”新建一个项目；</p>
+<p>选择你存放文档的仓库，点击“Import”，这里用 PCL 生存服的文档进行展示；</p>
+<p><img src="https://cdn.cakeskin.tk/images/deploy-vuepress-v1-docs-to-vercel/Import-Repo.png" alt="导入仓库"></p>
+<div class="info">
+<blockquote>
+<p>如果你要从一个组织账号部署，你需要先创建一个团队账号。</p>
+</blockquote>
+</div>
+<p><code>FRAMEWORK PRESET</code> 请务必选择 Vue.js。</p>
+<p>我们接下来来到 <code>BUILD AND OUTPUT SETTINGS</code> 页面，打开第二个开关，在旁边的文本框内填 <code>.vuepress/dist</code>（如果你的文档在子目录里存放比如 <code>docs</code> 文件夹，那么需要在前面加上这个文件夹的名字）。</p>
+<p>其余的可以留着不填，如下图（请不要直接照抄）</p>
+<p><img src="https://cdn.cakeskin.tk/images/deploy-vuepress-v1-docs-to-vercel/Config.png" alt="配置"></p>
+<p>点击“Deploy”按钮，然后等待部署。</p>
+<p>如果页面上冒出了烟花，表示你的文档已经成功部署了。</p>
+<h3>配置项目</h3>
+<p>打开项目，点击 Settings，导航到 Git，将“Production Branch”设置为你存放文档工作区的分支。</p>
+<p>需要注意的是，文档工作区的目录结构一般长这个样：</p>
+<p><img src="https://cdn.cakeskin.tk/images/deploy-vuepress-v1-docs-to-vercel/Branch.png" alt="文档目录结构"></p>
+<p>设置好，点击“Save”，然后对仓库进行一次提交，更改就会自动部署到生产环境。</p>
+<p>至此，我们所需要做的就全部完成了！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel" target="_blank">https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-10T00:43:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World!]]></title>
+        <id>https://www.lihaoyu.cn/posts/hello-world</id>
+        <link href="https://www.lihaoyu.cn/posts/hello-world"/>
+        <updated>2022-07-08T04:57:47.000Z</updated>
+        <content type="html"><![CDATA[<h2>Hexo</h2>
+<p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.</p>
+<!-- more -->
+<hr>
+<p>不知不觉，博客运行快要满一年了，而我也即将成为初三的学生。</p>
+<p>面对着即将到来的中考，我都不知道自己身上又会发生什么事情......</p>
+<p>开学以后，因为学业繁重，我的博客肯定要停更一段时间，可能也就一个星期维护一次。</p>
+<p>不过放心，我是不可能关掉博客的，放假只要有时间我就会更新的。</p>
+<p><img src="https://cdn.cakeskin.tk/images/hello-world/Live-Time.png" alt="Live-Time"><em>截止时间：2022/07/07 13:45</em></p>
+<p>hexo-theme-yun 是我这一年来一直在用的主题，在此为云游君打尻（？</p>
+<p>说实话有点遗憾，因为初二的时候一直没有给博客写很多文章，导致上线一年来就只有 12 篇文章，连开往都加入不了......</p>
+<p>看到别人都慢慢从 Hexo 转到了 Typecho 或者 WordPress，我也曾想过换成 WordPress，但无奈没有经济实力且 WordPress 的加载速度慢成💩而放弃。</p>
+<p>希望有人能支持我一下（</p>
+<p>就这么多，以后看着再改改罢。</p>
+<p><img src="https://cdn.cakeskin.tk/images/bg-dark.png" alt="image"></p>
+<blockquote>
+<p>也许我们会分别，但是我们将永远不会忘记彼此</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/hello-world" target="_blank">https://www.lihaoyu.cn/posts/hello-world</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-08T04:57:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[白嫖党福利——Backblaze B2 免费 10GB 对象存储]]></title>
+        <id>https://www.lihaoyu.cn/posts/backblaze-b2</id>
+        <link href="https://www.lihaoyu.cn/posts/backblaze-b2"/>
+        <updated>2022-07-07T13:53:31.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>其实 Backblaze 这个东西我今年初才听说，当时我疯狂的在网上搜可以白嫖的对象存储。</p>
+<p>然后我就看到了 Backblaze B2，免费 10GB 对象存储 + 每天免费 1GB 下载流量。</p>
+<blockquote>
+<p>感觉挺香的，你们觉得呢（</p>
+</blockquote>
+<!-- more -->
+<h2>介绍</h2>
+<p>Backblaze，一个比较老牌的云存储服务商，成立于 2007 年。它致力于为用户提供价格低廉的存储服务。</p>
+<p>可能你会看到它的一些报告，里面详尽的介绍了磁盘可靠性，合计磁盘可靠率，磁盘可靠的制造商等等一系列和机械硬盘有关的消息。</p>
+<p>但我们今天的话题不是磁盘可靠性 blabla 的，我们要拿到它的 10GB 免费存储。</p>
+<blockquote>
+<p>本篇文章开始将全部采用 Backblaze B2 + Cloudflare 作为图床，也请在评论区留言图片加载速度</p>
+</blockquote>
+<h2>步骤</h2>
+<h3>注册账号</h3>
+<p><a href="https://www.backblaze.com/b2/sign-up.html?referrer=nopref">注册链接</a></p>
+<p>然后输入你的邮箱和密码，点击下面的“Region”选择存储服务所在地区，可以选择 US West 或者 EU Central；</p>
+<blockquote>
+<p>我注册时选的是 US West 即美国西部。你可以自己去测试两个地区哪个速度更快。</p>
+</blockquote>
+<p><img src="https://cdn.cakeskin.tk/images/backblaze-b2/Register.png" alt="注册"></p>
+<p>登录账号，我们就来到了后台。</p>
+<h3>创建存储桶</h3>
+<p>点击“Create a new bucket”创建一个存储桶，名字随意，我这里用博客的桶进行演示；</p>
+<p><img src="https://cdn.cakeskin.tk/images/backblaze-b2/Create-Bucket.png" alt="创建存储桶"></p>
+<p>创建好以后，我们点击“Bucket Settings”，然后就可以对存储桶进行设置；</p>
+<p>接下来，在 <code>Bucket Info</code> 里填入 <code>{&quot;cache-control&quot;:&quot;max-age=31536000&quot;}</code> 设置缓存时长，为之后设置 Cloudflare 做准备；</p>
+<p><img src="https://cdn.cakeskin.tk/images/backblaze-b2/Bucket-Info.png" alt="Bucket Info"></p>
+<p>然后保存设置，点击“Upload/Download”按钮，就可以进入文件管理页面；</p>
+<p>将你的文件上传上去，点击旁边的信息按钮，就可以看到这个文件的详细信息了。</p>
+<p><img src="https://cdn.cakeskin.tk/images/backblaze-b2/Details.png" alt="详细信息"></p>
+<h3>接入 Cloudflare</h3>
+<p>Cloudflare 和 Backblaze 有合作关系，使用 Cloudflare 接入 Backblaze B2 可以免除流量费用。</p>
+<p>我们记下 Friendly URL 的根域名，比如我这里就是 <code>f004.backblazeb2.com</code>。</p>
+<p>让我们打开 Cloudflare 后台，登录账号，选择域名。</p>
+<p>记录类型选 CNAME，名称填一个自己喜欢的名字，然后将根域名填进目标，打开小黄云。</p>
+<p><img src="https://cdn.cakeskin.tk/images/backblaze-b2/Add-Record.png" alt="添加解析记录"></p>
+<p>保存以后，打开“页面规则”，添加一个规则，如下图：</p>
+<p><img src="https://cdn.cakeskin.tk/images/backblaze-b2/Page-Rules.png" alt="页面规则"></p>
+<p>保存以后，所有的事情就完成了！</p>
+<p>接下来，把 Friendly URL 中的根域名换成你自己接入 Cloudflare 的域名就可以了，试试看！</p>
+<h2>效果展示</h2>
+<p>下面的图片与视频是通过 Cloudflare + Backblaze B2 加载的，视频分辨率为 720P。</p>
+<p><img src="https://cdn.cakeskin.tk/images/bg-bright.png" alt="示例图片"></p>
+<video controls>
+    <source src="https://cdn.cakeskin.tk/images/backblaze-b2/levitated-trailer.mp4" type="video/mp4">
+</video>
+<div class="info">
+<blockquote>
+<p>在此墙裂要求 mr普拉斯打钱（雾</p>
+</blockquote>
+</div>
+<p>我们可以看到有了 Cloudflare 的加持，Backblaze 外链速度还是挺快的。</p>
+<p>使用 Microsoft Edge DevTools 查看元素，我们发现二者都已命中缓存：</p>
+<p><img src="https://cdn.cakeskin.tk/images/backblaze-b2/Cache-Hit.png" alt="缓存"></p>
+<p>至此，我们的设置就完成了！开始体验吧！</p>
+<div class="info">
+<blockquote>
+<p>如果你有 ImgURL Pro，那么可以将 Backblaze B2 作为图床快捷上传。</p>
+</blockquote>
+</div>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/backblaze-b2" target="_blank">https://www.lihaoyu.cn/posts/backblaze-b2</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-07T13:53:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[打开 Windows 传递优化，利人利己！]]></title>
+        <id>https://www.lihaoyu.cn/posts/windows-delievry-optimize</id>
+        <link href="https://www.lihaoyu.cn/posts/windows-delievry-optimize"/>
+        <updated>2022-07-05T11:50:21.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>Windows 的更新下载速度那是真的慢（虽然比官网下镜像快多了）。</p>
+<p>Windows 10 发布的时候，传递优化伴随着它一同出现在人们眼前。</p>
+<p>这应该是 <s>M$</s> 为了进一步改善更新下载速度而做出来的东西吧。</p>
+<!-- more -->
+<h2>步骤</h2>
+<h3>打开传递优化</h3>
+<p>老样子，让我们打开我们亲爱的“设置”，打开“Windows 更新”；</p>
+<p><img src="https://img-blog.csdnimg.cn/6c380eea35524e3bb5d231c9d1a10784.webp" alt="设置"></p>
+<p>点击“高级选项”，然后点击“传递优化”；</p>
+<p><img src="https://img-blog.csdnimg.cn/2a096d6e4e4b447cb0e2e87bb8a81be4.webp" alt="高级选项"></p>
+<blockquote>
+<p>如果你用的是 Windows 10，那么你应该打开“设置”-&gt;“更新和安全”-&gt;“传递优化”。</p>
+</blockquote>
+<p>然后我们可以看到传递优化的设置界面，如下图：</p>
+<p><img src="https://img-blog.csdnimg.cn/59bae51240c4422ea9511d36d306bbdf.webp" alt="传递优化"></p>
+<p>我们把“允许从其他电脑下载”打开，然后把下面的下载来源改成“Internet 和我的本地网络上的设备”即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/59bae51240c4422ea9511d36d306bbdf.webp" alt="传递优化设置"></p>
+<div class="success">
+<blockquote>
+<p>什么？你以为还有第二步？没有，你想多了！没错，传递优化的配置就是这么简单</p>
+</blockquote>
+</div>
+<h2>注意事项</h2>
+<p>传递优化这个东西，我猜测它的原理比较类似 P2P 之类的东西。</p>
+<p>别人电脑上下载过的更新会直接被传递优化下载下来，同时这份更新也会保留在电脑上，不过没那么占空间罢了。</p>
+<p>但是因为没多少人用，传递优化的效果不太明显。因此，我们需要很多人开启传递优化才能看到效果。</p>
+<p>传递优化也会占用一部分上传带宽用于为其他电脑下载更新，不过这个带宽你可以根据自己情况在设置中限制。</p>
+<p>设置中有一个传递优化的活动监视器，可以用来查看传递优化下载的更新来自哪里以及百分比、大小；上传的更新到哪里去了、百分比、大小。</p>
+<p><img src="https://img-blog.csdnimg.cn/c27bb08fc58f49a99d5ebe11fd0cbf84.webp" alt="活动监视器"></p>
+<p>就这么多。</p>
+<blockquote>
+<p>成功水了一篇文章🤣（bushi</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/windows-delievry-optimize" target="_blank">https://www.lihaoyu.cn/posts/windows-delievry-optimize</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-05T11:50:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[优化 Windows Search 搜索，加快搜索速度！]]></title>
+        <id>https://www.lihaoyu.cn/posts/windows-search-optimization</id>
+        <link href="https://www.lihaoyu.cn/posts/windows-search-optimization"/>
+        <updated>2022-07-04T08:18:16.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>Windows Search 这个东西，一言难尽......</p>
+<p>你说它没用吧，它还挺有用的；你说它有用吧，它搜索速度还贼慢，还搜不到想要的东西。</p>
+<p>这篇文章，我会告诉各位我的 Windows 搜索为什么那么好用，以及该怎么进行配置。</p>
+<!-- more -->
+<h2>索引</h2>
+<p>等等，什么是索引？</p>
+<blockquote>
+<p><a href="https://support.microsoft.com/zh-cn/windows/windows-10-%E4%B8%AD%E7%9A%84%E6%90%9C%E7%B4%A2%E7%B4%A2%E5%BC%95-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94-da061c83-af6b-095c-0f7a-4dfecda4d15a">Windows 10 中的搜索索引：常见问题解答</a></p>
+</blockquote>
+<p>我们在这里做个比喻。电脑像一本书，而索引就像书里面的书签。</p>
+<p>我想在这本书里找到一句话，如果那句话正好有一个书签，我就能很快地找到这句话。</p>
+<p>反之，如果没有书签，我就可能需要几个小时来找这句话。</p>
+<p>搜索索引也是一个道理。它通过为每个文件建立独一无二的标记并将其存储，从而加快搜索速度，改善搜索体验。</p>
+<h2>步骤</h2>
+<h3>设置索引模式</h3>
+<p>首先，让我们打开 Windows 的设置，导航到“隐私和安全性”-&gt;“搜索 Windows”。</p>
+<p>然后我们就能够看到索引状态、索引模式、排除项等等。</p>
+<p><img src="https://img-blog.csdnimg.cn/933c56e4432c4848ba21674bcf208ee1.webp" alt="索引设置"></p>
+<blockquote>
+<p>如果你用的是 Windows 10，则直接在“设置”的第一级页面中进入“搜索”分类即可。</p>
+</blockquote>
+<p>索引模式大多数人默认都是“经典”即只为桌面、音乐、图片、文档文件夹编制索引。</p>
+<p>让我们把它改成“增强”吧</p>
+<h3>排除不想索引的文件夹</h3>
+<p>Windows Search 提供了排除项功能，可以根据自己的需要对部分文件夹进行排除。</p>
+<p>比如，有时候你会发现搜索结果里出现了 DLL 文件或者 QQ 等东西缓存到电脑上的图片之类的东西。</p>
+<p>这时候，我们就需要设置排除的文件夹了。</p>
+<p>排除项一次只能设置一个文件夹，所以你可能需要一段时间来进行排除。</p>
+<h3>重建索引</h3>
+<p>万事大吉以后，我们可以重建索引。这样将会删除之前 Windows 在你电脑上编制的索引，然后重新编制。</p>
+<p>将页面滚动到最底部，选择“高级索引选项”在打开的窗口中选择“高级”；</p>
+<p><img src="https://img-blog.csdnimg.cn/bf56da03b1e74ea1b2b0b5e380718462.webp" alt="高级索引选项"></p>
+<p>在另一个弹出的窗口中选择“删除和重建索引”；</p>
+<p><img src="https://img-blog.csdnimg.cn/dc69e2cae4954a6f9ec635b1fb749507.webp" alt="删除和重建索引"></p>
+<p>选择后，Windows 会弹出一个提示框询问你是否继续操作，我们点击“确定”；</p>
+<p><img src="https://img-blog.csdnimg.cn/559b51c66b254e1693835349db7c41d3.webp" alt="重建索引"></p>
+<p>等待几秒，Windows 会自动开始编制索引。</p>
+<p>稍微等上几分钟，然后你应该就可以通过任务栏的搜索按钮 / 搜索框体验到完美的 Windows Search 了。</p>
+<p><img src="https://img-blog.csdnimg.cn/3f1d78b88589481886e11dcaf1dfed0e.webp" alt="Windows Search"></p>
+<h2>注意事项</h2>
+<p>需要注意的是，设置为“增强”模式后，Windows 将会对所有文件（除了排除文件夹）进行索引，索引量通常上万。</p>
+<p>这可能导致 Windows 更新失败，提示 0x800707e7 错误。</p>
+<p>因此，每次更新前为了保险起见，先重建索引，当 Windows 开始编制索引时立刻重启电脑。这样的话更新就不会出现什么大问题。</p>
+<p>如果你有意见，欢迎在评论区里指正！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/windows-search-optimization" target="_blank">https://www.lihaoyu.cn/posts/windows-search-optimization</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-04T08:18:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[搭建一个属于你自己的 Minecraft 服务器]]></title>
+        <id>https://www.lihaoyu.cn/posts/build-your-minecraft-server</id>
+        <link href="https://www.lihaoyu.cn/posts/build-your-minecraft-server"/>
+        <updated>2022-04-09T13:58:44.000Z</updated>
+        <content type="html"><![CDATA[<p>好的，又是一篇新的文章！其实网上的教程够多了，基本都能达到目标。</p>
+<p>但是我要写一个简单的教程来取代它们（其实如果自己忘了也可以看看）</p>
+<p>废话少说，让我们开始吧！</p>
+<blockquote>
+<p>前排提示：本教程仅适用于 Min</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/build-your-minecraft-server" target="_blank">https://www.lihaoyu.cn/posts/build-your-minecraft-server</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-04-09T13:58:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何诊断 Minecraft Java 版客户端中的错误]]></title>
+        <id>https://www.lihaoyu.cn/posts/minecraft-problems-solve</id>
+        <link href="https://www.lihaoyu.cn/posts/minecraft-problems-solve"/>
+        <updated>2022-04-07T23:45:18.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>妈耶，终于修好 Hexo 报 YAMLException 的问题了，上次更新已经是 5 个月前了呢！</p>
+<p>这段时间没更新，主要就是 Hexo 的锅。</p>
+<blockquote>
+<p>顺带一提，又回归到网课时期了（我这边有疫情）</p>
+</blockquote>
+<p>由于 <s>Mojang</s> Bugjump 的传统艺能，Minecraft Java 版通常会因为各种玄幻的原因崩溃，这篇文章将会带着你判断你的 Minecraft 出了什么问题，以及可能的修复方法。</p>
+<!-- more -->
+<h2>步骤</h2>
+<h3>选择正确的 Java 版本</h3>
+<p>请先选择正确的 Java 版本。</p>
+<p>1.17.x 需要 Java 16，1.18 + 需要 Java 17。1.16.5 及以下需要 Java 8</p>
+<p>如果选择了错误的 Java，那么不管怎么搞，游戏都始终会崩溃。</p>
+<blockquote>
+<p>通常情况下，启动器会自动根据选择的版本帮你选择 Java 运行时（如 <a href="https;//www.bakaxl.com">BakaXL</a> 和 PCL2）</p>
+</blockquote>
+<p>当你的游戏无法启动时，取决于你使用的启动器（如 <a href="https://www.bakaxl.com">BakaXL</a> ），启动器会为你分析崩溃原因并为你提供一个打包好的错误报告与日志。如果你比较懒，可以直接将这个压缩包发到 QQ 群等处询问他人。<s>（但这就和这篇文章的主旨脱离了啊喂）</s></p>
+<blockquote>
+<p>推荐阅读：<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way">提问的智慧</a></p>
+</blockquote>
+<p>理想情况下，上面的方法可帮你解决大部分问题。但是俗话说：“理想很丰满，现实很骨感”，有些问题连启动器都没办法告诉你为啥。这就需要我们自己动手了。</p>
+<h3>认识 Minecraft 的目录结构</h3>
+<p>首先，请打开你存放游戏的文件夹。我在这里默认你的游戏已经运行和崩溃了至少一次。</p>
+<p>如果你没有开启版本隔离，那么这个文件夹应该至少具备以下目录结构：</p>
+<pre><code>文件夹
+|_ .minecraft
+|     |_ assets
+|     |_ libraries
+|     |_ crash-reports
+|     |_ logs
+|     |_ versions
+|     |   |_ 你的游戏版本
+|     |       |_ 游戏版本.jar
+|     |       |_ 游戏版本.json
+|     |_ launcher_profiles.json       
+|_ 启动器（ PCL2.exe，BakaXL.exe 等）
+</code></pre>
+<p>如果你开启了版本隔离，那么这个文件夹的目录结构至少应该是这样的：</p>
+<pre><code>文件夹
+|_ .minecraft
+|     |_ assets
+|     |_ libraries
+|     |_ versions
+|     |   |_ 你的游戏版本
+|     |       |_ crash-reports
+|     |       |_ logs
+|     |       |_ 游戏版本.jar
+|     |       |_ 游戏版本.json
+|     |_ launcher_profiles.json
+|_ 启动器（ PCL2.exe，BakaXL.exe 等）
+</code></pre>
+<p>然后，按照上方的目录结构，找到 <code>crash-reports</code> 和 <code>logs</code> 文件夹。前者存放着游戏崩溃时自动生成的崩溃报告，后者存放游戏运行日志</p>
+<p>然后，在资源管理器中按下 “修改日期” 按钮，你就会看到最新的日志 <code>latest.log</code> 。</p>
+<p><img src="https://pic.dogimg.com/2022/04/08/624fbdc0b4a63.png" alt="latest-log"></p>
+<blockquote>
+<p><code>crash-reports</code> 文件夹同理。</p>
+</blockquote>
+<p>我们暂且先不去理 <code>latest.log</code> 。现在让我们打开最新的 <code>crash-report</code> 文件，打开以后你就会看到大片的堆栈跟踪以及看不懂的错误类型。</p>
+<blockquote>
+<p>文件名内标有 <code>server</code> 字样的一般和游戏内置的服务端有关，你可以不用理会。一般崩溃后产生的 <code>crash-report</code> 文件都是带有 <code>client</code> 字样的</p>
+<p><img src="https://pic.dogimg.com/2022/04/08/624fbf4329db5.png" alt="crash-report"></p>
+</blockquote>
+<h3>寻找错误</h3>
+<p>这一份崩溃报告是安装了 Forge 和 VanillaFix 后的一次崩溃生成的。我们可以看到这里的错误类型是 <code>Initializing game</code> ，意思是加载游戏（废话）。堆栈跟踪最顶部的一行告诉了我们错误原因是 <code>ngtlib</code> 这个依赖 Mod 加载 <code>jp.ngt.ngtlib.NGTCore</code> 这个 Class 失败了。</p>
+<p><img src="https://pic.dogimg.com/2022/04/08/624fc0dfd9e74.png" alt="屏幕截图 2022-04-08 125741.png"></p>
+<p>这段文字告诉我们导致错误的原因是 <code>ClassNotFoundException</code> 即 “找不到类”。下方的 Sha1 值验证不通过和后方跟着的人类可读报错告诉我们这个 Mod 和依赖它的 <code>RealTrainMod</code> 的版本不对应导致崩溃</p>
+<p>往下翻，我们可以看到这样的布局：</p>
+<p><img src="https://pic.dogimg.com/2022/04/08/624fc2d1a664a.png" alt="屏幕截图 2022-04-08 130559.png"></p>
+<p>上半部分记录了你的系统、游戏版本、Java 和 JVM 各自的版本、JVM 参数、内存等；下半部分则是你使用的 Forge、OptiFine（如果你装了）的版本以及下方 L、C、H、I、J、A、D、E 八个字符分别对应的意思以及你安装的 Mods。一般通过这张表即可得出出问题的 Mod 是哪个。</p>
+<p>以此类推即可。</p>
+<p>如果你的 Minecraft 文件夹内出现了文件名类似 <code>hs-err-pidxxxxxxxx.mdmp</code> 之类的文件的话，可能是你分配给 Minecraft 的内存过少或者你的 Java 有问题。</p>
+<p>如果启动时出现了一个窗口，内部带有如下链接：<a href="https://aka.ms/mcdriver">https://aka.ms/mcdriver</a> ，则说明你的显卡驱动出现了一些问题（或者你压根没有显卡——通常发生在你尝试在租来的 Windows 服务器上）。</p>
+<h3>解决问题</h3>
+<p>出问题的 Mod，需要更换或删除。</p>
+<p>内存不足，需要多分点内存，或者<s>滚回功率，坐和放宽</s>去玩老版本</p>
+<p>显卡有问题，可以考虑更新显卡驱动或者重买一个电脑（？</p>
+<p>Java / JVM 的问题，可以尝试重新安装一次 Java 或者多给你的 Minecraft 分配点内存。毕竟：</p>
+<p><img src="https://pic.dogimg.com/2022/05/02/626f50ce7ac63.jpg" alt="Java eats memories"></p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/minecraft-problems-solve" target="_blank">https://www.lihaoyu.cn/posts/minecraft-problems-solve</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-04-07T23:45:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cake Launcher 开发日志]]></title>
+        <id>https://www.lihaoyu.cn/posts/launcher-develop</id>
+        <link href="https://www.lihaoyu.cn/posts/launcher-develop"/>
+        <updated>2021-09-30T08:49:20.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://img.shields.io/github/issues-pr/Big-Cake-jpg/Cake-Launcher?label=Pull%20Requests&amp;style=flat-square" alt="GitHub pull requests"><img src="https://img.shields.io/github/issues/Big-Cake-jpg/Cake-Launcher?label=Issues&amp;style=flat-square" alt="GitHub issues"><img src="https://img.shields.io/github/license/Big-Cake-jpg/Cake-Launcher?label=License&amp;style=flat-square" alt="GitHub"><img src="https://img.shields.io/github/repo-size/Big-Cake-jpg/Cake-Launcher?label=Repository%20Size&amp;style=flat-square" alt="GitHub repo size"><img src="https://img.shields.io/github/contributors/Big-Cake-jpg/Cake-Launcher?label=Contributors&amp;style=flat-square" alt="GitHub contributors"><img src="https://img.shields.io/github/last-commit/Big-Cake-jpg/Cake-Launcher?label=Last%20commit&amp;style=flat-square" alt="GitHub last commit"><img src="https://img.shields.io/badge/Author-Big__Cake-blue?style=flat-square" alt="GitHub Author"><img src="https://img.shields.io/github/stars/Big-Cake-jpg/Cake-Launcher?label=Stars&amp;style=flat-square" alt="GitHub Repo stars"><img src="https://img.shields.io/github/forks/Big-Cake-jpg/Cake-Launcher?label=Forks&amp;style=flat-square" alt="GitHub forks"></p>
+<p><a href="https://github.com/Big-Cake-jpg/Cake-Launcher">Cake Launcher</a> 是我为自己的 Minecraft 服务器开发的一个启动器 <s>（蛋糕启动器（误））</s></p>
+<!-- more -->
+<h2>2021-09-30 | 微软登录</h2>
+<h3>10-01 | 初步完成</h3>
+<p>微软登录基本完成，目前启动器使用的启动核心是  <a href="https://github.com/baibao132/SquareMinecraftLauncherCore">SquareMinecraftLauncherCore</a>，用于离线登录与 Mojang 正版登录和微软正版登录</p>
+<blockquote>
+<p>感谢 B 站 UP 主 <a href="https://space.bilibili.com/495713706">小叶君</a> 的教程与微软登录dll</p>
+</blockquote>
+<p><img src="https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/cake-launcher.png" alt="Cake-Launcher"></p>
+<p>但现在需要解决一个新的问题：如果使用微软登录启动游戏，启动器将无法继续运行后续代码</p>
+<p><img src="https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/launcher-develop/problem.png" alt="problem"></p>
+<p>请等待后续更新……</p>
+<blockquote>
+<p>如果你想帮我修复这个问题，或者为启动器添砖加瓦，你可以前往 <a href="https://github.com/Big-Cake-jpg/Cake-Launcher">GitHub 仓库</a></p>
+</blockquote>
+<h3>10-01 | 继续优化</h3>
+<p>经过不懈的询问他人及对比代码，微软登录不会使启动器崩溃了</p>
+<p>但是无法获得 access_token 的问题出现了</p>
+<p>等待更新......</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/launcher-develop" target="_blank">https://www.lihaoyu.cn/posts/launcher-develop</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-04-07T12:53:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手把手教你如何搭建属于自己的 Hexo 博客]]></title>
+        <id>https://www.lihaoyu.cn/posts/build-a-hexo-blog</id>
+        <link href="https://www.lihaoyu.cn/posts/build-a-hexo-blog"/>
+        <updated>2021-12-04T08:45:10.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>写给一个想要拥有自己的博客，却没有资金的小白和小学时的自己</p>
+</blockquote>
+<h2>前言</h2>
+<p>虽然，独立博客的时代已经过去，越来越多的人们开始在大平台上发布自己的文章</p>
+<p>虽然，这些平台的流量能够为这些博主们创造收</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/build-a-hexo-blog" target="_blank">https://www.lihaoyu.cn/posts/build-a-hexo-blog</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-12-04T08:45:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我讲了节物理课这件事]]></title>
+        <id>https://www.lihaoyu.cn/posts/a-little-teacher</id>
+        <link href="https://www.lihaoyu.cn/posts/a-little-teacher"/>
+        <updated>2021-12-02T17:07:23.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>《关于加个引号就能变成小说这件事》</p>
+</blockquote>
+<h2>前言</h2>
+<p>说实话，这件事情本来能避免的，只是因为我当时~脑子抽了~上物理课的时候写地理默写</p>
+<p>结果就有了下面的这件事情......</p>
+<!-- more -->
+<h2>经过</h2>
+<p>大概是两个月前，有一节物理课。老师在上边给我们讲复习课，我在下边写<strong>地理</strong>默写</p>
+<p>老师看到了我在写别的就给我收掉了（</p>
+<p>然后我就开始改物理《名校课堂》上边的错题，老师也不让现在改......</p>
+<p>结果下了课，班主任就找过来问我上课是不是做了什么不该做的事（~还好上课的时候没在后门录视频~）</p>
+<blockquote>
+<p>“那你就讲一节课吧，给大家复习一下。如果讲不透，下次再出现类似的事情就立马叫家长”</p>
+</blockquote>
+<p>没办法，死马当活马医吧。我看了下课程表，下一节物理课在星期三第二节课（当时是星期一），还有一天多的准备时间</p>
+<p>我着急忙慌地跑到办公室问我的英语老师要了份教案，拿走了以后就根据上面的内容构思</p>
+<p>中午吃完饭回了宿舍，看到隔壁班和我一个宿舍那个男同学也在，我就让他帮我想想这些可以总结成什么</p>
+<p>“1+2+2+3+3+4。”他是这么说的</p>
+<blockquote>
+<p>“1” 是回声测距、“2” 分别是两大实验......</p>
+</blockquote>
+<p>教案终于填完了，然后我又仔细翻了遍第二章声现象的内容，为讲课做准备</p>
+<p>星期三，第一节课刚下没大概4分钟，物理老师站到了门口，结果有个女生就告诉她说我得讲课</p>
+<blockquote>
+<p>~rnm 她要是不说我就不用去讲课了~</p>
+</blockquote>
+<p>班主任就在最后一排坐着听课</p>
+<p>硬着头皮上了讲台就开始讲。说实话我自己都觉得讲的不好</p>
+<p>板书、画图、举例、抛出问题.....我能想到的所有讲课可以用的都用了</p>
+<p>课堂效果还算不错，但是我自己太紧张了，大家都指出我讲课的时候声音是颤抖的</p>
+<p>物理老师告诉我说讲的还不错，大家都听懂了</p>
+<h2>结果</h2>
+<p>完蛋了，现在连语文老师、数学老师（班主任）都想让我讲课了，可是这些科目我成绩都特别差的啊喂……</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/a-little-teacher" target="_blank">https://www.lihaoyu.cn/posts/a-little-teacher</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-12-02T17:07:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的 Minecraft 服务器 —— CakeMC]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-mcserver</id>
+        <link href="https://www.lihaoyu.cn/posts/my-mcserver"/>
+        <updated>2021-10-03T06:01:12.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>CakeMC 是我自己的一个 Minecraft 服务器，早在 Cake Launcher 的开发日志里就有提到</p>
+<p>它于今年 8 月份开始运营，到现在已经获得了较多的玩家数量，最高日在线数量达到了 6-7 人</p>
+<p>这对于一个没有多少宣传、新运营的服务器来说已经很不错了</p>
+<p>目前它甚至还获得了他人的帮助（指免费挂的面板服）</p>
+<p>下面开始正文……</p>
+<!-- more -->
+<h2>前身</h2>
+<h3>黑历史</h3>
+<p>CakeMC 的前身是我的黑历史：RTMWorld</p>
+<p>本来它是我和几个朋友开的联机服，在一起玩</p>
+<p>但是后来出了一件事，它就没有再开下去</p>
+<p>直到今年 8 月份</p>
+<h2>重组</h2>
+<p>8 月，我的朋友 XieXiLin 一下租了两个月的 VPS 闲置着，我就想到了继续开一个服务器的念头</p>
+<p>于是咬一咬牙，买了域名，又把 RTMWorld 进行了重组，改名 CakeMC 并计划提供 RealTrainMod 建设服务器（仍保留 RTMWorld 称呼）以及 1.17.1 生存服务器</p>
+<p>一切准备就绪，我和 XieXiLin 便开始在各个 QQ 群里小小宣传一下，便有两三个人来了……</p>
+<h2>发展</h2>
+<h3>田所地铁</h3>
+<p>8 月上旬，田所市及其轨道交通开始建设，并取得一定规模</p>
+<p>8 月中旬，田所市建设进度明显过于缓慢，而轨道交通建设进度明显加快</p>
+<p>8 月下旬，田所地铁二、三号线开通，三号线 POV 上传到 B 站作宣传</p>
+<h3>开学</h3>
+<p>9 月，群内大部分玩家开学，服务器开始日常空载</p>
+<p>9 月末，服务器主机到期，但地图早已提取出来保存</p>
+<p>10 月初，z0z0r4 为 CakeMC 作了支持，免费为 RTMWorld 提供了一个面板服</p>
+<h2>如何进入服务器</h2>
+<h3>进入服务器 QQ 群</h3>
+<p>加入<a href="https://jq.qq.com/?_wv=1027&amp;k=BMEMBGvG">外部审核群</a>，填写群公告内问卷并提交管理员审核</p>
+<p>工作日内不审核问卷，法定节假日或周末为审核时间</p>
+<p>寒暑假全天审核</p>
+<p>如果你有任何得意之作（如 RTM 追加包、建筑），请带着追加包模型截图或建筑截图私信管理员</p>
+<p>如果符合条件，管理员会为你加急审核</p>
+<blockquote>
+<p>学习时间内不加急审核，请等待周末/法定节假日</p>
+</blockquote>
+<p>如果你审核通过了，管理员会联系你，并告知你群号与验证答案</p>
+<blockquote>
+<p>你不可以泄露内群群号与验证答案<br>
+如果你把群号与验证答案泄露给了他人，你将被踢出内群，并且禁止再次进群</p>
+</blockquote>
+<h3>下载客户端整合包</h3>
+<p>在内群群文件内找到客户端整合包并下载到你喜欢的地方</p>
+<p><img src="https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/my-mcserver/client-download.png" alt="client-download"></p>
+<p>解压压缩包，你会得到一个文件夹，里面包含了客户端文件和启动器</p>
+<h3>启动客户端</h3>
+<blockquote>
+<p>推荐你使用 PCL2 来获得最佳体验，因为 HMCL 没有 PCL2 的一些功能</p>
+</blockquote>
+<p>打开启动器，然后登录你的帐号</p>
+<blockquote>
+<p>如果你有正版账号，我们更推荐你使用正版账号进入服务器<br>
+PCL2 启动器的右侧会动态展示服务器公告，这会成为我们发布整合包更新通知等的重要手段<br>
+服务器将来会更换 Blessing Skin Server + Yggdrasil API 实现鉴权，来加强对玩家的管理</p>
+</blockquote>
+<p>启动游戏前确认选择的版本为 “CakeMC - RTMWorld”，否则无法进入服务器</p>
+<h3>加入服务器</h3>
+<p>启动游戏，等待游戏加载完毕进入标题画面</p>
+<p>点击 “多人游戏” 按钮，在 “添加服务器” 页面填入服务器 IP</p>
+<blockquote>
+<p>RTMWorld 的 IP：rtmworld.cakemc.top</p>
+</blockquote>
+<p>保存，然后加入服务器，开始你的建设之旅吧！</p>
+<h2>赞助</h2>
+<p>服务器是公益性质的，接受各位玩家的无偿捐赠</p>
+<p>如果想要支持服务器，请通过下方的打赏按钮或者前往<a href="https://afdian.net/@Big_Cake2577117205">爱发电</a>支付</p>
+<h2>联系</h2>
+<p>如果你有疑问，可以发邮件到 contactus@cakemc.top 或者 bigcake@cakemc.top 联系，管理员会尽快处理的</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-mcserver" target="_blank">https://www.lihaoyu.cn/posts/my-mcserver</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-10-03T06:01:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于 GitHub 今年国庆节访问的问题]]></title>
+        <id>https://www.lihaoyu.cn/posts/about-github-access</id>
+        <link href="https://www.lihaoyu.cn/posts/about-github-access"/>
+        <updated>2021-10-01T00:55:13.000Z</updated>
+        <content type="html"><![CDATA[<p>今天，我在 Surfing the Internet 的时候往博客的 Aplayer 挂件里塞了个音乐列表</p>
+<p>结果发现 GitHub 突然无法访问了，显示 “连接超时”</p>
+<p>![GitHub-unacc</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/about-github-access" target="_blank">https://www.lihaoyu.cn/posts/about-github-access</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-10-01T00:55:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[神级内存清理软件———Mem Reduct]]></title>
+        <id>https://www.lihaoyu.cn/posts/mem-reduct</id>
+        <link href="https://www.lihaoyu.cn/posts/mem-reduct"/>
+        <updated>2021-09-20T12:58:00.000Z</updated>
+        <content type="html"><![CDATA[<p>想必看到这篇文章的大家大部分都经常因为运行内存不够而头疼吧</p>
+<p>在这篇文章中，我将会为大家介绍这款软件 ——— <a href="https://henrypp.org/product/memreduct">Mem Reduct</a></p>
+<hr>
+<h2>前言</h2>
+<p>任何优化软件都只能在一定程度上进行优化，有时甚至不会有什么效果</p>
+<p>因此如果你有“钞能力”，那我还是建议你给电脑加一根内存条</p>
+<!-- more -->
+<h2>安装</h2>
+<h3>下载安装包</h3>
+<p>点击<a href="https://henrypp.org/product/memreduct">这里</a>前往 Mem Reduct 的介绍页面</p>
+<blockquote>
+<p>这是一个国外网站，速度较慢且没有中文<br>
+所以请善用翻译功能与代理</p>
+</blockquote>
+<p>将页面拉到最下方，找到下载地址，如图</p>
+<p><img src="https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/download.PNG" alt="memreduct-download"></p>
+<blockquote>
+<p>Windows 系统请下载 exe 文件<br>
+macOS 请下载 sig 文件<br>
+bin.zip 为源代码</p>
+</blockquote>
+<p>点击对应的链接即可开始下载。由于下载链接为 GitHub Releases 所以速度可能较慢。如速度慢请自行使用 GitHub 文件加速等功能</p>
+<h3>安装</h3>
+<p>安装过程没什么好说的，在同意协议后一路回车即可</p>
+<p>需要注意的是如果你想将它安装到可移动存储设备时需要在安装时勾选 “ Store settings in application direction ”</p>
+<p>安装完成后就可以启动 Mem Reduct 了</p>
+<h2>设置</h2>
+<p>你可以针对自己的使用习惯设置内存清理的间隔时间与超过百分比清理内存的数值等功能</p>
+<blockquote>
+<p>程序有中文翻译，使用起来没有门槛</p>
+</blockquote>
+<p><img src="https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/settings.PNG" alt="memreduct-settings"></p>
+<h3>关闭 UAC 弹出提醒</h3>
+<p>第一次清理内存是需要你给予它管理员权限的</p>
+<p>而当你给予了它权限以后，程序本身的设置就可以让你选择不弹出 UAC 提醒了</p>
+<p>只需要在设置里勾选 “跳过用户账户控制弹出提醒” 即可</p>
+<h3>关闭内存清理二次确认弹窗</h3>
+<p>虽说这个功能可以防止不经意间的误触，但我还是建议你关掉这个功能</p>
+<p>只需要将 “在内存清理开始时确认” 取消勾选就可以了</p>
+<h3>开机自启动</h3>
+<p>既然是优化软件，那么软件内部会有自启动选项供你选择</p>
+<p>勾选 “开机启动” 即可让 Mem Reduct 在每次开机时自动启动</p>
+<h2>开源</h2>
+<p>Mem Reduct 是开源的，如果你有能力，可以去 <a href="https://github.com/henrypp/memreduct">GitHub</a> 为它做贡献</p>
+<p><img src="https://img.shields.io/github/downloads/henrypp/memreduct/total?style=flat-square" alt="GitHub all releases"> <img src="https://img.shields.io/github/v/release/henrypp/memreduct?style=flat-square" alt="GitHub release (latest SemVer)"> <img src="https://img.shields.io/github/license/henrypp/memreduct?style=flat-square" alt="GitHub"> <img src="https://img.shields.io/github/issues/henrypp/memreduct?style=flat-square" alt="GitHub issues"> <img src="https://img.shields.io/github/contributors/henrypp/memreduct?style=flat-square" alt="GitHub contributors"></p>
+<p>从提交日期看，可以发现 Mem Reduct 是一直在更新的。也证明了这位作者维护这个软件已经有长达六年多的时间了</p>
+<p><img src="https://jsd.lihaoyu.cn/gh/Big-Cake-jpg/Image_For_My_Blog/memreduct/github.PNG" alt="memreduct-github"></p>
+<h2>结语</h2>
+<p>一个好的软件，需要长时间的开发。一个好的软件，凝聚着开发者智慧的结晶</p>
+<p>并不是所有软件都是完美的，没有最完美，只有更完美</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/mem-reduct" target="_blank">https://www.lihaoyu.cn/posts/mem-reduct</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-09-20T12:58:00.000Z</published>
+    </entry>
+</feed>
