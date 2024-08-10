@@ -23,7 +23,7 @@ const toggleDark = () => appStore.toggleDark();
             alt="Site favicon"
             loading="lazy"
           />
-          <div class="ml-2 font-medium">{{ siteConfig.title }}</div>
+          <div class="font-medium">{{ siteConfig.title }}</div>
         </RouterLink>
       </div>
       <div class="navbar-menu">
