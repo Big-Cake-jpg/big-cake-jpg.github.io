@@ -22,8 +22,8 @@ const keys = computed(() => {
 });
 
 const input = ref("");
-const searchTime = ref(0);
-let startTime: number;
+// const searchTime = ref(0);
+// let startTime: number;
 
 const useFuseOptions = computed<UseFuseOptions<FuseListItem>>(() => ({
   fuseOptions: {
@@ -41,7 +41,7 @@ const searchInputRef = ref<HTMLInputElement>();
 watch(
   () => input.value,
   async () => {
-    startTime = Date.now();
+    // startTime = Date.now();
     const fuseListDataPath = siteConfig.value.fuse.dataPath.startsWith("http")
       ? siteConfig.value.fuse.dataPath
       : `${import.meta.env.BASE_URL}${siteConfig.value.fuse.dataPath}`;
@@ -51,7 +51,7 @@ watch(
         if (Array.isArray(data)) fuseListData.value = data;
 
         searchInputRef.value?.focus();
-        searchTime.value = Date.now() - startTime;
+        // searchTime.value = Date.now() - startTime;
       });
   }
 );
@@ -74,7 +74,7 @@ watch(
       />
     </div>
     <div v-if="input" class="flex-center" w="full" py="4">
-      {{ t("search.hits", results.length || 0) }} - {{ t("search.time", { searchTime }) }}
+      {{ t("search.hits", results.length || 0) }} <!--  - {{ t("search.time", { searchTime }) }} -->
     </div>
     <div v-else py="4">
       {{ t("search.tip") }}
