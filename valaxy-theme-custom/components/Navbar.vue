@@ -53,6 +53,9 @@ const toggleDark = () => appStore.toggleDark();
               <span class="icon text-xl" :class="item.icon" />
             </a>
           </span>
+          <RouterLink to="/search" class="navbar-item" aria-label="Search">
+            <span class="icon text-xl i-ri-search-line" />
+          </RouterLink>
           <a
             class="navbar-item"
             href="https://www.travellings.cn/go.html"
@@ -101,6 +104,9 @@ const toggleDark = () => appStore.toggleDark();
             <div class="icon text-xl" :class="item.icon" />
           </AppLink>
         </span>
+        <RouterLink to="/search" class="navbar-item" aria-label="Search">
+          <span class="icon text-xl i-ri-search-line" />
+        </RouterLink>
         <a
           class="navbar-item"
           href="https://www.travellings.cn/go.html"

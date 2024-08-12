@@ -24,3 +24,7 @@ social:
   email: E-Mail
 
 loading: Loading
+
+search:
+  tip: Try searching some key words in the search box above
+  time: "Time spent: {searchTime} ms"

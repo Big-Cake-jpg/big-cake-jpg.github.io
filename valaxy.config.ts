@@ -69,6 +69,8 @@ export default defineValaxyConfig<ThemeConfig>({
 
     announcement: {
       enable: false,
+      type: "info",
+      content: "这里是公告内容",
     },
 
     valaxyDarkOptions: {

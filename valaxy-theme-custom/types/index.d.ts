@@ -20,6 +20,7 @@ export interface ThemeConfig extends DefaultTheme.Config {
 
   announcement: {
     enable: boolean
+    type: 'info' | 'warning'
     content: string
   }
 

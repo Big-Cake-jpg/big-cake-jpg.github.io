@@ -82,6 +82,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/windows-search-optimization': RouteRecordInfo<'/posts/windows-search-optimization', '/posts/windows-search-optimization', Record<never, never>, Record<never, never>>,
     '/posts/xiaoyu-and-linxiaoyu': RouteRecordInfo<'/posts/xiaoyu-and-linxiaoyu', '/posts/xiaoyu-and-linxiaoyu', Record<never, never>, Record<never, never>>,
     '/posts/zhongkao-grades': RouteRecordInfo<'/posts/zhongkao-grades', '/posts/zhongkao-grades', Record<never, never>, Record<never, never>>,
+    '/search/': RouteRecordInfo<'/search/', '/search', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }
 }
