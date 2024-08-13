@@ -1,9 +1,15 @@
 <template>
-  <div v-if="isLoading">正在加载...</div>
   <div v-if="err">出现错误：{{ err }}</div>
   <div class="menu" v-else>
-    <ul class="menu-list">
-      <li v-for="link in friendLinks" :key="link.url">
+    <ul
+      class="menu-list"
+    >
+      <li v-for="n in 16" :key="n" v-if="isLoading" class="w-full" :class="{ 'is-skeleton': isLoading }">
+        <p class="p-2">
+          正在加载友情链接数据
+        </p>
+      </li>
+      <li v-for="link in friendLinks" :key="link.url" v-else>
         <a :href="link.url" target="_blank">
           {{ link.blog }}
         </a>
