@@ -30,7 +30,7 @@ const formatDate = (date: string | number | Date) => {
       <p class="text-2xl mb-2">{{ frontmatter.title }}</p>
       <p class="text-base">
         {{ formatDate(frontmatter.date as Date) }} &#x2022;
-        {{ frontmatter.categories ?? "未分类" }}
+        {{ Array.isArray(frontmatter.categories) ? frontmatter.categories.flat().join(', ') : frontmatter.categories ?? "未分类" }}
       </p>
       <PostMeta />
       <br />

@@ -24,9 +24,9 @@ const app = useAppStore();
 
 onMounted(async () => {
   (app.showLoading = false),
-    window.addEventListener("load", async () => {
-      setTimeout(async () => {
-        await import("@fontsource/noto-sans-sc/400.css");
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        import("@fontsource/noto-sans-sc/400.css");
       }, 500);
     });
 });

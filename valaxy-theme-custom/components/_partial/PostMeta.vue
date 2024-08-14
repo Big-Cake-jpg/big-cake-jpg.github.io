@@ -1,24 +1,24 @@
 <template>
   <div
     v-if="siteConfig.statistics.enable"
-    class="post-counter flex items-center"
+    class="flex items-center text-base"
     mt="2"
   >
     <span
       v-if="frontmatter.wordCount"
-      class="word-count inline-flex-center"
+      class="inline-flex-center"
       :title="t('statistics.word')"
     >
-      <span m="l-1">{{ frontmatter.wordCount }} 字</span>
+      <span>{{ frontmatter.wordCount }} 字</span>
     </span>
 
     <span
       v-if="frontmatter.readingTime"
-      class="reading-time inline-flex-center"
+      class="inline-flex-center"
       :title="t('statistics.time')"
     >
       <span m="x-2">-</span>
-      <time m="l-1">{{ frontmatter.readingTime }} 分钟读完</time>
+      <time>{{ frontmatter.readingTime }} 分钟读完</time>
     </span>
   </div>
 </template>
