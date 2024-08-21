@@ -16,7 +16,7 @@ onMounted(async () => {
 
 <template>
   <footer class="footer m-auto">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class="text-center lg:text-left">
           <p>
