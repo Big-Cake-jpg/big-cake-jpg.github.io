@@ -27,8 +27,8 @@ importers:
         specifier: ^2.8.7
         version: 2.8.7
       axios:
-        specifier: ^1.7.3
-        version: 1.7.3(debug@4.3.6)
+        specifier: ^1.7.4
+        version: 1.7.4(debug@4.3.6)
       bulma:
         specifier: ^1.0.2
         version: 1.0.2
@@ -37,7 +37,7 @@ importers:
         version: 3.2.1(pinia@2.2.1(vue@3.4.37))
       valaxy:
         specifier: ^0.19.7
-        version: 0.19.7(@babel/parser@7.25.3)(@types/markdown-it@14.1.2)(@types/node@22.2.0)(axios@1.7.3)(postcss@8.4.41)(rollup@4.20.0)(terser@5.31.5)
+        version: 0.19.7(@babel/parser@7.25.3)(@types/markdown-it@14.1.2)(@types/node@22.2.0)(axios@1.7.4)(postcss@8.4.41)(rollup@4.20.0)(terser@5.31.5)
       valaxy-addon-lightgallery:
         specifier: ^0.0.2
         version: 0.0.2
@@ -654,55 +654,46 @@ packages:
     resolution: {integrity: sha512-jMYvxZwGmoHFBTbr12Xc6wOdc2xA5tF5F2q6t7Rcfab68TT0n+r7dgawD4qhPEvasDsVpQi+MgDzj2faOLsZjA==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.20.0':
     resolution: {integrity: sha512-1asSTl4HKuIHIB1GcdFHNNZhxAYEdqML/MW4QmPS4G0ivbEcBr1JKlFLKsIRqjSwOBkdItn3/ZDlyvZ/N6KPlw==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.20.0':
     resolution: {integrity: sha512-COBb8Bkx56KldOYJfMf6wKeYJrtJ9vEgBRAOkfw6Ens0tnmzPqvlpjZiLgkhg6cA3DGzCmLmmd319pmHvKWWlQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.20.0':
     resolution: {integrity: sha512-+it+mBSyMslVQa8wSPvBx53fYuZK/oLTu5RJoXogjk6x7Q7sz1GNRsXWjn6SwyJm8E/oMjNVwPhmNdIjwP135Q==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.20.0':
     resolution: {integrity: sha512-yAMvqhPfGKsAxHN8I4+jE0CpLWD8cv4z7CK7BMmhjDuz606Q2tFKkWRY8bHR9JQXYcoLfopo5TTqzxgPUjUMfw==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.20.0':
     resolution: {integrity: sha512-qmuxFpfmi/2SUkAw95TtNq/w/I7Gpjurx609OOOV7U4vhvUhBcftcmXwl3rqAek+ADBwSjIC4IVNLiszoj3dPA==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.20.0':
     resolution: {integrity: sha512-I0BtGXddHSHjV1mqTNkgUZLnS3WtsqebAXv11D5BZE/gfw5KoyXSAXVqyJximQXNvNzUo4GKlCK/dIwXlz+jlg==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.20.0':
     resolution: {integrity: sha512-y+eoL2I3iphUg9tN9GB6ku1FA8kOfmF4oUEWhztDJ4KXJy1agk/9+pejOuZkNFhRwHAOxMsBPLbXPd6mJiCwew==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.20.0':
     resolution: {integrity: sha512-hM3nhW40kBNYUkZb/r9k2FKK+/MnKglX7UYd4ZUy5DJs8/sMsIbqWK2piZtVGE3kcXVNj3B2IrUYROJMMCikNg==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.20.0':
     resolution: {integrity: sha512-psegMvP+Ik/Bg7QRJbv8w8PAytPA7Uo8fpFjXyCRHWm6Nt42L+JtoqH8eDQ5hRP7/XW2UiIriy1Z46jf0Oa1kA==}
@@ -1089,8 +1080,8 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.7.3:
-    resolution: {integrity: sha512-Ar7ND9pU99eJ9GpoGQKhKf58GpUOgnzuaB7ueNQ5BMi0p+LZ5oaEnfF999fAArcTIBwXTCHAmGcHOZJaWPq9Nw==}
+  axios@1.7.4:
+    resolution: {integrity: sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -3936,7 +3927,7 @@ snapshots:
   '@valaxyjs/devtools@0.19.7(debug@4.3.6)(rollup@4.20.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
-      axios: 1.7.3(debug@4.3.6)
+      axios: 1.7.4(debug@4.3.6)
       body-parser: 1.20.2
       http-proxy-middleware: 3.0.0
       js-yaml: 4.1.0
@@ -4092,13 +4083,13 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@vueuse/integrations@10.11.1(axios@1.7.3)(fuse.js@7.0.0)(nprogress@0.2.0)(qrcode@1.5.4)(vue@3.4.37)':
+  '@vueuse/integrations@10.11.1(axios@1.7.4)(fuse.js@7.0.0)(nprogress@0.2.0)(qrcode@1.5.4)(vue@3.4.37)':
     dependencies:
       '@vueuse/core': 10.11.1(vue@3.4.37)
       '@vueuse/shared': 10.11.1(vue@3.4.37)
       vue-demi: 0.14.10(vue@3.4.37)
     optionalDependencies:
-      axios: 1.7.3(debug@4.3.6)
+      axios: 1.7.4(debug@4.3.6)
       fuse.js: 7.0.0
       nprogress: 0.2.0
       qrcode: 1.5.4
@@ -4180,7 +4171,7 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.3(debug@4.3.6):
+  axios@1.7.4(debug@4.3.6):
     dependencies:
       follow-redirects: 1.15.6(debug@4.3.6)
       form-data: 4.0.0
@@ -6126,7 +6117,7 @@ snapshots:
     dependencies:
       lightgallery: 2.7.2
 
-  valaxy@0.19.7(@babel/parser@7.25.3)(@types/markdown-it@14.1.2)(@types/node@22.2.0)(axios@1.7.3)(postcss@8.4.41)(rollup@4.20.0)(terser@5.31.5):
+  valaxy@0.19.7(@babel/parser@7.25.3)(@types/markdown-it@14.1.2)(@types/node@22.2.0)(axios@1.7.4)(postcss@8.4.41)(rollup@4.20.0)(terser@5.31.5):
     dependencies:
       '@antfu/utils': 0.7.10
       '@ctrl/tinycolor': 4.1.0
@@ -6142,7 +6133,7 @@ snapshots:
       '@vitejs/plugin-vue': 5.1.2(vite@5.4.0(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.5))(vue@3.4.37)
       '@vue/devtools-api': 7.3.7
       '@vueuse/core': 10.11.1(vue@3.4.37)
-      '@vueuse/integrations': 10.11.1(axios@1.7.3)(fuse.js@7.0.0)(nprogress@0.2.0)(qrcode@1.5.4)(vue@3.4.37)
+      '@vueuse/integrations': 10.11.1(axios@1.7.4)(fuse.js@7.0.0)(nprogress@0.2.0)(qrcode@1.5.4)(vue@3.4.37)
       consola: 3.2.3
       critters: 0.0.24
       cross-spawn: 7.0.3
