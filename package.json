@@ -21,7 +21,7 @@
     "axios": "^1.7.4",
     "bulma": "^1.0.2",
     "pinia-plugin-persistedstate": "^3.2.1",
-    "valaxy": "^0.19.7",
+    "valaxy": "^0.19.9",
     "valaxy-addon-lightgallery": "^0.0.2",
     "valaxy-theme-custom": "link:valaxy-theme-custom",
     "vite-plugin-compression2": "^1.1.3"
