@@ -98,7 +98,7 @@ export default defineValaxyConfig<ThemeConfig>({
       circleTransition: false,
     },
 
-    pageLoading: false,
+    pageLoading: true,
   },
 
   features: {
