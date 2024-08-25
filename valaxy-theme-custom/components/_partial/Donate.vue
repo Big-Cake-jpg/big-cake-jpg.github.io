@@ -2,7 +2,7 @@
   <div class="card" v-if="siteConfig.sponsor.enable">
     <div class="card-content">
       <div class="content">
-        <p class="text-center">喜欢这篇文章？能不能考虑一下投喂我（x</p>
+        <p class="text-center">{{ siteConfig.sponsor.description }}</p>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
           <a
             target="_blank"

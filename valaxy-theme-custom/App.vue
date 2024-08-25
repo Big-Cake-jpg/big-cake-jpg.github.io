@@ -3,9 +3,11 @@ import { useHead } from "@unhead/vue";
 import { onMounted } from "vue";
 import { useAppStore, useSiteConfig } from "valaxy";
 import { useRoute } from "vue-router";
+import { useThemeConfig } from "./composables";
 
 const route = useRoute();
 const site = useSiteConfig();
+const theme = useThemeConfig();
 
 useHead({
   link: [
@@ -24,13 +26,9 @@ const app = useAppStore();
 
 onMounted(async () => {
   (app.showLoading = false),
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        import("@fontsource/noto-sans-sc/400.css");
-      }, 500);
-    });
+  await import("@fontsource/noto-sans-sc/400.css");
 });
 </script>
 <template>
-  <PageLoading v-if="app.showLoading" />
+  <PageLoading v-if="app.showLoading && theme.pageLoading" />
 </template>

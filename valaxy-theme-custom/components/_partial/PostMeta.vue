@@ -9,7 +9,7 @@
       class="inline-flex-center"
       :title="t('statistics.word')"
     >
-      <span>{{ frontmatter.wordCount }} 字</span>
+      <span>{{ t("statistics.words", { wordCount: frontmatter.wordCount }) }}</span>
     </span>
 
     <span
@@ -18,7 +18,7 @@
       :title="t('statistics.time')"
     >
       <span m="x-2">-</span>
-      <time>{{ frontmatter.readingTime }} 分钟读完</time>
+      <time>{{ t("statistics.reading_time", { readingTime: frontmatter.readingTime }) }}</time>
     </span>
   </div>
 </template>

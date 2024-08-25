@@ -41,7 +41,6 @@ const searchInputRef = ref<HTMLInputElement>();
 watch(
   () => input.value,
   async () => {
-    // startTime = Date.now();
     const fuseListDataPath = siteConfig.value.fuse.dataPath.startsWith("http")
       ? siteConfig.value.fuse.dataPath
       : `${import.meta.env.BASE_URL}${siteConfig.value.fuse.dataPath}`;
@@ -51,7 +50,6 @@ watch(
         if (Array.isArray(data)) fuseListData.value = data;
 
         searchInputRef.value?.focus();
-        // searchTime.value = Date.now() - startTime;
       });
   }
 );

@@ -1,5 +1,10 @@
 sidebar:
-  toc: 文章目录
+  pages: 页面
+  recent_posts: 近期文章
+
+aside:
+  toc: 目录
+  global_friend_links: 友情链接
 
 menu:
   travellings: 开往
@@ -31,3 +36,18 @@ loading: 正在加载…
 search:
   tip: 试着在上面的搜索框中搜索一个关键词吧
   time: "搜索耗时：{searchTime} 毫秒"
+
+statistics:
+  words: "{wordCount} 字"
+  reading_time: "{readingTime} 分钟读完"
+
+posts: 文章
+categories: 分类
+tags: 标签
+
+copyright:
+  author: 本文作者
+  published_on: 发布日期
+  license: 许可协议
+  do_not_repost: 禁止转载
+  notice: 在转载或引用本文时，请务必遵守许可协议并注明来源

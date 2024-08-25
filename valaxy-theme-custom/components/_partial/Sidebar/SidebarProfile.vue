@@ -3,6 +3,7 @@ import { computed } from 'vue';
 import type { Post, Categories } from 'valaxy';
 import { useSiteConfig, useSiteStore, useCategories, useTags } from 'valaxy';
 import { useThemeConfig } from '../../../composables';
+import { useI18n } from 'vue-i18n';
 const props = withDefaults(defineProps<{
     type?: string
     posts?: Post[]
@@ -20,6 +21,7 @@ const posts = computed(() => (
 )
 const categories = useCategories();
 const tags = useTags();
+const { t } = useI18n();
 </script>
 
 <template>
@@ -34,19 +36,19 @@ const tags = useTags();
                 <div class="text-center">
                     <div>
                         <p class="heading text-lg">{{ posts.length }}</p>
-                        <p class="text-sm">文章</p>
+                        <p class="text-sm">{{ t("posts") }}</p>
                     </div>
                 </div>
                 <div class="text-center">
                     <div>
                         <p class="heading text-lg">{{ (Array.from(categories.children).length) }}</p>
-                        <p class="text-sm">分类</p>
+                        <p class="text-sm">{{ t("categories") }}</p>
                     </div>
                 </div>
                 <div class="text-center">
                     <div>
                         <p class="heading text-lg">{{ (Array.from(tags).length) }}</p>
-                        <p class="text-sm">标签</p>
+                        <p class="text-sm">{{ t("tags") }}</p>
                     </div>
                 </div>
             </nav>

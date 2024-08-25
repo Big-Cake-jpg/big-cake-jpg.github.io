@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { useFrontmatter, useSiteConfig } from "valaxy";
+import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
 const frontmatter = useFrontmatter();
 const route = useRoute();
 const siteConfig = useSiteConfig();
@@ -27,15 +29,15 @@ const formatDate = (date: string | number | Date) => {
       </div>
       <nav class="grid grid-cols-2 md:grid-cols-3 mb-3 gap-3">
         <div>
-          <p class="text-sm">本文作者</p>
+          <p class="text-sm">{{ t("copyright.author")}}</p>
           <p class="text-base">{{ siteConfig.author.name }}</p>
         </div>
         <div>
-          <p class="text-sm">发布日期</p>
+          <p class="text-sm">{{ t("copyright.published_on")}}</p>
           <p class="text-base">{{ formatDate(frontmatter.date as Date) }}</p>
         </div>
         <div>
-          <p class="text-sm">版权协议</p>
+          <p class="text-sm">{{ t("copyright.license")}}</p>
           <p class="text-base">
             <span v-if="frontmatter.license === 'nd'"
               ><a
@@ -43,7 +45,7 @@ const formatDate = (date: string | number | Date) => {
                 >CC BY-NC-ND 4.0</a
               ></span
             >
-            <span v-else-if="frontmatter.license === 'disallow'">禁止转载</span>
+            <span v-else-if="frontmatter.license === 'disallow'">{{ t("copyright.do_not_repost")}}</span>
             <span v-else
               ><a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
@@ -53,7 +55,7 @@ const formatDate = (date: string | number | Date) => {
           </p>
         </div>
       </nav>
-      <div>在转载或引用本文时，请务必遵守许可协议并注明来源</div>
+      <div>{{ t("copyright.notice")}}</div>
     </div>
   </div>
 </template>

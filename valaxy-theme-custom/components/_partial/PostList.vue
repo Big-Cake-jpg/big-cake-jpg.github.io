@@ -33,7 +33,7 @@ const displayedPosts = computed(() =>
 </script>
 
 <template>
-  <ul class="space-y-3">
+  <ul class="space-y-4">
     <li
       v-for="(post, index) in displayedPosts"
       :key="post.path"

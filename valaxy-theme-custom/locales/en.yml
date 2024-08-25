@@ -1,5 +1,10 @@
 sidebar:
+  pages: Pages
+  recent_posts: Recent Posts
+
+aside:
   toc: Table of Contents
+  global_friend_links: Friend Links
 
 menu:
   travellings: Travelling
@@ -28,3 +33,18 @@ loading: Loading
 search:
   tip: Try searching some key words in the search box above
   time: "Time spent: {searchTime} ms"
+
+statistics:
+  words: "{wordCount} words"
+  reading_time: "{readingTime} minute(s) to read"
+
+posts: Posts
+categories: Categories
+tags: Tags
+
+copyright:
+  author: Author
+  published_on: Published On
+  license: Copyright License
+  do_not_repost: Do not repost
+  notice: When reproducing or quoting this article, please be sure to comply with the license agreement and indicate the source

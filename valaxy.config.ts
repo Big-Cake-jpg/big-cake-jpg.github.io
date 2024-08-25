@@ -35,6 +35,19 @@ export default defineValaxyConfig<ThemeConfig>({
 
     footer: {
       since: 2021,
+      beian: {
+        icp: {
+          enable: true,
+          info: "晋 ICP 备 2024031556 号 - 1",
+        },
+        moe: {
+          enable: true,
+          info: "20230105",
+        },
+      },
+      hitokoto: {
+        enable: true,
+      }
     },
 
     pages: [
@@ -84,6 +97,8 @@ export default defineValaxyConfig<ThemeConfig>({
 
       circleTransition: false,
     },
+
+    pageLoading: false,
   },
 
   features: {
