@@ -15,7 +15,7 @@
     "@fontsource/noto-sans-sc": "^5.0.20",
     "@iconify-json/fluent": "^1.1.62",
     "@iconify-json/ic": "^1.1.18",
-    "@iconify-json/material-symbols-light": "^1.1.27",
+    "@iconify-json/material-symbols-light": "^1.1.29",
     "ansi-regex": "6.0.1",
     "artalk": "^2.8.7",
     "axios": "^1.7.4",

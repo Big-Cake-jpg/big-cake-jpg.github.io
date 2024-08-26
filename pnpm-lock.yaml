@@ -18,8 +18,8 @@ importers:
         specifier: ^1.1.18
         version: 1.1.18
       '@iconify-json/material-symbols-light':
-        specifier: ^1.1.27
-        version: 1.1.27
+        specifier: ^1.1.29
+        version: 1.1.29
       ansi-regex:
         specifier: 6.0.1
         version: 6.0.1
@@ -525,8 +525,8 @@ packages:
   '@iconify-json/ic@1.1.18':
     resolution: {integrity: sha512-RcfnSFVmQP6aEKQJM3Iczg9e5TXWlN0slIjiyH9l378YkhDPAhXdQ8xP8+tBwfz7B9jysqsV+vs9Iu8DMHvE6Q==}
 
-  '@iconify-json/material-symbols-light@1.1.27':
-    resolution: {integrity: sha512-CbAao0pEFfYAKorPYzQADcf5CrM9n14AtlzMVSYe4I2nicTzAZu9+wA/RJ4JorZ1EK4j9ideYjYAO28zV7a5wg==}
+  '@iconify-json/material-symbols-light@1.1.29':
+    resolution: {integrity: sha512-EhB2G2QWGlouR4lFyeP25HlBe6w5Bdb5JUT0TZLwbQTMX5ROnunrCBvR4WFkYgaXr0T9PcGo8XEIq1i1lIWYzw==}
 
   '@iconify-json/ri@1.1.22':
     resolution: {integrity: sha512-Pi0I54CFXYSfWlm4xIAGqyDvtibNEpSSyQvHrSrfxFgZgDtFum9tbtYmaTKK0wJWWzYzF3XIpIJTC9/KVYX3SQ==}
@@ -3540,7 +3540,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/material-symbols-light@1.1.27':
+  '@iconify-json/material-symbols-light@1.1.29':
     dependencies:
       '@iconify/types': 2.0.0
 
