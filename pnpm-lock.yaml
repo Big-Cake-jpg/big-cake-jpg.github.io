@@ -12,8 +12,8 @@ importers:
         specifier: ^5.0.20
         version: 5.0.20
       '@iconify-json/fluent':
-        specifier: ^1.1.62
-        version: 1.1.62
+        specifier: ^1.2.0
+        version: 1.2.0
       '@iconify-json/ic':
         specifier: ^1.1.18
         version: 1.1.18
@@ -519,8 +519,8 @@ packages:
   '@fontsource/noto-sans-sc@5.0.20':
     resolution: {integrity: sha512-//s6RoHtdtlbD3tXjGzLj4HdI9xoFbGWfE64pqdrxp1IWwOQJz93pnpOc4vxurDV9ET9vy6wajKBDrPDnE5qBg==}
 
-  '@iconify-json/fluent@1.1.62':
-    resolution: {integrity: sha512-+k1+XlL158AZNL4SlAwNOUy1rQSpKptq7MiTOEgCfFtL1H2UYOkwHS/BnfrePhpqg8UQpwphhvuUgUJRcFXdew==}
+  '@iconify-json/fluent@1.2.0':
+    resolution: {integrity: sha512-K4lsuOXlUM9TWapE4p8A/0l7mhcV3Rqp3b0NY3oIbP8IXM0YOTn4G5eZPhYmwTrhbZbQDqktGkI0BuETUhEbtw==}
 
   '@iconify-json/ic@1.1.18':
     resolution: {integrity: sha512-RcfnSFVmQP6aEKQJM3Iczg9e5TXWlN0slIjiyH9l378YkhDPAhXdQ8xP8+tBwfz7B9jysqsV+vs9Iu8DMHvE6Q==}
@@ -3532,7 +3532,7 @@ snapshots:
 
   '@fontsource/noto-sans-sc@5.0.20': {}
 
-  '@iconify-json/fluent@1.1.62':
+  '@iconify-json/fluent@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 
