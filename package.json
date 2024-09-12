@@ -12,7 +12,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@fontsource/noto-sans-sc": "^5.0.20",
+    "@fontsource/noto-sans-sc": "^5.1.0",
     "@iconify-json/fluent": "^1.2.0",
     "@iconify-json/ic": "^1.2.0",
     "@iconify-json/material-symbols-light": "^1.2.1",
