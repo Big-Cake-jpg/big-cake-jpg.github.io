@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MenuItem } from "valaxy";
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 defineProps<{
   headers: MenuItem[];
@@ -46,7 +46,7 @@ const observeAnchors = () => {
 
 onMounted(() => {
   const unobserve = observeAnchors();
-  onUnmounted(unobserve);
+  onBeforeUnmount(unobserve);
 });
 </script>
 
