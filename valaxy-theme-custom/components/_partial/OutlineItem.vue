@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import type { MenuItem } from "valaxy";
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, watch } from "vue";
 
-defineProps<{
+const props = defineProps<{
   headers: MenuItem[];
   onClick: (e: MouseEvent) => void;
   root?: boolean;
 }>();
 
-const emit = defineEmits(['close-menu']);
+const emit = defineEmits(["close-menu"]);
 const activeLink = ref<string | null>(null);
 
 const handleClick = (e: MouseEvent, link: string) => {
@@ -21,7 +21,7 @@ const handleClick = (e: MouseEvent, link: string) => {
       behavior: "smooth",
     });
   }
-  emit('close-menu');
+  emit("close-menu");
 };
 
 const observeAnchors = () => {
@@ -33,10 +33,10 @@ const observeAnchors = () => {
         }
       });
     },
-    { rootMargin: '0px 0px -80% 0px' } // Adjust the rootMargin as needed
+    { rootMargin: "0px 0px -80% 0px" } // Adjust the rootMargin as needed
   );
 
-  const anchors = document.querySelectorAll('[id]');
+  const anchors = document.querySelectorAll("[id]");
   anchors.forEach((anchor) => observer.observe(anchor));
 
   return () => {
@@ -44,10 +44,28 @@ const observeAnchors = () => {
   };
 };
 
+let unobserve: () => void;
+
 onMounted(() => {
-  const unobserve = observeAnchors();
-  onBeforeUnmount(unobserve);
+  unobserve = observeAnchors();
 });
+
+onBeforeUnmount(() => {
+  if (unobserve) {
+    unobserve();
+  }
+});
+
+watch(
+  () => props.headers,
+  () => {
+    if (unobserve) {
+      unobserve();
+    }
+    unobserve = observeAnchors();
+  },
+  { deep: true }
+);
 </script>
 
 <template>
@@ -59,11 +77,20 @@ onMounted(() => {
         class="mr-1.75"
         :lang="lang || 'zh-CN'"
       >
-        <a class="outline-link" :class="{ 'is-active': activeLink === link }" :href="link" @click="handleClick($event, link)">
+        <a
+          class="outline-link"
+          :class="{ 'is-active': activeLink === link }"
+          :href="link"
+          @click="handleClick($event, link)"
+        >
           {{ title }}
         </a>
         <template v-if="children?.length">
-          <OutlineItem :headers="children" @click="handleClick($event, link)" @close-menu="$emit('close-menu')"/>
+          <OutlineItem
+            :headers="children"
+            @click="handleClick($event, link)"
+            @close-menu="$emit('close-menu')"
+          />
         </template>
       </li>
     </ul>
