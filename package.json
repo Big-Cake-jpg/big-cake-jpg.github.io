@@ -20,7 +20,7 @@
     "artalk": "^2.9.1",
     "axios": "^1.7.7",
     "bulma": "^1.0.2",
-    "pinia-plugin-persistedstate": "^4.1.1",
+    "pinia-plugin-persistedstate": "^4.1.2",
     "valaxy": "^0.20.0",
     "valaxy-addon-lightgallery": "^0.0.3",
     "valaxy-theme-custom": "link:valaxy-theme-custom",
