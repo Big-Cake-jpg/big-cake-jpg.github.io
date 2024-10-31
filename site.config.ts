@@ -11,7 +11,7 @@ export default defineSiteConfig({
     email: "me@lihaoyu.cn",
     link: "https://www.lihaoyu.cn",
   },
-  description: "于风雨中 承载所有的回忆",
+  description: "于风雨中 承载所有的回忆 feedId:66423920692680718+userId:73260055904423936",
   subtitle: "也许我们会分别，但我们将永远不会忘记彼此",
 
   feed: {
