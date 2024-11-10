@@ -49,6 +49,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/ddos-attack-record': RouteRecordInfo<'/posts/ddos-attack-record', '/posts/ddos-attack-record', Record<never, never>, Record<never, never>>,
     '/posts/deploy-valaxy-blog-to-cloudflare-pages': RouteRecordInfo<'/posts/deploy-valaxy-blog-to-cloudflare-pages', '/posts/deploy-valaxy-blog-to-cloudflare-pages', Record<never, never>, Record<never, never>>,
     '/posts/deploy-vuepress-v1-docs-to-vercel': RouteRecordInfo<'/posts/deploy-vuepress-v1-docs-to-vercel', '/posts/deploy-vuepress-v1-docs-to-vercel', Record<never, never>, Record<never, never>>,
+    '/posts/force-enable-apple-intelligence-on-china-iphone-12': RouteRecordInfo<'/posts/force-enable-apple-intelligence-on-china-iphone-12', '/posts/force-enable-apple-intelligence-on-china-iphone-12', Record<never, never>, Record<never, never>>,
     '/posts/genshin-pizza-helper': RouteRecordInfo<'/posts/genshin-pizza-helper', '/posts/genshin-pizza-helper', Record<never, never>, Record<never, never>>,
     '/posts/goodbye-npp': RouteRecordInfo<'/posts/goodbye-npp', '/posts/goodbye-npp', Record<never, never>, Record<never, never>>,
     '/posts/google-translate-unavailable': RouteRecordInfo<'/posts/google-translate-unavailable', '/posts/google-translate-unavailable', Record<never, never>, Record<never, never>>,
