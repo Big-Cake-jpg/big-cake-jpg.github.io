@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "esbuild-wasm": "^0.24.0",
-    "vite-plugin-minify": "^2.0.1"
+    "vite-plugin-minify": "^2.1.0"
   },
   "overrides": {
     "esbuild": "npm:esbuild-wasm@latest"
