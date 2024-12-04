@@ -18,7 +18,7 @@
     "@iconify-json/material-symbols-light": "^1.2.8",
     "ansi-regex": "6.1.0",
     "artalk": "^2.9.1",
-    "axios": "^1.7.8",
+    "axios": "^1.7.9",
     "bulma": "^1.0.2",
     "dotenv": "^16.4.5",
     "pinia-plugin-persistedstate": "^4.1.3",
