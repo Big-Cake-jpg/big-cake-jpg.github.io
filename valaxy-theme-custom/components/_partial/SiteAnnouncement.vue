@@ -36,7 +36,7 @@ const isWarningInfo = computed(
   >
     <div class="max-w-6xl mx-auto">
       <div
-        class="text-center font-medium"
+        class="text-center font-medium text-black"
         style="display: flex; align-items: center; justify-content: center"
       >
         <span class="icon i-ic-baseline-warning" />
