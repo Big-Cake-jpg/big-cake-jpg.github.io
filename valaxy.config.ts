@@ -78,6 +78,10 @@ export default defineValaxyConfig<ThemeConfig>({
         name: "关于我",
         url: "/about",
       },
+      {
+        name: "状态监控",
+        url: "https://status.lihaoyu.cn",
+      },
     ],
 
     quickAccess: [
@@ -89,9 +93,9 @@ export default defineValaxyConfig<ThemeConfig>({
     ],
 
     announcement: {
-      enable: false,
-      type: "info",
-      content: "这里是公告内容",
+      enable: true,
+      type: "warning",
+      content: "部分服务正在维护。有关详细信息，请参阅：https://status.lihaoyu.cn",
     },
 
     valaxyDarkOptions: {
