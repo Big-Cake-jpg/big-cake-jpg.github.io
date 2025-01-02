@@ -5,8 +5,8 @@
       class="menu-list"
     >
       <li v-for="n in 16" :key="n" v-if="isLoading" class="w-full" :class="{ 'is-skeleton': isLoading }">
-        <p class="p-2">
-          正在加载友情链接数据
+        <p class="p-2 min-h-9">
+          
         </p>
       </li>
       <li v-for="link in friendLinks" :key="link.url" v-else>
