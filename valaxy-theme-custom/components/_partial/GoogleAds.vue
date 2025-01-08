@@ -9,23 +9,25 @@
     <div v-else class="fixed">
       <div class="text-center">{{ t("google_ads.unavailable") }}</div>
     </div> -->
-    <component
-      async
-      :is="'script'"
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406300839504314"
-      crossorigin="anonymous"
-    ></component>
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-3406300839504314"
-      data-ad-slot="2681266595"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-    <component :is="'script'">
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </component>
+    <div class="p-4">
+      <component
+        async
+        :is="'script'"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406300839504314"
+        crossorigin="anonymous"
+      ></component>
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-3406300839504314"
+        data-ad-slot="2681266595"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <component :is="'script'">
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </component>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
