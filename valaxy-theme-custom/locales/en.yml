@@ -52,4 +52,6 @@ copyright:
 excerpt:
   ai: AI-Generated Summary
 
-google_ads: Ads by Google
+google_ads:
+  title: Ads by Google
+  unavailable: Google ads are temporarily unavailable due to relevant regulations

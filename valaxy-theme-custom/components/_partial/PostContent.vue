@@ -33,7 +33,7 @@ const formatDate = (date: string | number | Date) => {
         {{ Array.isArray(frontmatter.categories) ? frontmatter.categories.flat().join(', ') : frontmatter.categories ?? "未分类" }}
       </p>
       <PostMeta />
-      <AiExcerpt v-if="frontmatter.excerpt_type === 'ai'" class="mt-2" />
+      <!-- <AiExcerpt v-if="frontmatter.excerpt_type === 'ai'" class="mt-2" /> -->
       <br />
       <div class="content break-words">
         <TimeWarning />

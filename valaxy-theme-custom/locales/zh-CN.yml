@@ -55,4 +55,6 @@ copyright:
 excerpt:
   ai: AI 生成的摘要
 
-google_ads: 由 Google 提供的广告
+google_ads:
+  title: 由 Google 提供的广告
+  unavailable: 受相关规定限制，Google 广告暂时无法显示

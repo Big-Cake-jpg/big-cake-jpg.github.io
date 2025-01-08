@@ -7,16 +7,13 @@ categories: 教程
 tags:
   - Apple 智能
   - iOS
-excerpt_type: ai
-excerpt: >-
-  本文介绍了在升级到iOS 18.1 Beta 5后如何在iPhone
-  12上强开Apple智能。作者提供了详细的操作步骤，包括更改设备设置、下载Nugget、获取MobileGestalt、强开Apple智能以及恢复面容ID的方法，但未测试恢复面容
-  ID的功能。需要注意的是，操作过程有一定风险，可能导致设备Bootloop或数据丢失，建议在非主力机上操作，并避免使用第三方工具。
 ---
 
 就，最近不是 Apple 智能很热门嘛，B 站到处都是强开教程，自己早就想看看效果了。但在当时我的设备已经升级到了新的 iOS 18.1 Beta 5，这个版本修复了 `sparserestore` 漏洞导致我无法使用 misakaX 了。
 
 好在现在 misakaX 与 Nugget 都对新的 iOS 版本提供了有限支持，所以咱也可以在 iPhone 12 上强开 Apple 智能了！
+
+<!-- more -->
 
 :::danger 风险警告
 
