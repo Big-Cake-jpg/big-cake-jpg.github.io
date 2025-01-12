@@ -66,6 +66,6 @@ const formatDate = (date: string | number | Date) => {
     </div>
   </div>
   <Donate class="mb-4" />
-  <GoogleAds />
+  <!-- <GoogleAds /> -->
   <Comment />
 </template>
