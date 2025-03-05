@@ -29,7 +29,7 @@ const { data } = useRandomData(props.links, props.random);
 const filteredData = computed(() => {
   const result = data.value?.filter((link) => link.healthy !== false) || [];
   if (result.length > 0 || data.value !== undefined) {
-    loading.value = true;
+    loading.value = false;
   }
   return result;
 });
