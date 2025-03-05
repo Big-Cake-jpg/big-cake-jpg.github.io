@@ -5,16 +5,16 @@ description: 以及穗香咖啡馆的各位！
 links: https://api.lihaoyu.cn/blog/links/inpage
 links_global: https://api.lihaoyu.cn/blog/links/global
 random: true
-aplayer: true
+aplayer: false
 medium_zoom: false
 ---
 
-<meting-js
+<!-- <meting-js
  id="2005302493"
  server="netease"
  type="song"
  theme="#F2BC57">
-</meting-js>
+</meting-js> -->
 
 友链需要一定时间来加载，如果无法显示，请确认 `api.lihaoyu.cn` 是否能够正常访问。
 
@@ -24,13 +24,13 @@ medium_zoom: false
 
 此处的友链仅显示在本页面上。
 
-<YunLinks :links="frontmatter.links" :random="frontmatter.random" />
+<FriendLinks :links="frontmatter.links" :random="frontmatter.random" />
 
 ## 全站友链
 
-此处友链不仅会显示在本页，也会显示在全站页脚部分。
+此处友链不仅会显示在本页，也会显示在全站边栏部分。
 
-<YunLinks :links="frontmatter.links_global" :random="frontmatter.random" />
+<FriendLinks :links="frontmatter.links_global" :random="frontmatter.random" />
 
 ---
 

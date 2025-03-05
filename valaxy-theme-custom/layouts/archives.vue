@@ -6,7 +6,7 @@
         <main class="main">
             <div class="container mx-auto p-3">
                 <div class="grid grid-cols-1 lg:grid-cols-5 lg:gap-4 max-w-7xl m-auto">
-                    <div class="mb-3 lg:mb-4 lg:col-span-3 lg:mb-0">
+                    <div class="mb-3 lg:mb-6 lg:col-span-3">
                         <div>
                             <ArchivesList />
                         </div>

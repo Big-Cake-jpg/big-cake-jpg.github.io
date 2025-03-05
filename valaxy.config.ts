@@ -93,7 +93,7 @@ export default defineValaxyConfig<ThemeConfig>({
     ],
 
     announcement: {
-      enable: true,
+      enable: false,
       type: "warning",
       content: "部分服务正在维护。有关详细信息，请参阅：https://status.lihaoyu.cn",
     },
