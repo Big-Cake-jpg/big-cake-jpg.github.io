@@ -29,7 +29,7 @@ const { data } = useRandomData(props.links, props.random);
 const filteredData = computed(() => {
   const result = data.value?.filter((link) => link.healthy !== false) || [];
   if (result.length > 0 || data.value !== undefined) {
-    loading.value = false;
+    loading.value = true;
   }
   return result;
 });
@@ -44,14 +44,14 @@ const placeholders = Array(placeholderCount).fill(null);
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <template v-if="loading">
-      <div v-for="(_, index) in placeholders" :key="index" class="box animate-pulse">
+      <div v-for="(_, index) in placeholders" :key="index" class="box !mb-0">
         <div class="media flex items-center">
           <div class="media-left mr-3">
-            <div class="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-lg"></div>
+            <div class="w-16 h-16 is-skeleton rounded-lg"></div>
           </div>
           <div class="media-content w-full">
-            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-3"></div>
-            <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded w-full"></div>
+            <div class="h-4 is-skeleton rounded w-3/4 mb-3"></div>
+            <div class="h-3 is-skeleton rounded w-full"></div>
           </div>
         </div>
       </div>
@@ -92,18 +92,3 @@ const placeholders = Array(placeholderCount).fill(null);
     </a>
   </div>
 </template>
-
-<style scoped>
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-</style>
