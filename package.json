@@ -22,7 +22,7 @@
     "bulma": "^1.0.3",
     "dotenv": "^16.4.7",
     "pinia-plugin-persistedstate": "^4.2.0",
-    "valaxy": "^0.22.13",
+    "valaxy": "^0.22.17",
     "valaxy-addon-lightgallery": "^0.0.4",
     "valaxy-theme-custom": "link:valaxy-theme-custom",
     "vite-plugin-compression2": "^1.3.3"
