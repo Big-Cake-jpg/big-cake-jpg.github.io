@@ -6,9 +6,10 @@ updated: 2025-03-30 14:17:37
 tags:
   - 一加
 categories: 报告
+cover: https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/670606d8a9e57b8f3c83f3a1fcf42f12.webp
 ---
 
-:::tip 提示
+:::tip
 
 这篇文章其实是最先在我新注册的微信公众号里发出来的，希望大家能关注一下公众号支持一下我（）
 
@@ -38,7 +39,7 @@ categories: 报告
 
 crDroid 一加 6T 维护者 @Terminator_J 也为它适配了基于 Android 15 的 crDroid 11，我手上的这台现在就是刷过 A15 的。
 
-![设备的 Android 版本页面](https://files.mdnice.com/user/99907/6796a017-83be-43f5-8bdc-138a18fab986.png)
+![设备的 Android 版本页面](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/637098f05d24d15369e96844e685261c.webp)
 
 那么接下来，就是具体的日常使用体验了。
 
@@ -71,7 +72,7 @@ Play 版本的微信有一个优点是可以使用 FCM 收取消息通知，不�
 
 我的微信主要用来和同学、家人联系，以及~~打某个滚筒洗衣机街机~~。
 
-![awmc](https://files.mdnice.com/user/99907/78f5fb92-888f-4836-9f9b-cf3620769526.png)
+![awmc](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/8b748a1dcea07e87fb041057cbc97e46.webp)
 
 > 唉，舞萌吃。
 
@@ -105,9 +106,9 @@ Play 版本的微信有一个优点是可以使用 FCM 收取消息通知，不�
 
 Apple Music 基本已经成了我重度使用的音乐 App，因为 Apple 的动效不知道把网易云甩了几条街了。感觉用起来还挺不错的，唯一可惜的地方在于 6T 的扬声器和 iPhone 比起来会差很多（虽然他们本就不是一个时代的东西）。
 
-![](https://files.mdnice.com/user/99907/b2a25bae-7af9-4c41-b65a-3ac4587b54ab.jpg)
+![](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/62d7391b69bfb32b3dccc96575b06981.webp)
 
-![](https://files.mdnice.com/user/99907/0d353b41-0d37-4d72-9fb1-e7a472f1afb4.png)
+![](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/02cf9ec0e9f40d17df2329aa88a82195.webp)
 
 ### 视频
 
@@ -125,11 +126,11 @@ Apple Music 基本已经成了我重度使用的音乐 App，因为 Apple 的动
 
 放点图吧。
 
-![awmc](https://files.mdnice.com/user/99907/70b1d34e-bd46-47f9-8078-a34d50e9f962.jpg)
+![awmc](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/0007b371a6519f4f17f3fed9a2763486.webp)
 
-![“外老就在哇”](https://files.mdnice.com/user/99907/147eb331-ff52-4b0c-b675-d92476275fe4.jpg)
+![“外老就在哇”](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/9310e6d0dead3ea443e9b113673c45f1.webp)
 
-![地铁](https://files.mdnice.com/user/99907/1f0bc451-3fa6-47e0-97ad-8f4dc0b3681b.jpg)
+![地铁](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/4fe45ed04669979eeaa2bf7364631b05.webp)
 
 ## GAMING！！！
 
@@ -141,11 +142,11 @@ Apple Music 基本已经成了我重度使用的音乐 App，因为 Apple 的动
 
 凌晨的时候，我拿这台 6T 打开了星穹铁道，清了点开拓力并且打了一次差分宇宙。
 
-![我使用的画质配置](https://files.mdnice.com/user/99907/88142d06-3f35-4f1b-bfe7-af4aa6738502.jpg)
+![我使用的画质配置](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/1a709242c99e0c63db87d5f045050fc8.webp)
 
-![只是垫几抽结果抽出万敌了，这下角色池六连没歪了](https://files.mdnice.com/user/99907/af356f5f-8935-4737-b85f-4ca76c619f29.jpg)
+![只是垫几抽结果抽出万敌了，这下角色池六连没歪了](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/b948b6888bd17c1ba613eb425a59529a.webp)
 
-![刷知更鸟材料时开大的云璃](https://files.mdnice.com/user/99907/95d92716-d0bc-44c8-b9d7-b11b4a3bbb2e.jpg)
+![刷知更鸟材料时开大的云璃](https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/f4b7782e4c10e19c703ef8a1110cb167.webp)
 
 额，怎么说呢，差不多稳定 30 帧以上吧，但总的来说 845 的游戏体验还算凑合。
 

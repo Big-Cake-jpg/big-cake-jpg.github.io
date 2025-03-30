@@ -20,6 +20,7 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...path]': RouteRecordInfo<'/[...path]', '/:path(.*)', { path: ParamValue<true> }, { path: ParamValue<false> }>,
+    '/404': RouteRecordInfo<'/404', '/404', Record<never, never>, Record<never, never>>,
     '/about/': RouteRecordInfo<'/about/', '/about', Record<never, never>, Record<never, never>>,
     '/albums/': RouteRecordInfo<'/albums/', '/albums', Record<never, never>, Record<never, never>>,
     '/albums/minecraft': RouteRecordInfo<'/albums/minecraft', '/albums/minecraft', Record<never, never>, Record<never, never>>,
@@ -78,6 +79,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/site-speed-optimization': RouteRecordInfo<'/posts/site-speed-optimization', '/posts/site-speed-optimization', Record<never, never>, Record<never, never>>,
     '/posts/talk-about-communications': RouteRecordInfo<'/posts/talk-about-communications', '/posts/talk-about-communications', Record<never, never>, Record<never, never>>,
     '/posts/use-artalk-in-valaxy': RouteRecordInfo<'/posts/use-artalk-in-valaxy', '/posts/use-artalk-in-valaxy', Record<never, never>, Record<never, never>>,
+    '/posts/use-oneplus-6t-in-2025-1': RouteRecordInfo<'/posts/use-oneplus-6t-in-2025-1', '/posts/use-oneplus-6t-in-2025-1', Record<never, never>, Record<never, never>>,
     '/posts/valaxy': RouteRecordInfo<'/posts/valaxy', '/posts/valaxy', Record<never, never>, Record<never, never>>,
     '/posts/whats-changed-to-my-blog': RouteRecordInfo<'/posts/whats-changed-to-my-blog', '/posts/whats-changed-to-my-blog', Record<never, never>, Record<never, never>>,
     '/posts/windows-delievry-optimize': RouteRecordInfo<'/posts/windows-delievry-optimize', '/posts/windows-delievry-optimize', Record<never, never>, Record<never, never>>,
