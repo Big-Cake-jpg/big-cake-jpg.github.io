@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.lihaoyu.cn/</id>
+    <title>晓雨杂记</title>
+    <updated>2025-04-10T12:31:53.250Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Big_Cake</name>
+        <email>me@lihaoyu.cn</email>
+        <uri>https://www.lihaoyu.cn</uri>
+    </author>
+    <link rel="alternate" href="https://www.lihaoyu.cn/"/>
+    <link rel="self" href="https://www.lihaoyu.cn/atom.xml"/>
+    <subtitle>于风雨中 承载所有的回忆</subtitle>
+    <logo>https://blog-api.lihaoyu.cn/images/profile/avatar-128x.webp</logo>
+    <icon>https://www.lihaoyu.cnhttps://blog-api.lihaoyu.cn/images/profile/head.webp</icon>
+    <rights>CC BY-NC-SA 4.0 2025 © Big_Cake</rights>
+    <entry>
+        <title type="html"><![CDATA[2025 年，把一加 6T 作为主力机是什么体验？（上）]]></title>
+        <id>https://www.lihaoyu.cn/posts/use-oneplus-6t-in-2025-1</id>
+        <link href="https://www.lihaoyu.cn/posts/use-oneplus-6t-in-2025-1"/>
+        <updated>2025-03-30T14:17:37.000Z</updated>
+        <content type="html"><![CDATA[<p>廉颇老矣，尚能饭否？</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/use-oneplus-6t-in-2025-1" target="_blank">https://www.lihaoyu.cn/posts/use-oneplus-6t-in-2025-1</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2025-03-30T14:17:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2024 年终总结]]></title>
+        <id>https://www.lihaoyu.cn/posts/2024-review</id>
+        <link href="https://www.lihaoyu.cn/posts/2024-review"/>
+        <updated>2024-12-31T09:30:00.000Z</updated>
+        <content type="html"><![CDATA[<p>是时候，写第二篇年终总结了。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/2024-review" target="_blank">https://www.lihaoyu.cn/posts/2024-review</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-12-31T09:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[国行 iPhone 12 强开 Apple 智能]]></title>
+        <id>https://www.lihaoyu.cn/posts/force-enable-apple-intelligence-on-china-iphone-12</id>
+        <link href="https://www.lihaoyu.cn/posts/force-enable-apple-intelligence-on-china-iphone-12"/>
+        <updated>2024-11-10T13:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>就，最近不是 Apple 智能很热门嘛，B 站到处都是强开教程，自己早就想看看效果了。但在当时我的设备已经升级到了新的 iOS 18.1 Beta 5，这个版本修复了 <code>sparserestore</code> 漏洞导致我无法使用 misakaX 了。</p>
+<p>好在现在 misakaX 与 Nugget 都对新的 iOS 版本提供了有限支持，所以咱也可以在 iPhone 12 上强开 Apple 智能了！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/force-enable-apple-intelligence-on-china-iphone-12" target="_blank">https://www.lihaoyu.cn/posts/force-enable-apple-intelligence-on-china-iphone-12</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-11-10T13:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[通过自定义主题重写我的博客]]></title>
+        <id>https://www.lihaoyu.cn/posts/rewrite-my-blog</id>
+        <link href="https://www.lihaoyu.cn/posts/rewrite-my-blog"/>
+        <updated>2024-07-10T14:43:13.000Z</updated>
+        <content type="html"><![CDATA[<p><s>我的老天，感谢 Restent 的馈赠（不是</s></p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/rewrite-my-blog" target="_blank">https://www.lihaoyu.cn/posts/rewrite-my-blog</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-07-10T14:43:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[窗边浅谈：形同陌路的“朋友”]]></title>
+        <id>https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2</id>
+        <link href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2"/>
+        <updated>2024-04-26T18:30:00.000Z</updated>
+        <content type="html"><![CDATA[<p>其实，我不想用冒号作连接符的，但 Restent 他们码字的时候换成冒号了。不过无所谓了。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2" target="_blank">https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows-2</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-04-26T18:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[没有衡水命，一身衡水病——盲目复制衡水模式的意义何在？]]></title>
+        <id>https://www.lihaoyu.cn/posts/hengshui-disease</id>
+        <link href="https://www.lihaoyu.cn/posts/hengshui-disease"/>
+        <updated>2024-04-14T14:37:21.000Z</updated>
+        <content type="html"><![CDATA[<p>没有衡水命，一身衡水病。盲目跟风“复制粘贴”，中国的高中到底怎么了？</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/hengshui-disease" target="_blank">https://www.lihaoyu.cn/posts/hengshui-disease</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-04-14T14:37:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 Valaxy 中使用 Artalk 作为评论系统]]></title>
+        <id>https://www.lihaoyu.cn/posts/use-artalk-in-valaxy</id>
+        <link href="https://www.lihaoyu.cn/posts/use-artalk-in-valaxy"/>
+        <updated>2024-02-01T11:23:19.000Z</updated>
+        <content type="html"><![CDATA[<p>废了老半天劲，终于摆脱了 Waline 苦海，投入了 Artalk 的怀抱。</p>
+<h2>前言</h2>
+<p>Restent 在使用 VitePress 作为框架驱动博客后便抛弃了 Waline，使用 Artalk 作为评论系统，还写了一篇文章 <a href="https://blog.gxres.net/posts/move-to-artalk-comment-system">迁移评论系统至 Artalk</a> 记录。此前他也向我发出邀约并称还能将他的 Artalk 实例开一个站给我，当时我选择考虑一下。</p>
+<p>后来他更换了自己的邮箱地址，但由于 Waline 的后端过于简单而无法修改自己注册账号的邮箱，迫不得已麻烦我改数据库。</p>
+<p>同时，Waline 基于无服务器函数也带来了一系列弊端：评论速度过于缓慢、Vercel 限制、图床找不到合适解决方案等等。</p>
+<p>自此，我便决定更换评论系统。在网上搜索以后才发现这简直是前无古人后无来者——根本没有现成的为 Valaxy 更换 Artalk 评论系统的资料。我决定做这个第一人。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/use-artalk-in-valaxy" target="_blank">https://www.lihaoyu.cn/posts/use-artalk-in-valaxy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-03-30T15:22:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[窗边浅谈：序章]]></title>
+        <id>https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows</id>
+        <link href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows"/>
+        <updated>2024-01-29T12:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>嘛，咱终于也有个像样的分类啦</p>
+</blockquote>
+<p>通常情况下，每次写文章的分类与标签都是现想，不仅要费很多时间，还让文章的分类变得杂乱无章。如果你看过分类与标签页面，就会发现有很多重复的项目以及奇怪的命名。与此同时我最近的精神状况也不是太好——期末考试考砸、同学的嘲讽、学不会 TypeScript 和 Vue、音游打不好、数学不会、理化不及格……各方面的打击给我增添了很多焦虑，再加上某些朋友的影响，导致我的情绪开始有些失控，甚至让我整个人变得过于敏感。因此创建这一分类也是为了让自己能有一个倾诉的地方。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows" target="_blank">https://www.lihaoyu.cn/posts/chat-prologu-by-the-windows</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-01-29T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【转载】关于 HiPer 的安全性讨论，以及对于近期一些小事的简单介绍]]></title>
+        <id>https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper</id>
+        <link href="https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper"/>
+        <updated>2024-01-01T15:21:52.000Z</updated>
+        <content type="html"><![CDATA[<p>:::warning<br>
+本文转载自 MainTest233 于知乎上的专栏文章 <a href="https://zhuanlan.zhihu.com/p/675492255">https://zhuanlan.zhihu.com/p/675492255</a>，已获得其授权。转载时请遵循 CC BY-NC-SA 协议。<br>
+:::</p>
+<p>知乎链接：<a href="https://zhuanlan.zhihu.com/p/675492255">https://zhuanlan.zhihu.com/p/675492255</a></p>
+<p>V2EX 链接：<a href="https://v2ex.com/t/1004968">https://v2ex.com/t/1004968</a></p>
+<p>还有一句废话：我的两份一个月的许可目前已经被全局覆盖为过期许可，阿猫，你在害怕什么呢？</p>
+<hr>
+<p>各位好，这里是 MainTest233，一位曾经在 HiPer 相关事件中作为 HiPer 方发言人</p>
+<p>相信各位应该大多还没有忘记这个一年前的事件</p>
+<blockquote>
+<p>PS: 如果你忘了或者不知道这个事情是什么, 你可以看看这几篇文章</p>
+<ul>
+<li><a href="https://www.bilibili.com/read/cv19532914/">BakaXL 针对近期相关文章的回应</a></li>
+<li><a href="https://www.bilibili.com/read/cv19553725/">PCL2 / HMCL / BakaXL 对联机功能下一步发展的联合公告</a></li>
+<li><a href="https://www.bilibili.com/read/cv19845645/">MC 启动器纷纷关闭联机功能，背后隐藏了多少不可告人之事？</a></li>
+<li><a href="https://www.v2ex.com/t/893156">当开源社区遇到公然违反开源协议的商业公司，除了无能为力，我们还能做什么</a></li>
+</ul>
+</blockquote>
+<p>很抱歉在临近新年的这个时候让大家想起这个十分令人烦心的事情，但我们今天不得不来提一提这个事情</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper" target="_blank">https://www.lihaoyu.cn/posts/about-the-security-vulnerability-of-hiper</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2024-01-01T15:21:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023 年终回顾]]></title>
+        <id>https://www.lihaoyu.cn/posts/2023-review</id>
+        <link href="https://www.lihaoyu.cn/posts/2023-review"/>
+        <updated>2023-12-30T15:14:05.000Z</updated>
+        <content type="html"><![CDATA[<p>终于，我的第一篇正式的年终回顾。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/2023-review" target="_blank">https://www.lihaoyu.cn/posts/2023-review</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-12-30T15:14:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[期中前半学期回顾]]></title>
+        <id>https://www.lihaoyu.cn/posts/midterm-review</id>
+        <link href="https://www.lihaoyu.cn/posts/midterm-review"/>
+        <updated>2023-11-19T13:49:53.000Z</updated>
+        <content type="html"><![CDATA[<p>那么，期中考试已经结束了。还有两个月，高一上半学期就要结束了。</p>
+<p>新的一年即将到来。2023 年即将成为过去，我也将在一个多月后迎来自己的 16 周岁生日了。</p>
+<blockquote>
+<p>但是……很不幸，时间的流逝永远不会停止。</p>
+<p>时光如箭，你的过去在不停增多，你的未来在不断减少，未知的可能性只会越来越少，而无法改变的后悔在累积如山。</p>
+<p>你明白了吗？</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/midterm-review" target="_blank">https://www.lihaoyu.cn/posts/midterm-review</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-11-21T18:08:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用起来还不错——国区 Apple Music 浅谈]]></title>
+        <id>https://www.lihaoyu.cn/posts/apple-music-experience</id>
+        <link href="https://www.lihaoyu.cn/posts/apple-music-experience"/>
+        <updated>2023-10-29T08:44:00.000Z</updated>
+        <content type="html"><![CDATA[<p>如果你是我的同学或者比较亲近的朋友，你可能知道我已经开了很长时间的 Apple Music 订阅了。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/apple-music-experience" target="_blank">https://www.lihaoyu.cn/posts/apple-music-experience</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-10-29T08:44:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[万物皆可美化之 VSCode]]></title>
+        <id>https://www.lihaoyu.cn/posts/beautify-your-vscode</id>
+        <link href="https://www.lihaoyu.cn/posts/beautify-your-vscode"/>
+        <updated>2023-10-01T12:35:37.000Z</updated>
+        <content type="html"><![CDATA[<p>啥？这年头连 VSCode 都能美化？</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/beautify-your-vscode" target="_blank">https://www.lihaoyu.cn/posts/beautify-your-vscode</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-10-01T12:35:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[博客二周年——我对博客的想法]]></title>
+        <id>https://www.lihaoyu.cn/posts/2-years-anniversary</id>
+        <link href="https://www.lihaoyu.cn/posts/2-years-anniversary"/>
+        <updated>2023-09-16T22:00:54.000Z</updated>
+        <content type="html"><![CDATA[<p>诸君安好。</p>
+<p>光阴似箭，日月如梭。如今寒舍己立兩載，值此喜庆之日，撰此文，以述心之所想，亦是与君共勉。</p>
+<hr>
+<h2>起</h2>
+<p>博客，我是这样理解字面意思的：博客，“博“众”客”之欢。在维基百科、百度</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/2-years-anniversary" target="_blank">https://www.lihaoyu.cn/posts/2-years-anniversary</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-09-16T22:00:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我过不去的坎——数学]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-poor-mathematics</id>
+        <link href="https://www.lihaoyu.cn/posts/my-poor-mathematics"/>
+        <updated>2023-09-08T19:22:15.000Z</updated>
+        <content type="html"><![CDATA[<p>数学，一直以来都是我的心头大患。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-poor-mathematics" target="_blank">https://www.lihaoyu.cn/posts/my-poor-mathematics</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-09-08T19:22:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[将 Waline 从 LeanCloud 迁移到 MongoDB Cloud]]></title>
+        <id>https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb</id>
+        <link href="https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb"/>
+        <updated>2023-08-30T10:34:58.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>从 Hexo 时代开始，我的 Waline 就是托管在 Vercel 的，而数据存储使用的是 LeanCloud 国际版。这也是 Waline 官方最推荐的部署方式。虽然简单，但是时间长了 Waline 的速度必然会受制于 LeanCloud。之前 <a href="https://dusays.com">杜老师</a> 就在我博客的<a href="/posts/talk-about-communications">「谈人际交往」</a>这篇文章下评论说我的 Waline 加载速度太慢了。</p>
+<p>我自己后来翻文章、回复评论的时候也发现加载速度上的一些问题，便决定切换数据库，从 LeanCloud 迁出来优化评论区的性能。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb" target="_blank">https://www.lihaoyu.cn/posts/migrate-waline-db-to-mongodb</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-09-08T18:33:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初入舞萌 DX]]></title>
+        <id>https://www.lihaoyu.cn/posts/maimai-newbee</id>
+        <link href="https://www.lihaoyu.cn/posts/maimai-newbee"/>
+        <updated>2023-08-28T13:12:45.000Z</updated>
+        <content type="html"><![CDATA[<p><s>我最终还是成为了 mai 批。</s></p>
+<h2>原因</h2>
+<p>我以前是没有尝试过舞萌的，因为一直以为太原这座城市没有啥电玩城会有舞萌机台，即使后来看了一下音游地图发现是有的。</p>
+<p>放假大部分时间我都是缩在家里</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/maimai-newbee" target="_blank">https://www.lihaoyu.cn/posts/maimai-newbee</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-08-28T13:12:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记一次重装 Windows]]></title>
+        <id>https://www.lihaoyu.cn/posts/reinstall-my-pc-os</id>
+        <link href="https://www.lihaoyu.cn/posts/reinstall-my-pc-os"/>
+        <updated>2023-07-19T18:55:53.000Z</updated>
+        <content type="html"><![CDATA[<p><s>受不了啦！我要 switch to Linux！我与 <code>0x800707e7</code> 不共戴天！</s></p>
+<p>Switch to Linux 是不可能的，这辈子都不可能 switch to Linux 的。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/reinstall-my-pc-os" target="_blank">https://www.lihaoyu.cn/posts/reinstall-my-pc-os</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-19T18:55:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记一次被 DDoS]]></title>
+        <id>https://www.lihaoyu.cn/posts/ddos-attack-record</id>
+        <link href="https://www.lihaoyu.cn/posts/ddos-attack-record"/>
+        <updated>2023-07-11T20:05:45.000Z</updated>
+        <content type="html"><![CDATA[<p>哇哦，终于也轮到我被打了吗？</p>
+<h2>太长不读</h2>
+<p>这次 DDoS 攻击并未造成任何实质性的损失，也并未影响到博客的正常访问。</p>
+<p>Cloudflare 的记录显示 HTTP DDoS 攻击总共有 300 万次请求，其余的一百多万次请求被自定义防火墙规则所拦截。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/ddos-attack-record" target="_blank">https://www.lihaoyu.cn/posts/ddos-attack-record</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-11T20:05:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中考成绩！]]></title>
+        <id>https://www.lihaoyu.cn/posts/zhongkao-grades</id>
+        <link href="https://www.lihaoyu.cn/posts/zhongkao-grades"/>
+        <updated>2023-07-09T09:06:15.000Z</updated>
+        <content type="html"><![CDATA[<p>昨天晚上快 12 点的时候，我查到了自己的中考成绩。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/zhongkao-grades" target="_blank">https://www.lihaoyu.cn/posts/zhongkao-grades</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-10T17:16:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OMORI 初体验]]></title>
+        <id>https://www.lihaoyu.cn/posts/omori</id>
+        <link href="https://www.lihaoyu.cn/posts/omori"/>
+        <updated>2023-07-04T11:40:48.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>“那个时候……</p>
+<p>明明我们最需要的就是彼此的陪伴，大家却选择了分道扬镳。</p>
+<p><strong>这一次……我们不能再犯相同的错误了。</strong>”</p>
+<p><em>——英雄</em></p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/omori" target="_blank">https://www.lihaoyu.cn/posts/omori</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-07-04T11:40:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中考之后]]></title>
+        <id>https://www.lihaoyu.cn/posts/after-zhongkao</id>
+        <link href="https://www.lihaoyu.cn/posts/after-zhongkao"/>
+        <updated>2023-06-24T13:11:27.000Z</updated>
+        <content type="html"><![CDATA[<p>中考，结束了。同样的，我也不再是一个初中学生了。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/after-zhongkao" target="_blank">https://www.lihaoyu.cn/posts/after-zhongkao</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-06-24T13:11:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[谈人际交往]]></title>
+        <id>https://www.lihaoyu.cn/posts/talk-about-communications</id>
+        <link href="https://www.lihaoyu.cn/posts/talk-about-communications"/>
+        <updated>2023-06-16T15:14:04.000Z</updated>
+        <content type="html"><![CDATA[<p>诸君安好。</p>
+<p>在写这篇文章的草稿时，我正坐在教室里上着晚自习。手上的英语作业已经写完了，胡思乱想之时回忆起了同学在微信上给我发的一条消息：</p>
+<p>“你在网络上的语言表达能力明显比现实中强。”</p>
+<p>直到后来，我才真的发现网络上的我与现实中的我在语言表达能力上的差距。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/talk-about-communications" target="_blank">https://www.lihaoyu.cn/posts/talk-about-communications</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-06-16T15:14:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的音乐品味]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-taste-of-music</id>
+        <link href="https://www.lihaoyu.cn/posts/my-taste-of-music"/>
+        <updated>2023-06-02T19:48:14.000Z</updated>
+        <content type="html"><![CDATA[<p>最近一直在有高强度使用 Apple Music、网易云音乐、LyricEase，即使在学校有时候也会偷偷打开网易云听一听，可能是因为还有十几天就要迎接中考导致压力变大的缘故吧。然后就是现在申请到了 Windows 新版 NTQQ 的内测权限，不得不说真的无比流畅。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-taste-of-music" target="_blank">https://www.lihaoyu.cn/posts/my-taste-of-music</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-06-02T19:48:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[加入开往团队所给我带来的]]></title>
+        <id>https://www.lihaoyu.cn/posts/after-joined-travellings</id>
+        <link href="https://www.lihaoyu.cn/posts/after-joined-travellings"/>
+        <updated>2023-05-20T21:56:27.000Z</updated>
+        <content type="html"><![CDATA[<p>如果你有留意<a href="https://github.com/travellings-link/travellings">开往项目的 GitHub 仓库</a>，那么你大概率会在 Issue 和 Pull Requests 中发现我的身影。</p>
+<p>就目前的情况来看，我大抵是已经成为了开往维护组的一员，帮助审核新申请和添加网站，这样的状况已经持续了几个月。就在今天，我终于把所有堆积的申请全部审核完毕并打上了对应的 Label。</p>
+<p>至于为什么，我会在这里简单说一说。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/after-joined-travellings" target="_blank">https://www.lihaoyu.cn/posts/after-joined-travellings</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-05-20T21:56:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自建 jsDelivr 镜像]]></title>
+        <id>https://www.lihaoyu.cn/posts/jsdelivr-mirror</id>
+        <link href="https://www.lihaoyu.cn/posts/jsdelivr-mirror"/>
+        <updated>2023-05-03T12:17:12.000Z</updated>
+        <content type="html"><![CDATA[<p>花了点时间，简单做出来的。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/jsdelivr-mirror" target="_blank">https://www.lihaoyu.cn/posts/jsdelivr-mirror</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-05-03T12:17:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[渺软公益 CDN]]></title>
+        <id>https://www.lihaoyu.cn/posts/miaorun-public-cdn</id>
+        <link href="https://www.lihaoyu.cn/posts/miaorun-public-cdn"/>
+        <updated>2023-05-01T14:40:11.000Z</updated>
+        <content type="html"><![CDATA[<p>又是一个快速的公共 CDN 镜像，感谢 <a href="https://icodeq.com">Zkeq</a> 提供的服务。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/miaorun-public-cdn" target="_blank">https://www.lihaoyu.cn/posts/miaorun-public-cdn</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-05-01T14:40:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023 中考宣言]]></title>
+        <id>https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination</id>
+        <link href="https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination"/>
+        <updated>2023-04-03T20:29:15.000Z</updated>
+        <content type="html"><![CDATA[<p>写给自己，同时也是写给每一位初三学子。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination" target="_blank">https://www.lihaoyu.cn/posts/2023-senior-high-school-entrance-examination</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-04-03T20:29:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[晓雨和林小雨的奇妙日常]]></title>
+        <id>https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu</id>
+        <link href="https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu"/>
+        <updated>2023-03-11T19:45:43.000Z</updated>
+        <content type="html"><![CDATA[<p>:::danger 前排警告<br>
+本系列<s>小说</s>文章内容均为虚构且使用 ChatGPT 编写。如果内容中有任何不妥之处，请在评论区中及时指出以便我在之后的故事编写中能够给予 ChatGPT 更加合理的故事线。谢谢啦！<br>
+:::</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu" target="_blank">https://www.lihaoyu.cn/posts/xiaoyu-and-linxiaoyu</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-03-11T19:45:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[为了纯粹的快——来看看我对我的博客做了什么]]></title>
+        <id>https://www.lihaoyu.cn/posts/whats-changed-to-my-blog</id>
+        <link href="https://www.lihaoyu.cn/posts/whats-changed-to-my-blog"/>
+        <updated>2023-03-02T19:23:08.000Z</updated>
+        <content type="html"><![CDATA[<p>只为了更快：性能与美观优先，这几个月我对我的博客做出了一些大的更改。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/whats-changed-to-my-blog" target="_blank">https://www.lihaoyu.cn/posts/whats-changed-to-my-blog</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-03-02T19:23:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Valaxy 与 Cloudflare 的邂逅——将 Valaxy 博客部署到 Cloudflare Pages]]></title>
+        <id>https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages</id>
+        <link href="https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages"/>
+        <updated>2023-02-23T21:17:05.000Z</updated>
+        <content type="html"><![CDATA[<p>最近将博客从 Vercel 搬迁到了 Cloudflare Pages，页面加载速度感觉提升了一点。正好 Valaxy 对于使用 Cloudflare Pages 部署的文档还在编写，故以此为题作文一篇。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages" target="_blank">https://www.lihaoyu.cn/posts/deploy-valaxy-blog-to-cloudflare-pages</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-23T21:17:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Minecraft 国际版玩家对近期事件的回应]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-opinions-about-that-post</id>
+        <link href="https://www.lihaoyu.cn/posts/my-opinions-about-that-post"/>
+        <updated>2023-02-12T15:59:59.000Z</updated>
+        <content type="html"><![CDATA[<p>不请自来。</p>
+<p>本人是一位普通的 Minecraft 国际版玩家，也是一位 BakaXL 用户。</p>
+<p>如大家所见，2 月 5 日在知乎上发布的那个问题就是我提出的。</p>
+<p>给不知道的人一个传送门：<a href="https://www.zhihu.com/question/582313498">https://www.zhihu.com/question/582313498</a></p>
+<p>昨天晚上，我在 B 站上刷到了这一篇文章，认为该文章中有诸多地方不合理，故在此发布该专栏进行说明。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-opinions-about-that-post" target="_blank">https://www.lihaoyu.cn/posts/my-opinions-about-that-post</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-12T15:59:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[对网易与 Minecraft 国际版的担忧]]></title>
+        <id>https://www.lihaoyu.cn/posts/netease-and-minecraft</id>
+        <link href="https://www.lihaoyu.cn/posts/netease-and-minecraft"/>
+        <updated>2023-02-11T20:30:59.000Z</updated>
+        <content type="html"><![CDATA[<p>开学后的第一更。</p>
+<p>网易，你觉得你对得起你那“游戏热爱者”的口号吗？</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/netease-and-minecraft" target="_blank">https://www.lihaoyu.cn/posts/netease-and-minecraft</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-11T20:30:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[诈尸？—— 第三方网易云音乐客户端 LyricEase]]></title>
+        <id>https://www.lihaoyu.cn/posts/lyricease</id>
+        <link href="https://www.lihaoyu.cn/posts/lyricease"/>
+        <updated>2023-01-08T13:07:43.000Z</updated>
+        <content type="html"><![CDATA[<p>以前我提到过，我很喜欢 UWP 应用，因为大多数 UWP 的界面都能与 Windows 完美融合在一起。</p>
+<p>前段时间因为网易云音乐官方的客户端不合我意，以及它的资源占用，我便尝试寻找一个第三方的网易云音乐客户端。</p>
+<p>正好在 B 站上看到了 LyricEase 复活的视频，以前也对 LyricEase 有所耳闻，便决定拿来用。</p>
+<p>用了少说也有半个月了，是时候宣传出去了。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/lyricease" target="_blank">https://www.lihaoyu.cn/posts/lyricease</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-02-01T11:05:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[再见，Notepad++]]></title>
+        <id>https://www.lihaoyu.cn/posts/goodbye-npp</id>
+        <link href="https://www.lihaoyu.cn/posts/goodbye-npp"/>
+        <updated>2023-01-28T14:08:24.000Z</updated>
+        <content type="html"><![CDATA[<h2>声明</h2>
+<p><strong>首先说明：我坚定的支持“一国两制”，坚决反对一切分裂国家、破坏统一的行为。任何邪恶，终将被绳之以法！</strong></p>
+<h2>前言</h2>
+<blockquote>
+<p>本文在 Windows 11 + Ubuntu 双系统</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/goodbye-npp" target="_blank">https://www.lihaoyu.cn/posts/goodbye-npp</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-01-28T14:08:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[你的下一个启动器，何必是启动器]]></title>
+        <id>https://www.lihaoyu.cn/posts/bakaxl-launcher</id>
+        <link href="https://www.lihaoyu.cn/posts/bakaxl-launcher"/>
+        <updated>2023-01-16T12:19:47.000Z</updated>
+        <content type="html"><![CDATA[<p>隆重向您介绍 BakaXL！全新的 BakaXL 3.0 版本为各位带来了更直观的本体设置界面、全新装修过的笨蛋广场、更丰富多彩的个性化选项、更快速的核心安装，以及对 Modrinth 的完整支持！</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/bakaxl-launcher" target="_blank">https://www.lihaoyu.cn/posts/bakaxl-launcher</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2023-01-16T12:19:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Valaxy —— 快到没边的全新静态博客框架]]></title>
+        <id>https://www.lihaoyu.cn/posts/valaxy</id>
+        <link href="https://www.lihaoyu.cn/posts/valaxy"/>
+        <updated>2022-10-17T08:35:47.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>其实我已经关注云游君的 <a href="https://valaxy.site">Valaxy</a> 很久了，无奈没有条件只能一直用 Hexo。</p>
+<p>最近上网课拿到电脑，便想着“不然把博客迁移到 Valaxy 吧”，便打开了 Valaxy 的文档开始一顿操作，设置好以后已经基本处于可以用在生产环境的情况了。</p>
+<p>同时我也感受到了它超快的速度以及原生的页面热重载，便打算把它介绍给大家。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/valaxy" target="_blank">https://www.lihaoyu.cn/posts/valaxy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-10-17T08:35:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[见证历史了——谷歌取消大陆地区翻译服务]]></title>
+        <id>https://www.lihaoyu.cn/posts/google-translate-unavailable</id>
+        <link href="https://www.lihaoyu.cn/posts/google-translate-unavailable"/>
+        <updated>2022-10-02T18:40:35.000Z</updated>
+        <content type="html"><![CDATA[<p>近几天在群里聊天，发现几乎每个群都在传 Chrome 翻译用不了了和竹新社的新闻，一搜才知道原来谷歌把国内的翻译服务 <a href="http://translate.google.cn">translate.google.cn</a> 停止了。理由是“低使用率”。</p>
+<blockquote>
+<p>*根据</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/google-translate-unavailable" target="_blank">https://www.lihaoyu.cn/posts/google-translate-unavailable</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-10-02T19:53:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 iOS 桌面查看你的原神账号信息——原神披萨小助手]]></title>
+        <id>https://www.lihaoyu.cn/posts/genshin-pizza-helper</id>
+        <link href="https://www.lihaoyu.cn/posts/genshin-pizza-helper"/>
+        <updated>2022-09-10T20:36:27.000Z</updated>
+        <content type="html"><![CDATA[<p>emmmm，这个 App 我是在暑假的时候看到的。</p>
+<p>当时我在刷 B 站，忽然间就看到了这个 App 的作者发布的视频。</p>
+<p>虽然当时的版本很简陋，但是因为当时米游社还没有实装实时便签小组件，而我的确有这种需求，便装了一个。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/genshin-pizza-helper" target="_blank">https://www.lihaoyu.cn/posts/genshin-pizza-helper</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-09-10T20:36:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中秋节快乐！以及一些碎碎念]]></title>
+        <id>https://www.lihaoyu.cn/posts/happy-mid-autumn-festival</id>
+        <link href="https://www.lihaoyu.cn/posts/happy-mid-autumn-festival"/>
+        <updated>2022-09-10T19:18:49.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>(｡･∀･)ﾉﾞ嗨，各位老爷们大家好！</p>
+<p>先祝贺大家 <s>PHP Fatal Error</s> 中秋节快乐！</p>
+<p>如大家所见，我已经开学了，我也真正成为了一名初三年级的学生。</p>
+<p>放假三天，这是我开学后第一次更新文章。这三天我打算给博客再做点事情，以及日常维护。</p>
+<p>不知不觉中，时间就溜走了，2022 也即将成为历史。这一年来我做了哪些过意不去的事情也需要自己思考一下了。</p>
+<p><img src="https://img-blog.csdnimg.cn/b9158fb2fffd4cd883966614fb7de835.webp" alt="calendar"></p>
+<p>终于要迎来第一篇年终回顾了呢，心情有点复杂......</p>
+<p>接下来，我要开始介绍这个部落格在未来一段时间内的计划了。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/happy-mid-autumn-festival" target="_blank">https://www.lihaoyu.cn/posts/happy-mid-autumn-festival</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-09-10T19:18:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[与朋友联机游玩 Minecraft]]></title>
+        <id>https://www.lihaoyu.cn/posts/play-minecraft-with-friends</id>
+        <link href="https://www.lihaoyu.cn/posts/play-minecraft-with-friends"/>
+        <updated>2022-08-22T15:45:05.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p><s>这年头连启动器都开始卷了</s></p>
+<p>从最开始的 PCL2，到现在的 BakaXL、HMCL、FSM3，它们都相继支持了联机。</p>
+<p>但是这个体验嘛，就可能天上地下了。</p>
+<p>目前在我用过的所有支持联机的启动器里，BakaXL 的体验可以说是最好的了。毕竟完全免费的中继、正版盗版随意联机和友好的失败原因提示摆在那里。</p>
+<p>正因如此，本文将使用 BakaXL 进行演示。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/play-minecraft-with-friends" target="_blank">https://www.lihaoyu.cn/posts/play-minecraft-with-friends</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-08-22T15:45:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[优化站点速度之见解]]></title>
+        <id>https://www.lihaoyu.cn/posts/site-speed-optimization</id>
+        <link href="https://www.lihaoyu.cn/posts/site-speed-optimization"/>
+        <updated>2022-07-15T13:32:45.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>有没有一种可能，大家当中的一部分人都在为自己的网站速度而苦恼呢？</p>
+<p>特别是去年 12 月 jsDelivr 的备案被吊销以后，很多网站的速度明显下降。</p>
+<p>这篇文章，我会把我的经验分享给大家，希望能对各位的情况有点作用。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/site-speed-optimization" target="_blank">https://www.lihaoyu.cn/posts/site-speed-optimization</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-15T13:32:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[搭建 Hypixel 加速 IP]]></title>
+        <id>https://www.lihaoyu.cn/posts/build-hypixel-boost-ip</id>
+        <link href="https://www.lihaoyu.cn/posts/build-hypixel-boost-ip"/>
+        <updated>2022-07-13T16:48:21.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>其实在这之前我一直用的是网上公开的加速 IP，比如 NoCheatPlus 团队的公益加速 IP。</p>
+<p>然而昨天这个加速 IP 出了点问题，Minecraft 连不上去了。</p>
+<p>我就想，要不然自己搭建一个算了，稳定还省心呢。</p>
+<p>于是这篇文章应运而生。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/build-hypixel-boost-ip" target="_blank">https://www.lihaoyu.cn/posts/build-hypixel-boost-ip</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-13T16:48:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[部署 VuePress v1 文档到 Vercel]]></title>
+        <id>https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel</id>
+        <link href="https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel"/>
+        <updated>2022-07-10T08:43:54.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>可能大家用 VuePress 做文档的已经厌烦了每天对着终端敲 <code>yarn docs:build</code> 了吧。</p>
+<p>想用 CI 却苦于配置无从下手。</p>
+<p>这里我来和大家分享一下，如何将 VuePress 文档部署到 Vercel 上。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel" target="_blank">https://www.lihaoyu.cn/posts/deploy-vuepress-v1-docs-to-vercel</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-10T08:43:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World!]]></title>
+        <id>https://www.lihaoyu.cn/posts/hello-world</id>
+        <link href="https://www.lihaoyu.cn/posts/hello-world"/>
+        <updated>2022-07-08T12:57:47.000Z</updated>
+        <content type="html"><![CDATA[<h2>Hexo</h2>
+<p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/hello-world" target="_blank">https://www.lihaoyu.cn/posts/hello-world</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-08T12:57:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[白嫖党福利——Backblaze B2 免费 10GB 对象存储]]></title>
+        <id>https://www.lihaoyu.cn/posts/backblaze-b2</id>
+        <link href="https://www.lihaoyu.cn/posts/backblaze-b2"/>
+        <updated>2022-07-07T21:53:31.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>其实 Backblaze 这个东西我今年初才听说，当时我疯狂的在网上搜可以白嫖的对象存储。</p>
+<p>然后我就看到了 Backblaze B2，免费 10GB 对象存储 + 每天免费 1GB 下载流量。</p>
+<blockquote>
+<p>感觉挺香的，你们觉得呢（</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/backblaze-b2" target="_blank">https://www.lihaoyu.cn/posts/backblaze-b2</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-07T21:53:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[打开 Windows 传递优化，利人利己！]]></title>
+        <id>https://www.lihaoyu.cn/posts/windows-delievry-optimize</id>
+        <link href="https://www.lihaoyu.cn/posts/windows-delievry-optimize"/>
+        <updated>2022-07-05T19:50:21.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>Windows 的更新下载速度那是真的慢（虽然比官网下镜像快多了）。</p>
+<p>Windows 10 发布的时候，传递优化伴随着它一同出现在人们眼前。</p>
+<p>这应该是 <s>M$</s> 为了进一步改善更新下载速度而做出来的东西吧。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/windows-delievry-optimize" target="_blank">https://www.lihaoyu.cn/posts/windows-delievry-optimize</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-05T19:50:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[优化 Windows Search 搜索，加快搜索速度！]]></title>
+        <id>https://www.lihaoyu.cn/posts/windows-search-optimization</id>
+        <link href="https://www.lihaoyu.cn/posts/windows-search-optimization"/>
+        <updated>2022-07-04T16:18:16.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>Windows Search 这个东西，一言难尽......</p>
+<p>你说它没用吧，它还挺有用的；你说它有用吧，它搜索速度还贼慢，还搜不到想要的东西。</p>
+<p>这篇文章，我会告诉各位我的 Windows 搜索为什么那么好用，以及该怎么进行配置。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/windows-search-optimization" target="_blank">https://www.lihaoyu.cn/posts/windows-search-optimization</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-07-04T16:18:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[搭建一个属于你自己的 Minecraft 服务器]]></title>
+        <id>https://www.lihaoyu.cn/posts/build-your-minecraft-server</id>
+        <link href="https://www.lihaoyu.cn/posts/build-your-minecraft-server"/>
+        <updated>2022-04-09T21:58:44.000Z</updated>
+        <content type="html"><![CDATA[<p>好的，又是一篇新的文章！其实网上的教程够多了，基本都能达到目标。</p>
+<p>但是我要写一个简单的教程来取代它们（其实如果自己忘了也可以看看）</p>
+<p>废话少说，让我们开始吧！</p>
+<blockquote>
+<p>前排提示：本教程仅适用于 Min</p>
+</blockquote>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/build-your-minecraft-server" target="_blank">https://www.lihaoyu.cn/posts/build-your-minecraft-server</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-04-09T21:58:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何诊断 Minecraft Java 版客户端中的错误]]></title>
+        <id>https://www.lihaoyu.cn/posts/minecraft-problems-solve</id>
+        <link href="https://www.lihaoyu.cn/posts/minecraft-problems-solve"/>
+        <updated>2022-04-08T07:45:18.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>妈耶，终于修好 Hexo 报 YAMLException 的问题了，上次更新已经是 5 个月前了呢！</p>
+<p>这段时间没更新，主要就是 Hexo 的锅。</p>
+<blockquote>
+<p>顺带一提，又回归到网课时期了（我这边有疫情）</p>
+</blockquote>
+<p>由于 <s>Mojang</s> Bugjump 的传统艺能，Minecraft Java 版通常会因为各种玄幻的原因崩溃，这篇文章将会带着你判断你的 Minecraft 出了什么问题，以及可能的修复方法。</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/minecraft-problems-solve" target="_blank">https://www.lihaoyu.cn/posts/minecraft-problems-solve</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-04-08T07:45:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cake Launcher 开发日志]]></title>
+        <id>https://www.lihaoyu.cn/posts/launcher-develop</id>
+        <link href="https://www.lihaoyu.cn/posts/launcher-develop"/>
+        <updated>2021-09-30T16:49:20.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://img.shields.io/github/issues-pr/Big-Cake-jpg/Cake-Launcher?label=Pull%20Requests&amp;style=flat-square" alt="GitHub pull requests"><img src="https://img.shields.io/github/issues/Big-Cake-jpg/Cake-Launcher?label=Issues&amp;style=flat-square" alt="GitHub issues"><img src="https://img.shields.io/github/license/Big-Cake-jpg/Cake-Launcher?label=License&amp;style=flat-square" alt="GitHub"><img src="https://img.shields.io/github/repo-size/Big-Cake-jpg/Cake-Launcher?label=Repository%20Size&amp;style=flat-square" alt="GitHub repo size"><img src="https://img.shields.io/github/contributors/Big-Cake-jpg/Cake-Launcher?label=Contributors&amp;style=flat-square" alt="GitHub contributors"><img src="https://img.shields.io/github/last-commit/Big-Cake-jpg/Cake-Launcher?label=Last%20commit&amp;style=flat-square" alt="GitHub last commit"><img src="https://img.shields.io/badge/Author-Big__Cake-blue?style=flat-square" alt="GitHub Author"><img src="https://img.shields.io/github/stars/Big-Cake-jpg/Cake-Launcher?label=Stars&amp;style=flat-square" alt="GitHub Repo stars"><img src="https://img.shields.io/github/forks/Big-Cake-jpg/Cake-Launcher?label=Forks&amp;style=flat-square" alt="GitHub forks"></p>
+<p><a href="https://github.com/Big-Cake-jpg/Cake-Launcher">Cake Launcher</a> 是我为自己的 Minecraft 服务器开发的一个启动器 <s>（蛋糕启动器（误））</s></p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/launcher-develop" target="_blank">https://www.lihaoyu.cn/posts/launcher-develop</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2022-04-07T20:53:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手把手教你如何搭建属于自己的 Hexo 博客]]></title>
+        <id>https://www.lihaoyu.cn/posts/build-a-hexo-blog</id>
+        <link href="https://www.lihaoyu.cn/posts/build-a-hexo-blog"/>
+        <updated>2021-12-04T16:45:10.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>写给一个想要拥有自己的博客，却没有资金的小白和小学时的自己</p>
+</blockquote>
+<h2>前言</h2>
+<p>虽然，独立博客的时代已经过去，越来越多的人们开始在大平台上发布自己的文章</p>
+<p>虽然，这些平台的流量能够为这些博主们创造收</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/build-a-hexo-blog" target="_blank">https://www.lihaoyu.cn/posts/build-a-hexo-blog</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-12-04T16:45:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我讲了节物理课这件事]]></title>
+        <id>https://www.lihaoyu.cn/posts/a-little-teacher</id>
+        <link href="https://www.lihaoyu.cn/posts/a-little-teacher"/>
+        <updated>2021-12-03T01:07:23.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>《关于加个引号就能变成小说这件事》</p>
+</blockquote>
+<h2>前言</h2>
+<p>说实话，这件事情本来能避免的，只是因为我当时~脑子抽了~上物理课的时候写地理默写</p>
+<p>结果就有了下面的这件事情......</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/a-little-teacher" target="_blank">https://www.lihaoyu.cn/posts/a-little-teacher</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-12-03T01:07:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的 Minecraft 服务器 —— CakeMC]]></title>
+        <id>https://www.lihaoyu.cn/posts/my-mcserver</id>
+        <link href="https://www.lihaoyu.cn/posts/my-mcserver"/>
+        <updated>2021-10-03T14:01:12.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>CakeMC 是我自己的一个 Minecraft 服务器，早在 Cake Launcher 的开发日志里就有提到</p>
+<p>它于今年 8 月份开始运营，到现在已经获得了较多的玩家数量，最高日在线数量达到了 6-7 人</p>
+<p>这对于一个没有多少宣传、新运营的服务器来说已经很不错了</p>
+<p>目前它甚至还获得了他人的帮助（指免费挂的面板服）</p>
+<p>下面开始正文……</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/my-mcserver" target="_blank">https://www.lihaoyu.cn/posts/my-mcserver</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-10-03T14:01:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于 GitHub 今年国庆节访问的问题]]></title>
+        <id>https://www.lihaoyu.cn/posts/about-github-access</id>
+        <link href="https://www.lihaoyu.cn/posts/about-github-access"/>
+        <updated>2021-10-01T08:55:13.000Z</updated>
+        <content type="html"><![CDATA[<p>今天，我在 Surfing the Internet 的时候往博客的 Aplayer 挂件里塞了个音乐列表</p>
+<p>结果发现 GitHub 突然无法访问了，显示 “连接超时”</p>
+<p>![GitHub-unacc</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/about-github-access" target="_blank">https://www.lihaoyu.cn/posts/about-github-access</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-10-01T08:55:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[神级内存清理软件———Mem Reduct]]></title>
+        <id>https://www.lihaoyu.cn/posts/mem-reduct</id>
+        <link href="https://www.lihaoyu.cn/posts/mem-reduct"/>
+        <updated>2021-09-20T20:58:00.000Z</updated>
+        <content type="html"><![CDATA[<p>想必看到这篇文章的大家大部分都经常因为运行内存不够而头疼吧</p>
+<p>在这篇文章中，我将会为大家介绍这款软件 ——— <a href="https://henrypp.org/product/memreduct">Mem Reduct</a></p>
+<hr>
+<h2>前言</h2>
+<p>任何优化软件都只能在一定程度上进行优化，有时甚至不会有什么效果</p>
+<p>因此如果你有“钞能力”，那我还是建议你给电脑加一根内存条</p>
+<br/><p>访问 <a href="https://www.lihaoyu.cn/posts/mem-reduct" target="_blank">https://www.lihaoyu.cn/posts/mem-reduct</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Big_Cake</name>
+            <email>me@lihaoyu.cn</email>
+            <uri>https://www.lihaoyu.cn</uri>
+        </author>
+        <published>2021-09-20T20:58:00.000Z</published>
+    </entry>
+</feed>
