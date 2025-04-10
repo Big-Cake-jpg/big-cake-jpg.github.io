@@ -9,6 +9,10 @@ categories: 报告
 cover: https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/670606d8a9e57b8f3c83f3a1fcf42f12.webp
 ---
 
+廉颇老矣，尚能饭否？
+
+<!-- more -->
+
 :::tip
 
 这篇文章其实是最先在我新注册的微信公众号里发出来的，希望大家能关注一下公众号支持一下我（）
@@ -24,8 +28,6 @@ cover: https://objects.lihaoyu.cn/bigcake-blog-images/2025/03/30/670606d8a9e57b8
 但只要想，什么都能用来当主力设备，甚至是一台 iPhone 6 Plus。
 
 现在，我们就来让它做段时间的主力设备，看看它是不是“老当益壮”，继续承担现代社会的日常陪伴吧。
-
-<!-- more -->
 
 ---
 
